@@ -1,16 +1,3 @@
-/**
- * ICM20948_7Semi.h
- * - Public Arduino C++ header for ICM-20948 (I2C-only in this release)
- *
- * Library Info
- * - Name: ICM20948_7Semi
- * - Version: 0.1.1 (2025-10-24)
- * - Author: 7Semi / Evelta
- * - License: MIT
- * - Transport: I2C @100kHz+
- * - Dependencies: <Arduino.h>, <Wire.h>, "ICM20948_REGS.h"
- */
-
 #ifndef ICM20948_7SEMI_H
 #define ICM20948_7SEMI_H
 
@@ -19,230 +6,622 @@
 #include <SPI.h>
 #include "ICM20948_regs.h"
 
+#include "7Semi_Interface.h"
+#include "7Semi_I2C_Interface.h"
+#include "7Semi_SPI_Interface.h"
+#include "BusIO_7Semi.h"
+
+enum class ICM20948_Op_Mode : uint8_t
+{
+  MODE_POWER_DOWN = 0x00,
+  MODE_SINGLE_MEASUREMENT = 0x01,
+  MODE_CONTINUOUS_1 = 0x02,
+  MODE_CONTINUOUS_2 = 0x04,
+  MODE_CONTINUOUS_3 = 0x06,
+  MODE_CONTINUOUS_4 = 0x08,
+  MODE_SELF_TEST = 0x10
+};
+
+enum class ICM20948_Clock_Source : uint8_t
+{
+  INTERNAL_20MHZ_0 = 0x00, // Internal oscillator
+  AUTO_PLL_1 = 0x01,       // Auto select (PLL if ready)
+  AUTO_PLL_2 = 0x02,
+  AUTO_PLL_3 = 0x03,
+  AUTO_PLL_4 = 0x04,
+  AUTO_PLL_5 = 0x05,
+  INTERNAL_20MHZ_6 = 0x06, // Internal oscillator
+  STOP_CLOCK = 0x07        // Stops clock, timing generator reset
+};
+
+enum class ICM20948_Gyro_DLPF : uint8_t
+{
+  DLPF_196HZ = 0x00, // BW ≈ 196.6 Hz, NBW ≈ 229.8 Hz
+  DLPF_151HZ = 0x01, // BW ≈ 151.8 Hz, NBW ≈ 187.6 Hz
+  DLPF_119HZ = 0x02, // BW ≈ 119.5 Hz, NBW ≈ 154.3 Hz
+  DLPF_51HZ = 0x03,  // BW ≈ 51.2 Hz,  NBW ≈ 73.3 Hz
+  DLPF_23HZ = 0x04,  // BW ≈ 23.9 Hz,  NBW ≈ 35.9 Hz
+  DLPF_11HZ = 0x05,  // BW ≈ 11.6 Hz,  NBW ≈ 17.8 Hz
+  DLPF_5HZ = 0x06,   // BW ≈ 5.7 Hz,   NBW ≈ 8.9 Hz
+  DLPF_361HZ = 0x07  // BW ≈ 361.4 Hz, NBW ≈ 376.5 Hz
+};
+
+enum class ICM20948_Gyro_FullScale : uint8_t
+{
+  DPS_250 = 0x00,  // ±250 dps
+  DPS_500 = 0x01,  // ±500 dps
+  DPS_1000 = 0x02, // ±1000 dps
+  DPS_2000 = 0x03  // ±2000 dps
+};
+
+enum class ICM20948_Accel_FullScale : uint8_t
+{
+  G_2 = 0x00, // ±2g
+  G_4 = 0x01, // ±4g
+  G_8 = 0x02, // ±8g
+  G_16 = 0x03 // ±16g
+};
+
+enum class ICM20948_Accel_Average : uint8_t
+{
+  AVG_1_OR_4 = 0x00, // Depends on ACCEL_FCHOICE
+  AVG_8 = 0x01,      // Average 8 samples
+  AVG_16 = 0x02,     // Average 16 samples
+  AVG_32 = 0x03      // Average 32 samples
+};
+
 /**
  * Class
  * - Manages ICM-20948 over I2C (SPI path disabled in this cut)
  * - Caches scale factors for LSB->physical conversions
  */
-class ICM20948_7Semi {
+class ICM20948_7Semi
+{
 public:
-  /** - Bus mode selector (internal) */
-  enum Mode : uint8_t { MODE_I2C = 0,
-                        MODE_SPI = 1 };
 
-  /** - Construct with defaults; call begin() to attach bus */
   ICM20948_7Semi();
 
   /**
-   * begin (I2C)
-   * - Stores TwoWire ref, device address; probes WHO_AM_I; applies defaults
-   * - Returns true on success
-   * - Params:
-   *   - wirePort: Wire instance (e.g., Wire)
-   *   - address:  I2C addr 0x68 (AD0=0) or 0x69 (AD0=1)
+   * beginI2C
+   *
+   * - Initialize ICM20948 using I2C interface
+   * - Sets up communication layer (Interface + BusIO)
+   * - Verifies device identity (WHO_AM_I)
+   * - Configures basic power and clock settings
+   *
+   * Returns:
+   * - true  → Device initialized successfully
+   * - false → Communication or configuration failed
    */
-  bool begin(TwoWire &wirePort, uint8_t address = 0x68);
-  bool begin(SPIClass &spiPort, uint8_t csPin);
+  bool beginI2C(uint8_t address = 0x69, TwoWire &i2cPort = Wire, uint32_t i2cSpeed = 400000);
+
+  bool beginSPI(uint8_t csPin, SPIClass &spiPort = SPI, uint32_t spiSpeed = 1000000);
+
+  /**
+   * readWhoAmI
+   *
+   * - Read WHO_AM_I register (device ID)
+   * - Used during initialization to verify ICM20948
+   * - Expected value: 0xEA
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool readWhoAmI(uint8_t &whoAmI);
+
+  /**
+   * selectBank
+   *
+   * - Select USER BANK (0–3)
+   * - Used to access different register groups inside ICM20948
+   *
+   * Returns:
+   * - true  → Bank switch successful
+   * - false → Write failed
+   */
+  bool selectBank(uint8_t bank);
+
+  /**
+   * softReset
+   *
+   * - Perform software reset of ICM20948
+   * - Resets all internal registers to default state
+   *
+   * Flow:
+   * - Select USER BANK 0
+   * - Set DEVICE_RESET bit
+   * - Wait for device to restart
+   *
+   * Returns:
+   * - true  → Reset successful
+   * - false → Operation failed
+   */
+  bool softReset();
+
+  /**
+   * sleep
+   *
+   * - Enable or disable sleep mode
+   * - Maintains clock source (CLKSEL = 1)
+   *
+   * Flow:
+   * - Select USER BANK 0
+   * - Set or clear SLEEP bit
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool sleep(bool en);
 
   /**
    * applyBasicDefaults
-   * - Wake, enable accel/gyro, DLPF on, max FS, sane INT cfg
+   *
+   * - Apply basic sensor configuration
+   * - Configure power, filters, ranges, and sampling rates
+   *
+   * Returns:
+   * - true  → Configuration successful
+   * - false → Any register write failed
    */
   bool applyBasicDefaults();
 
   /**
    * readAccel
-   * - Read accelerometer in g
-   * - Params:
-   *   - x: out g on X
-   *   - y: out g on Y
-   *   - z: out g on Z
+   *
+   * - Read accelerometer data (X, Y, Z)
+   * - Convert raw values to g using LSB scale
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Read failed
    */
   bool readAccel(float &x, float &y, float &z);
 
   /**
    * readGyro
-   * - Read gyroscope in dps
-   * - Params:
-   *   - x: out dps on X
-   *   - y: out dps on Y
-   *   - z: out dps on Z
+   *
+   * - Read gyroscope data (X, Y, Z)
+   * - Convert raw values to dps using LSB scale
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Read failed
    */
   bool readGyro(float &x, float &y, float &z);
 
   /**
    * readTemperature
-   * - Read temperature in °C
-   * - Params:
-   *   - t: out temperature (°C)
+   *
+   * - Read temperature sensor
+   * - Convert raw values to °C
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Read failed
    */
-  bool readTemperature(float &t);
+  bool readTemperature(float &temperature);
 
   /**
    * readMag
-   * - Read AK09916 via bypass; returns microtesla
-   * - Params:
-   *   - x: out uT on X
-   *   - y: out uT on Y
-   *   - z: out uT on Z
+   *
+   * - Read magnetometer data via internal I2C master
+   * - Data comes from EXT_SLV_SENS_DATA registers
+   * - Convert raw values to µT
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Read failed
    */
   bool readMag(float &x, float &y, float &z);
 
   /**
-   * readWhoAmI
-   * - Return 0xEA on success, 0x00 if bus/power state blocks read
+   * initMag
+   *
+   * - Initialize AK09916 magnetometer using internal I2C master
+   * - Verifies WHO_AM_I and enables continuous mode
+   * - Configures SLV0 for automatic data read
+   *
+   * Returns:
+   * - true  → Initialization successful
+   * - false → Operation failed
    */
-  uint8_t readWhoAmI();
+  bool initMag();
 
   /**
- * softReset
- * - Device soft reset; reapply configuration after call
- */
-  bool softReset();
+   * setMagOpMode
+   *
+   * - Set magnetometer operation mode
+   *
+   * Returns:
+   * - true  → Mode set successfully
+   * - false → Write failed
+   */
+  bool setMagOpMode(ICM20948_Op_Mode opMode);
 
   /**
- * sleep
- * - Enter/exit sleep
- * - Params:
- *   - en: true to sleep; false to wake (CLKSEL kept = 1)
- */
-  bool sleep(bool en);
+   * setLowPower
+   *
+   * - Enable or disable low power mode
+   * - Controls LP_EN bit in PWR_MGMT_1
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setLowPower(bool enable);
 
   /**
- * lowPower
- * - Toggle low-power mode and duty-cycling
- * - Params:
- *   - LP_EN: enable low-power bit in PWR_MGMT_1
- *   - ACCEL_CYCLE: duty-cycle accelerometer
- *   - GYRO_CYCLE: duty-cycle gyroscope
- */
-  bool lowPower(bool LP_EN, bool ACCEL_CYCLE, bool GYRO_CYCLE);
+   * getLowPower
+   *
+   * - Read low power mode status
+   * - Returns state of LP_EN bit
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getLowPower(bool &enable);
 
   /**
- * setClkSel
- * - Select clock source (0..7)
- * - Params:
- *   - c: CLKSEL value; use 1 for auto PLL
- */
-  bool setClkSel(uint8_t c);
+   * setClock
+   *
+   * - Set clock source (CLKSEL [2:0])
+   * - Selects internal clock for sensor operation
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setClock(ICM20948_Clock_Source clock);
 
   /**
- * Gyro_SMPLRT
- * - Set gyro ODR (Hz) for DLPF-enabled path (base 1100 Hz)
- * - Params:
- *   - rate_hz: desired rate (>= 4.3 Hz)
- */
-  bool Gyro_SMPLRT(float rate_hz);
+   * getClock
+   *
+   * - Read current clock source (CLKSEL [2:0])
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getClock(uint8_t &clock);
 
   /**
- * GyroConfig
- * - Configure gyro DLPF/FS/FCHOICE and axis/averaging
- * - Params:
- *   - DLPFCFG: 0..7 filter config
- *   - FS_SEL:  0..3 full-scale (±250..±2000 dps)
- *   - FCHOICE: 0=DLPF on, 1=bypass (per datasheet mapping)
- *   - XGYRO/YGYRO/ZGYRO: true to enable axis
- *   - AVGCFG: averaging 0..7 (see datasheet)
- */
-  bool GyroConfig(uint8_t DLPFCFG, uint8_t FS_SEL, bool FCHOICE,
-                  bool XGYRO, bool YGYRO, bool ZGYRO, uint8_t AVGCFG);
+   * setGyroSampleRate
+   *
+   * - Set gyroscope sample rate
+   * - Uses internal divider (SRD) based on 1100 Hz base rate
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Invalid input or write failed
+   */
+  bool setGyroSampleRate(float sampleRate);
 
   /**
- * Accel_SMPLRT
- * - Set accel ODR (Hz) for DLPF-enabled path (base 1125 Hz)
- * - Params:
- *   - rate_hz: desired rate (1..1125 Hz)
- */
-  bool Accel_SMPLRT(uint16_t rate_hz);
+   * getGyroSampleRate
+   *
+   * - Get current gyroscope sample rate
+   * - Computes value from divider register
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getGyroSampleRate(float &sampleRate);
 
   /**
- * AccelConfigure
- * - Configure accel DLPF/FS/DEC3 and optional self-test
- * - Params:
- *   - DLPF: 0..7 filter config
- *   - FS_SEL: 0..3 full-scale (±2..±16 g)
- *   - dlpf_enable: true to enable DLPF
- *   - dec3: decimator (0..3)
- *   - stX/stY/stZ: enable per-axis self-test
- */
-  bool AccelConfigure(uint8_t DLPF, uint8_t FS_SEL,
-                      bool dlpf_enable, uint8_t dec3,
-                      bool stX, bool stY, bool stZ);
+   * setDLPF
+   *
+   * - Configure gyroscope digital low-pass filter (DLPF)
+   * - Option to bypass filter (full bandwidth)
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setDLPF(ICM20948_Gyro_DLPF dlpf, bool bypass);
+
+  /**
+   * getDLPF
+   *
+   * - Read gyroscope DLPF configuration
+   * - Returns filter setting and bypass state
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getDLPF(uint8_t &dlpf, bool &bypass);
+
+  /**
+   * setGyroScale
+   *
+   * - Set gyroscope full-scale range (FS_SEL)
+   * - Controls sensitivity (dps range)
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Write FS_SEL bits [2:1]
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setGyroScale(ICM20948_Gyro_FullScale fullScale);
+
+  /**
+   * getGyroScale
+   *
+   * - Get current gyroscope full-scale range (FS_SEL
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getGyroScale(uint8_t &fullScale);
+
+  /**
+   * selfTestGyro
+   *
+   * - Enable or disable gyroscope self-test per axis
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool selfTestGyro(bool x, bool y, bool z);
+
+  /**
+   * setAccelSampleRate
+   *
+   * - Set accelerometer output data rate (ODR)
+   * - Uses 1125 Hz base rate with 12-bit divider
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setAccelSampleRate(uint16_t sampleRate);
+
+  /**
+   * getAccelSampleRate
+   *
+   * - Get accelerometer output data rate (ODR)
+   * - Computes value from divider registers
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getAccelSampleRate(float &sampleRate);
+
+  /**
+   * selfTestAccel
+   *
+   * - Enable or disable accelerometer self-test per axis
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool selfTestAccel(bool x, bool y, bool z);
+
+  /**
+   * setAccelScale
+   *
+   * - Set accelerometer full-scale range (FS_SEL)
+   * - Controls measurement range (±2g, ±4g, ±8g, ±16g)
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setAccelScale(ICM20948_Accel_FullScale fullScale);
+
+  /**
+   * getAccelScale
+   *
+   * - Get current accelerometer full-scale range (FS_SEL)
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getAccelScale(uint8_t &fullScale);
+
+  /**
+   * setAccelDLPF
+   *
+   * - Configure accelerometer digital low-pass filter (DLPF)
+   * - Option to bypass filter (full bandwidth)
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Set or clear bypass bit
+   * - Configure DLPF bits if not bypassed
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setAccelDLPF(uint8_t dlpf, bool bypass);
+
+  /**
+   * getAccelDLPF
+   *
+   * - Read accelerometer DLPF configuration
+   * - Returns filter setting and bypass state
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Read ACCEL_CONFIG register
+   * - Extract bypass and DLPF bits
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getAccelDLPF(uint8_t &dlpf, bool &bypass);
+
+  /**
+   * setAccelAveraging
+   *
+   * - Configure accelerometer averaging / decimation (DEC3)
+   * - Controls internal averaging of accel samples
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Write DEC3 bits [1:0]
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setAccelAveraging(ICM20948_Accel_Average avg);
+
+  /**
+   * getAccelAveraging
+   *
+   * - Read accelerometer averaging / decimation setting (DEC3)
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Read DEC3 bits [1:0]
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getAccelAveraging(uint8_t &avg);
 
   /**
    * setSensors
-   * - Enable/disable accel, gyro, temp
-   * - Params:
-   *   - accel_on: true enable accel
-   *   - gyro_on:  true enable gyro
-   *   - temp_on:  true enable temp (affects TEMP_DIS)
+   *
+   * - Enable or disable accel, gyro, and temperature sensor
+   * - Controls power gating via PWR_MGMT_2 and TEMP_DIS
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 0
+   * - Build PWR_MGMT_2 mask
+   * - Configure temperature enable/disable
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
    */
   bool setSensors(bool accel_on, bool gyro_on, bool temp_on);
 
   /**
-   * Offsets
-   * - write/read gyro offsets (3x int16)
-   * - write/read accel offsets (3x int16)
-   * - Params:
-   *   - off/out: arrays [3] order X,Y,Z
+   * getSensors
+   *
+   * - Read accel, gyro, and temperature enable state
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 0
+   * - Read PWR_MGMT_2 register
+   * - Read TEMP_DIS bit
+   * - Decode enable states
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
    */
-  bool writeGyroOffset(const int16_t off[3]);
-  bool readGyroOffset(int16_t out[3]);
-  bool writeAccelOffset(const int16_t off[3]);
-  bool readAccelOffset(int16_t out[3]);
+  bool getSensors(bool &accel_on, bool &gyro_on, bool &temp_on);
 
   /**
-   * Unified R/W (dispatches to active bus)
-   * - read(devAddr, reg, buf, len)
-   * - write(devAddr, reg, buf, len)
+   * setGyroOffset
+   *
+   * - Set gyroscope offset values for X, Y, Z axes
+   * - Writes offset registers in USER BANK 2
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Pack offsets into byte array
+   * - Write to offset registers
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
    */
-  bool read(uint8_t devAddr, uint8_t reg, uint8_t *buf, size_t len);
-  bool write(uint8_t devAddr, uint8_t reg, const uint8_t *buf, size_t len);
+  bool setGyroOffset(uint16_t offsetX, uint16_t offsetY, uint16_t offsetZ);
+
+  /**
+   * getGyroOffset
+   *
+   * - Read gyroscope offset values for X, Y, Z axes
+   * - Reads offset registers from USER BANK 2
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 2
+   * - Read offset registers
+   * - Convert to signed values
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getGyroOffset(int16_t &offsetX, int16_t &offsetY, int16_t &offsetZ);
+
+  /**
+   * setAccelOffset
+   *
+   * - Set accelerometer offset values for X, Y, Z axes
+   * - Writes offset registers in USER BANK 1
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 1
+   * - Pack offsets into byte array
+   * - Write to offset registers
+   *
+   * Returns:
+   * - true  → Operation successful
+   * - false → Operation failed
+   */
+  bool setAccelOffset(int16_t offsetX, int16_t offsetY, int16_t offsetZ);
+
+  /**
+   * getAccelOffset
+   *
+   * - Read accelerometer offset values for X, Y, Z axes
+   * - Reads offset registers from USER BANK 1
+   *
+   * Flow:
+   * - Validate bus pointer
+   * - Select USER BANK 1
+   * - Read offset registers
+   * - Convert to signed values
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Operation failed
+   */
+  bool getAccelOffset(int16_t &offsetX, int16_t &offsetY, int16_t &offsetZ);
 
 private:
-  /**
-   * selectBank / enableBypass
-   * - selectBank(bank): choose USER BANK 0..3
-   * - enableBypass(en): true routes host I2C to AK09916
-   */
-  bool selectBank(uint8_t bank);
-  bool enableBypass(bool en);
+  I2C_Interface i2c;
+  SPI_Interface spi;
 
-  /**
-   * I2C helpers
-   * - i2cWrite(addr, reg, buf, len)
-   * - i2cRead(addr, reg, buf, len)
-   */
-  bool i2cWrite(uint8_t addr, uint8_t reg, const uint8_t *buf, size_t len);
-  bool i2cRead(uint8_t addr, uint8_t reg, uint8_t *buf, size_t len);
+  Interface_7Semi *iface = nullptr;
 
-  /**
-   * SPI helpers (declared for completeness; SPI begin disabled in this cut)
-   * - spiWrite(reg, buf, len)
-   * - spiRead(reg, buf, len)
-   */
-  bool spiWrite(uint8_t reg, const uint8_t *buf, size_t len);
-  bool spiRead(uint8_t reg, uint8_t *buf, size_t len);
+  BusIO_7Semi<Interface_7Semi> *bus = nullptr;
 
-  /**
-   * Single-byte helpers at current address
-   * - writeReg(reg, val)
-   * - readReg(reg, val)
-   */
-  bool writeReg(uint8_t reg, uint8_t val);
-  bool readReg(uint8_t reg, uint8_t &val);
+  float mg_per_lsb = 16384.0f;        // LSB/g at ±16g
+  float degree_per_second = 131.072f; // LSB/dps at ±2000 dps
 
-private:
-  Mode _mode = MODE_I2C;     // current bus
-  uint8_t _csPin = 0xFF;     // SPI CS (unused for I2C)
-  TwoWire *_wire = nullptr;  // Wire handle
-  SPIClass *_spi = nullptr;  // SPI handle
-  uint8_t _i2cAddr = 0x69;   // device I2C address
-
-  /** - Cached scales for unit conversion */
-  float _accelMgPerLSB = 2048.0f;  // LSB/g at ±16g
-  float _gyroDpsPerLSB = 16.384f;  // LSB/dps at ±2000 dps
+  bool writeSlave4(uint8_t reg, uint8_t value);
+  bool readSlave4(uint8_t reg, uint8_t &value);
 };
 
 #endif /* ICM20948_7SEMI_H */
-
