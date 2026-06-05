@@ -740,7 +740,37 @@ bool DevLab_ICM20948::setAccelSampleRate(uint16_t sampleRate)
   // Success
   return true;
 }
+bool DevLab_ICM20948::setAccelDivRate(uint16_t divisor)
+{
+  if (!bus)
+    return false;
 
+  // Select USER BANK 2
+  if (!selectBank(2))
+    return false;
+
+  // Validate input
+  if (divisor == 0)
+    return false;
+
+  if (divisor > 4095u)
+    divisor = 4095u;
+
+  // Split divider into high and low bytes
+  uint8_t msb = (uint8_t)((divisor >> 8) & 0x0F);
+  uint8_t lsb = (uint8_t)(divisor & 0xFF);
+
+  // Write divider high byte
+  if (!bus->write(ACCEL_SMPLRT_DIV_1, msb))
+    return false;
+
+  // Write divider low byte
+  if (!bus->write(ACCEL_SMPLRT_DIV_2, lsb))
+    return false;
+
+  // Success
+  return true;
+}
 bool DevLab_ICM20948::getAccelSampleRate(float &sampleRate)
 {
   // Validate bus pointer

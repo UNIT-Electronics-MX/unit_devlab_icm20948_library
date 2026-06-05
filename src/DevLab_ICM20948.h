@@ -70,6 +70,17 @@ enum class ICM20948_Accel_Average : uint8_t
   AVG_32 = 0x03      // Average 32 samples
 };
 
+enum class ICM20948_Accel_DLPFCFG : uint8_t
+{
+  DLPF0_246HZ = 0x00, // BW ≈ 246 Hz, NBW ≈ 265 Hz
+  DLPF_246HZ = 0x01, // BW ≈ 246 Hz, NBW ≈ 265 Hz
+  DLPF_111HZ = 0x02, // BW ≈ 111 Hz, NBW ≈ 136 Hz
+  DLPF_50HZ = 0x03,  // BW ≈ 50 Hz,  NBW ≈ 68.8 Hz
+  DLPF_24HZ = 0x04,  // BW ≈ 24 Hz,  NBW ≈ 34.4 Hz
+  DLPF_12HZ = 0x05,  // BW ≈ 12 Hz,  NBW ≈ 17 Hz
+  DLPF_6HZ = 0x06,   // BW ≈ 6 Hz,   NBW ≈ 8.3 Hz
+  DLPF_473HZ = 0x07, // BW ≈ 473 Hz, NBW ≈ 499 Hz
+};
 /**
  * Class
  * - Manages ICM-20948 over I2C (SPI path disabled in this cut)
@@ -374,6 +385,7 @@ public:
    */
   bool selfTestGyro(bool x, bool y, bool z);
 
+  bool setAccelDivRate(uint16_t divisor);
   /**
    * setAccelSampleRate
    *
@@ -623,5 +635,6 @@ private:
   bool writeSlave4(uint8_t reg, uint8_t value); 
   bool readSlave4(uint8_t reg, uint8_t &value);
 };
+
 
 #endif /* ICM20948_DEVLAB_H */
