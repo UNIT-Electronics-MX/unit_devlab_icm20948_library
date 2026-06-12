@@ -1,0 +1,11 @@
+<map id="DevLab_ICM20948::beginI2C" name="DevLab_ICM20948::beginI2C">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,70,213,95"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a31460c48549b1d3081e253706f8b15e6" title=" " alt="" coords="267,5,490,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,67,271,46,272,51,170,73"/>
+<area shape="rect" id="Node000003" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="544,70,767,95"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="214,80,530,80,530,85,214,85"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#a8bef7eafb3b67eb736f491d0df453b9e" title=" " alt="" coords="261,121,496,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,93,298,115,297,121,177,98"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="476,43,581,65,579,70,475,48"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="448,118,571,95,572,101,449,123"/>
+</map>
