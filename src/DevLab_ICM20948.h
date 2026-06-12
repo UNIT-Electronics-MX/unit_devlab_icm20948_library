@@ -123,6 +123,24 @@ struct ICM20948_IntEnableConfig
   uint8_t fifoWmEn[5];       // [0]–[4]: 1 = watermark interrupt ON para ese canal
 };
 
+struct ICM20948_IntStatus
+{
+  // --- INT_STATUS (0x19) ---
+  uint8_t womInt     : 1;  // Wake on motion ocurrió
+  uint8_t pllRdyInt  : 1;  // PLL listo
+  uint8_t dmpInt1    : 1;  // DMP generó interrupción
+  uint8_t i2cMstInt  : 1;  // I2C master generó interrupción
+
+  // --- INT_STATUS_1 (0x1A) ---
+  uint8_t rawDataRdy : 1;  // Datos de sensores listos para leer
+
+  // --- INT_STATUS_2 (0x1B) ---
+  uint8_t fifoOvf[5];      // [0]–[4]: FIFO overflow por canal
+
+  // --- INT_STATUS_3 (0x1C) ---
+  uint8_t fifoWm[5];       // [0]–[4]: FIFO watermark por canal
+};
+
 /**
  * Class
  * - Manages ICM-20948 over I2C (SPI path disabled in this cut)
@@ -665,6 +683,7 @@ public:
 
   bool intInit();
 
+  bool checkIntStatus(ICM20948_IntStatus &status);
 
 private:
   I2C_Interface i2c;

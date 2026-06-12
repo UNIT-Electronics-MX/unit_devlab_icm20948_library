@@ -1227,3 +1227,32 @@ bool DevLab_ICM20948::intEnableConfig(const ICM20948_IntEnableConfig &cfg)
 
   return true;
 }
+
+bool DevLab_ICM20948::checkIntStatus(ICM20948_IntStatus &status)
+{
+  if (!bus)           return false;
+  if (!selectBank(0)) return false;
+
+  // Leer los 4 registros de status en una sola operación de burst
+  uint8_t raw[4];
+  if (!bus->read(INT_STATUS, raw, 4)) return false;
+
+  // INT_STATUS (0x19)
+  status.womInt    = (raw[0] & STS_WOM_INT)     ? 1 : 0;
+  status.pllRdyInt = (raw[0] & STS_PLL_RDY_INT) ? 1 : 0;
+  status.dmpInt1   = (raw[0] & STS_DMP_INT1)    ? 1 : 0;
+  status.i2cMstInt = (raw[0] & STS_I2C_MST_INT) ? 1 : 0;
+
+  // INT_STATUS_1 (0x1A)
+  status.rawDataRdy = (raw[1] & STS_RAW_DATA_0_RDY_INT) ? 1 : 0;
+
+  // INT_STATUS_2 (0x1B) — FIFO overflow canal por canal
+  for (uint8_t i = 0; i < 5; i++)
+    status.fifoOvf[i] = (raw[2] & BIT(i)) ? 1 : 0;
+
+  // INT_STATUS_3 (0x1C) — FIFO watermark canal por canal
+  for (uint8_t i = 0; i < 5; i++)
+    status.fifoWm[i] = (raw[3] & BIT(i)) ? 1 : 0;
+
+  return true;
+}
