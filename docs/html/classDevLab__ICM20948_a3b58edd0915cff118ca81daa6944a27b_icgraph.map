@@ -1,0 +1,9 @@
+<map id="DevLab_ICM20948::readAccel" name="DevLab_ICM20948::readAccel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,31,461,56"/>
+<area shape="rect" id="Node000002" href="$i2c__accel_8ino.html#afe461d27b9c48d5921c00d521181f12f" title="Read and print accelerometer data in g." alt="" coords="130,5,181,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,32,181,24,181,18,241,26"/>
+<area shape="rect" id="Node000003" href="$test_8ino.html#a59a0400232b9ffe7d4395b166f74593a" title="Run the accelerometer DLPF validation sweep and print samples." alt="" coords="112,55,199,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,60,199,65,199,59,235,55"/>
+<area shape="rect" id="Node000004" href="$test_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, reset/wake the IMU, enable sensors, and start sweep." alt="" coords="5,55,64,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,70,64,70,64,65,98,65"/>
+</map>

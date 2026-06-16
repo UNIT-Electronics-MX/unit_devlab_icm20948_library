@@ -1,5 +1,7 @@
 <map id="I2C_Interface::beginI2C" name="I2C_Interface::beginI2C">
-<area shape="rect" id="Node000001" title=" " alt="" coords="261,5,435,31"/>
-<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a91147b3cd4c45bffc8e024f985be7b21" title=" " alt="" coords="5,5,213,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,21,214,21,214,15,248,15"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="368,5,541,31"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a91147b3cd4c45bffc8e024f985be7b21" title=" " alt="" coords="112,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="354,21,320,21,320,15,354,15"/>
+<area shape="rect" id="Node000003" href="$gyr__test_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, reset/wake the IMU, enable gyro, and start the sweep." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
 </map>

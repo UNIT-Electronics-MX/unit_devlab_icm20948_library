@@ -1,2 +1,554 @@
 \doxysection{examples/test/test.ino File Reference}
 \hypertarget{test_8ino}{}\label{test_8ino}\index{examples/test/test.ino@{examples/test/test.ino}}
+
+
+Accelerometer DLPF validation sketch for the 7Semi ICM-\/20948.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dev\+Lab\+\_\+\+ICM20948.\+h$>$}\newline
+Include dependency graph for test.\+ino\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8ino__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}}
+\begin{DoxyCompactList}\small\item\em Gyroscope DLPF divider and timing configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test_8ino_a526d580d324bce60a3e964066fae77e3}{SDA\+\_\+\+PIN}}~6
+\begin{DoxyCompactList}\small\item\em I2C SDA pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{test_8ino_a06c967e78bcedcee909a70764f879433}{SCL\+\_\+\+PIN}}~7
+\begin{DoxyCompactList}\small\item\em I2C SCL pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{test_8ino_a8b7500a141450a9df212017430c0df9e}{I2\+C\+\_\+\+FREQ}}~400000\+UL
+\begin{DoxyCompactList}\small\item\em I2C bus speed in hertz. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}{ICM\+\_\+\+ADDR}}~0x69
+\begin{DoxyCompactList}\small\item\em ICM-\/20948 I2C address selected by the AD0 pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{test_8ino_a8765c1cf679c82cf73a0a13af44b983b}{print\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a separator line to Serial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8ino_a42633dcf8fe2689c57c8113825f74c66}{print\+Doble\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a double separator line to Serial. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729}{apply\+Settings}} (uint8\+\_\+t fs\+\_\+idx, const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Apply one accelerometer full-\/scale and DLPF configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8ino_a1cf9f29034d9373db6498335da3d661c}{first\+Stage}} ()
+\begin{DoxyCompactList}\small\item\em Verify the IMU identity register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8ino_a59a0400232b9ffe7d4395b166f74593a}{run\+Sweep}} ()
+\begin{DoxyCompactList}\small\item\em Run the accelerometer DLPF validation sweep and print samples. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Initialize I2C, reset/wake the IMU, enable sensors, and start sweep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{test_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Optional post-\/sweep loop for manual accelerometer reads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} \mbox{\hyperlink{test_8ino_a9ef8fe0f793376a22cc3d83386c3b86a}{configs\+DLPF}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Accelerometer DLPF configurations exercised by this validation. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{test_8ino_a7a9c77b04f25920366c8b7b1e13d4854}{N\+\_\+\+DLPF}} = sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}) / sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}\mbox{[}0\mbox{]})
+\begin{DoxyCompactList}\small\item\em Number of accelerometer DLPF configurations. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale}} \mbox{\hyperlink{test_8ino_afba242a959acc49646be317c43c4bc51}{accel\+Cfg}} \mbox{[}$\,$\mbox{]} = \{ \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05aade318cc7367b7f1b4127eddc5f4899f}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+2}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05abda3c606e1ce64e3bda86c1fe6232693}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+4}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05a7526fbbb8f59b17de642323ac8f156aa}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+8}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05a0ab58ba0a5550a73055a08e4c20ee549}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+16}}\}
+\begin{DoxyCompactList}\small\item\em Accelerometer full-\/scale ranges available for validation. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{test_8ino_a14ebfda2dc5c37c8a8080f828f9fecf8}{etiquetas\+Accel\+Cfg}} \mbox{[}$\,$\mbox{]} = \{"{}+-\/2G"{},"{}+-\/4G"{}, "{}+-\/8G"{}, "{}+-\/16G"{}\}
+\begin{DoxyCompactList}\small\item\em Text labels matching accel\+Cfg. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{test_8ino_a6e9ca5bda437536b80c2d5b592629088}{N\+\_\+\+FS}} = 4
+\begin{DoxyCompactList}\small\item\em Number of accelerometer full-\/scale ranges. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG}} \mbox{\hyperlink{test_8ino_a1aaf273f25b97fc05866f455e73b7ba9}{accel\+DLPF}} \mbox{[}$\,$\mbox{]} = \{ \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833a13cbb7979b56e04b08ae1fce52de8920}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF0\+\_\+246\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833aeeb64eacdc3d03767db5a3801123bfb4}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+246\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833afe0dbe8c5c9de890080dc391ebe993c9}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+111\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833a1b0dedc13cdfd5d62bb48c2ad2fa704b}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+50\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833a4b000385ff347b34dfec18d96059bd64}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+24\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833aa94e8735e478a9c88792525ccbcc679a}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+12\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833afc7f83a30afbfee6d61610e4089ac326}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+6\+HZ}},\mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833af80e05f16aaf83801216cef7d6a5446f}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+473\+HZ}} \}
+\begin{DoxyCompactList}\small\item\em Accelerometer DLPF enum values matching configs\+DLPF. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{test_8ino_a7d8148db97649efa472bd4ed2470fb4c}{etiquetas\+Accel\+DLPFCFG}} \mbox{[}$\,$\mbox{]} = \{ "{}246/265"{}, "{}246/265"{}, "{}111/136"{}, "{}50.\+4/68.\+8"{},"{}23.\+9/34.\+4"{}, "{}11.\+5/17.\+0"{}, "{}5.\+7/8.\+3"{},"{}473/499"{}\}
+\begin{DoxyCompactList}\small\item\em Text labels describing accel\+DLPF bandwidth pairs. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9}{ICM20948\+\_\+\+Accel\+\_\+\+Average}} \mbox{\hyperlink{test_8ino_a44172cfd2be3fc4ff6f7b1fb343d2ec4}{accel\+AVG}} \mbox{[}$\,$\mbox{]} = \{\mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9aebd0ae3f26f35e0266d46e0b767eeadc}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+1\+\_\+\+OR\+\_\+4}} ,\mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9a682b1e1305b78c070fc0d38523969924}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+8}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9ad52a23a3a06614aefd7b8c55510f95f6}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+16}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9a5a625254a69fb541caa23fed503c1e2b}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+32}}\}
+\begin{DoxyCompactList}\small\item\em Accelerometer averaging settings available for validation. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{test_8ino_a1e7d1f7dded2d3dfeb778c3cfcc91dea}{etiquetas\+Accel\+AVG}} \mbox{[}$\,$\mbox{]} = \{"{}1 OR 4"{},"{}8"{},"{}16"{},"{}32"{}\}
+\begin{DoxyCompactList}\small\item\em Text labels matching accel\+AVG. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{test_8ino_afa2564ef9650479c8ec39b52d193fbbd}{accel\+SR}} \mbox{[}$\,$\mbox{]} = \{0, 1, 3, 5, 7 , 10, 15, 22, 31, 63, 127, 255, 513, 1022, 2044, 4095\}
+\begin{DoxyCompactList}\small\item\em Raw accelerometer sample-\/rate divider values for experiments. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{test_8ino_aab3a263352ee1fbbca9fe5acf2cd19eb}{etiquetas\+SR}} \mbox{[}$\,$\mbox{]} = \{ "{}1125.\+0"{},"{}562.\+5"{}, "{}281.\+3"{}, "{}187.\+5"{},"{}140.\+6"{}, "{}102.\+3"{}, "{}70.\+3"{}, "{}48.\+9"{}, "{}35.\+2"{}, "{}17.\+6"{}, "{}8.\+8"{}, "{}4.\+4"{}, "{}2.\+2"{}, "{}1.\+1"{}, "{}0.\+55"{}, "{}0.\+27"{}\}
+\begin{DoxyCompactList}\small\item\em Text labels matching accel\+SR output data rates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} \mbox{\hyperlink{test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}
+\begin{DoxyCompactList}\small\item\em Global ICM-\/20948 driver instance. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{test_8ino_ac52922d562439e55245447f152baaf1b}{total\+\_\+pass}} = 0
+\begin{DoxyCompactList}\small\item\em Count of validation passes reserved for future checks. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{test_8ino_a1bf762e03a9be2534f36ec8a2611c341}{total\+\_\+fail}} = 0
+\begin{DoxyCompactList}\small\item\em Count of validation failures reserved for future checks. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{test_8ino_ae452872d489cfa87ffe02f8cf8718a43}{total\+\_\+warn}} = 0
+\begin{DoxyCompactList}\small\item\em Count of validation warnings reserved for future checks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Accelerometer DLPF validation sketch for the 7Semi ICM-\/20948. 
+
+Runs an I2C accelerometer sweep across DLPF settings, prints sample data to Serial, and is intended for bench validation with the sensor flat and stationary. 
+
+Definition in file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{test_8ino_a8b7500a141450a9df212017430c0df9e}\label{test_8ino_a8b7500a141450a9df212017430c0df9e} 
+\index{test.ino@{test.ino}!I2C\_FREQ@{I2C\_FREQ}}
+\index{I2C\_FREQ@{I2C\_FREQ}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{I2C\_FREQ}{I2C\_FREQ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+FREQ~400000\+UL}
+
+
+
+I2C bus speed in hertz. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00019}{19}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}\label{test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb} 
+\index{test.ino@{test.ino}!ICM\_ADDR@{ICM\_ADDR}}
+\index{ICM\_ADDR@{ICM\_ADDR}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{ICM\_ADDR}{ICM\_ADDR}}
+{\footnotesize\ttfamily \#define ICM\+\_\+\+ADDR~0x69}
+
+
+
+ICM-\/20948 I2C address selected by the AD0 pin. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00025}{25}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a06c967e78bcedcee909a70764f879433}\label{test_8ino_a06c967e78bcedcee909a70764f879433} 
+\index{test.ino@{test.ino}!SCL\_PIN@{SCL\_PIN}}
+\index{SCL\_PIN@{SCL\_PIN}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{SCL\_PIN}{SCL\_PIN}}
+{\footnotesize\ttfamily \#define SCL\+\_\+\+PIN~7}
+
+
+
+I2C SCL pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00017}{17}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a526d580d324bce60a3e964066fae77e3}\label{test_8ino_a526d580d324bce60a3e964066fae77e3} 
+\index{test.ino@{test.ino}!SDA\_PIN@{SDA\_PIN}}
+\index{SDA\_PIN@{SDA\_PIN}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{SDA\_PIN}{SDA\_PIN}}
+{\footnotesize\ttfamily \#define SDA\+\_\+\+PIN~6}
+
+
+
+I2C SDA pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00015}{15}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729}\label{test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729} 
+\index{test.ino@{test.ino}!applySettings@{applySettings}}
+\index{applySettings@{applySettings}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{applySettings()}{applySettings()}}
+{\footnotesize\ttfamily bool apply\+Settings (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fs\+\_\+idx,  }\item[{const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+Apply one accelerometer full-\/scale and DLPF configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fs\+\_\+idx} & Index into accel\+Cfg. \\
+\hline
+{\em cfg} & DLPF timing and divider configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all configuration writes succeeded, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00114}{114}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8ino_a1cf9f29034d9373db6498335da3d661c}\label{test_8ino_a1cf9f29034d9373db6498335da3d661c} 
+\index{test.ino@{test.ino}!firstStage@{firstStage}}
+\index{firstStage@{firstStage}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{firstStage()}{firstStage()}}
+{\footnotesize\ttfamily void first\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verify the IMU identity register. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00131}{131}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8ino_afe461d27b9c48d5921c00d521181f12f}\label{test_8ino_afe461d27b9c48d5921c00d521181f12f} 
+\index{test.ino@{test.ino}!loop@{loop}}
+\index{loop@{loop}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Optional post-\/sweep loop for manual accelerometer reads. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00225}{225}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a42633dcf8fe2689c57c8113825f74c66}\label{test_8ino_a42633dcf8fe2689c57c8113825f74c66} 
+\index{test.ino@{test.ino}!printDobleLinea@{printDobleLinea}}
+\index{printDobleLinea@{printDobleLinea}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{printDobleLinea()}{printDobleLinea()}}
+{\footnotesize\ttfamily void print\+Doble\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a double separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00103}{103}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8ino_a8765c1cf679c82cf73a0a13af44b983b}\label{test_8ino_a8765c1cf679c82cf73a0a13af44b983b} 
+\index{test.ino@{test.ino}!printLinea@{printLinea}}
+\index{printLinea@{printLinea}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{printLinea()}{printLinea()}}
+{\footnotesize\ttfamily void print\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00098}{98}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{test_8ino_a8765c1cf679c82cf73a0a13af44b983b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8ino_a59a0400232b9ffe7d4395b166f74593a}\label{test_8ino_a59a0400232b9ffe7d4395b166f74593a} 
+\index{test.ino@{test.ino}!runSweep@{runSweep}}
+\index{runSweep@{runSweep}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{runSweep()}{runSweep()}}
+{\footnotesize\ttfamily void run\+Sweep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the accelerometer DLPF validation sweep and print samples. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00144}{144}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{test_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{test_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{test.ino@{test.ino}!setup@{setup}}
+\index{setup@{setup}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize I2C, reset/wake the IMU, enable sensors, and start sweep. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00186}{186}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{test_8ino_a44172cfd2be3fc4ff6f7b1fb343d2ec4}\label{test_8ino_a44172cfd2be3fc4ff6f7b1fb343d2ec4} 
+\index{test.ino@{test.ino}!accelAVG@{accelAVG}}
+\index{accelAVG@{accelAVG}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{accelAVG}{accelAVG}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9}{ICM20948\+\_\+\+Accel\+\_\+\+Average}} accel\+AVG\mbox{[}$\,$\mbox{]} = \{\mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9aebd0ae3f26f35e0266d46e0b767eeadc}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+1\+\_\+\+OR\+\_\+4}} ,\mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9a682b1e1305b78c070fc0d38523969924}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+8}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9ad52a23a3a06614aefd7b8c55510f95f6}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+16}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a792c56c75cabcab23c273bd9a48aefa9a5a625254a69fb541caa23fed503c1e2b}{ICM20948\+\_\+\+Accel\+\_\+\+Average\+::\+AVG\+\_\+32}}\}}
+
+
+
+Accelerometer averaging settings available for validation. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00072}{72}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_afba242a959acc49646be317c43c4bc51}\label{test_8ino_afba242a959acc49646be317c43c4bc51} 
+\index{test.ino@{test.ino}!accelCfg@{accelCfg}}
+\index{accelCfg@{accelCfg}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{accelCfg}{accelCfg}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale}} accel\+Cfg\mbox{[}$\,$\mbox{]} = \{ \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05aade318cc7367b7f1b4127eddc5f4899f}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+2}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05abda3c606e1ce64e3bda86c1fe6232693}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+4}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05a7526fbbb8f59b17de642323ac8f156aa}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+8}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05a0ab58ba0a5550a73055a08e4c20ee549}{ICM20948\+\_\+\+Accel\+\_\+\+Full\+Scale\+::\+G\+\_\+16}}\}}
+
+
+
+Accelerometer full-\/scale ranges available for validation. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00060}{60}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a1aaf273f25b97fc05866f455e73b7ba9}\label{test_8ino_a1aaf273f25b97fc05866f455e73b7ba9} 
+\index{test.ino@{test.ino}!accelDLPF@{accelDLPF}}
+\index{accelDLPF@{accelDLPF}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{accelDLPF}{accelDLPF}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG}} accel\+DLPF\mbox{[}$\,$\mbox{]} = \{ \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833a13cbb7979b56e04b08ae1fce52de8920}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF0\+\_\+246\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833aeeb64eacdc3d03767db5a3801123bfb4}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+246\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833afe0dbe8c5c9de890080dc391ebe993c9}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+111\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833a1b0dedc13cdfd5d62bb48c2ad2fa704b}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+50\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833a4b000385ff347b34dfec18d96059bd64}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+24\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833aa94e8735e478a9c88792525ccbcc679a}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+12\+HZ}}, \mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833afc7f83a30afbfee6d61610e4089ac326}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+6\+HZ}},\mbox{\hyperlink{DevLab__ICM20948_8h_a62506f4660c8cca0e4f2d55cc6cea833af80e05f16aaf83801216cef7d6a5446f}{ICM20948\+\_\+\+Accel\+\_\+\+DLPFCFG\+::\+DLPF\+\_\+473\+HZ}} \}}
+
+
+
+Accelerometer DLPF enum values matching configs\+DLPF. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00067}{67}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_afa2564ef9650479c8ec39b52d193fbbd}\label{test_8ino_afa2564ef9650479c8ec39b52d193fbbd} 
+\index{test.ino@{test.ino}!accelSR@{accelSR}}
+\index{accelSR@{accelSR}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{accelSR}{accelSR}}
+{\footnotesize\ttfamily const uint16\+\_\+t accel\+SR\mbox{[}$\,$\mbox{]} = \{0, 1, 3, 5, 7 , 10, 15, 22, 31, 63, 127, 255, 513, 1022, 2044, 4095\}}
+
+
+
+Raw accelerometer sample-\/rate divider values for experiments. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00077}{77}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a9ef8fe0f793376a22cc3d83386c3b86a}\label{test_8ino_a9ef8fe0f793376a22cc3d83386c3b86a} 
+\index{test.ino@{test.ino}!configsDLPF@{configsDLPF}}
+\index{configsDLPF@{configsDLPF}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{configsDLPF}{configsDLPF}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} configs\+DLPF\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \{\ \ 0,\ \ \ 0,\ \ \ 265.0f,\ \ 1125.0f,\ \ \textcolor{stringliteral}{"{}DLPF0\_246\ |\ NBW=265Hz\ |\ ODR=1125Hz\ (4.2x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 1,\ \ \ 0,\ \ \ 265.0f,\ \ 1125.0f,\ \ \textcolor{stringliteral}{"{}DLPF\_246\ \ |\ NBW=265Hz\ |\ ODR=1125Hz\ (4.2x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 2,\ \ \ 1,\ \ \ 136.0f,\ \ \ 562.5f,\ \ \textcolor{stringliteral}{"{}DLPF\_111\ \ |\ NBW=136Hz\ |\ ODR=\ 562Hz\ (4.1x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 3,\ \ \ 3,\ \ \ \ 68.8f,\ \ \ 281.3f,\ \ \textcolor{stringliteral}{"{}DLPF\_50\ \ \ |\ NBW=\ 69Hz\ |\ ODR=\ 281Hz\ (4.1x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 4,\ \ \ 7,\ \ \ \ 34.4f,\ \ \ 140.6f,\ \ \textcolor{stringliteral}{"{}DLPF\_24\ \ \ |\ NBW=\ 34Hz\ |\ ODR=\ 141Hz\ (4.1x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 5,\ \ 15,\ \ \ \ 17.0f,\ \ \ \ 70.3f,\ \ \textcolor{stringliteral}{"{}DLPF\_12\ \ \ |\ NBW=\ 17Hz\ |\ ODR=\ \ 70Hz\ (4.1x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 6,\ \ 31,\ \ \ \ \ 8.3f,\ \ \ \ 35.2f,\ \ \textcolor{stringliteral}{"{}DLPF\_6\ \ \ \ |\ NBW=\ \ 8Hz\ |\ ODR=\ \ 35Hz\ (4.2x)"{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 7,\ \ \ 0,\ \ \ 499.0f,\ \ 1125.0f,\ \ \textcolor{stringliteral}{"{}DLPF\_473\ \ |\ NBW=499Hz\ |\ ODR=1125Hz\ (2.3x)"{}}\ \},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Accelerometer DLPF configurations exercised by this validation. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00042}{42}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a1e7d1f7dded2d3dfeb778c3cfcc91dea}\label{test_8ino_a1e7d1f7dded2d3dfeb778c3cfcc91dea} 
+\index{test.ino@{test.ino}!etiquetasAccelAVG@{etiquetasAccelAVG}}
+\index{etiquetasAccelAVG@{etiquetasAccelAVG}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasAccelAVG}{etiquetasAccelAVG}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+Accel\+AVG\mbox{[}$\,$\mbox{]} = \{"{}1 OR 4"{},"{}8"{},"{}16"{},"{}32"{}\}}
+
+
+
+Text labels matching accel\+AVG. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00074}{74}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a14ebfda2dc5c37c8a8080f828f9fecf8}\label{test_8ino_a14ebfda2dc5c37c8a8080f828f9fecf8} 
+\index{test.ino@{test.ino}!etiquetasAccelCfg@{etiquetasAccelCfg}}
+\index{etiquetasAccelCfg@{etiquetasAccelCfg}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasAccelCfg}{etiquetasAccelCfg}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+Accel\+Cfg\mbox{[}$\,$\mbox{]} = \{"{}+-\/2G"{},"{}+-\/4G"{}, "{}+-\/8G"{}, "{}+-\/16G"{}\}}
+
+
+
+Text labels matching accel\+Cfg. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00062}{62}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a7d8148db97649efa472bd4ed2470fb4c}\label{test_8ino_a7d8148db97649efa472bd4ed2470fb4c} 
+\index{test.ino@{test.ino}!etiquetasAccelDLPFCFG@{etiquetasAccelDLPFCFG}}
+\index{etiquetasAccelDLPFCFG@{etiquetasAccelDLPFCFG}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasAccelDLPFCFG}{etiquetasAccelDLPFCFG}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+Accel\+DLPFCFG\mbox{[}$\,$\mbox{]} = \{ "{}246/265"{}, "{}246/265"{}, "{}111/136"{}, "{}50.\+4/68.\+8"{},"{}23.\+9/34.\+4"{}, "{}11.\+5/17.\+0"{}, "{}5.\+7/8.\+3"{},"{}473/499"{}\}}
+
+
+
+Text labels describing accel\+DLPF bandwidth pairs. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00069}{69}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_aab3a263352ee1fbbca9fe5acf2cd19eb}\label{test_8ino_aab3a263352ee1fbbca9fe5acf2cd19eb} 
+\index{test.ino@{test.ino}!etiquetasSR@{etiquetasSR}}
+\index{etiquetasSR@{etiquetasSR}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasSR}{etiquetasSR}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+SR\mbox{[}$\,$\mbox{]} = \{ "{}1125.\+0"{},"{}562.\+5"{}, "{}281.\+3"{}, "{}187.\+5"{},"{}140.\+6"{}, "{}102.\+3"{}, "{}70.\+3"{}, "{}48.\+9"{}, "{}35.\+2"{}, "{}17.\+6"{}, "{}8.\+8"{}, "{}4.\+4"{}, "{}2.\+2"{}, "{}1.\+1"{}, "{}0.\+55"{}, "{}0.\+27"{}\}}
+
+
+
+Text labels matching accel\+SR output data rates. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00079}{79}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}\label{test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1} 
+\index{test.ino@{test.ino}!imu@{imu}}
+\index{imu@{imu}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} imu}
+
+
+
+Global ICM-\/20948 driver instance. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00084}{84}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a7a9c77b04f25920366c8b7b1e13d4854}\label{test_8ino_a7a9c77b04f25920366c8b7b1e13d4854} 
+\index{test.ino@{test.ino}!N\_DLPF@{N\_DLPF}}
+\index{N\_DLPF@{N\_DLPF}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{N\_DLPF}{N\_DLPF}}
+{\footnotesize\ttfamily const uint8\+\_\+t N\+\_\+\+DLPF = sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}) / sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}\mbox{[}0\mbox{]})}
+
+
+
+Number of accelerometer DLPF configurations. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00057}{57}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a6e9ca5bda437536b80c2d5b592629088}\label{test_8ino_a6e9ca5bda437536b80c2d5b592629088} 
+\index{test.ino@{test.ino}!N\_FS@{N\_FS}}
+\index{N\_FS@{N\_FS}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{N\_FS}{N\_FS}}
+{\footnotesize\ttfamily const uint8\+\_\+t N\+\_\+\+FS = 4}
+
+
+
+Number of accelerometer full-\/scale ranges. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00064}{64}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_a1bf762e03a9be2534f36ec8a2611c341}\label{test_8ino_a1bf762e03a9be2534f36ec8a2611c341} 
+\index{test.ino@{test.ino}!total\_fail@{total\_fail}}
+\index{total\_fail@{total\_fail}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{total\_fail}{total\_fail}}
+{\footnotesize\ttfamily uint8\+\_\+t total\+\_\+fail = 0}
+
+
+
+Count of validation failures reserved for future checks. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00089}{89}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_ac52922d562439e55245447f152baaf1b}\label{test_8ino_ac52922d562439e55245447f152baaf1b} 
+\index{test.ino@{test.ino}!total\_pass@{total\_pass}}
+\index{total\_pass@{total\_pass}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{total\_pass}{total\_pass}}
+{\footnotesize\ttfamily uint8\+\_\+t total\+\_\+pass = 0}
+
+
+
+Count of validation passes reserved for future checks. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00087}{87}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+
+\Hypertarget{test_8ino_ae452872d489cfa87ffe02f8cf8718a43}\label{test_8ino_ae452872d489cfa87ffe02f8cf8718a43} 
+\index{test.ino@{test.ino}!total\_warn@{total\_warn}}
+\index{total\_warn@{total\_warn}!test.ino@{test.ino}}
+\doxysubsubsection{\texorpdfstring{total\_warn}{total\_warn}}
+{\footnotesize\ttfamily uint8\+\_\+t total\+\_\+warn = 0}
+
+
+
+Count of validation warnings reserved for future checks. 
+
+
+
+Definition at line \mbox{\hyperlink{test_8ino_source_l00091}{91}} of file \mbox{\hyperlink{test_8ino_source}{test.\+ino}}.
+

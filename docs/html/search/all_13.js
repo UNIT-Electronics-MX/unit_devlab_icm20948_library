@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['xa_5foffs_5fh_0',['XA_OFFS_H',['../ICM20948__regs_8h.html#a04ff2b3ed31a8d968fd35d4aa6f21f41',1,'ICM20948_regs.h']]],
-  ['xa_5foffs_5fl_1',['XA_OFFS_L',['../ICM20948__regs_8h.html#aa167443ed9dcf512457e9c798ec4313e',1,'ICM20948_regs.h']]],
-  ['xg_5foffs_5fusrh_2',['XG_OFFS_USRH',['../ICM20948__regs_8h.html#a75ed9711e6453cadb7bc62a8457aefc7',1,'ICM20948_regs.h']]],
-  ['xg_5foffs_5fusrl_3',['XG_OFFS_USRL',['../ICM20948__regs_8h.html#a49299ef6d11d7ba69751f58abad33a54',1,'ICM20948_regs.h']]],
-  ['xgyro_5fcten_4',['XGYRO_CTEN',['../ICM20948__regs_8h.html#a14c351ac5c8173a80ec555e65ec8ae93',1,'ICM20948_regs.h']]]
+  ['who_5fam_5fi_0',['WHO_AM_I',['../ICM20948__regs_8h.html#a9fcb9e460d175bfc7ab4d80bf788b43a',1,'ICM20948_regs.h']]],
+  ['who_5fam_5fi_5fval_1',['WHO_AM_I_VAL',['../ICM20948__regs_8h.html#a4a6eb6d34106490a76e78b008ee463db',1,'ICM20948_regs.h']]],
+  ['wiring_2',['Connections / Wiring',['../index.html#autotoc_md4',1,'']]],
+  ['wof_5fdeglitch_5fen_3',['WOF_DEGLITCH_EN',['../ICM20948__regs_8h.html#a1af4f725fc8854c51027afd46293e49b',1,'ICM20948_regs.h']]],
+  ['wof_5fedge_5fint_4',['WOF_EDGE_INT',['../ICM20948__regs_8h.html#a9b9c831e45d70557c2b8f25b3e5d202b',1,'ICM20948_regs.h']]],
+  ['wofen_5',['wofEn',['../structICM20948__IntEnableConfig.html#ad8e41ee5fb54f5f168e2429d09ea900e',1,'ICM20948_IntEnableConfig']]],
+  ['womint_6',['womInt',['../structICM20948__IntStatus.html#a2438eb5d73069cbb931b12879679c756',1,'ICM20948_IntStatus']]],
+  ['wominten_7',['womIntEn',['../structICM20948__IntEnableConfig.html#a2c13cfee0f9e9e73a152599540dc8e0f',1,'ICM20948_IntEnableConfig']]],
+  ['write_8',['write',['../classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5',1,'BusIO_7Semi::write(uint8_t reg, uint8_t value)'],['../classBusIO__7Semi.html#aaa3c727db8143b9af43dc4b449f43ece',1,'BusIO_7Semi::write(uint8_t reg, uint16_t value)'],['../classBusIO__7Semi.html#a9261e4a7ea9ae5b528a4c9f38e0bf329',1,'BusIO_7Semi::write(uint8_t reg, const uint8_t *data, uint32_t len)'],['../classSPI__Interface.html#ae48d3d857131fc77c0f32c7ed24c28e1',1,'SPI_Interface::write()'],['../classInterface__7Semi.html#a35047310c257c82ae7f60d143326daa0',1,'Interface_7Semi::write()'],['../classI2C__Interface.html#aa3191e7336ca8b3167f60aeee058a523',1,'I2C_Interface::write()'],['../structicm__plat__t.html#a9df1e04508e6883fa346566871d0db8c',1,'icm_plat_t::write']]],
+  ['writebit_9',['writebit',['../classBusIO__7Semi.html#ac7b3d1c425f7187abbe1bbec64d9ccea',1,'BusIO_7Semi::writeBit(uint8_t reg, uint8_t pos, uint8_t value)'],['../classBusIO__7Semi.html#a6a07d4bd0a308294b37166b6d25209b2',1,'BusIO_7Semi::writeBit(uint8_t reg, uint8_t pos, uint16_t value)']]],
+  ['writebits_10',['writebits',['../classBusIO__7Semi.html#a855c7388d4118e632c84c7f8e2e3ddc2',1,'BusIO_7Semi::writeBits(uint8_t reg, uint8_t pos, uint8_t len, uint8_t value)'],['../classBusIO__7Semi.html#af38d37d409c6d8bc956522465fa39390',1,'BusIO_7Semi::writeBits(uint8_t reg, uint8_t pos, uint8_t len, uint16_t value)']]]
 ];

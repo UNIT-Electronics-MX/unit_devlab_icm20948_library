@@ -1,0 +1,5 @@
+<map id="isrHandler" name="isrHandler">
+<area shape="rect" id="Node000001" title="Interrupt service routine for the IMU data&#45;ready signal." alt="" coords="112,5,201,31"/>
+<area shape="rect" id="Node000002" href="$interrupt_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, verify the IMU, configure interrupts, and attach ISR." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
+</map>

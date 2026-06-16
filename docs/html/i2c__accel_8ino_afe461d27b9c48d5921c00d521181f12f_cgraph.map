@@ -1,0 +1,11 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title="Read and print accelerometer data in g." alt="" coords="5,31,56,56"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b" title=" " alt="" coords="104,31,319,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,41,90,41,90,46,56,46"/>
+<area shape="rect" id="Node000003" href="$classBusIO__7Semi.html#a933c66d9a1afe84102323e209a93dd31" title=" " alt="" coords="405,5,551,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,30,391,24,392,29,319,36"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="367,55,589,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="319,50,353,53,353,59,319,56"/>
+<area shape="rect" id="Node000005" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="637,55,787,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="590,65,624,65,624,70,590,70"/>
+</map>

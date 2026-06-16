@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "BusIO_7Semi", "classBusIO__7Semi.html", "classBusIO__7Semi" ],
+    [ "configDLPF", "structconfigDLPF.html", "structconfigDLPF" ],
     [ "DevLab_ICM20948", "classDevLab__ICM20948.html", "classDevLab__ICM20948" ],
     [ "I2C_Interface", "classI2C__Interface.html", "classI2C__Interface" ],
     [ "ICM20948_IntEnableConfig", "structICM20948__IntEnableConfig.html", "structICM20948__IntEnableConfig" ],

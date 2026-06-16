@@ -1,5 +1,29 @@
 <map id="src/DevLab_ICM20948.h" name="src/DevLab_ICM20948.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="13,5,191,31"/>
-<area shape="rect" id="Node000002" href="$DevLab__ICM20948_8cpp.html" title=" " alt="" coords="5,79,199,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,44,105,79,99,79,99,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1113,5,1292,31"/>
+<area shape="rect" id="Node000002" href="$gyr__test_8ino.html" title="Gyroscope DLPF and full&#45;scale sweep for the 7Semi ICM&#45;20948." alt="" coords="5,79,173,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1100,23,926,28,698,38,443,55,186,81,174,83,173,78,185,76,442,50,698,33,926,23,1100,18"/>
+<area shape="rect" id="Node000003" href="$i2c__accel_8ino.html" title=" " alt="" coords="198,79,349,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1100,25,770,41,565,57,360,81,349,83,348,78,360,76,565,52,769,35,1099,19"/>
+<area shape="rect" id="Node000004" href="$i2c__basic_8ino.html" title=" " alt="" coords="373,79,523,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1100,27,843,46,690,61,536,81,524,83,523,78,536,76,689,56,843,41,1100,22"/>
+<area shape="rect" id="Node000005" href="$i2c__gyro_8ino.html" title=" " alt="" coords="548,79,716,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1100,33,926,53,728,81,717,83,716,78,728,76,925,48,1099,28"/>
+<area shape="rect" id="Node000006" href="$i2c__magneto_8ino.html" title=" " alt="" coords="741,79,915,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1135,36,916,82,915,76,1134,31"/>
+<area shape="rect" id="Node000007" href="$interrupt_8ino.html" title="I2C interrupt example for the 7Semi ICM&#45;20948." alt="" coords="940,79,1087,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1163,38,1060,81,1058,76,1161,33"/>
+<area shape="rect" id="Node000008" href="$mag__test_8ino.html" title="Magnetometer operation&#45;mode sweep for the 7Semi ICM&#45;20948." alt="" coords="1111,79,1295,119"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1205,44,1205,79,1200,79,1200,44"/>
+<area shape="rect" id="Node000009" href="$spi__accel_8ino.html" title=" " alt="" coords="1319,79,1470,119"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1244,33,1350,76,1348,81,1242,38"/>
+<area shape="rect" id="Node000010" href="$spi__basic_8ino.html" title=" " alt="" coords="1494,79,1645,119"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1271,31,1483,76,1494,78,1493,84,1482,81,1269,36"/>
+<area shape="rect" id="Node000011" href="$spi__gyro_8ino.html" title=" " alt="" coords="1669,79,1837,119"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1306,28,1471,49,1658,76,1670,78,1669,83,1657,81,1471,54,1305,34"/>
+<area shape="rect" id="Node000012" href="$test_8ino.html" title="Accelerometer DLPF validation sketch for the 7Semi ICM&#45;20948." alt="" coords="1861,86,2029,111"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1306,23,1554,42,1702,57,1850,76,1892,83,1891,89,1849,81,1702,63,1554,48,1306,28"/>
+<area shape="rect" id="Node000013" href="$test2_8ino.html" title="Extended accelerometer DLPF, full&#45;scale, and averaging sweep." alt="" coords="2053,86,2237,111"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1306,20,1634,38,1838,54,2042,76,2089,83,2088,89,2041,81,1837,60,1634,44,1306,26"/>
+<area shape="rect" id="Node000014" href="$DevLab__ICM20948_8cpp.html" title=" " alt="" coords="2262,86,2455,111"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1306,19,1719,34,1983,51,2250,76,2300,83,2299,89,2249,81,1983,57,1719,40,1306,24"/>
 </map>

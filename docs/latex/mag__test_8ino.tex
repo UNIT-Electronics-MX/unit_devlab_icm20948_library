@@ -1,2 +1,296 @@
 \doxysection{examples/mag\+\_\+test/mag\+\_\+test.ino File Reference}
 \hypertarget{mag__test_8ino}{}\label{mag__test_8ino}\index{examples/mag\_test/mag\_test.ino@{examples/mag\_test/mag\_test.ino}}
+
+
+Magnetometer operation-\/mode sweep for the 7Semi ICM-\/20948.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dev\+Lab\+\_\+\+ICM20948.\+h$>$}\newline
+Include dependency graph for mag\+\_\+test.\+ino\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mag__test_8ino__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mag__test_8ino_a526d580d324bce60a3e964066fae77e3}{SDA\+\_\+\+PIN}}~6
+\begin{DoxyCompactList}\small\item\em I2C SDA pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mag__test_8ino_a06c967e78bcedcee909a70764f879433}{SCL\+\_\+\+PIN}}~7
+\begin{DoxyCompactList}\small\item\em I2C SCL pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mag__test_8ino_a8b7500a141450a9df212017430c0df9e}{I2\+C\+\_\+\+FREQ}}~400000\+UL
+\begin{DoxyCompactList}\small\item\em I2C bus speed in hertz. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mag__test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}{ICM\+\_\+\+ADDR}}~0x69
+\begin{DoxyCompactList}\small\item\em ICM-\/20948 I2C address selected by the AD0 pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mag__test_8ino_a8765c1cf679c82cf73a0a13af44b983b}{print\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a separator line to Serial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mag__test_8ino_a42633dcf8fe2689c57c8113825f74c66}{print\+Doble\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a double separator line to Serial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d}{apply\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the magnetometer and collect samples for each mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Initialize I2C, verify the IMU, enable sensors, and start the sweep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mag__test_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Empty loop; this sketch runs the magnetometer sweep once in \doxylink{mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} \mbox{\hyperlink{mag__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}
+\begin{DoxyCompactList}\small\item\em Global ICM-\/20948 driver instance. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bb}{ICM20948\+\_\+\+Op\+\_\+\+Mode}} \mbox{\hyperlink{mag__test_8ino_aab69c51478cd4dd7461938611ebc08bf}{op\+Mode}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Magnetometer operating modes tested by the sweep. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mag__test_8ino_a9d54bec7e353a4e4bd28e1b1d346f47d}{etiquetas\+Op\+Mode\+Cfg}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Text labels matching the operating modes printed in the sweep. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{mag__test_8ino_a70317553f12ff1d3b53c82107a6cb5cf}{N\+\_\+\+OPM}} = 6
+\begin{DoxyCompactList}\small\item\em Number of printable magnetometer operation modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Magnetometer operation-\/mode sweep for the 7Semi ICM-\/20948. 
+
+Initializes the AK09916 magnetometer through the ICM-\/20948 internal I2C master, iterates through continuous measurement modes, and prints CSV-\/like magnetic field samples to the Serial monitor. 
+
+Definition in file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mag__test_8ino_a8b7500a141450a9df212017430c0df9e}\label{mag__test_8ino_a8b7500a141450a9df212017430c0df9e} 
+\index{mag\_test.ino@{mag\_test.ino}!I2C\_FREQ@{I2C\_FREQ}}
+\index{I2C\_FREQ@{I2C\_FREQ}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{I2C\_FREQ}{I2C\_FREQ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+FREQ~400000\+UL}
+
+
+
+I2C bus speed in hertz. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00019}{19}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}\label{mag__test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb} 
+\index{mag\_test.ino@{mag\_test.ino}!ICM\_ADDR@{ICM\_ADDR}}
+\index{ICM\_ADDR@{ICM\_ADDR}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{ICM\_ADDR}{ICM\_ADDR}}
+{\footnotesize\ttfamily \#define ICM\+\_\+\+ADDR~0x69}
+
+
+
+ICM-\/20948 I2C address selected by the AD0 pin. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00021}{21}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a06c967e78bcedcee909a70764f879433}\label{mag__test_8ino_a06c967e78bcedcee909a70764f879433} 
+\index{mag\_test.ino@{mag\_test.ino}!SCL\_PIN@{SCL\_PIN}}
+\index{SCL\_PIN@{SCL\_PIN}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{SCL\_PIN}{SCL\_PIN}}
+{\footnotesize\ttfamily \#define SCL\+\_\+\+PIN~7}
+
+
+
+I2C SCL pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00017}{17}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a526d580d324bce60a3e964066fae77e3}\label{mag__test_8ino_a526d580d324bce60a3e964066fae77e3} 
+\index{mag\_test.ino@{mag\_test.ino}!SDA\_PIN@{SDA\_PIN}}
+\index{SDA\_PIN@{SDA\_PIN}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{SDA\_PIN}{SDA\_PIN}}
+{\footnotesize\ttfamily \#define SDA\+\_\+\+PIN~6}
+
+
+
+I2C SDA pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00015}{15}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d}\label{mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d} 
+\index{mag\_test.ino@{mag\_test.ino}!applySettings@{applySettings}}
+\index{applySettings@{applySettings}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{applySettings()}{applySettings()}}
+{\footnotesize\ttfamily void apply\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the magnetometer and collect samples for each mode. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00052}{52}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mag__test_8ino_afe461d27b9c48d5921c00d521181f12f}\label{mag__test_8ino_afe461d27b9c48d5921c00d521181f12f} 
+\index{mag\_test.ino@{mag\_test.ino}!loop@{loop}}
+\index{loop@{loop}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty loop; this sketch runs the magnetometer sweep once in \doxylink{mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup()}. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00137}{137}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a42633dcf8fe2689c57c8113825f74c66}\label{mag__test_8ino_a42633dcf8fe2689c57c8113825f74c66} 
+\index{mag\_test.ino@{mag\_test.ino}!printDobleLinea@{printDobleLinea}}
+\index{printDobleLinea@{printDobleLinea}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{printDobleLinea()}{printDobleLinea()}}
+{\footnotesize\ttfamily void print\+Doble\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a double separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00029}{29}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a8765c1cf679c82cf73a0a13af44b983b}\label{mag__test_8ino_a8765c1cf679c82cf73a0a13af44b983b} 
+\index{mag\_test.ino@{mag\_test.ino}!printLinea@{printLinea}}
+\index{printLinea@{printLinea}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{printLinea()}{printLinea()}}
+{\footnotesize\ttfamily void print\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00027}{27}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{mag\_test.ino@{mag\_test.ino}!setup@{setup}}
+\index{setup@{setup}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize I2C, verify the IMU, enable sensors, and start the sweep. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00090}{90}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mag__test_8ino_a9d54bec7e353a4e4bd28e1b1d346f47d}\label{mag__test_8ino_a9d54bec7e353a4e4bd28e1b1d346f47d} 
+\index{mag\_test.ino@{mag\_test.ino}!etiquetasOpModeCfg@{etiquetasOpModeCfg}}
+\index{etiquetasOpModeCfg@{etiquetasOpModeCfg}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasOpModeCfg}{etiquetasOpModeCfg}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+Op\+Mode\+Cfg\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \textcolor{stringliteral}{"{}PowerDown"{}},\textcolor{stringliteral}{"{}SingleMeasure"{}},\textcolor{stringliteral}{"{}Continuo1"{}},\textcolor{stringliteral}{"{}Continuo2"{}},\textcolor{stringliteral}{"{}Continuo3"{}},\textcolor{stringliteral}{"{}Continuo4"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Text labels matching the operating modes printed in the sweep. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00043}{43}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}\label{mag__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1} 
+\index{mag\_test.ino@{mag\_test.ino}!imu@{imu}}
+\index{imu@{imu}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} imu}
+
+
+
+Global ICM-\/20948 driver instance. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00024}{24}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_a70317553f12ff1d3b53c82107a6cb5cf}\label{mag__test_8ino_a70317553f12ff1d3b53c82107a6cb5cf} 
+\index{mag\_test.ino@{mag\_test.ino}!N\_OPM@{N\_OPM}}
+\index{N\_OPM@{N\_OPM}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{N\_OPM}{N\_OPM}}
+{\footnotesize\ttfamily const uint8\+\_\+t N\+\_\+\+OPM = 6}
+
+
+
+Number of printable magnetometer operation modes. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00047}{47}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+
+\Hypertarget{mag__test_8ino_aab69c51478cd4dd7461938611ebc08bf}\label{mag__test_8ino_aab69c51478cd4dd7461938611ebc08bf} 
+\index{mag\_test.ino@{mag\_test.ino}!opMode@{opMode}}
+\index{opMode@{opMode}!mag\_test.ino@{mag\_test.ino}}
+\doxysubsubsection{\texorpdfstring{opMode}{opMode}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bb}{ICM20948\+\_\+\+Op\+\_\+\+Mode}} op\+Mode\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bbaeb5ecad776b2d1994801f86a1046bdd4}{ICM20948\_Op\_Mode::MODE\_POWER\_DOWN}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bba7974d706e59ca8d22b8782dfdabce86e}{ICM20948\_Op\_Mode::MODE\_SINGLE\_MEASUREMENT}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bbaf2654418af9eab4757668f4339177c53}{ICM20948\_Op\_Mode::MODE\_CONTINUOUS\_1}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bba2e879cf4786e911224250d6b0194a582}{ICM20948\_Op\_Mode::MODE\_CONTINUOUS\_2}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bba7f0a8ea70bc11d0092f0cd5d87ce6a3f}{ICM20948\_Op\_Mode::MODE\_CONTINUOUS\_3}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bba9a1ea869de47842c32f3676129ee81af}{ICM20948\_Op\_Mode::MODE\_CONTINUOUS\_4}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_ad14b8d7e0be37ca0ccaf45ccc31c18bba6c83671c670b651f57b5b009b6a2229b}{ICM20948\_Op\_Mode::MODE\_SELF\_TEST}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Magnetometer operating modes tested by the sweep. 
+
+
+
+Definition at line \mbox{\hyperlink{mag__test_8ino_source_l00032}{32}} of file \mbox{\hyperlink{mag__test_8ino_source}{mag\+\_\+test.\+ino}}.
+

@@ -1,0 +1,29 @@
+<map id="examples/test/test.ino" name="examples/test/test.ino">
+<area shape="rect" id="Node000001" title="Accelerometer DLPF validation sketch for the 7Semi ICM&#45;20948." alt="" coords="489,5,657,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="702,299,766,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="603,28,641,46,686,73,730,107,766,151,779,176,785,199,784,223,777,252,768,272,756,289,751,286,763,269,771,250,778,222,780,200,774,178,761,153,726,111,683,77,639,51,601,33"/>
+<area shape="rect" id="Node000003" href="$DevLab__ICM20948_8h.html" title=" " alt="" coords="253,79,407,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="534,33,383,77,381,72,533,28"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="407,90,498,93,598,102,685,120,719,133,741,150,752,166,758,183,761,220,756,256,747,286,741,285,750,255,756,220,753,184,747,168,737,154,716,138,684,125,597,107,498,98,407,95"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="187,299,271,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="327,105,242,287,238,285,322,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="344,299,399,324"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="331,104,328,167,331,209,339,250,357,286,352,289,334,252,326,209,323,167,326,104"/>
+<area shape="rect" id="Node000006" href="$ICM20948__regs_8h.html" title=" " alt="" coords="5,152,140,177"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="289,107,128,151,127,146,288,101"/>
+<area shape="rect" id="Node000007" href="$7Semi__Interface_8h.html" title=" " alt="" coords="349,225,489,251"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="334,104,342,138,359,176,375,197,394,215,391,219,371,200,354,179,337,139,329,105"/>
+<area shape="rect" id="Node000008" href="$7Semi__I2C__Interface_8h.html" title=" " alt="" coords="559,152,727,177"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="381,101,580,146,579,152,380,107"/>
+<area shape="rect" id="Node000009" href="$7Semi__SPI__Interface_8h.html" title=" " alt="" coords="368,152,535,177"/>
+<area shape="poly" id="edge14_Node000003_Node000009" title=" " alt="" coords="351,102,421,143,419,147,348,106"/>
+<area shape="rect" id="Node000010" href="$BusIO__7Semi_8h.html" title=" " alt="" coords="71,225,191,251"/>
+<area shape="poly" id="edge16_Node000003_Node000010" title=" " alt="" coords="301,106,257,126,212,154,178,185,150,216,146,212,174,181,208,150,255,122,299,102"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="470,248,689,297,688,302,469,253"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="390,253,274,296,272,291,388,248"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="414,253,389,289,384,286,409,250"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="653,176,722,286,717,288,648,179"/>
+<area shape="poly" id="edge12_Node000008_Node000007" title=" " alt="" coords="608,180,469,224,468,219,607,175"/>
+<area shape="poly" id="edge15_Node000009_Node000007" title=" " alt="" coords="448,179,432,214,428,212,444,177"/>
+<area shape="poly" id="edge17_Node000010_Node000004" title=" " alt="" coords="149,249,203,288,200,292,145,253"/>
+</map>

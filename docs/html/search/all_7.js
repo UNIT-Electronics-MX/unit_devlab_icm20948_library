@@ -57,5 +57,10 @@ var searchData=
   ['gyro_5fyout_5fh_54',['GYRO_YOUT_H',['../ICM20948__regs_8h.html#a0970193c5ba295a66f057c017663adf1',1,'ICM20948_regs.h']]],
   ['gyro_5fyout_5fl_55',['GYRO_YOUT_L',['../ICM20948__regs_8h.html#af2403ccc9042c6a869278a7c211a396d',1,'ICM20948_regs.h']]],
   ['gyro_5fzout_5fh_56',['GYRO_ZOUT_H',['../ICM20948__regs_8h.html#ac0fcd61ece1f100c02494fc94f0b0dad',1,'ICM20948_regs.h']]],
-  ['gyro_5fzout_5fl_57',['GYRO_ZOUT_L',['../ICM20948__regs_8h.html#a5466aa6a32d0b17e834ef9792e7f415d',1,'ICM20948_regs.h']]]
+  ['gyro_5fzout_5fl_57',['GYRO_ZOUT_L',['../ICM20948__regs_8h.html#a5466aa6a32d0b17e834ef9792e7f415d',1,'ICM20948_regs.h']]],
+  ['gyroavgcfg_58',['gyroAVGCfg',['../gyr__test_8ino.html#a463898670c43b15f342a38ee2baa2b38',1,'gyr_test.ino']]],
+  ['gyrodlpf_59',['gyroDLPF',['../gyr__test_8ino.html#a716a28065e18db7cab02f68d1d68b418',1,'gyr_test.ino']]],
+  ['gyrofscfg_60',['gyroFSCfg',['../gyr__test_8ino.html#a96719cfcca29e73648c7a8876b7ca3a2',1,'gyr_test.ino']]],
+  ['gyroscope_61',['Reading Gyroscope',['../index.html#autotoc_md21',1,'']]],
+  ['gyroscope_20scale_62',['Setting Gyroscope Scale',['../index.html#autotoc_md25',1,'']]]
 ];

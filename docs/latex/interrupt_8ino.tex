@@ -1,2 +1,304 @@
 \doxysection{examples/interrupt/interrupt.ino File Reference}
 \hypertarget{interrupt_8ino}{}\label{interrupt_8ino}\index{examples/interrupt/interrupt.ino@{examples/interrupt/interrupt.ino}}
+
+
+I2C interrupt example for the 7Semi ICM-\/20948.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dev\+Lab\+\_\+\+ICM20948.\+h$>$}\newline
+Include dependency graph for interrupt.\+ino\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interrupt_8ino__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{interrupt_8ino_a526d580d324bce60a3e964066fae77e3}{SDA\+\_\+\+PIN}}~6
+\begin{DoxyCompactList}\small\item\em I2C SDA pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupt_8ino_a06c967e78bcedcee909a70764f879433}{SCL\+\_\+\+PIN}}~7
+\begin{DoxyCompactList}\small\item\em I2C SCL pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupt_8ino_a8b7500a141450a9df212017430c0df9e}{I2\+C\+\_\+\+FREQ}}~400000\+UL
+\begin{DoxyCompactList}\small\item\em I2C bus speed in hertz. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupt_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}{ICM\+\_\+\+ADDR}}~0x69
+\begin{DoxyCompactList}\small\item\em ICM-\/20948 I2C address selected by the AD0 pin. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{interrupt_8ino_aeedc5a6d7f0f7fc5c87dd7e256bb5977}{PIN\+\_\+\+INT}}~D7
+\begin{DoxyCompactList}\small\item\em MCU pin connected to the IMU interrupt output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interrupt_8ino_a8765c1cf679c82cf73a0a13af44b983b}{print\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a separator line to Serial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interrupt_8ino_a42633dcf8fe2689c57c8113825f74c66}{print\+Doble\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a double separator line to Serial. \end{DoxyCompactList}\item 
+void IRAM\+\_\+\+ATTR \mbox{\hyperlink{interrupt_8ino_aef596810c644e9f3853919b365e8270f}{isr\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Interrupt service routine for the IMU data-\/ready signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Initialize I2C, verify the IMU, configure interrupts, and attach ISR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interrupt_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Report interrupt events when the ISR count changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} \mbox{\hyperlink{interrupt_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}
+\begin{DoxyCompactList}\small\item\em Global ICM-\/20948 driver instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structICM20948__IntPinConfig}{ICM20948\+\_\+\+Int\+Pin\+Config}} \mbox{\hyperlink{interrupt_8ino_af8536a7aea1fb9b62bdcad10835f1f53}{pin\+Cfg}}
+\begin{DoxyCompactList}\small\item\em Interrupt pin electrical and latch configuration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structICM20948__IntEnableConfig}{ICM20948\+\_\+\+Int\+Enable\+Config}} \mbox{\hyperlink{interrupt_8ino_a3ed2ef4689db703e7ed0abe059695ca3}{int\+En}}
+\begin{DoxyCompactList}\small\item\em Interrupt enable flags used by this example. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \mbox{\hyperlink{interrupt_8ino_af1bf977df8c9fcc5211d7331c2319268}{isr\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Number of interrupt events observed by the ISR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I2C interrupt example for the 7Semi ICM-\/20948. 
+
+Configures the IMU raw-\/data-\/ready interrupt pin and counts ISR events on an Arduino-\/compatible board. 
+
+Definition in file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{interrupt_8ino_a8b7500a141450a9df212017430c0df9e}\label{interrupt_8ino_a8b7500a141450a9df212017430c0df9e} 
+\index{interrupt.ino@{interrupt.ino}!I2C\_FREQ@{I2C\_FREQ}}
+\index{I2C\_FREQ@{I2C\_FREQ}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{I2C\_FREQ}{I2C\_FREQ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+FREQ~400000\+UL}
+
+
+
+I2C bus speed in hertz. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00016}{16}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}\label{interrupt_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb} 
+\index{interrupt.ino@{interrupt.ino}!ICM\_ADDR@{ICM\_ADDR}}
+\index{ICM\_ADDR@{ICM\_ADDR}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{ICM\_ADDR}{ICM\_ADDR}}
+{\footnotesize\ttfamily \#define ICM\+\_\+\+ADDR~0x69}
+
+
+
+ICM-\/20948 I2C address selected by the AD0 pin. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00018}{18}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_aeedc5a6d7f0f7fc5c87dd7e256bb5977}\label{interrupt_8ino_aeedc5a6d7f0f7fc5c87dd7e256bb5977} 
+\index{interrupt.ino@{interrupt.ino}!PIN\_INT@{PIN\_INT}}
+\index{PIN\_INT@{PIN\_INT}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{PIN\_INT}{PIN\_INT}}
+{\footnotesize\ttfamily \#define PIN\+\_\+\+INT~D7}
+
+
+
+MCU pin connected to the IMU interrupt output. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00020}{20}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a06c967e78bcedcee909a70764f879433}\label{interrupt_8ino_a06c967e78bcedcee909a70764f879433} 
+\index{interrupt.ino@{interrupt.ino}!SCL\_PIN@{SCL\_PIN}}
+\index{SCL\_PIN@{SCL\_PIN}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{SCL\_PIN}{SCL\_PIN}}
+{\footnotesize\ttfamily \#define SCL\+\_\+\+PIN~7}
+
+
+
+I2C SCL pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00014}{14}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a526d580d324bce60a3e964066fae77e3}\label{interrupt_8ino_a526d580d324bce60a3e964066fae77e3} 
+\index{interrupt.ino@{interrupt.ino}!SDA\_PIN@{SDA\_PIN}}
+\index{SDA\_PIN@{SDA\_PIN}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{SDA\_PIN}{SDA\_PIN}}
+{\footnotesize\ttfamily \#define SDA\+\_\+\+PIN~6}
+
+
+
+I2C SDA pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00012}{12}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{interrupt_8ino_aef596810c644e9f3853919b365e8270f}\label{interrupt_8ino_aef596810c644e9f3853919b365e8270f} 
+\index{interrupt.ino@{interrupt.ino}!isrHandler@{isrHandler}}
+\index{isrHandler@{isrHandler}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{isrHandler()}{isrHandler()}}
+{\footnotesize\ttfamily void IRAM\+\_\+\+ATTR isr\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interrupt service routine for the IMU data-\/ready signal. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00052}{52}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{interrupt_8ino_afe461d27b9c48d5921c00d521181f12f}\label{interrupt_8ino_afe461d27b9c48d5921c00d521181f12f} 
+\index{interrupt.ino@{interrupt.ino}!loop@{loop}}
+\index{loop@{loop}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Report interrupt events when the ISR count changes. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00094}{94}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a42633dcf8fe2689c57c8113825f74c66}\label{interrupt_8ino_a42633dcf8fe2689c57c8113825f74c66} 
+\index{interrupt.ino@{interrupt.ino}!printDobleLinea@{printDobleLinea}}
+\index{printDobleLinea@{printDobleLinea}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{printDobleLinea()}{printDobleLinea()}}
+{\footnotesize\ttfamily void print\+Doble\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a double separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00028}{28}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a8765c1cf679c82cf73a0a13af44b983b}\label{interrupt_8ino_a8765c1cf679c82cf73a0a13af44b983b} 
+\index{interrupt.ino@{interrupt.ino}!printLinea@{printLinea}}
+\index{printLinea@{printLinea}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{printLinea()}{printLinea()}}
+{\footnotesize\ttfamily void print\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00026}{26}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{interrupt.ino@{interrupt.ino}!setup@{setup}}
+\index{setup@{setup}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize I2C, verify the IMU, configure interrupts, and attach ISR. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00059}{59}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{interrupt_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}\label{interrupt_8ino_aa8226278adaa3f7fb2ad8b966f7787a1} 
+\index{interrupt.ino@{interrupt.ino}!imu@{imu}}
+\index{imu@{imu}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} imu}
+
+
+
+Global ICM-\/20948 driver instance. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00023}{23}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_a3ed2ef4689db703e7ed0abe059695ca3}\label{interrupt_8ino_a3ed2ef4689db703e7ed0abe059695ca3} 
+\index{interrupt.ino@{interrupt.ino}!intEn@{intEn}}
+\index{intEn@{intEn}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{intEn}{intEn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structICM20948__IntEnableConfig}{ICM20948\+\_\+\+Int\+Enable\+Config}} int\+En}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .rawDataRdyEn\ =\ 1\ \ \ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Interrupt enable flags used by this example. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00042}{42}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_af1bf977df8c9fcc5211d7331c2319268}\label{interrupt_8ino_af1bf977df8c9fcc5211d7331c2319268} 
+\index{interrupt.ino@{interrupt.ino}!isrCount@{isrCount}}
+\index{isrCount@{isrCount}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{isrCount}{isrCount}}
+{\footnotesize\ttfamily volatile uint32\+\_\+t isr\+Count = 0}
+
+
+
+Number of interrupt events observed by the ISR. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00047}{47}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+
+\Hypertarget{interrupt_8ino_af8536a7aea1fb9b62bdcad10835f1f53}\label{interrupt_8ino_af8536a7aea1fb9b62bdcad10835f1f53} 
+\index{interrupt.ino@{interrupt.ino}!pinCfg@{pinCfg}}
+\index{pinCfg@{pinCfg}!interrupt.ino@{interrupt.ino}}
+\doxysubsubsection{\texorpdfstring{pinCfg}{pinCfg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structICM20948__IntPinConfig}{ICM20948\+\_\+\+Int\+Pin\+Config}} pin\+Cfg}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .activeLevel\ \ \ =\ 1,}
+\DoxyCodeLine{\ \ .driveMode\ \ \ \ \ =\ 0,}
+\DoxyCodeLine{\ \ .latchMode\ \ \ \ \ =\ 0,}
+\DoxyCodeLine{\ \ .clearMode\ \ \ \ \ =\ 1,}
+\DoxyCodeLine{\ \ .fsyncActLevel\ =\ 0,}
+\DoxyCodeLine{\ \ .fsyncIntEn\ \ \ \ =\ 0,}
+\DoxyCodeLine{\ \ .bypassEn\ \ \ \ \ \ =\ 0}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Interrupt pin electrical and latch configuration. 
+
+
+
+Definition at line \mbox{\hyperlink{interrupt_8ino_source_l00031}{31}} of file \mbox{\hyperlink{interrupt_8ino_source}{interrupt.\+ino}}.
+

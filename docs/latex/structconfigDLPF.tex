@@ -1,0 +1,109 @@
+\doxysection{config\+DLPF Struct Reference}
+\hypertarget{structconfigDLPF}{}\label{structconfigDLPF}\index{configDLPF@{configDLPF}}
+
+
+Gyroscope DLPF divider and timing configuration.  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structconfigDLPF_a3e61183bf0cc5e5fdbfddb96b2adc9c2}{dlpf\+\_\+idx}}
+\begin{DoxyCompactList}\small\item\em Index into the gyro\+DLPF lookup table. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structconfigDLPF_a522bdaa9ec30e1a07c1e1c7d1a228946}{div}}
+\begin{DoxyCompactList}\small\item\em Sample-\/rate divider written to the IMU register. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structconfigDLPF_a810cc6538484c5984d1ad25e1f554370}{nbw\+\_\+hz}}
+\begin{DoxyCompactList}\small\item\em Noise bandwidth in hertz for reporting. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{structconfigDLPF_a258433764b5ca0dfbc1636b6ac90d27d}{odr\+\_\+hz}}
+\begin{DoxyCompactList}\small\item\em Output data rate in hertz for timing calculations. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structconfigDLPF_a4d1ecadff3d90a4666035aa9ba3dc166}{nombre}}
+\begin{DoxyCompactList}\small\item\em Text label printed with each captured sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gyroscope DLPF divider and timing configuration. 
+
+Accelerometer DLPF divider and timing configuration. 
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00026}{26}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structconfigDLPF_a522bdaa9ec30e1a07c1e1c7d1a228946}\label{structconfigDLPF_a522bdaa9ec30e1a07c1e1c7d1a228946} 
+\index{configDLPF@{configDLPF}!div@{div}}
+\index{div@{div}!configDLPF@{configDLPF}}
+\doxysubsubsection{\texorpdfstring{div}{div}}
+{\footnotesize\ttfamily uint16\+\_\+t config\+DLPF\+::div}
+
+
+
+Sample-\/rate divider written to the IMU register. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00030}{30}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{structconfigDLPF_a3e61183bf0cc5e5fdbfddb96b2adc9c2}\label{structconfigDLPF_a3e61183bf0cc5e5fdbfddb96b2adc9c2} 
+\index{configDLPF@{configDLPF}!dlpf\_idx@{dlpf\_idx}}
+\index{dlpf\_idx@{dlpf\_idx}!configDLPF@{configDLPF}}
+\doxysubsubsection{\texorpdfstring{dlpf\_idx}{dlpf\_idx}}
+{\footnotesize\ttfamily uint8\+\_\+t config\+DLPF\+::dlpf\+\_\+idx}
+
+
+
+Index into the gyro\+DLPF lookup table. 
+
+Index into the accel\+DLPF lookup table. 
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00028}{28}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{structconfigDLPF_a810cc6538484c5984d1ad25e1f554370}\label{structconfigDLPF_a810cc6538484c5984d1ad25e1f554370} 
+\index{configDLPF@{configDLPF}!nbw\_hz@{nbw\_hz}}
+\index{nbw\_hz@{nbw\_hz}!configDLPF@{configDLPF}}
+\doxysubsubsection{\texorpdfstring{nbw\_hz}{nbw\_hz}}
+{\footnotesize\ttfamily float config\+DLPF\+::nbw\+\_\+hz}
+
+
+
+Noise bandwidth in hertz for reporting. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00032}{32}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{structconfigDLPF_a4d1ecadff3d90a4666035aa9ba3dc166}\label{structconfigDLPF_a4d1ecadff3d90a4666035aa9ba3dc166} 
+\index{configDLPF@{configDLPF}!nombre@{nombre}}
+\index{nombre@{nombre}!configDLPF@{configDLPF}}
+\doxysubsubsection{\texorpdfstring{nombre}{nombre}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} config\+DLPF\+::nombre}
+
+
+
+Text label printed with each captured sample. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00036}{36}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{structconfigDLPF_a258433764b5ca0dfbc1636b6ac90d27d}\label{structconfigDLPF_a258433764b5ca0dfbc1636b6ac90d27d} 
+\index{configDLPF@{configDLPF}!odr\_hz@{odr\_hz}}
+\index{odr\_hz@{odr\_hz}!configDLPF@{configDLPF}}
+\doxysubsubsection{\texorpdfstring{odr\_hz}{odr\_hz}}
+{\footnotesize\ttfamily float config\+DLPF\+::odr\+\_\+hz}
+
+
+
+Output data rate in hertz for timing calculations. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00034}{34}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+examples/gyr\+\_\+test/\mbox{\hyperlink{gyr__test_8ino}{gyr\+\_\+test.\+ino}}\item 
+examples/test/\mbox{\hyperlink{test_8ino}{test.\+ino}}\item 
+examples/test2/\mbox{\hyperlink{test2_8ino}{test2.\+ino}}\end{DoxyCompactItemize}

@@ -1,0 +1,23 @@
+<map id="applySettings" name="applySettings">
+<area shape="rect" id="Node000001" title="Apply one accelerometer full&#45;scale and DLPF configuration." alt="" coords="5,77,116,102"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#aca0cb8da36b8e9128299b9aeb5bb60ec" title=" " alt="" coords="180,5,387,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,74,163,55,193,46,194,52,165,60,102,79"/>
+<area shape="rect" id="Node000005" href="$classDevLab__ICM20948.html#ac52d80aad738b90aa0f05e9d6404bb85" title=" " alt="" coords="164,134,403,159"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="100,99,165,119,205,128,204,134,163,124,99,105"/>
+<area shape="rect" id="Node000009" href="$classDevLab__ICM20948.html#a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43" title=" " alt="" coords="180,69,387,109"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="116,87,166,87,166,92,116,92"/>
+<area shape="rect" id="Node000003" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="451,33,673,58"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,30,437,34,437,39,387,35"/>
+<area shape="rect" id="Node000004" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="944,33,1093,58"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="387,19,451,17,674,13,771,15,896,24,931,28,930,33,896,29,771,20,674,18,451,23,387,24"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="674,43,930,43,930,48,674,48"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="356,131,402,119,468,91,525,62,528,67,471,96,404,124,358,137"/>
+<area shape="rect" id="Node000006" href="$classBusIO__7Semi.html#ac7b3d1c425f7187abbe1bbec64d9ccea" title=" " alt="" coords="479,185,645,210"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="354,157,479,180,478,185,353,162"/>
+<area shape="rect" id="Node000007" href="$classBusIO__7Semi.html#a855c7388d4118e632c84c7f8e2e3ddc2" title=" " alt="" coords="721,109,896,134"/>
+<area shape="poly" id="edge10_Node000005_Node000007" title=" " alt="" coords="403,138,707,124,708,129,403,144"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="608,182,673,163,756,136,758,141,674,168,609,187"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="844,106,969,60,971,65,846,111"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="387,70,467,58,468,63,387,76"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="387,93,707,113,707,118,387,98"/>
+</map>

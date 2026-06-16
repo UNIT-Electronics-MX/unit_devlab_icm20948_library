@@ -1,0 +1,13 @@
+<map id="DevLab_ICM20948::initMag" name="DevLab_ICM20948::initMag">
+<area shape="rect" id="Node000001" title=" " alt="" coords="405,55,605,80"/>
+<area shape="rect" id="Node000002" href="$mag__test_8ino.html#af42a493b8d96759f43d866fbe725cf3d" title="Initialize the magnetometer and collect samples for each mode." alt="" coords="247,29,357,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,56,357,52,358,46,392,50"/>
+<area shape="rect" id="Node000006" href="$i2c__basic_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure Serial, I2C, sensor identity check, and enabled sensors." alt="" coords="273,79,331,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="391,83,332,91,331,85,391,78"/>
+<area shape="rect" id="Node000003" href="$gyr__test_8ino.html#a59a0400232b9ffe7d4395b166f74593a" title="Run the gyroscope validation sweep and print each captured sample." alt="" coords="112,5,199,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,33,198,28,199,22,234,28"/>
+<area shape="rect" id="Node000005" href="$mag__test_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, verify the IMU, enable sensors, and start the sweep." alt="" coords="126,55,185,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="234,57,185,65,184,60,233,51"/>
+<area shape="rect" id="Node000004" href="$gyr__test_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, reset/wake the IMU, enable gyro, and start the sweep." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
+</map>

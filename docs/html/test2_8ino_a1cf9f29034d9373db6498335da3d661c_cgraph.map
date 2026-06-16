@@ -1,0 +1,11 @@
+<map id="firstStage" name="firstStage">
+<area shape="rect" id="Node000001" title="Verify the IMU identity register." alt="" coords="5,31,89,56"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a8bef7eafb3b67eb736f491d0df453b9e" title=" " alt="" coords="137,31,372,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,41,124,41,124,46,90,46"/>
+<area shape="rect" id="Node000003" href="$classBusIO__7Semi.html#a933c66d9a1afe84102323e209a93dd31" title=" " alt="" coords="459,5,604,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,30,445,23,445,28,372,35"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="420,55,643,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="372,51,407,54,406,59,372,56"/>
+<area shape="rect" id="Node000005" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="691,55,840,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="643,65,677,65,677,70,643,70"/>
+</map>

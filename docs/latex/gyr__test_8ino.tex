@@ -1,2 +1,499 @@
 \doxysection{examples/gyr\+\_\+test/gyr\+\_\+test.ino File Reference}
 \hypertarget{gyr__test_8ino}{}\label{gyr__test_8ino}\index{examples/gyr\_test/gyr\_test.ino@{examples/gyr\_test/gyr\_test.ino}}
+
+
+Gyroscope DLPF and full-\/scale sweep for the 7Semi ICM-\/20948.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dev\+Lab\+\_\+\+ICM20948.\+h$>$}\newline
+Include dependency graph for gyr\+\_\+test.\+ino\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyr__test_8ino__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}}
+\begin{DoxyCompactList}\small\item\em Gyroscope DLPF divider and timing configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gyr__test_8ino_a526d580d324bce60a3e964066fae77e3}{SDA\+\_\+\+PIN}}~6
+\begin{DoxyCompactList}\small\item\em I2C SDA pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{gyr__test_8ino_a06c967e78bcedcee909a70764f879433}{SCL\+\_\+\+PIN}}~7
+\begin{DoxyCompactList}\small\item\em I2C SCL pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{gyr__test_8ino_a8b7500a141450a9df212017430c0df9e}{I2\+C\+\_\+\+FREQ}}~400000\+UL
+\begin{DoxyCompactList}\small\item\em I2C bus speed in hertz. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{gyr__test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}{ICM\+\_\+\+ADDR}}~0x69
+\begin{DoxyCompactList}\small\item\em ICM-\/20948 I2C address selected by the AD0 pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gyr__test_8ino_a8765c1cf679c82cf73a0a13af44b983b}{print\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a separator line to Serial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66}{print\+Doble\+Linea}} ()
+\begin{DoxyCompactList}\small\item\em Print a double separator line to Serial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c}{first\+Stage}} ()
+\begin{DoxyCompactList}\small\item\em Verify the IMU identity register. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729}{apply\+Settings}} (uint8\+\_\+t fs\+\_\+idx, const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} \&cfg)
+\begin{DoxyCompactList}\small\item\em Apply one gyroscope full-\/scale and DLPF configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a}{run\+Sweep}} ()
+\begin{DoxyCompactList}\small\item\em Run the gyroscope validation sweep and print each captured sample. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Initialize I2C, reset/wake the IMU, enable gyro, and start the sweep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gyr__test_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Empty loop; this sketch runs the gyroscope sweep once in \doxylink{gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} \mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}} \mbox{[}$\,$\mbox{]}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{gyr__test_8ino_a7a9c77b04f25920366c8b7b1e13d4854}{N\+\_\+\+DLPF}} = sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}) / sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}\mbox{[}0\mbox{]})
+\begin{DoxyCompactList}\small\item\em Number of gyroscope DLPF configurations. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7d}{ICM20948\+\_\+\+Gyro\+\_\+\+Full\+Scale}} \mbox{\hyperlink{gyr__test_8ino_a96719cfcca29e73648c7a8876b7ca3a2}{gyro\+FSCfg}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Gyroscope full-\/scale ranges exercised by the sweep. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gyr__test_8ino_ac00ecbbc3aaaa24d969fe7187c3cdbb7}{etiquetas\+Gyro\+FSCfg}} \mbox{[}$\,$\mbox{]} = \{"{}250"{}, "{}500"{}, "{}1000"{}, "{}2000"{}\}
+\begin{DoxyCompactList}\small\item\em Text labels matching gyro\+FSCfg. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{gyr__test_8ino_a6e9ca5bda437536b80c2d5b592629088}{N\+\_\+\+FS}} = 4
+\begin{DoxyCompactList}\small\item\em Number of gyroscope full-\/scale ranges. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1}{ICM20948\+\_\+\+Gyro\+\_\+\+DLPF}} \mbox{\hyperlink{gyr__test_8ino_a716a28065e18db7cab02f68d1d68b418}{gyro\+DLPF}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Gyroscope DLPF enum values matching configs\+DLPF. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088}{ICM20948\+\_\+\+Gyro\+\_\+\+Average}} \mbox{\hyperlink{gyr__test_8ino_a463898670c43b15f342a38ee2baa2b38}{gyro\+AVGCfg}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Gyroscope averaging settings available for experiments. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gyr__test_8ino_aded31576e106714b5b4d358a997a7ce8}{etiquetas\+Gyro\+AVGCfg}} \mbox{[}$\,$\mbox{]} = \{"{}1"{},"{}2"{},"{}4"{},"{}8"{},"{}16"{},"{}32"{},"{}64"{},"{}128"{}\}
+\begin{DoxyCompactList}\small\item\em Text labels matching gyro\+AVGCfg. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{gyr__test_8ino_a0d5bdf34da5950970f04fcb4d629a48a}{N\+\_\+\+AVG}} = 8
+\begin{DoxyCompactList}\small\item\em Number of gyroscope averaging settings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} \mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}
+\begin{DoxyCompactList}\small\item\em Global ICM-\/20948 driver instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gyroscope DLPF and full-\/scale sweep for the 7Semi ICM-\/20948. 
+
+Applies each gyroscope filter/full-\/scale configuration over I2C and prints repeated samples for validation and noise comparison. 
+
+Definition in file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{gyr__test_8ino_a8b7500a141450a9df212017430c0df9e}\label{gyr__test_8ino_a8b7500a141450a9df212017430c0df9e} 
+\index{gyr\_test.ino@{gyr\_test.ino}!I2C\_FREQ@{I2C\_FREQ}}
+\index{I2C\_FREQ@{I2C\_FREQ}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{I2C\_FREQ}{I2C\_FREQ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+FREQ~400000\+UL}
+
+
+
+I2C bus speed in hertz. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00018}{18}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}\label{gyr__test_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb} 
+\index{gyr\_test.ino@{gyr\_test.ino}!ICM\_ADDR@{ICM\_ADDR}}
+\index{ICM\_ADDR@{ICM\_ADDR}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{ICM\_ADDR}{ICM\_ADDR}}
+{\footnotesize\ttfamily \#define ICM\+\_\+\+ADDR~0x69}
+
+
+
+ICM-\/20948 I2C address selected by the AD0 pin. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00020}{20}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a06c967e78bcedcee909a70764f879433}\label{gyr__test_8ino_a06c967e78bcedcee909a70764f879433} 
+\index{gyr\_test.ino@{gyr\_test.ino}!SCL\_PIN@{SCL\_PIN}}
+\index{SCL\_PIN@{SCL\_PIN}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{SCL\_PIN}{SCL\_PIN}}
+{\footnotesize\ttfamily \#define SCL\+\_\+\+PIN~7}
+
+
+
+I2C SCL pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00016}{16}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a526d580d324bce60a3e964066fae77e3}\label{gyr__test_8ino_a526d580d324bce60a3e964066fae77e3} 
+\index{gyr\_test.ino@{gyr\_test.ino}!SDA\_PIN@{SDA\_PIN}}
+\index{SDA\_PIN@{SDA\_PIN}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{SDA\_PIN}{SDA\_PIN}}
+{\footnotesize\ttfamily \#define SDA\+\_\+\+PIN~6}
+
+
+
+I2C SDA pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00014}{14}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729}\label{gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729} 
+\index{gyr\_test.ino@{gyr\_test.ino}!applySettings@{applySettings}}
+\index{applySettings@{applySettings}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{applySettings()}{applySettings()}}
+{\footnotesize\ttfamily bool apply\+Settings (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fs\+\_\+idx,  }\item[{const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} \&}]{cfg }\end{DoxyParamCaption})}
+
+
+
+Apply one gyroscope full-\/scale and DLPF configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fs\+\_\+idx} & Index into gyro\+FSCfg. \\
+\hline
+{\em cfg} & DLPF timing and divider configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all configuration writes succeeded, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00133}{133}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c}\label{gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c} 
+\index{gyr\_test.ino@{gyr\_test.ino}!firstStage@{firstStage}}
+\index{firstStage@{firstStage}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{firstStage()}{firstStage()}}
+{\footnotesize\ttfamily void first\+Stage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verify the IMU identity register. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00117}{117}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gyr__test_8ino_afe461d27b9c48d5921c00d521181f12f}\label{gyr__test_8ino_afe461d27b9c48d5921c00d521181f12f} 
+\index{gyr\_test.ino@{gyr\_test.ino}!loop@{loop}}
+\index{loop@{loop}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Empty loop; this sketch runs the gyroscope sweep once in \doxylink{gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup()}. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00248}{248}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66}\label{gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66} 
+\index{gyr\_test.ino@{gyr\_test.ino}!printDobleLinea@{printDobleLinea}}
+\index{printDobleLinea@{printDobleLinea}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{printDobleLinea()}{printDobleLinea()}}
+{\footnotesize\ttfamily void print\+Doble\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a double separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00112}{112}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gyr__test_8ino_a8765c1cf679c82cf73a0a13af44b983b}\label{gyr__test_8ino_a8765c1cf679c82cf73a0a13af44b983b} 
+\index{gyr\_test.ino@{gyr\_test.ino}!printLinea@{printLinea}}
+\index{printLinea@{printLinea}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{printLinea()}{printLinea()}}
+{\footnotesize\ttfamily void print\+Linea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print a separator line to Serial. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00110}{110}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a}\label{gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a} 
+\index{gyr\_test.ino@{gyr\_test.ino}!runSweep@{runSweep}}
+\index{runSweep@{runSweep}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{runSweep()}{runSweep()}}
+{\footnotesize\ttfamily void run\+Sweep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the gyroscope validation sweep and print each captured sample. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00158}{158}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{gyr\_test.ino@{gyr\_test.ino}!setup@{setup}}
+\index{setup@{setup}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize I2C, reset/wake the IMU, enable gyro, and start the sweep. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00203}{203}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}\label{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de} 
+\index{gyr\_test.ino@{gyr\_test.ino}!configsDLPF@{configsDLPF}}
+\index{configsDLPF@{configsDLPF}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{configsDLPF}{configsDLPF}}
+{\footnotesize\ttfamily \texorpdfstring{$\ast$}{*}const \mbox{\hyperlink{structconfigDLPF}{config\+DLPF}} configs\+DLPF}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \{\ \ 0,\ \ \ 0,\ \ 229.8f,\ 1125.0f,\ \textcolor{stringliteral}{"{}196,6\ ;\ 229,8\ ;\ 1125.0\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 1,\ \ \ 0,\ \ 187.6f,\ 1125.0f,\ \textcolor{stringliteral}{"{}151,8\ ;\ 187.6\ ;\ 1125.0\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 2,\ \ \ 0,\ \ 154.3f,\ \ 1125.0f,\ \textcolor{stringliteral}{"{}119,5\ ;\ 154,3\ ;\ 1125.0\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 3,\ \ \ 2,\ \ \ 73.3f,\ \ 375.0f,\ \textcolor{stringliteral}{"{}51,2\ ;\ 73,3\ ;\ 375\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 4,\ \ \ 5,\ \ \ 35.9f,\ \ 187.5f,\ \textcolor{stringliteral}{"{}23,9\ ;\ 35,9\ ;\ 187.5\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 5,\ \ 14,\ \ \ 17.8f,\ \ \ 75.0f,\ \textcolor{stringliteral}{"{}11,6\ ;\ 17,8\ ;\ \ 75.0\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 6,\ \ 29,\ \ \ \ 8.9f,\ \ \ 37.5f,\ \textcolor{stringliteral}{"{}5,7\ ;\ 8,9\ ;\ \ 37.5\ "{}}\ \},}
+\DoxyCodeLine{\ \ \{\ \ 7,\ \ \ 0,\ \ 376.5f,\ 1125.0f,\ \textcolor{stringliteral}{"{}361,4\ ;\ 376,5\ ;\ 1125\ "{}}\ \},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00041}{41}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_aded31576e106714b5b4d358a997a7ce8}\label{gyr__test_8ino_aded31576e106714b5b4d358a997a7ce8} 
+\index{gyr\_test.ino@{gyr\_test.ino}!etiquetasGyroAVGCfg@{etiquetasGyroAVGCfg}}
+\index{etiquetasGyroAVGCfg@{etiquetasGyroAVGCfg}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasGyroAVGCfg}{etiquetasGyroAVGCfg}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+Gyro\+AVGCfg\mbox{[}$\,$\mbox{]} = \{"{}1"{},"{}2"{},"{}4"{},"{}8"{},"{}16"{},"{}32"{},"{}64"{},"{}128"{}\}}
+
+
+
+Text labels matching gyro\+AVGCfg. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00102}{102}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_ac00ecbbc3aaaa24d969fe7187c3cdbb7}\label{gyr__test_8ino_ac00ecbbc3aaaa24d969fe7187c3cdbb7} 
+\index{gyr\_test.ino@{gyr\_test.ino}!etiquetasGyroFSCfg@{etiquetasGyroFSCfg}}
+\index{etiquetasGyroFSCfg@{etiquetasGyroFSCfg}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{etiquetasGyroFSCfg}{etiquetasGyroFSCfg}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} etiquetas\+Gyro\+FSCfg\mbox{[}$\,$\mbox{]} = \{"{}250"{}, "{}500"{}, "{}1000"{}, "{}2000"{}\}}
+
+
+
+Text labels matching gyro\+FSCfg. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00073}{73}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a463898670c43b15f342a38ee2baa2b38}\label{gyr__test_8ino_a463898670c43b15f342a38ee2baa2b38} 
+\index{gyr\_test.ino@{gyr\_test.ino}!gyroAVGCfg@{gyroAVGCfg}}
+\index{gyroAVGCfg@{gyroAVGCfg}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{gyroAVGCfg}{gyroAVGCfg}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088}{ICM20948\+\_\+\+Gyro\+\_\+\+Average}} gyro\+AVGCfg\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a0e1dad64ff226da838c42ef470c44130}{ICM20948\_Gyro\_Average::AVG\_1}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a88daf0edb8c43762591eb529182359a3}{ICM20948\_Gyro\_Average::AVG\_2}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a4f91b71e175d17b54f72111f8a2f448f}{ICM20948\_Gyro\_Average::AVG\_4}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a682b1e1305b78c070fc0d38523969924}{ICM20948\_Gyro\_Average::AVG\_8}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088ad52a23a3a06614aefd7b8c55510f95f6}{ICM20948\_Gyro\_Average::AVG\_16}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a5a625254a69fb541caa23fed503c1e2b}{ICM20948\_Gyro\_Average::AVG\_32}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088ac36b80b074a6c01ebbb930bce9b15f93}{ICM20948\_Gyro\_Average::AVG\_64}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a42196be320909c8dda602c04785329d4}{ICM20948\_Gyro\_Average::AVG\_128}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Gyroscope averaging settings available for experiments. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00090}{90}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a716a28065e18db7cab02f68d1d68b418}\label{gyr__test_8ino_a716a28065e18db7cab02f68d1d68b418} 
+\index{gyr\_test.ino@{gyr\_test.ino}!gyroDLPF@{gyroDLPF}}
+\index{gyroDLPF@{gyroDLPF}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{gyroDLPF}{gyroDLPF}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1}{ICM20948\+\_\+\+Gyro\+\_\+\+DLPF}} gyro\+DLPF\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1a662ccb78ed3b42f60e60feeb4152f02d}{ICM20948\_Gyro\_DLPF::DLPF\_196HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1a28104648b3e4be8f7935c4e33a93f86d}{ICM20948\_Gyro\_DLPF::DLPF\_151HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1a743e10bbb0a9ee5ed323e4730038d0ea}{ICM20948\_Gyro\_DLPF::DLPF\_119HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1aacd670919f63d087c79b5d1768c5f790}{ICM20948\_Gyro\_DLPF::DLPF\_51HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1af0563928829b8e022a67761651b4ccd3}{ICM20948\_Gyro\_DLPF::DLPF\_23HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1a42f1efcd8f9af5f24fecd31ca9a61dee}{ICM20948\_Gyro\_DLPF::DLPF\_11HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1a0a652e865481fdc15eb7b725dec06c16}{ICM20948\_Gyro\_DLPF::DLPF\_5HZ}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a9f4d08566440cf9c577724b075c59aa1ad73ac78850a4c2472ecf9b9d4352193a}{ICM20948\_Gyro\_DLPF::DLPF\_361HZ}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Gyroscope DLPF enum values matching configs\+DLPF. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00078}{78}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a96719cfcca29e73648c7a8876b7ca3a2}\label{gyr__test_8ino_a96719cfcca29e73648c7a8876b7ca3a2} 
+\index{gyr\_test.ino@{gyr\_test.ino}!gyroFSCfg@{gyroFSCfg}}
+\index{gyroFSCfg@{gyroFSCfg}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{gyroFSCfg}{gyroFSCfg}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7d}{ICM20948\+\_\+\+Gyro\+\_\+\+Full\+Scale}} gyro\+FSCfg\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7da280ca4444fdadaea21eee0318f1058cd}{ICM20948\_Gyro\_FullScale::DPS\_250}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7daa6c595a11edc7bce59747f5b079f2c4e}{ICM20948\_Gyro\_FullScale::DPS\_500}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7dafb97ded09a3f4b47d17ccccb847fbe63}{ICM20948\_Gyro\_FullScale::DPS\_1000}},}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7da7a03fe4c8dae7b2cc724db90de97f53f}{ICM20948\_Gyro\_FullScale::DPS\_2000}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Gyroscope full-\/scale ranges exercised by the sweep. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00065}{65}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}\label{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1} 
+\index{gyr\_test.ino@{gyr\_test.ino}!imu@{imu}}
+\index{imu@{imu}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} imu}
+
+
+
+Global ICM-\/20948 driver instance. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00107}{107}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a0d5bdf34da5950970f04fcb4d629a48a}\label{gyr__test_8ino_a0d5bdf34da5950970f04fcb4d629a48a} 
+\index{gyr\_test.ino@{gyr\_test.ino}!N\_AVG@{N\_AVG}}
+\index{N\_AVG@{N\_AVG}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{N\_AVG}{N\_AVG}}
+{\footnotesize\ttfamily const uint8\+\_\+t N\+\_\+\+AVG = 8}
+
+
+
+Number of gyroscope averaging settings. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00104}{104}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a7a9c77b04f25920366c8b7b1e13d4854}\label{gyr__test_8ino_a7a9c77b04f25920366c8b7b1e13d4854} 
+\index{gyr\_test.ino@{gyr\_test.ino}!N\_DLPF@{N\_DLPF}}
+\index{N\_DLPF@{N\_DLPF}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{N\_DLPF}{N\_DLPF}}
+{\footnotesize\ttfamily const uint8\+\_\+t N\+\_\+\+DLPF = sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}) / sizeof(\mbox{\hyperlink{gyr__test_8ino_a7765094f7f58284a9f1ed69787fd11de}{configs\+DLPF}}\mbox{[}0\mbox{]})}
+
+
+
+Number of gyroscope DLPF configurations. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00062}{62}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+
+\Hypertarget{gyr__test_8ino_a6e9ca5bda437536b80c2d5b592629088}\label{gyr__test_8ino_a6e9ca5bda437536b80c2d5b592629088} 
+\index{gyr\_test.ino@{gyr\_test.ino}!N\_FS@{N\_FS}}
+\index{N\_FS@{N\_FS}!gyr\_test.ino@{gyr\_test.ino}}
+\doxysubsubsection{\texorpdfstring{N\_FS}{N\_FS}}
+{\footnotesize\ttfamily const uint8\+\_\+t N\+\_\+\+FS = 4}
+
+
+
+Number of gyroscope full-\/scale ranges. 
+
+
+
+Definition at line \mbox{\hyperlink{gyr__test_8ino_source_l00075}{75}} of file \mbox{\hyperlink{gyr__test_8ino_source}{gyr\+\_\+test.\+ino}}.
+

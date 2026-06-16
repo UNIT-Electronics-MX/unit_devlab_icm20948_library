@@ -1,0 +1,33 @@
+<map id="runSweep" name="runSweep">
+<area shape="rect" id="Node000001" title="Run the full accelerometer validation matrix and print samples." alt="" coords="5,277,92,303"/>
+<area shape="rect" id="Node000002" href="$mag__test_8ino.html#af42a493b8d96759f43d866fbe725cf3d" title="Initialize the magnetometer and collect samples for each mode." alt="" coords="147,203,258,228"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,275,162,232,165,236,77,280"/>
+<area shape="rect" id="Node000011" href="$test2_8ino.html#a42633dcf8fe2689c57c8113825f74c66" title="Print a double separator line to Serial." alt="" coords="140,328,265,353"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="89,300,151,321,149,326,87,305"/>
+<area shape="rect" id="Node000012" href="$classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b" title=" " alt="" coords="333,289,547,315"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="92,289,319,296,319,301,92,294"/>
+<area shape="rect" id="Node000003" href="$classDevLab__ICM20948.html#a7b137192f8eb987cd221808c2c6c3561" title=" " alt="" coords="340,89,540,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,200,399,118,401,123,232,205"/>
+<area shape="rect" id="Node000008" href="$classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314" title=" " alt="" coords="336,191,544,216"/>
+<area shape="poly" id="edge12_Node000002_Node000008" title=" " alt="" coords="258,210,322,207,322,212,259,215"/>
+<area shape="rect" id="Node000010" href="$classDevLab__ICM20948.html#a0882a30454b0716953f5f375613d24b3" title=" " alt="" coords="313,240,567,265"/>
+<area shape="poly" id="edge15_Node000002_Node000010" title=" " alt="" coords="259,221,346,235,345,240,258,227"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="875,141,1097,167"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="526,112,615,123,861,144,861,149,614,129,525,117"/>
+<area shape="rect" id="Node000005" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="1145,65,1295,91"/>
+<area shape="poly" id="edge11_Node000003_Node000005" title=" " alt="" coords="462,87,528,54,570,37,614,25,687,12,749,5,804,3,856,6,962,21,1098,45,1163,59,1162,64,1097,50,962,26,855,11,804,8,749,10,687,17,615,30,572,42,530,58,464,92"/>
+<area shape="rect" id="Node000006" href="$classDevLab__ICM20948.html#a4210e842050486637a5967b2a9ef7b57" title=" " alt="" coords="627,40,814,65"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="512,87,634,65,635,70,513,92"/>
+<area shape="rect" id="Node000007" href="$classDevLab__ICM20948.html#a0d6774b76298645ee45ec0e9065a8891" title=" " alt="" coords="615,89,827,115"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="540,99,600,99,600,105,540,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1033,139,1097,119,1172,93,1174,98,1098,125,1034,144"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="789,63,828,74,895,103,952,132,950,137,893,107,826,79,787,68"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="814,54,1097,69,1132,70,1131,76,1097,74,814,60"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="787,112,908,136,907,141,786,117"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="827,94,1131,80,1131,85,827,100"/>
+<area shape="poly" id="edge14_Node000008_Node000004" title=" " alt="" coords="544,193,826,169,861,165,861,171,827,174,544,198"/>
+<area shape="rect" id="Node000009" href="$classBusIO__7Semi.html#a933c66d9a1afe84102323e209a93dd31" title=" " alt="" coords="648,241,793,267"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="512,213,637,236,636,241,511,219"/>
+<area shape="poly" id="edge19_Node000012_Node000004" title=" " alt="" coords="548,310,612,311,683,308,756,297,826,277,867,256,905,229,963,175,966,179,908,233,870,261,828,282,757,302,684,313,612,317,547,315"/>
+<area shape="poly" id="edge18_Node000012_Node000009" title=" " alt="" coords="514,287,634,266,635,271,515,292"/>
+</map>

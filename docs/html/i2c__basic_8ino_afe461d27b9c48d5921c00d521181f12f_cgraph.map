@@ -1,0 +1,23 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title="Read accelerometer, gyroscope, magnetometer, and temperature data." alt="" coords="5,80,56,105"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b" title=" " alt="" coords="128,104,343,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,93,114,100,114,105,56,98"/>
+<area shape="rect" id="Node000006" href="$classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d" title=" " alt="" coords="130,153,341,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="49,104,74,123,105,140,127,147,125,152,103,144,71,127,45,108"/>
+<area shape="rect" id="Node000007" href="$classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314" title=" " alt="" coords="131,5,339,31"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="45,78,71,58,103,40,124,32,126,37,105,44,74,62,48,82"/>
+<area shape="rect" id="Node000008" href="$classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e" title=" " alt="" coords="104,55,367,80"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="56,87,119,79,120,84,57,92"/>
+<area shape="rect" id="Node000003" href="$classBusIO__7Semi.html#a933c66d9a1afe84102323e209a93dd31" title=" " alt="" coords="453,55,599,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,101,439,79,440,85,311,107"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="415,104,637,129"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="343,114,401,114,401,119,343,119"/>
+<area shape="rect" id="Node000005" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="685,104,835,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="638,114,672,114,672,119,638,119"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="339,151,365,140,380,128,389,115,398,102,413,89,439,78,441,83,416,94,402,105,393,118,384,132,368,144,341,156"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="310,151,436,129,437,134,311,156"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="311,28,440,50,439,55,310,33"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="341,28,368,40,384,52,393,65,402,78,416,89,433,97,430,102,413,94,398,81,389,68,380,56,365,44,338,33"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="367,65,439,65,439,70,367,70"/>
+<area shape="poly" id="edge13_Node000008_Node000004" title=" " alt="" coords="311,77,437,99,436,104,310,83"/>
+</map>

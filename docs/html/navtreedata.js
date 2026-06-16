@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "DevLab_ICM20948", "index.html", [
+    [ "DevLab ICM20948 Arduino Library", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -39,6 +40,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
@@ -50,7 +53,8 @@ var NAVTREEINDEX =
 [
 "7Semi__I2C__Interface_8h.html",
 "ICM20948__regs_8h.html#a966007d39d833afbf07884f535d7c1fb",
-"globals_defs_r.html"
+"globals_defs_r.html",
+"test_8ino.html#a8b7500a141450a9df212017430c0df9e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

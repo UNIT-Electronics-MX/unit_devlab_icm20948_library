@@ -1,24 +1,4 @@
 var searchData=
 [
-  ['selectbank_0',['selectBank',['../classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55',1,'DevLab_ICM20948']]],
-  ['selftestaccel_1',['selfTestAccel',['../classDevLab__ICM20948.html#adfbd409c7723007d208c82550098a649',1,'DevLab_ICM20948']]],
-  ['selftestgyro_2',['selfTestGyro',['../classDevLab__ICM20948.html#a9d7602ece2c3908e7bbb2acd45dff156',1,'DevLab_ICM20948']]],
-  ['setaccelaveraging_3',['setAccelAveraging',['../classDevLab__ICM20948.html#a619f82390347cc173d1604d4d711b537',1,'DevLab_ICM20948']]],
-  ['setacceldivrate_4',['setAccelDivRate',['../classDevLab__ICM20948.html#aca0cb8da36b8e9128299b9aeb5bb60ec',1,'DevLab_ICM20948']]],
-  ['setacceldlpf_5',['setAccelDLPF',['../classDevLab__ICM20948.html#ac52d80aad738b90aa0f05e9d6404bb85',1,'DevLab_ICM20948']]],
-  ['setacceloffset_6',['setAccelOffset',['../classDevLab__ICM20948.html#a7c150c665140086d7937fa4b2f39cd45',1,'DevLab_ICM20948']]],
-  ['setaccelsamplerate_7',['setAccelSampleRate',['../classDevLab__ICM20948.html#afe657b6e9d21f02dad2599ea04feefe2',1,'DevLab_ICM20948']]],
-  ['setaccelscale_8',['setAccelScale',['../classDevLab__ICM20948.html#a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43',1,'DevLab_ICM20948']]],
-  ['setclock_9',['setClock',['../classDevLab__ICM20948.html#a18de038f48173c77483f4be1c04204d6',1,'DevLab_ICM20948']]],
-  ['setdlpf_10',['setDLPF',['../classDevLab__ICM20948.html#a0bea2c662c285120253851c80289e077',1,'DevLab_ICM20948']]],
-  ['setgyroaveraging_11',['setGyroAveraging',['../classDevLab__ICM20948.html#a7ae5665d5e835f8024df82f43bae46e7',1,'DevLab_ICM20948']]],
-  ['setgyrodivrate_12',['setGyroDivRate',['../classDevLab__ICM20948.html#a16cc9db132bb7a2b706275c9f5a03773',1,'DevLab_ICM20948']]],
-  ['setgyrooffset_13',['setGyroOffset',['../classDevLab__ICM20948.html#a631e6298058a3c54f1c02bae5cf8db54',1,'DevLab_ICM20948']]],
-  ['setgyrosamplerate_14',['setGyroSampleRate',['../classDevLab__ICM20948.html#a70bbcf97fd1c211e2bea203a5039b1bb',1,'DevLab_ICM20948']]],
-  ['setgyroscale_15',['setGyroScale',['../classDevLab__ICM20948.html#a6a06dbd14558e50d40595de82502d632',1,'DevLab_ICM20948']]],
-  ['setlowpower_16',['setLowPower',['../classDevLab__ICM20948.html#a6c9c09f8b2ab39f5de7f48c6c743ffc4',1,'DevLab_ICM20948']]],
-  ['setmagopmode_17',['setMagOpMode',['../classDevLab__ICM20948.html#a0882a30454b0716953f5f375613d24b3',1,'DevLab_ICM20948']]],
-  ['setsensors_18',['setSensors',['../classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186',1,'DevLab_ICM20948']]],
-  ['sleep_19',['sleep',['../classDevLab__ICM20948.html#a4210e842050486637a5967b2a9ef7b57',1,'DevLab_ICM20948']]],
-  ['softreset_20',['softReset',['../classDevLab__ICM20948.html#a0d6774b76298645ee45ec0e9065a8891',1,'DevLab_ICM20948']]]
+  ['loop_0',['loop',['../gyr__test_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;gyr_test.ino'],['../i2c__accel_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;i2c_accel.ino'],['../i2c__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;i2c_basic.ino'],['../i2c__gyro_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;i2c_gyro.ino'],['../i2c__magneto_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;i2c_magneto.ino'],['../interrupt_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;interrupt.ino'],['../mag__test_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;mag_test.ino'],['../spi__accel_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;spi_accel.ino'],['../spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;spi_basic.ino'],['../spi__gyro_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;spi_gyro.ino'],['../test_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;test.ino'],['../test2_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'loop():&#160;test2.ino']]]
 ];

@@ -1,7 +1,13 @@
 <map id="DevLab_ICM20948::applyBasicDefaults" name="DevLab_ICM20948::applyBasicDefaults">
-<area shape="rect" id="Node000001" title=" " alt="" coords="261,23,484,63"/>
-<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a91147b3cd4c45bffc8e024f985be7b21" title=" " alt="" coords="5,5,213,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,34,213,31,214,25,248,29"/>
-<area shape="rect" id="Node000003" href="$classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18" title=" " alt="" coords="6,55,213,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="248,57,213,61,213,55,247,52"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="368,47,591,87"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a91147b3cd4c45bffc8e024f985be7b21" title=" " alt="" coords="112,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,47,284,33,285,28,359,42"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18" title=" " alt="" coords="113,55,319,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="354,70,320,70,320,65,354,65"/>
+<area shape="rect" id="Node000006" href="$i2c__gyro_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure the IMU for gyroscope&#45;only operation over I2C." alt="" coords="187,104,245,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="359,93,246,114,245,109,358,87"/>
+<area shape="rect" id="Node000003" href="$gyr__test_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, reset/wake the IMU, enable gyro, and start the sweep." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
+<area shape="rect" id="Node000005" href="$spi__accel_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure the IMU for accelerometer&#45;only operation over SPI." alt="" coords="5,55,64,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,70,64,70,64,65,99,65"/>
 </map>

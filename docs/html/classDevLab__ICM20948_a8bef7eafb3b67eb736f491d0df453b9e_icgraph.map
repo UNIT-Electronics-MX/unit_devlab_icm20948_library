@@ -1,7 +1,16 @@
 <map id="DevLab_ICM20948::readWhoAmI" name="DevLab_ICM20948::readWhoAmI">
-<area shape="rect" id="Node000001" title=" " alt="" coords="261,31,496,56"/>
-<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a91147b3cd4c45bffc8e024f985be7b21" title=" " alt="" coords="5,5,213,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,34,213,30,214,25,248,28"/>
-<area shape="rect" id="Node000003" href="$classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18" title=" " alt="" coords="6,55,213,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="248,58,213,61,212,55,248,52"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="368,80,603,105"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a91147b3cd4c45bffc8e024f985be7b21" title=" " alt="" coords="112,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="431,78,319,45,274,33,276,28,321,39,433,73"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18" title=" " alt="" coords="113,104,319,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="355,107,320,110,319,105,354,102"/>
+<area shape="rect" id="Node000006" href="$gyr__test_8ino.html#a1cf9f29034d9373db6498335da3d661c" title="Verify the IMU identity register." alt="" coords="174,55,258,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="354,83,258,74,259,69,355,78"/>
+<area shape="rect" id="Node000007" href="$i2c__accel_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure the IMU for accelerometer&#45;only operation over I2C." alt="" coords="187,153,245,179"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="430,112,321,143,246,162,245,157,319,138,429,107"/>
+<area shape="rect" id="Node000003" href="$gyr__test_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Initialize I2C, reset/wake the IMU, enable gyro, and start the sweep." alt="" coords="5,31,64,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,35,64,42,64,37,111,30"/>
+<area shape="rect" id="Node000005" href="$spi__accel_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure the IMU for accelerometer&#45;only operation over SPI." alt="" coords="5,104,64,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="99,119,64,119,64,114,99,114"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="160,63,64,50,64,44,160,57"/>
 </map>

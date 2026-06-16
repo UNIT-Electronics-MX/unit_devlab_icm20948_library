@@ -1,2 +1,150 @@
 \doxysection{examples/i2c\+\_\+basic/i2c\+\_\+basic.ino File Reference}
 \hypertarget{i2c__basic_8ino}{}\label{i2c__basic_8ino}\index{examples/i2c\_basic/i2c\_basic.ino@{examples/i2c\_basic/i2c\_basic.ino}}
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Dev\+Lab\+\_\+\+ICM20948.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{i2c__basic_8ino_a526d580d324bce60a3e964066fae77e3}{SDA\+\_\+\+PIN}}~6
+\begin{DoxyCompactList}\small\item\em I2C SDA pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i2c__basic_8ino_a06c967e78bcedcee909a70764f879433}{SCL\+\_\+\+PIN}}~7
+\begin{DoxyCompactList}\small\item\em I2C SCL pin used by the example board. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i2c__basic_8ino_a8b7500a141450a9df212017430c0df9e}{I2\+C\+\_\+\+FREQ}}~400000\+UL
+\begin{DoxyCompactList}\small\item\em I2C bus speed in hertz. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{i2c__basic_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}{ICM\+\_\+\+ADDR}}~0x69
+\begin{DoxyCompactList}\small\item\em ICM-\/20948 I2C address selected by the AD0 pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Configure Serial, I2C, sensor identity check, and enabled sensors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Read accelerometer, gyroscope, magnetometer, and temperature data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} \mbox{\hyperlink{i2c__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}
+\begin{DoxyCompactList}\small\item\em Global ICM-\/20948 driver instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{i2c__basic_8ino_a8b7500a141450a9df212017430c0df9e}\label{i2c__basic_8ino_a8b7500a141450a9df212017430c0df9e} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!I2C\_FREQ@{I2C\_FREQ}}
+\index{I2C\_FREQ@{I2C\_FREQ}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{I2C\_FREQ}{I2C\_FREQ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+FREQ~400000\+UL}
+
+
+
+I2C bus speed in hertz. 
+
+
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00036}{36}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+
+\Hypertarget{i2c__basic_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb}\label{i2c__basic_8ino_a8fb98755bd25ab9d5bf8739e15df6eeb} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!ICM\_ADDR@{ICM\_ADDR}}
+\index{ICM\_ADDR@{ICM\_ADDR}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{ICM\_ADDR}{ICM\_ADDR}}
+{\footnotesize\ttfamily \#define ICM\+\_\+\+ADDR~0x69}
+
+
+
+ICM-\/20948 I2C address selected by the AD0 pin. 
+
+
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00038}{38}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+
+\Hypertarget{i2c__basic_8ino_a06c967e78bcedcee909a70764f879433}\label{i2c__basic_8ino_a06c967e78bcedcee909a70764f879433} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!SCL\_PIN@{SCL\_PIN}}
+\index{SCL\_PIN@{SCL\_PIN}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{SCL\_PIN}{SCL\_PIN}}
+{\footnotesize\ttfamily \#define SCL\+\_\+\+PIN~7}
+
+
+
+I2C SCL pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00034}{34}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+
+\Hypertarget{i2c__basic_8ino_a526d580d324bce60a3e964066fae77e3}\label{i2c__basic_8ino_a526d580d324bce60a3e964066fae77e3} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!SDA\_PIN@{SDA\_PIN}}
+\index{SDA\_PIN@{SDA\_PIN}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{SDA\_PIN}{SDA\_PIN}}
+{\footnotesize\ttfamily \#define SDA\+\_\+\+PIN~6}
+
+
+
+I2C SDA pin used by the example board. 
+
+
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00032}{32}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f}\label{i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!loop@{loop}}
+\index{loop@{loop}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read accelerometer, gyroscope, magnetometer, and temperature data. 
+
+Values are printed periodically to the Serial monitor in engineering units. 
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00090}{90}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!setup@{setup}}
+\index{setup@{setup}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configure Serial, I2C, sensor identity check, and enabled sensors. 
+
+The sketch stops in an infinite loop if the IMU cannot be initialized or the WHO\+\_\+\+AM\+\_\+I register does not match the expected ICM-\/20948 value. 
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00049}{49}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{i2c__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}\label{i2c__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1} 
+\index{i2c\_basic.ino@{i2c\_basic.ino}!imu@{imu}}
+\index{imu@{imu}!i2c\_basic.ino@{i2c\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} imu}
+
+
+
+Global ICM-\/20948 driver instance. 
+
+
+
+Definition at line \mbox{\hyperlink{i2c__basic_8ino_source_l00041}{41}} of file \mbox{\hyperlink{i2c__basic_8ino_source}{i2c\+\_\+basic.\+ino}}.
+

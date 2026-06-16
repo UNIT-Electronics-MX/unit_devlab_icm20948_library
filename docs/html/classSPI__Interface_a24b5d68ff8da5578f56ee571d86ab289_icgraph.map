@@ -1,5 +1,7 @@
 <map id="SPI_Interface::beginSPI" name="SPI_Interface::beginSPI">
-<area shape="rect" id="Node000001" title=" " alt="" coords="260,5,431,31"/>
-<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18" title=" " alt="" coords="5,5,212,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,21,212,21,212,15,246,15"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="367,5,537,31"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18" title=" " alt="" coords="112,5,319,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="353,21,319,21,319,15,353,15"/>
+<area shape="rect" id="Node000003" href="$spi__accel_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure the IMU for accelerometer&#45;only operation over SPI." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
 </map>

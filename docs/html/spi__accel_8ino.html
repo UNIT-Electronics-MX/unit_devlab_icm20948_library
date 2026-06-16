@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DevLab_ICM20948<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">DevLab_ICM20948<span id="projectnumber">&#160;1.0.2</span>
    </div>
    <div id="projectbrief">ICM-20948 9-Axis Motion Sensor Driver</div>
   </td>
@@ -91,18 +91,165 @@ $(document).ready(function(){initNavTree('spi__accel_8ino.html',''); initResizab
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">spi_accel.ino File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;<a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>&gt;</code><br />
+</div>
 <p><a href="spi__accel_8ino_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a785e68f45fbc9e3f0ed8219615c1ed1d" id="r_a785e68f45fbc9e3f0ed8219615c1ed1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi__accel_8ino.html#a785e68f45fbc9e3f0ed8219615c1ed1d">SPI_FAST_SPEED</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:a785e68f45fbc9e3f0ed8219615c1ed1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI clock used during sensor initialization and reads.  <br /></td></tr>
+<tr class="separator:a785e68f45fbc9e3f0ed8219615c1ed1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5f08ba3a5b3d8e5b3fa5a22429ecfa2b" id="r_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b"><td class="memItemLeft" align="right" valign="top">SPIClass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi__accel_8ino.html#a5f08ba3a5b3d8e5b3fa5a22429ecfa2b">spi_bus</a> (SPI)</td></tr>
+<tr class="memdesc:a5f08ba3a5b3d8e5b3fa5a22429ecfa2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI bus object used by the IMU driver.  <br /></td></tr>
+<tr class="separator:a5f08ba3a5b3d8e5b3fa5a22429ecfa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi__accel_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the IMU for accelerometer-only operation over SPI.  <br /></td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi__accel_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and print accelerometer data in g.  <br /></td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa8226278adaa3f7fb2ad8b966f7787a1" id="r_aa8226278adaa3f7fb2ad8b966f7787a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDevLab__ICM20948.html">DevLab_ICM20948</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spi__accel_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a></td></tr>
+<tr class="memdesc:aa8226278adaa3f7fb2ad8b966f7787a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global ICM-20948 driver instance.  <br /></td></tr>
+<tr class="separator:aa8226278adaa3f7fb2ad8b966f7787a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a785e68f45fbc9e3f0ed8219615c1ed1d" name="a785e68f45fbc9e3f0ed8219615c1ed1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785e68f45fbc9e3f0ed8219615c1ed1d">&#9670;&#160;</a></span>SPI_FAST_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_FAST_SPEED&#160;&#160;&#160;1000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI clock used during sensor initialization and reads. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi__accel_8ino_source.html#l00033">33</a> of file <a class="el" href="spi__accel_8ino_source.html">spi_accel.ino</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read and print accelerometer data in g. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi__accel_8ino_source.html#l00116">116</a> of file <a class="el" href="spi__accel_8ino_source.html">spi_accel.ino</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.svg" width="792" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the IMU for accelerometer-only operation over SPI. </p>
+<dl class="section note"><dt>Note</dt><dd>The sketch expects a board-level CS_PIN definition to select the chip-select pin used by beginSPI(). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="spi__accel_8ino_source.html#l00047">47</a> of file <a class="el" href="spi__accel_8ino_source.html">spi_accel.ino</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.svg" width="1091" height="492"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a5f08ba3a5b3d8e5b3fa5a22429ecfa2b" name="a5f08ba3a5b3d8e5b3fa5a22429ecfa2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f08ba3a5b3d8e5b3fa5a22429ecfa2b">&#9670;&#160;</a></span>spi_bus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SPIClass spi_bus </td>
+          <td>(</td>
+          <td class="paramtype">SPI&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SPI bus object used by the IMU driver. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.svg" width="188" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa8226278adaa3f7fb2ad8b966f7787a1" name="aa8226278adaa3f7fb2ad8b966f7787a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8226278adaa3f7fb2ad8b966f7787a1">&#9670;&#160;</a></span>imu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDevLab__ICM20948.html">DevLab_ICM20948</a> imu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Global ICM-20948 driver instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="spi__accel_8ino_source.html#l00036">36</a> of file <a class="el" href="spi__accel_8ino_source.html">spi_accel.ino</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="dir_0e5973fcad70f068092871290dcee444.html">spi_accel</a></li><li class="navelem"><a class="el" href="spi__accel_8ino.html">spi_accel.ino</a></li>
-    <li class="footer">Generated on Tue Jun 16 2026 16:04:34 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Jun 16 2026 16:58:53 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

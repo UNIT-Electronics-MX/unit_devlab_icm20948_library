@@ -1,0 +1,19 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title="Read and print accelerometer, gyroscope, and temperature data." alt="" coords="5,55,56,80"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b" title=" " alt="" coords="128,5,343,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,55,103,39,140,31,141,36,105,45,57,60"/>
+<area shape="rect" id="Node000006" href="$classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d" title=" " alt="" coords="130,55,341,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="56,65,116,65,116,70,56,70"/>
+<area shape="rect" id="Node000007" href="$classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e" title=" " alt="" coords="104,104,367,129"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="57,74,105,89,148,99,146,104,103,94,56,79"/>
+<area shape="rect" id="Node000003" href="$classBusIO__7Semi.html#a933c66d9a1afe84102323e209a93dd31" title=" " alt="" coords="453,31,599,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="343,25,440,33,439,38,342,30"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="415,80,637,105"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="326,28,368,40,392,52,416,65,445,74,443,79,414,70,389,57,366,44,325,33"/>
+<area shape="rect" id="Node000005" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="685,80,835,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="638,90,672,90,672,95,638,95"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="341,56,439,48,440,53,341,61"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="341,74,401,79,400,84,341,79"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="319,101,366,89,390,77,414,65,440,57,441,62,416,70,392,82,368,94,320,107"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="367,103,401,100,401,106,367,108"/>
+</map>

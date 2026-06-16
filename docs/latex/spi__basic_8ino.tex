@@ -1,2 +1,124 @@
 \doxysection{examples/spi\+\_\+basic/spi\+\_\+basic.ino File Reference}
 \hypertarget{spi__basic_8ino}{}\label{spi__basic_8ino}\index{examples/spi\_basic/spi\_basic.ino@{examples/spi\_basic/spi\_basic.ino}}
+{\ttfamily \#include $<$Dev\+Lab\+\_\+\+ICM20948.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{spi__basic_8ino_a785e68f45fbc9e3f0ed8219615c1ed1d}{SPI\+\_\+\+FAST\+\_\+\+SPEED}}~1000000
+\begin{DoxyCompactList}\small\item\em SPI clock used during sensor initialization and reads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+SPIClass \mbox{\hyperlink{spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b}{spi\+\_\+bus}} (SPI)
+\begin{DoxyCompactList}\small\item\em SPI bus object used by the IMU driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Initialize Serial and start the ICM-\/20948 over SPI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Read and print accelerometer, gyroscope, and temperature data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} \mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}
+\begin{DoxyCompactList}\small\item\em Global ICM-\/20948 driver instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{spi__basic_8ino_a785e68f45fbc9e3f0ed8219615c1ed1d}\label{spi__basic_8ino_a785e68f45fbc9e3f0ed8219615c1ed1d} 
+\index{spi\_basic.ino@{spi\_basic.ino}!SPI\_FAST\_SPEED@{SPI\_FAST\_SPEED}}
+\index{SPI\_FAST\_SPEED@{SPI\_FAST\_SPEED}!spi\_basic.ino@{spi\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{SPI\_FAST\_SPEED}{SPI\_FAST\_SPEED}}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+FAST\+\_\+\+SPEED~1000000}
+
+
+
+SPI clock used during sensor initialization and reads. 
+
+
+
+Definition at line \mbox{\hyperlink{spi__basic_8ino_source_l00034}{34}} of file \mbox{\hyperlink{spi__basic_8ino_source}{spi\+\_\+basic.\+ino}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f}\label{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f} 
+\index{spi\_basic.ino@{spi\_basic.ino}!loop@{loop}}
+\index{loop@{loop}!spi\_basic.ino@{spi\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read and print accelerometer, gyroscope, and temperature data. 
+
+
+
+Definition at line \mbox{\hyperlink{spi__basic_8ino_source_l00065}{65}} of file \mbox{\hyperlink{spi__basic_8ino_source}{spi\+\_\+basic.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d}\label{spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+\index{spi\_basic.ino@{spi\_basic.ino}!setup@{setup}}
+\index{setup@{setup}!spi\_basic.ino@{spi\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Serial and start the ICM-\/20948 over SPI. 
+
+\begin{DoxyNote}{Note}
+The sketch expects a board-\/level CS\+\_\+\+PIN definition to select the chip-\/select pin used by begin\+SPI(). 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{spi__basic_8ino_source_l00048}{48}} of file \mbox{\hyperlink{spi__basic_8ino_source}{spi\+\_\+basic.\+ino}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b}\label{spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b} 
+\index{spi\_basic.ino@{spi\_basic.ino}!spi\_bus@{spi\_bus}}
+\index{spi\_bus@{spi\_bus}!spi\_basic.ino@{spi\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{spi\_bus()}{spi\_bus()}}
+{\footnotesize\ttfamily SPIClass spi\+\_\+bus (\begin{DoxyParamCaption}\item[{SPI}]{ }\end{DoxyParamCaption})}
+
+
+
+SPI bus object used by the IMU driver. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}\label{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1} 
+\index{spi\_basic.ino@{spi\_basic.ino}!imu@{imu}}
+\index{imu@{imu}!spi\_basic.ino@{spi\_basic.ino}}
+\doxysubsubsection{\texorpdfstring{imu}{imu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDevLab__ICM20948}{Dev\+Lab\+\_\+\+ICM20948}} imu}
+
+
+
+Global ICM-\/20948 driver instance. 
+
+
+
+Definition at line \mbox{\hyperlink{spi__basic_8ino_source_l00037}{37}} of file \mbox{\hyperlink{spi__basic_8ino_source}{spi\+\_\+basic.\+ino}}.
+

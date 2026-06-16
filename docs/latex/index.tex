@@ -1,0 +1,278 @@
+\chapter{Dev\+Lab ICM20948 Arduino Library}
+\hypertarget{index}{}\label{index}\index{DevLab ICM20948 Arduino Library@{DevLab ICM20948 Arduino Library}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ Arduino driver for the module Dev\+Lab ICM-\/20948 9-\/axis IMU sensor.
+
+This library is a Dev\+Lab adaptation derived from the 7Semi ICM20948 Arduino Library. The original MIT license notice from 7semi-\/solutions is preserved in {\ttfamily LICENSE}. See {\ttfamily NOTICE.\+md} for attribution and origin details.
+
+The ICM-\/20948 integrates a 3-\/axis accelerometer, 3-\/axis gyroscope, and 3-\/axis magnetometer (AK09916), enabling motion tracking, orientation sensing, and navigation applications.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item 9-\/axis motion sensing
+\begin{DoxyItemize}
+\item 3-\/axis Accelerometer
+\item 3-\/axis Gyroscope
+\item 3-\/axis Magnetometer
+\end{DoxyItemize}
+\item Configurable sensor ranges
+\begin{DoxyItemize}
+\item Accel\+: ±2g / ±4g / ±8g / ±16g
+\item Gyro\+: ±250 / ±500 / ±1000 / ±2000 dps
+\end{DoxyItemize}
+\item Digital Low Pass Filter configurable(\+DLPF)
+\begin{DoxyItemize}
+\item Noise reduction
+\item Configurable bandwidth
+\end{DoxyItemize}
+\item Adjustable sample rates
+\begin{DoxyItemize}
+\item Accel\+: up to 1125 Hz
+\item Gyro\+: up to 1100 Hz
+\end{DoxyItemize}
+\item Internal I2C Master (for magnetometer)
+\begin{DoxyItemize}
+\item AK09916 integration via SLV0/\+SLV4
+\end{DoxyItemize}
+\item ISupports both communication interfaces
+\begin{DoxyItemize}
+\item I²C
+\item SPI
+\end{DoxyItemize}
+\item Temperature measurement
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Connections / Wiring}{Connections / Wiring}}\label{index_autotoc_md4}
+The ICM-\/20948 supports both {\bfseries{I²C}} and {\bfseries{SPI}} communication.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{I²\+C Connection}{I²C Connection}}\label{index_autotoc_md6}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ICM-\/20948 Pin   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ MCU Pin   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Notes    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ICM-\/20948 Pin   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ MCU Pin   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Notes    }\\\cline{1-3}
+\endhead
+VCC   &3.\+3V   &5V only if board supports    \\\cline{1-3}
+GND   &GND   &Common ground    \\\cline{1-3}
+SDA   &SDA   &I²C data    \\\cline{1-3}
+SCL   &SCL   &I²C clock    \\\cline{1-3}
+AD0   &GND/3\+V3   &Address select   \\\cline{1-3}
+\end{longtabu}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{I²\+C Notes}{I²C Notes}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Default I²C address\+: 0x29
+\item Supported bus speeds\+:
+\begin{DoxyItemize}
+\item 100 k\+Hz ~\newline
+
+\item 400 k\+Hz (recommended) ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md10}{}\doxysection{\texorpdfstring{SPI Connection}{SPI Connection}}\label{index_autotoc_md10}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ICM-\/20948 Pin   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ MCU Pin    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ICM-\/20948 Pin   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ MCU Pin    }\\\cline{1-2}
+\endhead
+VCC   &3.\+3V    \\\cline{1-2}
+GND   &GND    \\\cline{1-2}
+SCK   &SCK    \\\cline{1-2}
+MOSI   &MOSI    \\\cline{1-2}
+MISO   &MISO    \\\cline{1-2}
+CS   &GPIO   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{index_autotoc_md11}
+\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Arduino Library Manager}{Arduino Library Manager}}\label{index_autotoc_md12}
+
+\begin{DoxyEnumerate}
+\item Open Arduino IDE ~\newline
+
+\item Go to Library Manager ~\newline
+
+\item Search for {\bfseries{Dev\+Lab ICM20948}} ~\newline
+
+\item Click Install ~\newline
+
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Manual Installation}{Manual Installation}}\label{index_autotoc_md14}
+
+\begin{DoxyEnumerate}
+\item Download repository as ZIP ~\newline
+
+\item Arduino IDE → Sketch → Include Library → Add .ZIP Library ~\newline
+
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md16}{}\doxysection{\texorpdfstring{Library Overview}{Library Overview}}\label{index_autotoc_md16}
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md18}{}\doxysubsection{\texorpdfstring{Initialize Sensor}{Initialize Sensor}}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item I2C
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21}{beginI2C}}(0x69,\ Wire,\ 400000))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ Serial.println(\textcolor{stringliteral}{"{}IMU\ init\ failed"{}});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (1);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item SPI
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18}{beginSPI}}(CS\_PIN,\ SPI,\ 1000000))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ Serial.println(\textcolor{stringliteral}{"{}SPI\ init\ failed"{}});}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (1);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md19}{}\doxysubsection{\texorpdfstring{Enable Sensors}{Enable Sensors}}\label{index_autotoc_md19}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186}{setSensors}}(\textcolor{keyword}{true},\ \textcolor{keyword}{true},\ \textcolor{keyword}{true});}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item accel → enable accelerometer
+\item gyro → enable gyroscope
+\item temp → enable temperatur
+\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysection{\texorpdfstring{Reading Accelerometer}{Reading Accelerometer}}\label{index_autotoc_md20}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float}\ ax,\ ay,\ az;}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b}{readAccel}}(ax,\ ay,\ az);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Output in g
+\end{DoxyItemize}\hypertarget{index_autotoc_md21}{}\doxysection{\texorpdfstring{Reading Gyroscope}{Reading Gyroscope}}\label{index_autotoc_md21}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float}\ gx,\ gy,\ gz;}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d}{readGyro}}(gx,\ gy,\ gz);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Output in degrees/sec
+\end{DoxyItemize}\hypertarget{index_autotoc_md22}{}\doxysection{\texorpdfstring{Reading Temperature}{Reading Temperature}}\label{index_autotoc_md22}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float}\ temp;}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e}{readTemperature}}(temp);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Output in °C
+\end{DoxyItemize}\hypertarget{index_autotoc_md23}{}\doxysection{\texorpdfstring{Reading Magnetometer}{Reading Magnetometer}}\label{index_autotoc_md23}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561}{initMag}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{float}\ mx,\ my,\ mz;}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314}{readMag}}(mx,\ my,\ mz);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Output in microtesla (µT)
+\end{DoxyItemize}\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{Setting Accelerometer Scale}{Setting Accelerometer Scale}}\label{index_autotoc_md24}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43}{setAccelScale}}(\mbox{\hyperlink{DevLab__ICM20948_8h_a7d56bdd11158e2d05da5c9317fadee05abda3c606e1ce64e3bda86c1fe6232693}{G\_4}});}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item G\+\_\+2, G\+\_\+4, G\+\_\+8, G\+\_\+16
+\end{DoxyItemize}\hypertarget{index_autotoc_md25}{}\doxysubsection{\texorpdfstring{Setting Gyroscope Scale}{Setting Gyroscope Scale}}\label{index_autotoc_md25}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632}{setGyroScale}}(\mbox{\hyperlink{DevLab__ICM20948_8h_a409a608f5c864bb503bf1a65b164de7da7a03fe4c8dae7b2cc724db90de97f53f}{DPS\_2000}});}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md26}{}\doxysubsection{\texorpdfstring{Setting Sample Rate}{Setting Sample Rate}}\label{index_autotoc_md26}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2}{setAccelSampleRate}}(225);}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb}{setGyroSampleRate}}(225);}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md27}{}\doxysubsection{\texorpdfstring{DLPF Configuration}{DLPF Configuration}}\label{index_autotoc_md27}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85}{setAccelDLPF}}(\mbox{\hyperlink{ICM20948__regs_8h_a981a5bd41894531939c10568f7793069}{ACCEL\_DLPFCFG\_3}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a0bea2c662c285120253851c80289e077}{setDLPF}}(GYRO\_DLPF\_3,\ \textcolor{keyword}{false});}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md28}{}\doxysubsection{\texorpdfstring{Averaging Configuration}{Averaging Configuration}}\label{index_autotoc_md28}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{gyr__test_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537}{setAccelAveraging}}(\mbox{\hyperlink{DevLab__ICM20948_8h_a6b88764d5f92bd1ed524fdc1f8b87088a682b1e1305b78c070fc0d38523969924}{AVG\_8}});}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md29}{}\doxysection{\texorpdfstring{Applications}{Applications}}\label{index_autotoc_md29}
+
+\begin{DoxyItemize}
+\item Robotics (obstacle detection)
+\item Drones (altitude sensing)
+\item Wearables (activity tracking)
+\item Navigation systems (IMU fusion)
+\item ndustrial motion sensing
+\item Gaming controllers
+\end{DoxyItemize}\hypertarget{index_autotoc_md30}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md30}
+
+\begin{DoxyItemize}
+\item MIT License
+\item Original work copyright\+: 2025 7semi-\/solutions
+\item Dev\+Lab adaptation maintains the original license notice and attribution. 
+\end{DoxyItemize}

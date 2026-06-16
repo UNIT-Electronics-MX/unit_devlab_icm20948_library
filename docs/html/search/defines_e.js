@@ -1,14 +1,17 @@
 var searchData=
 [
-  ['self_5ftest_5fx_5faccel_0',['SELF_TEST_X_ACCEL',['../ICM20948__regs_8h.html#a514afe64ef4e94fd792f0e01e66cf682',1,'ICM20948_regs.h']]],
-  ['self_5ftest_5fx_5fgyro_1',['SELF_TEST_X_GYRO',['../ICM20948__regs_8h.html#afbca39272b9691b037268612593d36ea',1,'ICM20948_regs.h']]],
-  ['self_5ftest_5fy_5faccel_2',['SELF_TEST_Y_ACCEL',['../ICM20948__regs_8h.html#a9dba24f56a63a23b71ece8ebafbe46e1',1,'ICM20948_regs.h']]],
-  ['self_5ftest_5fy_5fgyro_3',['SELF_TEST_Y_GYRO',['../ICM20948__regs_8h.html#a4589b391b79cd75e09d08c4465ff95d6',1,'ICM20948_regs.h']]],
-  ['self_5ftest_5fz_5faccel_4',['SELF_TEST_Z_ACCEL',['../ICM20948__regs_8h.html#a89faa3ca314423fc7876d1df8c62f848',1,'ICM20948_regs.h']]],
-  ['self_5ftest_5fz_5fgyro_5',['SELF_TEST_Z_GYRO',['../ICM20948__regs_8h.html#a7d36169280ef7d539e6535693fa54663',1,'ICM20948_regs.h']]],
-  ['sts_5fdmp_5fint1_6',['STS_DMP_INT1',['../ICM20948__regs_8h.html#a7bdf0e8f1f8ce9ac0b6c3416e94de186',1,'ICM20948_regs.h']]],
-  ['sts_5fi2c_5fmst_5fint_7',['STS_I2C_MST_INT',['../ICM20948__regs_8h.html#a02e7e0bda15647950f785937f772c0d3',1,'ICM20948_regs.h']]],
-  ['sts_5fpll_5frdy_5fint_8',['STS_PLL_RDY_INT',['../ICM20948__regs_8h.html#a307d55fede8f7bed60f2820f10b4a37c',1,'ICM20948_regs.h']]],
-  ['sts_5fraw_5fdata_5f0_5frdy_5fint_9',['STS_RAW_DATA_0_RDY_INT',['../ICM20948__regs_8h.html#ae4756d95c4a9a7ce7f4de7808c759697',1,'ICM20948_regs.h']]],
-  ['sts_5fwom_5fint_10',['STS_WOM_INT',['../ICM20948__regs_8h.html#a1da7a39a86332022ad6cc968d9bb2fe6',1,'ICM20948_regs.h']]]
+  ['scl_5fpin_0',['scl_pin',['../i2c__accel_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;i2c_accel.ino'],['../i2c__basic_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;i2c_basic.ino'],['../i2c__gyro_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;i2c_gyro.ino'],['../i2c__magneto_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;i2c_magneto.ino'],['../interrupt_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;interrupt.ino'],['../mag__test_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;mag_test.ino'],['../test_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;test.ino'],['../test2_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;test2.ino'],['../gyr__test_8ino.html#a06c967e78bcedcee909a70764f879433',1,'SCL_PIN:&#160;gyr_test.ino']]],
+  ['sda_5fpin_1',['sda_pin',['../test_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;test.ino'],['../test2_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;test2.ino'],['../mag__test_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;mag_test.ino'],['../interrupt_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;interrupt.ino'],['../i2c__gyro_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;i2c_gyro.ino'],['../i2c__basic_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;i2c_basic.ino'],['../i2c__accel_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;i2c_accel.ino'],['../gyr__test_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;gyr_test.ino'],['../i2c__magneto_8ino.html#a526d580d324bce60a3e964066fae77e3',1,'SDA_PIN:&#160;i2c_magneto.ino']]],
+  ['self_5ftest_5fx_5faccel_2',['SELF_TEST_X_ACCEL',['../ICM20948__regs_8h.html#a514afe64ef4e94fd792f0e01e66cf682',1,'ICM20948_regs.h']]],
+  ['self_5ftest_5fx_5fgyro_3',['SELF_TEST_X_GYRO',['../ICM20948__regs_8h.html#afbca39272b9691b037268612593d36ea',1,'ICM20948_regs.h']]],
+  ['self_5ftest_5fy_5faccel_4',['SELF_TEST_Y_ACCEL',['../ICM20948__regs_8h.html#a9dba24f56a63a23b71ece8ebafbe46e1',1,'ICM20948_regs.h']]],
+  ['self_5ftest_5fy_5fgyro_5',['SELF_TEST_Y_GYRO',['../ICM20948__regs_8h.html#a4589b391b79cd75e09d08c4465ff95d6',1,'ICM20948_regs.h']]],
+  ['self_5ftest_5fz_5faccel_6',['SELF_TEST_Z_ACCEL',['../ICM20948__regs_8h.html#a89faa3ca314423fc7876d1df8c62f848',1,'ICM20948_regs.h']]],
+  ['self_5ftest_5fz_5fgyro_7',['SELF_TEST_Z_GYRO',['../ICM20948__regs_8h.html#a7d36169280ef7d539e6535693fa54663',1,'ICM20948_regs.h']]],
+  ['spi_5ffast_5fspeed_8',['spi_fast_speed',['../spi__accel_8ino.html#a785e68f45fbc9e3f0ed8219615c1ed1d',1,'SPI_FAST_SPEED:&#160;spi_accel.ino'],['../spi__basic_8ino.html#a785e68f45fbc9e3f0ed8219615c1ed1d',1,'SPI_FAST_SPEED:&#160;spi_basic.ino'],['../spi__gyro_8ino.html#a785e68f45fbc9e3f0ed8219615c1ed1d',1,'SPI_FAST_SPEED:&#160;spi_gyro.ino']]],
+  ['sts_5fdmp_5fint1_9',['STS_DMP_INT1',['../ICM20948__regs_8h.html#a7bdf0e8f1f8ce9ac0b6c3416e94de186',1,'ICM20948_regs.h']]],
+  ['sts_5fi2c_5fmst_5fint_10',['STS_I2C_MST_INT',['../ICM20948__regs_8h.html#a02e7e0bda15647950f785937f772c0d3',1,'ICM20948_regs.h']]],
+  ['sts_5fpll_5frdy_5fint_11',['STS_PLL_RDY_INT',['../ICM20948__regs_8h.html#a307d55fede8f7bed60f2820f10b4a37c',1,'ICM20948_regs.h']]],
+  ['sts_5fraw_5fdata_5f0_5frdy_5fint_12',['STS_RAW_DATA_0_RDY_INT',['../ICM20948__regs_8h.html#ae4756d95c4a9a7ce7f4de7808c759697',1,'ICM20948_regs.h']]],
+  ['sts_5fwom_5fint_13',['STS_WOM_INT',['../ICM20948__regs_8h.html#a1da7a39a86332022ad6cc968d9bb2fe6',1,'ICM20948_regs.h']]]
 ];

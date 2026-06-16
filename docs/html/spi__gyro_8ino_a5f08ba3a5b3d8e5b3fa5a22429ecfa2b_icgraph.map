@@ -1,0 +1,5 @@
+<map id="spi_bus" name="spi_bus">
+<area shape="rect" id="Node000001" title="SPI bus object used by the IMU driver." alt="" coords="112,5,183,31"/>
+<area shape="rect" id="Node000002" href="$spi__gyro_8ino.html#a4fc01d736fe50cf5b977f755b675f11d" title="Configure the IMU for gyroscope&#45;only operation over SPI." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
+</map>

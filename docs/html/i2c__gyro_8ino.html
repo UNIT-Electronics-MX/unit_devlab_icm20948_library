@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DevLab_ICM20948<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">DevLab_ICM20948<span id="projectnumber">&#160;1.0.2</span>
    </div>
    <div id="projectbrief">ICM-20948 9-Axis Motion Sensor Driver</div>
   </td>
@@ -91,18 +91,201 @@ $(document).ready(function(){initNavTree('i2c__gyro_8ino.html',''); initResizabl
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">i2c_gyro.ino File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;Wire.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>&gt;</code><br />
+</div>
 <p><a href="i2c__gyro_8ino_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a526d580d324bce60a3e964066fae77e3" id="r_a526d580d324bce60a3e964066fae77e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#a526d580d324bce60a3e964066fae77e3">SDA_PIN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a526d580d324bce60a3e964066fae77e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C SDA pin used by the example board.  <br /></td></tr>
+<tr class="separator:a526d580d324bce60a3e964066fae77e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c967e78bcedcee909a70764f879433" id="r_a06c967e78bcedcee909a70764f879433"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#a06c967e78bcedcee909a70764f879433">SCL_PIN</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a06c967e78bcedcee909a70764f879433"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C SCL pin used by the example board.  <br /></td></tr>
+<tr class="separator:a06c967e78bcedcee909a70764f879433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7500a141450a9df212017430c0df9e" id="r_a8b7500a141450a9df212017430c0df9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#a8b7500a141450a9df212017430c0df9e">I2C_FREQ</a>&#160;&#160;&#160;400000UL</td></tr>
+<tr class="memdesc:a8b7500a141450a9df212017430c0df9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C bus speed in hertz.  <br /></td></tr>
+<tr class="separator:a8b7500a141450a9df212017430c0df9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb98755bd25ab9d5bf8739e15df6eeb" id="r_a8fb98755bd25ab9d5bf8739e15df6eeb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#a8fb98755bd25ab9d5bf8739e15df6eeb">ICM_ADDR</a>&#160;&#160;&#160;0x69</td></tr>
+<tr class="memdesc:a8fb98755bd25ab9d5bf8739e15df6eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ICM-20948 I2C address selected by the AD0 pin.  <br /></td></tr>
+<tr class="separator:a8fb98755bd25ab9d5bf8739e15df6eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the IMU for gyroscope-only operation over I2C.  <br /></td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and print gyroscope data in degrees per second.  <br /></td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa8226278adaa3f7fb2ad8b966f7787a1" id="r_aa8226278adaa3f7fb2ad8b966f7787a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDevLab__ICM20948.html">DevLab_ICM20948</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__gyro_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a></td></tr>
+<tr class="memdesc:aa8226278adaa3f7fb2ad8b966f7787a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global ICM-20948 driver instance.  <br /></td></tr>
+<tr class="separator:aa8226278adaa3f7fb2ad8b966f7787a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a8b7500a141450a9df212017430c0df9e" name="a8b7500a141450a9df212017430c0df9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7500a141450a9df212017430c0df9e">&#9670;&#160;</a></span>I2C_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_FREQ&#160;&#160;&#160;400000UL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C bus speed in hertz. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00045">45</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+
+</div>
+</div>
+<a id="a8fb98755bd25ab9d5bf8739e15df6eeb" name="a8fb98755bd25ab9d5bf8739e15df6eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb98755bd25ab9d5bf8739e15df6eeb">&#9670;&#160;</a></span>ICM_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ICM_ADDR&#160;&#160;&#160;0x69</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ICM-20948 I2C address selected by the AD0 pin. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00047">47</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+
+</div>
+</div>
+<a id="a06c967e78bcedcee909a70764f879433" name="a06c967e78bcedcee909a70764f879433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c967e78bcedcee909a70764f879433">&#9670;&#160;</a></span>SCL_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCL_PIN&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C SCL pin used by the example board. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00043">43</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+
+</div>
+</div>
+<a id="a526d580d324bce60a3e964066fae77e3" name="a526d580d324bce60a3e964066fae77e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526d580d324bce60a3e964066fae77e3">&#9670;&#160;</a></span>SDA_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDA_PIN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C SDA pin used by the example board. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00041">41</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read and print gyroscope data in degrees per second. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00125">125</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.svg" width="788" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the IMU for gyroscope-only operation over I2C. </p>
+<p>The function initializes the I2C interface, applies safe defaults, enables the gyroscope, and configures DLPF, full-scale range, and output data rate. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00058">58</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.svg" width="1091" height="374"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa8226278adaa3f7fb2ad8b966f7787a1" name="aa8226278adaa3f7fb2ad8b966f7787a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8226278adaa3f7fb2ad8b966f7787a1">&#9670;&#160;</a></span>imu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDevLab__ICM20948.html">DevLab_ICM20948</a> imu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Global ICM-20948 driver instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="i2c__gyro_8ino_source.html#l00050">50</a> of file <a class="el" href="i2c__gyro_8ino_source.html">i2c_gyro.ino</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="dir_72b0ae39f9e205f9b537e4731b867472.html">i2c_gyro</a></li><li class="navelem"><a class="el" href="i2c__gyro_8ino.html">i2c_gyro.ino</a></li>
-    <li class="footer">Generated on Tue Jun 16 2026 16:04:34 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Jun 16 2026 16:58:53 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
