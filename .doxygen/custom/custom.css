@@ -1,0 +1,457 @@
+/* ============================================
+   Texas Instruments Style for Doxygen
+   ============================================ */
+
+/* TI Color Palette */
+:root {
+    --ti-red: #CC0000;
+    --ti-dark-red: #990000;
+    --ti-light-red: #E60000;
+    --ti-gray: #666666;
+    --ti-light-gray: #F5F5F5;
+    --ti-dark-gray: #333333;
+    --ti-border-gray: #DDDDDD;
+    --ti-white: #FFFFFF;
+    --ti-black: #000000;
+    --ti-blue-link: #0066CC;
+    --ti-code-bg: #F8F8F8;
+}
+
+/* ============================================
+   General Page Styling
+   ============================================ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    background-color: var(--ti-white);
+    color: var(--ti-dark-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+#titlearea {
+    background: linear-gradient(180deg, var(--ti-red) 0%, var(--ti-dark-red) 100%);
+    border-bottom: 3px solid var(--ti-dark-red);
+    padding: 20px 0;
+    color: var(--ti-white);
+}
+
+#projectname {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ti-white);
+    margin: 0;
+    padding: 0;
+}
+
+#projectbrief {
+    color: var(--ti-light-gray);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#projectnumber {
+    color: var(--ti-light-gray);
+    font-size: 12px;
+}
+
+/* ============================================
+   Navigation Menu
+   ============================================ */
+
+#main-menu {
+    background-color: var(--ti-dark-gray);
+    border-bottom: 1px solid var(--ti-border-gray);
+}
+
+#main-nav {
+    background-color: var(--ti-dark-gray);
+}
+
+.sm-dox {
+    background-color: var(--ti-dark-gray) !important;
+}
+
+.sm-dox a {
+    color: var(--ti-white) !important;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.sm-dox a:hover {
+    background-color: var(--ti-red) !important;
+    color: var(--ti-white) !important;
+}
+
+.sm-dox a.current {
+    background-color: var(--ti-red) !important;
+}
+
+/* Tabs styling */
+.tabs, .tabs2, .tabs3 {
+    background: var(--ti-dark-gray);
+    border-bottom: 2px solid var(--ti-red);
+}
+
+.tablist li {
+    background: var(--ti-gray);
+    border: none;
+    margin-right: 2px;
+}
+
+.tablist a {
+    color: var(--ti-white);
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+}
+
+.tablist a:hover {
+    background: var(--ti-red);
+    color: var(--ti-white);
+}
+
+.tablist li.current a {
+    background: var(--ti-red);
+    color: var(--ti-white);
+}
+
+/* ============================================
+   Sidebar / Tree View
+   ============================================ */
+
+#side-nav {
+    background-color: var(--ti-light-gray);
+    border-right: 1px solid var(--ti-border-gray);
+    padding: 10px;
+}
+
+#nav-tree {
+    background-color: var(--ti-light-gray);
+}
+
+#nav-tree .item {
+    color: var(--ti-dark-gray);
+}
+
+#nav-tree .selected {
+    background-color: var(--ti-red);
+    color: var(--ti-white);
+    border-radius: 3px;
+}
+
+#nav-tree a:hover {
+    background-color: var(--ti-red);
+    color: var(--ti-white);
+    border-radius: 3px;
+}
+
+/* ============================================
+   Content Area
+   ============================================ */
+
+#doc-content {
+    background-color: var(--ti-white);
+    padding: 20px;
+}
+
+.contents {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ti-dark-gray);
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid var(--ti-red);
+    padding-bottom: 5px;
+}
+
+h1 {
+    font-size: 26px;
+    color: var(--ti-red);
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+    border-bottom: 1px solid var(--ti-border-gray);
+}
+
+h4, h5, h6 {
+    border-bottom: none;
+}
+
+/* Links */
+a {
+    color: var(--ti-blue-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--ti-red);
+    text-decoration: underline;
+}
+
+/* ============================================
+   Code Blocks
+   ============================================ */
+
+.fragment, pre.fragment {
+    background-color: var(--ti-code-bg);
+    border: 1px solid var(--ti-border-gray);
+    border-left: 4px solid var(--ti-red);
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+code {
+    background-color: var(--ti-code-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90%;
+    color: var(--ti-dark-red);
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+table.memberdecls,
+table.fieldtable,
+table.params {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+    border: 1px solid var(--ti-border-gray);
+}
+
+table.memberdecls th,
+table.fieldtable th,
+table.params th {
+    background: linear-gradient(180deg, var(--ti-red) 0%, var(--ti-dark-red) 100%);
+    color: var(--ti-white);
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table.memberdecls td,
+table.fieldtable td,
+table.params td {
+    padding: 8px 10px;
+    border: 1px solid var(--ti-border-gray);
+}
+
+table.memberdecls tr:nth-child(even),
+table.fieldtable tr:nth-child(even),
+table.params tr:nth-child(even) {
+    background-color: var(--ti-light-gray);
+}
+
+table.memberdecls tr:hover,
+table.fieldtable tr:hover,
+table.params tr:hover {
+    background-color: #FFE6E6;
+}
+
+/* ============================================
+   Function/Class Documentation
+   ============================================ */
+
+.memitem {
+    background-color: var(--ti-white);
+    border: 1px solid var(--ti-border-gray);
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.memproto {
+    background: linear-gradient(180deg, var(--ti-light-gray) 0%, var(--ti-white) 100%);
+    border-bottom: 2px solid var(--ti-red);
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px 5px 0 0;
+}
+
+.memdoc {
+    padding: 15px;
+    background-color: var(--ti-white);
+}
+
+.memname {
+    color: var(--ti-red);
+    font-weight: bold;
+}
+
+.paramname {
+    color: var(--ti-blue-link);
+    font-style: italic;
+}
+
+/* ============================================
+   Buttons and UI Elements
+   ============================================ */
+
+.ui-button,
+button,
+input[type="button"],
+input[type="submit"] {
+    background: linear-gradient(180deg, var(--ti-red) 0%, var(--ti-dark-red) 100%);
+    color: var(--ti-white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ui-button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background: var(--ti-light-red);
+    box-shadow: 0 2px 8px rgba(204, 0, 0, 0.3);
+}
+
+/* ============================================
+   Warning/Note Boxes
+   ============================================ */
+
+dl.warning,
+dl.attention,
+dl.note,
+dl.todo,
+dl.bug {
+    border-left: 4px solid;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+dl.warning {
+    background-color: #FFF3CD;
+    border-left-color: #FFC107;
+}
+
+dl.attention {
+    background-color: #FFE6E6;
+    border-left-color: var(--ti-red);
+}
+
+dl.note {
+    background-color: #E7F3FF;
+    border-left-color: var(--ti-blue-link);
+}
+
+dl.todo {
+    background-color: #F0F0F0;
+    border-left-color: var(--ti-gray);
+}
+
+dl.bug {
+    background-color: #FFEBEE;
+    border-left-color: #D32F2F;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+#nav-path {
+    background-color: var(--ti-light-gray);
+    border-top: 2px solid var(--ti-red);
+    padding: 10px;
+}
+
+.navpath li {
+    color: var(--ti-gray);
+}
+
+hr.footer {
+    border-top: 1px solid var(--ti-border-gray);
+    margin-top: 30px;
+}
+
+/* ============================================
+   Search Box
+   ============================================ */
+
+#MSearchBox {
+    background-color: var(--ti-white);
+    border: 1px solid var(--ti-border-gray);
+    border-radius: 4px;
+}
+
+#MSearchField {
+    background-color: var(--ti-white);
+    color: var(--ti-dark-gray);
+    border: none;
+    padding: 5px 10px;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    #projectname {
+        font-size: 22px;
+    }
+    
+    .contents {
+        padding: 10px;
+    }
+    
+    .tablist a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   Custom Additions
+   ============================================ */
+
+/* Logo area if you add one */
+#projectlogo img {
+    max-height: 60px;
+    margin-right: 20px;
+}
+
+/* Improve readability */
+p {
+    margin: 1em 0;
+}
+
+/* Better list styling */
+ul, ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+/* Enhanced documentation sections */
+.textblock {
+    line-height: 1.7;
+}

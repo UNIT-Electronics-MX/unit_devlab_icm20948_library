@@ -58,11 +58,11 @@ jobs:
 
       - name: Clean previous generated docs
         run: |
-          rm -rf docs/html docs/latex doxygen_warnings.log
+          rm -rf docs/html docs/latex .doxygen/doxygen_warnings.log
 
       - name: Generate current Doxygen docs
         run: |
-          doxygen Doxyfile
+          cd .doxygen && doxygen Doxyfile
 
       - name: Verify deploy entrypoint
         run: |
@@ -90,10 +90,10 @@ jobs:
       - name: Summarize Doxygen warnings
         if: always()
         run: |
-          if [ -s doxygen_warnings.log ]; then
+          if [ -s .doxygen/doxygen_warnings.log ]; then
             echo "Doxygen warnings:"
-            wc -l doxygen_warnings.log
-            sed -n '1,120p' doxygen_warnings.log
+            wc -l .doxygen/doxygen_warnings.log
+            sed -n '1,120p' .doxygen/doxygen_warnings.log
           else
             echo "No Doxygen warnings log was generated."
           fi
@@ -120,7 +120,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: doxygen-warnings
-          path: doxygen_warnings.log
+          path: .doxygen/doxygen_warnings.log
           if-no-files-found: ignore
 
       - name: Upload PDF documentation
