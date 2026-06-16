@@ -1,6 +1,13 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{unicode}[2026/06/16 Unicode mappings for Doxygen PDF output]
 
+\RequirePackage{iftex}
+\ifPDFTeX
+  \RequirePackage[utf8]{inputenc}
+\else
+  \providecommand{\DeclareUnicodeCharacter}[2]{}
+\fi
+
 \DeclareUnicodeCharacter{00B0}{\ensuremath{^\circ}}
 \DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
 \DeclareUnicodeCharacter{00B2}{\ensuremath{^2}}
