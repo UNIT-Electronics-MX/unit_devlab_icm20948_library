@@ -63,6 +63,13 @@ jobs:
         run: |
           cd .doxygen && doxygen Doxyfile
 
+      - name: Organize LaTeX build tree
+        run: |
+          test -f docs/latex/refman.tex
+          mkdir -p docs/latex/build
+          find docs/latex -mindepth 1 -maxdepth 1 ! -name build -exec mv -t docs/latex/build {} +
+          cp docs/latex/build/refman.tex docs/latex/refman.tex
+
       - name: Create .nojekyll files for GitHub Pages
         run: |
           touch docs/.nojekyll
@@ -71,11 +78,6 @@ jobs:
       - name: Verify deploy entrypoint
         run: |
           test -f docs/html/index.html
-
-      - name: Expose LaTeX manual entrypoint
-        run: |
-          test -f docs/latex/build/refman.tex
-          cp docs/latex/build/refman.tex docs/latex/refman.tex
 
       - name: Build PDF from LaTeX
         if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') || startsWith(github.ref, 'refs/tags/') || (github.event_name == 'workflow_dispatch' && inputs.build_pdf) }}

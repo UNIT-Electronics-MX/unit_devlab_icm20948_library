@@ -101,7 +101,7 @@ doxygen -u Doxyfile  # Updates file with new options
 All paths in Doxyfile are relative to `.doxygen/`:
 - `INPUT = ../src ../examples`
 - `OUTPUT_DIRECTORY = ../docs`
-- `LATEX_OUTPUT = latex/build`
+- `LATEX_OUTPUT = latex` (CI moves the generated LaTeX files into `docs/latex/build/`)
 - `HTML_EXTRA_STYLESHEET = custom/custom.css`
 
 ### Warning log not appearing
