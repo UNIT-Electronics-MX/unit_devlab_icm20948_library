@@ -35,7 +35,7 @@
 /** IMU inst0ance */
 DevLab_ICM20948 imu;
 
-SPIClass spi_bus(SPI);   // ← usa el bus SPI por defecto del Arduino
+SPIClass spi_bus(SPI);   
 
 void setup() {
   Serial.begin(115200);

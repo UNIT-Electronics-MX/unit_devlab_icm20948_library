@@ -26,9 +26,17 @@ uint8\+\_\+t \doxymbox{\hyperlink{structICM20948__IntEnableConfig_aaac0730419102
 
 
 \doxysubsection{Detailed Description}
+\doxylink{structICM20948__IntEnableConfig}{ICM20948\+\_\+\+Int\+Enable\+Config}
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00107}{107}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+\begin{DoxyItemize}
+\item Selects which interrupt sources are routed to the INT pin
+\item Covers INT\+\_\+\+ENABLE (0x10), INT\+\_\+\+ENABLE\+\_\+1 (0x11), INT\+\_\+\+ENABLE\+\_\+2 (0x12), INT\+\_\+\+ENABLE\+\_\+3 (0x13)
+\item FIFO overflow and watermark fields are per-\/channel arrays \+[0]\+–\+[4]\+
+\item Pass to int\+Enable\+Config() to write all four registers in one call 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00122}{122}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 
 
@@ -43,7 +51,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+dmp\+Int1\+En}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00113}{113}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00128}{128}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_a1254a7bd92a17da57b81a91338c145bc}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!fifoOvfEn@{fifoOvfEn}}
 \index{fifoOvfEn@{fifoOvfEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -53,7 +61,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+fifo\+Ovf\+En\+[5]\+}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00120}{120}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00135}{135}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_aaac07304191025a3f3da9b0a619b3f6f}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!fifoWmEn@{fifoWmEn}}
 \index{fifoWmEn@{fifoWmEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -63,7 +71,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+fifo\+Wm\+En\+[5]\+}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00123}{123}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00138}{138}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_aff622326c928640c8f9576a7c9834be7}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!i2cMstIntEn@{i2cMstIntEn}}
 \index{i2cMstIntEn@{i2cMstIntEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -73,7 +81,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+i2c\+Mst\+Int\+En}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00114}{114}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00129}{129}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_ad5823eddb88b1463692d7fe5363ca6f9}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!pllRdyEn@{pllRdyEn}}
 \index{pllRdyEn@{pllRdyEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -83,7 +91,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+pll\+Rdy\+En}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00112}{112}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00127}{127}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_a6764938aee3f8d6c6e070851872cc388}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!rawDataRdyEn@{rawDataRdyEn}}
 \index{rawDataRdyEn@{rawDataRdyEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -93,7 +101,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+raw\+Data\+Rdy\+En}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00117}{117}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00132}{132}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_ad8e41ee5fb54f5f168e2429d09ea900e}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!wofEn@{wofEn}}
 \index{wofEn@{wofEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -103,7 +111,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+wof\+En}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00110}{110}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00125}{125}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntEnableConfig_a2c13cfee0f9e9e73a152599540dc8e0f}\index{ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}!womIntEn@{womIntEn}}
 \index{womIntEn@{womIntEn}!ICM20948\_IntEnableConfig@{ICM20948\_IntEnableConfig}}
@@ -113,7 +121,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Enable\+Config::\+wom\+Int\+En}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00111}{111}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00126}{126}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 
 

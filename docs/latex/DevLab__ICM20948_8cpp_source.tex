@@ -95,7 +95,7 @@
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00092}00092\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00093}00093\ \ \ \textcolor{comment}{//\ Validate\ device\ ID\ (expected\ 0xEA)}}
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00094}00094\ \ \ \textcolor{keywordflow}{if}\ (who\_am\_i\ ==\ \doxymbox{\hyperlink{ICM20948__regs_8h_a4a6eb6d34106490a76e78b008ee463db}{WHO\_AM\_I\_VAL}})}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00094}00094\ \ \ \textcolor{keywordflow}{if}\ (who\_am\_i\ !=\ \doxymbox{\hyperlink{ICM20948__regs_8h_a4a6eb6d34106490a76e78b008ee463db}{WHO\_AM\_I\_VAL}})}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00096}00096\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00097}00097\ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(2))}
@@ -105,7 +105,7 @@
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00102}00102\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00103}00103\ \ \ \textcolor{comment}{//\ Enable\ I2C\ interface\ (I2C\_IF\_DIS\ =\ 0)}}
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00104}00104\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>writeBit(\doxymbox{\hyperlink{ICM20948__regs_8h_abd9eebb35aad7616fe0414952e2d477d}{USER\_CTRL}},\ 4,\ (uint8\_t)0x00))}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00104}00104\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>writeBit(\doxymbox{\hyperlink{ICM20948__regs_8h_abd9eebb35aad7616fe0414952e2d477d}{USER\_CTRL}},\ 4,\ (uint8\_t)0x01))}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00106}00106\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l00107}00107\ \ \ \textcolor{comment}{//\ Wake\ device\ from\ sleep\ mode\ (SLEEP\ =\ 0)}}
@@ -1177,7 +1177,7 @@
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01173}01173\ \}}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01174}01174\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01175}01175\ }
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01176}\doxymbox{\hyperlink{classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37}{01176}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37}{DevLab\_ICM20948::intInit}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structICM20948__IntPinConfig}{ICM20948\_IntPinConfig}}\ \&cfg)\{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01176}\doxymbox{\hyperlink{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43}{01176}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43}{DevLab\_ICM20948::intInit}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structICM20948__IntPinConfig}{ICM20948\_IntPinConfig}}\ \&cfg)\{}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01177}01177\ \ \ \textcolor{comment}{//\ Validate\ bus\ pointer}}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01178}01178\ \ \ \textcolor{keywordflow}{if}\ (!bus)}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01179}01179\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
@@ -1201,7 +1201,7 @@
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01197}01197\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01198}01198\ \}}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01199}01199\ }
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01200}01200\ \textcolor{keywordtype}{bool}\ DevLab\_ICM20948::intEnableConfig(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structICM20948__IntEnableConfig}{ICM20948\_IntEnableConfig}}\ \&cfg)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01200}\doxymbox{\hyperlink{classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7}{01200}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7}{DevLab\_ICM20948::intEnableConfig}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structICM20948__IntEnableConfig}{ICM20948\_IntEnableConfig}}\ \&cfg)}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01201}01201\ \{}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01202}01202\ \ \ \textcolor{keywordflow}{if}\ (!bus)\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01203}01203\ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
@@ -1212,22 +1212,22 @@
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01208}01208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_ad5823eddb88b1463692d7fe5363ca6f9}{pllRdyEn}}\ \ \ \ <<\ 2)\ |}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01209}01209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_a5640acb7eedb2bf36876d7b3651988da}{dmpInt1En}}\ \ \ <<\ 1)\ |}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01210}01210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_aff622326c928640c8f9576a7c9834be7}{i2cMstIntEn}}\ <<\ 0);}
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01211}01211\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>\doxymbox{\hyperlink{classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5}{write}}(\doxymbox{\hyperlink{ICM20948__regs_8h_abf7a56466fd6203663685a04448c9185}{INT\_ENABLE}},\ reg0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01211}01211\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_abf7a56466fd6203663685a04448c9185}{INT\_ENABLE}},\ reg0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01212}01212\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01213}01213\ \ \ \textcolor{comment}{//\ INT\_ENABLE\_1}}
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01214}01214\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>\doxymbox{\hyperlink{classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5}{write}}(\doxymbox{\hyperlink{ICM20948__regs_8h_ae8c6c6e4a060f62ce0e923d80a0ccffe}{INT\_ENABLE\_1}},\ (uint8\_t)(cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_a6764938aee3f8d6c6e070851872cc388}{rawDataRdyEn}}\ \&\ 0x01)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01214}01214\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_ae8c6c6e4a060f62ce0e923d80a0ccffe}{INT\_ENABLE\_1}},\ (uint8\_t)(cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_a6764938aee3f8d6c6e070851872cc388}{rawDataRdyEn}}\ \&\ 0x01)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01215}01215\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01216}01216\ \ \ \textcolor{comment}{//\ INT\_ENABLE\_2\ —\ construye\ máscara\ desde\ el\ array}}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01217}01217\ \ \ uint8\_t\ ovfMask\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01218}01218\ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ 5;\ i++)}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01219}01219\ \ \ \ \ ovfMask\ |=\ (cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_a1254a7bd92a17da57b81a91338c145bc}{fifoOvfEn}}[i]\ ?\ BIT(i)\ :\ 0);}
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01220}01220\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>\doxymbox{\hyperlink{classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5}{write}}(\doxymbox{\hyperlink{ICM20948__regs_8h_a37397c9ab1b56abddfadfa044fec7371}{INT\_ENABLE\_2}},\ ovfMask))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01220}01220\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a37397c9ab1b56abddfadfa044fec7371}{INT\_ENABLE\_2}},\ ovfMask))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01221}01221\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01222}01222\ \ \ \textcolor{comment}{//\ INT\_ENABLE\_3\ —\ igual}}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01223}01223\ \ \ uint8\_t\ wmMask\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01224}01224\ \ \ \textcolor{keywordflow}{for}\ (uint8\_t\ i\ =\ 0;\ i\ <\ 5;\ i++)}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01225}01225\ \ \ \ \ wmMask\ |=\ (cfg.\doxymbox{\hyperlink{structICM20948__IntEnableConfig_aaac07304191025a3f3da9b0a619b3f6f}{fifoWmEn}}[i]\ ?\ BIT(i)\ :\ 0);}
-\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01226}01226\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>\doxymbox{\hyperlink{classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5}{write}}(\doxymbox{\hyperlink{ICM20948__regs_8h_a3d88b66994665f81b4be05f71a6bf721}{INT\_ENABLE\_3}},\ wmMask))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01226}01226\ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a3d88b66994665f81b4be05f71a6bf721}{INT\_ENABLE\_3}},\ wmMask))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01227}01227\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01228}01228\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01229}01229\ \}}
@@ -1260,5 +1260,180 @@
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01256}01256\ }
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01257}01257\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01258}01258\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01259}01259\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01260}\doxymbox{\hyperlink{classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a}{01260}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a}{DevLab\_ICM20948::auxMasterEnable}}(uint8\_t\ clkFreq)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01261}01261\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01262}01262\ \ \ \ \ \textcolor{comment}{//\ BANK\ 0:\ asegurarse\ que\ BYPASS\_EN=0\ e\ I2C\_MST\_EN=1}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01263}01263\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01264}01264\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01265}01265\ \ \ \ \ \textcolor{comment}{//\ Limpiar\ BYPASS\_EN\ (bit\ 1\ de\ INT\_PIN\_CFG)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01266}01266\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>writeBit(\doxymbox{\hyperlink{ICM20948__regs_8h_ab00fdfba66092d2d869031629c092dad}{INT\_PIN\_CFG}},\ 1,\ (uint8\_t)0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01267}01267\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01268}01268\ \ \ \ \ \textcolor{comment}{//\ Activar\ I2C\_MST\_EN\ (bit\ 5\ de\ USER\_CTRL)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01269}01269\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>writeBit(\doxymbox{\hyperlink{ICM20948__regs_8h_abd9eebb35aad7616fe0414952e2d477d}{USER\_CTRL}},\ 5,\ (uint8\_t)1))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01270}01270\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01271}01271\ \ \ \ \ \textcolor{comment}{//\ BANK\ 3:\ configurar\ clock\ del\ master\ auxiliar}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01272}01272\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01273}01273\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01274}01274\ \ \ \ \ \textcolor{comment}{//\ clkFreq\ típico:\ 0x07\ =\ \string~345.6\ kHz\ \ |\ \ 0x0D\ =\ \string~400\ kHz}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01275}01275\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>writeBits(\doxymbox{\hyperlink{ICM20948__regs_8h_a24bc05247067ad9f0479f5a6d49c6412}{I2C\_MST\_CTRL}},\ 0,\ 4,\ clkFreq))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01276}01276\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01277}01277\ \ \ \ \ \textcolor{comment}{//\ Volver\ a\ BANK\ 0}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01278}01278\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01279}01279\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01280}01280\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01281}\doxymbox{\hyperlink{classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102}{01281}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102}{DevLab\_ICM20948::auxWriteByte}}(uint8\_t\ slaveAddr,\ uint8\_t\ reg,\ uint8\_t\ data)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01282}01282\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01283}01283\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01284}01284\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01285}01285\ \ \ \ \ \textcolor{comment}{//\ Dirección\ del\ slave,\ bit\ 7=0\ para\ escritura}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01286}01286\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a25432a6492073ae1e1e082ea95ad3c65}{I2C\_SLV4\_ADDR}},\ (uint8\_t)(slaveAddr\ \&\ 0x7F)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01287}01287\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01288}01288\ \ \ \ \ \textcolor{comment}{//\ Registro\ destino\ que\ queremos\ escribir\ en\ el\ slave}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01289}01289\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a89919db5e2f4a361c1d19cc2215c8d0c}{I2C\_SLV4\_REG}},\ reg))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01290}01290\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01291}01291\ \ \ \ \ \textcolor{comment}{//\ Dato\ a\ escribir}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01292}01292\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a317a21f85deb696c508437cd32ac803c}{I2C\_SLV4\_DO}},\ data))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01293}01293\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01294}01294\ \ \ \ \ \textcolor{comment}{//\ Disparar\ transacción\ (I2C\_SLV4\_EN,\ se\ auto-\/limpia\ al\ terminar)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01295}01295\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a7e5cb081a1546553fe74fb3e07b7907b}{I2C\_SLV4\_CTRL}},\ (uint8\_t)\doxymbox{\hyperlink{ICM20948__regs_8h_a00a6bbbaaeeeba58a5c7a70a00237b34}{I2C\_SLVx\_EN}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01296}01296\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01297}01297\ \ \ \ \ \textcolor{comment}{//\ Esperar\ a\ que\ complete\ —\ verificar\ SLV4\_DONE\ en\ BANK\ 0}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01298}01298\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01299}01299\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01300}01300\ \ \ \ \ uint8\_t\ status\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01301}01301\ \ \ \ \ uint8\_t\ timeout\ =\ 50;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01302}01302\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01303}01303\ \ \ \ \ \ \ \ \ delay(1);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01304}01304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a8498e646190e00d95ddd95af4d6a093a}{I2C\_MST\_STATUS}},\ status))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01305}01305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (-\/-\/timeout\ ==\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ timeout}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01306}01306\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!(status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_ad2aa22121a98f94134f273fe12e269be}{MST\_SLV4\_DONE}}));}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01307}01307\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01308}01308\ \ \ \ \ \textcolor{comment}{//\ Verificar\ que\ no\ hubo\ NACK}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01309}01309\ \ \ \ \ \textcolor{keywordflow}{return}\ !(status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_add44eaeeb32d78a1dbfb3a01a98471b3}{MST\_SLV4\_NACK}});}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01310}01310\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01311}01311\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01312}\doxymbox{\hyperlink{classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb}{01312}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb}{DevLab\_ICM20948::auxReadByte}}(uint8\_t\ slaveAddr,\ uint8\_t\ reg,\ uint8\_t\ \&data)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01313}01313\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01314}01314\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01315}01315\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01316}01316\ \ \ \ \ \textcolor{comment}{//\ Dirección\ del\ slave,\ bit\ 7=1\ para\ lectura}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01317}01317\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a25432a6492073ae1e1e082ea95ad3c65}{I2C\_SLV4\_ADDR}},\ (uint8\_t)((slaveAddr\ \&\ 0x7F)\ |\ \doxymbox{\hyperlink{ICM20948__regs_8h_a8c357db66e310d0e6298ab41c86d3cad}{I2C\_SLVx\_RNW}})))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01318}01318\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01319}01319\ \ \ \ \ \textcolor{comment}{//\ Registro\ origen\ que\ queremos\ leer\ del\ slave}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01320}01320\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a89919db5e2f4a361c1d19cc2215c8d0c}{I2C\_SLV4\_REG}},\ reg))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01321}01321\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01322}01322\ \ \ \ \ \textcolor{comment}{//\ Disparar\ transacción\ (I2C\_SLV4\_EN,\ se\ auto-\/limpia\ al\ terminar)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01323}01323\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a7e5cb081a1546553fe74fb3e07b7907b}{I2C\_SLV4\_CTRL}},\ (uint8\_t)\doxymbox{\hyperlink{ICM20948__regs_8h_a00a6bbbaaeeeba58a5c7a70a00237b34}{I2C\_SLVx\_EN}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01324}01324\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01325}01325\ \ \ \ \ \textcolor{comment}{//\ Esperar\ a\ que\ complete\ —\ verificar\ SLV4\_DONE\ en\ BANK\ 0}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01326}01326\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01327}01327\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01328}01328\ \ \ \ \ uint8\_t\ status\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01329}01329\ \ \ \ \ uint8\_t\ timeout\ =\ 50;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01330}01330\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01331}01331\ \ \ \ \ \ \ \ \ delay(1);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01332}01332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a8498e646190e00d95ddd95af4d6a093a}{I2C\_MST\_STATUS}},\ status))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01333}01333\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (-\/-\/timeout\ ==\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ timeout}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01334}01334\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!(status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_ad2aa22121a98f94134f273fe12e269be}{MST\_SLV4\_DONE}}));}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01335}01335\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01336}01336\ \ \ \ \ \textcolor{comment}{//\ Verificar\ que\ no\ hubo\ NACK}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01337}01337\ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_add44eaeeb32d78a1dbfb3a01a98471b3}{MST\_SLV4\_NACK}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01338}01338\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01339}01339\ \ \ \ \ \textcolor{comment}{//\ Leer\ el\ dato\ recibido\ del\ slave\ (BANK\ 3)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01340}01340\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01341}01341\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a838003994d9f3319308f9f650cc2a083}{I2C\_SLV4\_DI}},\ data))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01342}01342\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01343}01343\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01344}01344\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01345}01345\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01346}\doxymbox{\hyperlink{classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808}{01346}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808}{DevLab\_ICM20948::auxWriteCommand}}(uint8\_t\ slaveAddr,\ uint8\_t\ cmd)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01347}01347\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01348}01348\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01349}01349\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01350}01350\ \ \ \ \ \textcolor{comment}{//\ Dirección\ del\ slave,\ bit\ 7=0\ para\ escritura}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01351}01351\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a25432a6492073ae1e1e082ea95ad3c65}{I2C\_SLV4\_ADDR}},\ (uint8\_t)(slaveAddr\ \&\ 0x7F)))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01352}01352\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01353}01353\ \ \ \ \ \textcolor{comment}{//\ Byte\ de\ comando\ a\ enviar\ (único\ byte\ de\ la\ transacción)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01354}01354\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a317a21f85deb696c508437cd32ac803c}{I2C\_SLV4\_DO}},\ cmd))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01355}01355\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01356}01356\ \ \ \ \ \textcolor{comment}{//\ EN\ +\ REG\_DIS:\ el\ SLV4\ envía\ solo\ I2C\_SLV4\_DO,\ sin\ byte\ de\ registro}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01357}01357\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a7e5cb081a1546553fe74fb3e07b7907b}{I2C\_SLV4\_CTRL}},\ (uint8\_t)(\doxymbox{\hyperlink{ICM20948__regs_8h_a00a6bbbaaeeeba58a5c7a70a00237b34}{I2C\_SLVx\_EN}}\ |\ \doxymbox{\hyperlink{ICM20948__regs_8h_aff507d9c313c3acd182b127a8a7df3fb}{I2C\_SLVx\_REG\_DIS}})))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01358}01358\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01359}01359\ \ \ \ \ \textcolor{comment}{//\ Esperar\ a\ que\ complete\ —\ verificar\ SLV4\_DONE\ en\ BANK\ 0}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01360}01360\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01361}01361\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01362}01362\ \ \ \ \ uint8\_t\ status\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01363}01363\ \ \ \ \ uint8\_t\ timeout\ =\ 50;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01364}01364\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01365}01365\ \ \ \ \ \ \ \ \ delay(1);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01366}01366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a8498e646190e00d95ddd95af4d6a093a}{I2C\_MST\_STATUS}},\ status))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01367}01367\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (-\/-\/timeout\ ==\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \textcolor{comment}{//\ timeout}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01368}01368\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!(status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_ad2aa22121a98f94134f273fe12e269be}{MST\_SLV4\_DONE}}));}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01369}01369\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01370}01370\ \ \ \ \ \textcolor{comment}{//\ Verificar\ que\ no\ hubo\ NACK}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01371}01371\ \ \ \ \ \textcolor{keywordflow}{return}\ !(status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_add44eaeeb32d78a1dbfb3a01a98471b3}{MST\_SLV4\_NACK}});}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01372}01372\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01373}01373\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01374}\doxymbox{\hyperlink{classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619}{01374}}\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619}{DevLab\_ICM20948::auxConfigSlave}}(uint8\_t\ slaveAddr,\ uint8\_t\ reg,\ uint8\_t\ numBytes)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01375}01375\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01376}01376\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01377}01377\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01378}01378\ \ \ \ \ \textcolor{comment}{//\ Slave\ 0:\ dirección\ +\ bit\ READ}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01379}01379\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a614db921c27f375c632960a7f34999a4}{I2C\_SLV0\_ADDR}},\ (uint8\_t)(slaveAddr\ |\ \doxymbox{\hyperlink{ICM20948__regs_8h_a8c357db66e310d0e6298ab41c86d3cad}{I2C\_SLVx\_RNW}})))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01380}01380\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01381}01381\ \ \ \ \ \textcolor{comment}{//\ Registro\ de\ inicio}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01382}01382\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a0553d56ecccd0fc8008505e712a9b075}{I2C\_SLV0\_REG}},\ reg))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01383}01383\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01384}01384\ \ \ \ \ \textcolor{comment}{//\ Habilitar\ +\ número\ de\ bytes}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01385}01385\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_ad6fb6553534b0b9e9715db3e5a04ebca}{I2C\_SLV0\_CTRL}},\ (uint8\_t)(\doxymbox{\hyperlink{ICM20948__regs_8h_a00a6bbbaaeeeba58a5c7a70a00237b34}{I2C\_SLVx\_EN}}\ |\ (numBytes\ \&\ 0x0F))))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01386}01386\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01387}01387\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01388}01388\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01389}01389\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01390}01390\ \textcolor{comment}{//\ Para\ leer\ los\ datos\ que\ el\ ICM\ leyó\ automáticamente:}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01391}\doxymbox{\hyperlink{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566}{01391}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566}{DevLab\_ICM20948::auxReadSensorData}}(uint8\_t\ *buf,\ uint8\_t\ len)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01392}01392\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01393}01393\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01394}01394\ \ \ \ \ \textcolor{keywordflow}{return}\ bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a3cc8ba7b3d13ace76a3d4bfd9101de76}{EXT\_SLV\_SENS\_DATA\_00}},\ buf,\ len);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01395}01395\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01396}01396\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01397}\doxymbox{\hyperlink{classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f}{01397}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f}{DevLab\_ICM20948::auxReadResponse}}(uint8\_t\ slaveAddr,\ uint8\_t\ \&data)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01398}01398\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01399}01399\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01400}01400\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01401}01401\ \ \ \ \ \textcolor{comment}{//\ Slave\ address\ con\ bit\ READ,\ sin\ byte\ de\ registro\ (REG\_DIS)}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01402}01402\ \ \ \ \ \textcolor{comment}{//\ Genera:\ [START,\ addr+R,\ lee\ 1\ byte,\ STOP]}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01403}01403\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a25432a6492073ae1e1e082ea95ad3c65}{I2C\_SLV4\_ADDR}},\ (uint8\_t)((slaveAddr\ \&\ 0x7F)\ |\ \doxymbox{\hyperlink{ICM20948__regs_8h_a8c357db66e310d0e6298ab41c86d3cad}{I2C\_SLVx\_RNW}})))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01404}01404\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>write(\doxymbox{\hyperlink{ICM20948__regs_8h_a7e5cb081a1546553fe74fb3e07b7907b}{I2C\_SLV4\_CTRL}},\ (uint8\_t)(\doxymbox{\hyperlink{ICM20948__regs_8h_a00a6bbbaaeeeba58a5c7a70a00237b34}{I2C\_SLVx\_EN}}\ |\ \doxymbox{\hyperlink{ICM20948__regs_8h_aff507d9c313c3acd182b127a8a7df3fb}{I2C\_SLVx\_REG\_DIS}})))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01405}01405\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01406}01406\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01407}01407\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01408}01408\ \ \ \ \ uint8\_t\ status\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01409}01409\ \ \ \ \ uint8\_t\ timeout\ =\ 50;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01410}01410\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01411}01411\ \ \ \ \ \ \ \ \ delay(1);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01412}01412\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a8498e646190e00d95ddd95af4d6a093a}{I2C\_MST\_STATUS}},\ status))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01413}01413\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (-\/-\/timeout\ ==\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01414}01414\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!(status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_ad2aa22121a98f94134f273fe12e269be}{MST\_SLV4\_DONE}}));}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01415}01415\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01416}01416\ \ \ \ \ \textcolor{keywordflow}{if}\ (status\ \&\ \doxymbox{\hyperlink{ICM20948__regs_8h_add44eaeeb32d78a1dbfb3a01a98471b3}{MST\_SLV4\_NACK}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01417}01417\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01418}01418\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(3))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01419}01419\ \ \ \ \ \textcolor{keywordflow}{if}\ (!bus-\/>read(\doxymbox{\hyperlink{ICM20948__regs_8h_a838003994d9f3319308f9f650cc2a083}{I2C\_SLV4\_DI}},\ data))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01420}01420\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01421}01421\ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55}{selectBank}}(0);}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01422}01422\ \}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01423}01423\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01424}\doxymbox{\hyperlink{classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a}{01424}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a}{DevLab\_ICM20948::auxRead12bit}}(uint16\_t\ \&raw)}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01425}01425\ \{}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01426}01426\ \ \ \ \ uint8\_t\ buf[2];}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01427}01427\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566}{auxReadSensorData}}(buf,\ 2))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01428}01428\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01429}01429\ \ \ \ \ \textcolor{comment}{//\ LSB\ primero\ (little-\/endian):\ buf[0]\ =\ byte\ bajo,\ buf[1]\ =\ byte\ alto}}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01430}01430\ \ \ \ \ raw\ =\ (uint16\_t)(buf[0]\ |\ (buf[1]\ <<\ 8))\ \&\ 0x0FFF;}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01431}01431\ }
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01432}01432\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{DevLab__ICM20948_8cpp_source_l01433}01433\ \}}
 
 \end{DoxyCode}

@@ -82,9 +82,10 @@ var searchData=
   ['int_5fstatus_5f2_79',['INT_STATUS_2',['../ICM20948__regs_8h.html#a8e75e97149a0b6aa3b89d5b93b1574d7',1,'ICM20948_regs.h']]],
   ['int_5fstatus_5f3_80',['INT_STATUS_3',['../ICM20948__regs_8h.html#ad284ca31cb7c46ef85f24eb7437e7438',1,'ICM20948_regs.h']]],
   ['int_5fwom_5fint_5fen_81',['INT_WOM_INT_EN',['../ICM20948__regs_8h.html#a112d99669ad650a0ae65f050322c04ff',1,'ICM20948_regs.h']]],
-  ['interface_5f7semi_82',['Interface_7Semi',['../classInterface__7Semi.html',1,'']]],
-  ['internal_5f20mhz_83',['INTERNAL_20MHZ',['../ICM20948__regs_8h.html#a7ef2e1cb009cff30755f69c992e479ba',1,'ICM20948_regs.h']]],
-  ['internal_5f20mhz_5f0_84',['INTERNAL_20MHZ_0',['../DevLab__ICM20948_8h.html#a4f34ad1572aec922143a5ffa9420879aa59e0b75b3c047b4b832b0200d782ddb2',1,'DevLab_ICM20948.h']]],
-  ['internal_5f20mhz_5f6_85',['INTERNAL_20MHZ_6',['../DevLab__ICM20948_8h.html#a4f34ad1572aec922143a5ffa9420879aa366429873bd2a3e635e2f5e9444e8c65',1,'DevLab_ICM20948.h']]],
-  ['intinit_86',['intInit',['../classDevLab__ICM20948.html#a9dbe029090b4057fd9245551d8917b37',1,'DevLab_ICM20948']]]
+  ['intenableconfig_82',['intEnableConfig',['../classDevLab__ICM20948.html#a3c5db22058479806072167f2c15319c7',1,'DevLab_ICM20948']]],
+  ['interface_5f7semi_83',['Interface_7Semi',['../classInterface__7Semi.html',1,'']]],
+  ['internal_5f20mhz_84',['INTERNAL_20MHZ',['../ICM20948__regs_8h.html#a7ef2e1cb009cff30755f69c992e479ba',1,'ICM20948_regs.h']]],
+  ['internal_5f20mhz_5f0_85',['INTERNAL_20MHZ_0',['../DevLab__ICM20948_8h.html#a4f34ad1572aec922143a5ffa9420879aa59e0b75b3c047b4b832b0200d782ddb2',1,'DevLab_ICM20948.h']]],
+  ['internal_5f20mhz_5f6_86',['INTERNAL_20MHZ_6',['../DevLab__ICM20948_8h.html#a4f34ad1572aec922143a5ffa9420879aa366429873bd2a3e635e2f5e9444e8c65',1,'DevLab_ICM20948.h']]],
+  ['intinit_87',['intInit',['../classDevLab__ICM20948.html#ab011f71e9466a0e1e8245638f81b0f43',1,'DevLab_ICM20948']]]
 ];

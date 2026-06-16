@@ -167,8 +167,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d407a299b73a9d6da88f724bcca0a36" id="r_a3d407a299b73a9d6da88f724bcca0a36"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3d407a299b73a9d6da88f724bcca0a36">getGyroOffset</a> (int16_t &amp;offsetX, int16_t &amp;offsetY, int16_t &amp;offsetZ)</td></tr>
 <tr class="memitem:a7c150c665140086d7937fa4b2f39cd45" id="r_a7c150c665140086d7937fa4b2f39cd45"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a7c150c665140086d7937fa4b2f39cd45">setAccelOffset</a> (int16_t offsetX, int16_t offsetY, int16_t offsetZ)</td></tr>
 <tr class="memitem:ae4beff71dc469940c9ba561d57f04ec7" id="r_ae4beff71dc469940c9ba561d57f04ec7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae4beff71dc469940c9ba561d57f04ec7">getAccelOffset</a> (int16_t &amp;offsetX, int16_t &amp;offsetY, int16_t &amp;offsetZ)</td></tr>
-<tr class="memitem:a9dbe029090b4057fd9245551d8917b37" id="r_a9dbe029090b4057fd9245551d8917b37"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9dbe029090b4057fd9245551d8917b37">intInit</a> ()</td></tr>
+<tr class="memitem:ab011f71e9466a0e1e8245638f81b0f43" id="r_ab011f71e9466a0e1e8245638f81b0f43"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab011f71e9466a0e1e8245638f81b0f43">intInit</a> (const <a class="el" href="structICM20948__IntPinConfig.html">ICM20948_IntPinConfig</a> &amp;cfg)</td></tr>
+<tr class="memitem:a3c5db22058479806072167f2c15319c7" id="r_a3c5db22058479806072167f2c15319c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3c5db22058479806072167f2c15319c7">intEnableConfig</a> (const <a class="el" href="structICM20948__IntEnableConfig.html">ICM20948_IntEnableConfig</a> &amp;cfg)</td></tr>
 <tr class="memitem:a61f65c00baf13e2cd69eee7cb6688720" id="r_a61f65c00baf13e2cd69eee7cb6688720"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a61f65c00baf13e2cd69eee7cb6688720">checkIntStatus</a> (<a class="el" href="structICM20948__IntStatus.html">ICM20948_IntStatus</a> &amp;status)</td></tr>
+<tr class="memitem:aab027c72832d1c7ec722187e6a64796a" id="r_aab027c72832d1c7ec722187e6a64796a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aab027c72832d1c7ec722187e6a64796a">auxMasterEnable</a> (uint8_t clkFreq)</td></tr>
+<tr class="memitem:a1079d6d89e4bda1f496cce90a820e102" id="r_a1079d6d89e4bda1f496cce90a820e102"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1079d6d89e4bda1f496cce90a820e102">auxWriteByte</a> (uint8_t slaveAddr, uint8_t reg, uint8_t data)</td></tr>
+<tr class="memitem:a1b8cce13fe757b1b3a61f8437766d7eb" id="r_a1b8cce13fe757b1b3a61f8437766d7eb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1b8cce13fe757b1b3a61f8437766d7eb">auxReadByte</a> (uint8_t slaveAddr, uint8_t reg, uint8_t &amp;data)</td></tr>
+<tr class="memitem:ac2a1cdaf078cac71e14e0629925a7808" id="r_ac2a1cdaf078cac71e14e0629925a7808"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac2a1cdaf078cac71e14e0629925a7808">auxWriteCommand</a> (uint8_t slaveAddr, uint8_t cmd)</td></tr>
+<tr class="memitem:ab8336307b4096237d701d989d1f5e619" id="r_ab8336307b4096237d701d989d1f5e619"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab8336307b4096237d701d989d1f5e619">auxConfigSlave</a> (uint8_t slaveAddr, uint8_t reg, uint8_t numBytes)</td></tr>
+<tr class="memitem:a8f47c9f63642c35e5b5656e720667566" id="r_a8f47c9f63642c35e5b5656e720667566"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8f47c9f63642c35e5b5656e720667566">auxReadSensorData</a> (uint8_t *buf, uint8_t len)</td></tr>
+<tr class="memitem:a57d37173d6d5c54ab4c7027dfdd3a78f" id="r_a57d37173d6d5c54ab4c7027dfdd3a78f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a57d37173d6d5c54ab4c7027dfdd3a78f">auxReadResponse</a> (uint8_t slaveAddr, uint8_t &amp;data)</td></tr>
+<tr class="memitem:a357d1315ecc5a649ac4ce6b31cb47e7a" id="r_a357d1315ecc5a649ac4ce6b31cb47e7a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a357d1315ecc5a649ac4ce6b31cb47e7a">auxRead12bit</a> (uint16_t &amp;raw)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class</p><ul>
@@ -176,7 +185,7 @@ Public Member Functions</h2></td></tr>
 <li>Caches scale factors for LSB-&gt;physical conversions </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00149">149</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00172">172</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad71f3c89c3edb515b8cfb3f4b3073e95" name="ad71f3c89c3edb515b8cfb3f4b3073e95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad71f3c89c3edb515b8cfb3f4b3073e95">&#9670;&#160;</a></span>DevLab_ICM20948()</h2>
@@ -235,6 +244,356 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.svg" width="490" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab8336307b4096237d701d989d1f5e619" name="ab8336307b4096237d701d989d1f5e619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8336307b4096237d701d989d1f5e619">&#9670;&#160;</a></span>auxConfigSlave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxConfigSlave </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveAddr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>numBytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxConfigSlave</p>
+<ul>
+<li>Configure SLV0 for automatic periodic reads from an auxiliary I2C slave</li>
+<li>The ICM20948 master will read numBytes starting at reg on every ODR cycle</li>
+<li>Data is deposited into EXT_SLV_SENS_DATA_00 and subsequent registers</li>
+<li>Call once during initialization; read results with auxReadSensorData</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>slaveAddr: 7-bit I2C address of the auxiliary slave</li>
+<li>reg: starting register address to read from on the slave</li>
+<li>numBytes: number of bytes to read per cycle (1–15)</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → SLV0 configured successfully</li>
+<li>false → Operation failed </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01374">1374</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.svg" width="498" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aab027c72832d1c7ec722187e6a64796a" name="aab027c72832d1c7ec722187e6a64796a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab027c72832d1c7ec722187e6a64796a">&#9670;&#160;</a></span>auxMasterEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxMasterEnable </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>clkFreq</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxMasterEnable</p>
+<ul>
+<li>Enable the ICM20948 internal I2C master for auxiliary bus</li>
+<li>Clears BYPASS_EN so the aux bus is controlled by the ICM</li>
+<li>Sets I2C_MST_EN in USER_CTRL</li>
+<li>Configures auxiliary master clock frequency</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>clkFreq: clock divider value (e.g. 0x07 ≈ 345.6 kHz, 0x0D ≈ 400 kHz)</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Master enabled successfully</li>
+<li>false → Operation failed </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01260">1260</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.svg" width="502" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a357d1315ecc5a649ac4ce6b31cb47e7a" name="a357d1315ecc5a649ac4ce6b31cb47e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a357d1315ecc5a649ac4ce6b31cb47e7a">&#9670;&#160;</a></span>auxRead12bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxRead12bit </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t &amp;</td>          <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxRead12bit</p>
+<ul>
+<li>Read a 12-bit value previously configured via auxConfigSlave (SLV0, numBytes = 2)</li>
+<li>Assumes little-endian packing: first byte = LSB, second byte = MSB</li>
+<li>Result is masked to 12 bits (0-4095)</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Read successful</li>
+<li>false → Read failed </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01424">1424</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.svg" width="779" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1b8cce13fe757b1b3a61f8437766d7eb" name="a1b8cce13fe757b1b3a61f8437766d7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b8cce13fe757b1b3a61f8437766d7eb">&#9670;&#160;</a></span>auxReadByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxReadByte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveAddr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxReadByte</p>
+<ul>
+<li>Read a single byte from a register of an auxiliary I2C slave via SLV4</li>
+<li>Generates a combined write-then-read transaction (reg byte + repeated START)</li>
+<li>Suitable for slaves that follow standard I2C register-read protocol</li>
+</ul>
+<p>Note: slaves that need separate write/read transactions (e.g. command-response firmware) should use auxWriteCommand + auxReadResponse instead.</p>
+<p>Parameters:</p><ul>
+<li>slaveAddr: 7-bit I2C address of the auxiliary slave</li>
+<li>reg: register address to read from</li>
+<li>data: output byte received from slave</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Read successful</li>
+<li>false → Timeout or NACK </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01312">1312</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.svg" width="520" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a57d37173d6d5c54ab4c7027dfdd3a78f" name="a57d37173d6d5c54ab4c7027dfdd3a78f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d37173d6d5c54ab4c7027dfdd3a78f">&#9670;&#160;</a></span>auxReadResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxReadResponse </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveAddr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxReadResponse</p>
+<ul>
+<li>Read a single response byte from an auxiliary I2C slave via SLV4</li>
+<li>Generates a pure read transaction: [START, addr+R, 1 byte, STOP]</li>
+<li>No register byte is sent (REG_DIS); slave must already be ready to transmit</li>
+<li>Use after auxWriteCommand to complete a command-response exchange with slaves that require separate write and read transactions (e.g. PY32F0 firmware slaves)</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>slaveAddr: 7-bit I2C address of the auxiliary slave</li>
+<li>data: output byte received from slave</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Response received successfully</li>
+<li>false → Timeout or NACK </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01397">1397</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.svg" width="490" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8f47c9f63642c35e5b5656e720667566" name="a8f47c9f63642c35e5b5656e720667566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f47c9f63642c35e5b5656e720667566">&#9670;&#160;</a></span>auxReadSensorData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxReadSensorData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxReadSensorData</p>
+<ul>
+<li>Read bytes from EXT_SLV_SENS_DATA registers (BANK 0)</li>
+<li>Returns data collected by the ICM20948 master from SLV0–SLV3 on the last cycle</li>
+<li>Must call auxConfigSlave first to set up the automatic read</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>buf: output buffer to store the received bytes</li>
+<li>len: number of bytes to read (must match numBytes configured in auxConfigSlave)</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Read successful</li>
+<li>false → Bus error </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01391">1391</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.svg" width="490" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.svg" width="508" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1079d6d89e4bda1f496cce90a820e102" name="a1079d6d89e4bda1f496cce90a820e102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1079d6d89e4bda1f496cce90a820e102">&#9670;&#160;</a></span>auxWriteByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxWriteByte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveAddr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxWriteByte</p>
+<ul>
+<li>Write a single byte to a register of an auxiliary I2C slave via SLV4</li>
+<li>Uses one-shot SLV4 transaction: polls SLV4_DONE, checks for NACK</li>
+<li>Suitable for configuration writes (not continuous streaming)</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>slaveAddr: 7-bit I2C address of the auxiliary slave</li>
+<li>reg: target register address on the slave</li>
+<li>data: byte to write</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Write acknowledged by slave</li>
+<li>false → Timeout or NACK </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01281">1281</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.svg" width="522" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac2a1cdaf078cac71e14e0629925a7808" name="ac2a1cdaf078cac71e14e0629925a7808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a1cdaf078cac71e14e0629925a7808">&#9670;&#160;</a></span>auxWriteCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::auxWriteCommand </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slaveAddr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>auxWriteCommand</p>
+<ul>
+<li>Send a single command byte to an auxiliary I2C slave via SLV4</li>
+<li>Uses REG_DIS: generates [START, addr+W, cmd_byte, STOP] with no register prefix</li>
+<li>Designed for slaves that use a command-response protocol (no register addressing)</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>slaveAddr: 7-bit I2C address of the auxiliary slave</li>
+<li>cmd: command byte to send</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Command acknowledged by slave</li>
+<li>false → Timeout or NACK </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01346">1346</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.svg" width="492" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -330,6 +689,20 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>checkIntStatus</p>
+<ul>
+<li>Read and parse all four interrupt status registers in a single burst read</li>
+<li>Covers INT_STATUS (0x19), INT_STATUS_1 (0x1A), INT_STATUS_2 (0x1B), INT_STATUS_3 (0x1C) from BANK 0</li>
+<li>Reading clears the interrupt flags when clearMode = 0 in <a class="el" href="structICM20948__IntPinConfig.html">ICM20948_IntPinConfig</a></li>
+<li>Typically called inside the INT pin ISR or polled in the main loop</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>status: <a class="el" href="structICM20948__IntStatus.html">ICM20948_IntStatus</a> struct populated with the current interrupt flags</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Status read successfully</li>
+<li>false → Operation failed </li>
+</ul>
 
 <p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01231">1231</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
 <div class="dynheader">
@@ -830,8 +1203,45 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a9dbe029090b4057fd9245551d8917b37" name="a9dbe029090b4057fd9245551d8917b37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dbe029090b4057fd9245551d8917b37">&#9670;&#160;</a></span>intInit()</h2>
+<a id="a3c5db22058479806072167f2c15319c7" name="a3c5db22058479806072167f2c15319c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5db22058479806072167f2c15319c7">&#9670;&#160;</a></span>intEnableConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DevLab_ICM20948::intEnableConfig </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structICM20948__IntEnableConfig.html">ICM20948_IntEnableConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cfg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>intEnableConfig</p>
+<ul>
+<li>Enable or disable individual interrupt sources routed to the INT pin</li>
+<li>Writes INT_ENABLE (0x10), INT_ENABLE_1 (0x11), INT_ENABLE_2 (0x12), and INT_ENABLE_3 (0x13) in BANK 0</li>
+<li>Must call <a class="el" href="#ab011f71e9466a0e1e8245638f81b0f43">intInit()</a> first to configure the pin electrical behavior</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>cfg: <a class="el" href="structICM20948__IntEnableConfig.html">ICM20948_IntEnableConfig</a> struct with the desired interrupt sources enabled</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → All four registers written successfully</li>
+<li>false → Operation failed </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01200">1200</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab011f71e9466a0e1e8245638f81b0f43" name="ab011f71e9466a0e1e8245638f81b0f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab011f71e9466a0e1e8245638f81b0f43">&#9670;&#160;</a></span>intInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,17 +1249,29 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">bool DevLab_ICM20948::intInit </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structICM20948__IntPinConfig.html">ICM20948_IntPinConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cfg</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>intInit</p>
+<ul>
+<li>Configure the physical behavior of the INT pin (INT_PIN_CFG register, BANK 0)</li>
+<li>Sets active level, drive mode (push-pull / open-drain), latch vs pulse mode, clear condition, FSYNC level, FSYNC interrupt enable, and I2C bypass</li>
+</ul>
+<p>Parameters:</p><ul>
+<li>cfg: <a class="el" href="structICM20948__IntPinConfig.html">ICM20948_IntPinConfig</a> struct with the desired pin settings</li>
+</ul>
+<p>Returns:</p><ul>
+<li>true → Configuration written successfully</li>
+<li>false → Operation failed </li>
+</ul>
 
 <p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l01176">1176</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37_cgraph.svg" width="471" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.svg" width="471" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1078,11 +1500,6 @@ Here is the caller graph for this function:</div>
 </ul>
 
 <p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8cpp_source.html#l00132">132</a> of file <a class="el" href="DevLab__ICM20948_8cpp_source.html">DevLab_ICM20948.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_icgraph.svg" width="800" height="2378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>

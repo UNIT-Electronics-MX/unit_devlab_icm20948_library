@@ -93,6 +93,13 @@ enum class ICM20948_Accel_DLPFCFG : uint8_t
   DLPF_473HZ = 0x07, // BW ≈ 473 Hz, NBW ≈ 499 Hz
 };
 
+/**
+ * ICM20948_IntPinConfig
+ *
+ * - Physical configuration of the INT pin (INT_PIN_CFG register, BANK 0)
+ * - Controls electrical behavior and clear condition of the interrupt line
+ * - Pass to intInit() to apply settings
+ */
 struct ICM20948_IntPinConfig
 {
   uint8_t activeLevel    : 1;  // bit 7 | 0 = active high,       1 = active low
@@ -104,6 +111,14 @@ struct ICM20948_IntPinConfig
   uint8_t bypassEn       : 1;  // bit 1 | 0 = normal,            1 = I2C bypass mode
 };
 
+/**
+ * ICM20948_IntEnableConfig
+ *
+ * - Selects which interrupt sources are routed to the INT pin
+ * - Covers INT_ENABLE (0x10), INT_ENABLE_1 (0x11), INT_ENABLE_2 (0x12), INT_ENABLE_3 (0x13)
+ * - FIFO overflow and watermark fields are per-channel arrays [0]–[4]
+ * - Pass to intEnableConfig() to write all four registers in one call
+ */
 struct ICM20948_IntEnableConfig
 {
   // --- INT_ENABLE (0x10) ---
@@ -123,6 +138,14 @@ struct ICM20948_IntEnableConfig
   uint8_t fifoWmEn[5];       // [0]–[4]: 1 = watermark interrupt ON para ese canal
 };
 
+/**
+ * ICM20948_IntStatus
+ *
+ * - Holds the parsed state of the four interrupt status registers
+ * - Covers INT_STATUS (0x19), INT_STATUS_1 (0x1A), INT_STATUS_2 (0x1B), INT_STATUS_3 (0x1C)
+ * - Populated by checkIntStatus() via a single 4-byte burst read
+ * - Reading these registers clears the interrupt flags (when clearMode = 0 in IntPinConfig)
+ */
 struct ICM20948_IntStatus
 {
   // --- INT_STATUS (0x19) ---
@@ -681,17 +704,197 @@ public:
    */
   bool getAccelOffset(int16_t &offsetX, int16_t &offsetY, int16_t &offsetZ);
 
+  /**
+   * intInit
+   *
+   * - Configure the physical behavior of the INT pin (INT_PIN_CFG register, BANK 0)
+   * - Sets active level, drive mode (push-pull / open-drain), latch vs pulse mode,
+   *   clear condition, FSYNC level, FSYNC interrupt enable, and I2C bypass
+   *
+   * Parameters:
+   * - cfg: ICM20948_IntPinConfig struct with the desired pin settings
+   *
+   * Returns:
+   * - true  → Configuration written successfully
+   * - false → Operation failed
+   */
   bool intInit(const ICM20948_IntPinConfig &cfg);
 
+  /**
+   * intEnableConfig
+   *
+   * - Enable or disable individual interrupt sources routed to the INT pin
+   * - Writes INT_ENABLE (0x10), INT_ENABLE_1 (0x11), INT_ENABLE_2 (0x12),
+   *   and INT_ENABLE_3 (0x13) in BANK 0
+   * - Must call intInit() first to configure the pin electrical behavior
+   *
+   * Parameters:
+   * - cfg: ICM20948_IntEnableConfig struct with the desired interrupt sources enabled
+   *
+   * Returns:
+   * - true  → All four registers written successfully
+   * - false → Operation failed
+   */
   bool intEnableConfig(const ICM20948_IntEnableConfig &cfg);
-  
+
+  /**
+   * checkIntStatus
+   *
+   * - Read and parse all four interrupt status registers in a single burst read
+   * - Covers INT_STATUS (0x19), INT_STATUS_1 (0x1A), INT_STATUS_2 (0x1B),
+   *   INT_STATUS_3 (0x1C) from BANK 0
+   * - Reading clears the interrupt flags when clearMode = 0 in ICM20948_IntPinConfig
+   * - Typically called inside the INT pin ISR or polled in the main loop
+   *
+   * Parameters:
+   * - status: ICM20948_IntStatus struct populated with the current interrupt flags
+   *
+   * Returns:
+   * - true  → Status read successfully
+   * - false → Operation failed
+   */
   bool checkIntStatus(ICM20948_IntStatus &status);
 
-  bool auxMasterEnable(uint8_t lkFreq);
+  /**
+   * auxMasterEnable
+   *
+   * - Enable the ICM20948 internal I2C master for auxiliary bus
+   * - Clears BYPASS_EN so the aux bus is controlled by the ICM
+   * - Sets I2C_MST_EN in USER_CTRL
+   * - Configures auxiliary master clock frequency
+   *
+   * Parameters:
+   * - clkFreq: clock divider value (e.g. 0x07 ≈ 345.6 kHz, 0x0D ≈ 400 kHz)
+   *
+   * Returns:
+   * - true  → Master enabled successfully
+   * - false → Operation failed
+   */
+  bool auxMasterEnable(uint8_t clkFreq);
 
+  /**
+   * auxWriteByte
+   *
+   * - Write a single byte to a register of an auxiliary I2C slave via SLV4
+   * - Uses one-shot SLV4 transaction: polls SLV4_DONE, checks for NACK
+   * - Suitable for configuration writes (not continuous streaming)
+   *
+   * Parameters:
+   * - slaveAddr: 7-bit I2C address of the auxiliary slave
+   * - reg:       target register address on the slave
+   * - data:      byte to write
+   *
+   * Returns:
+   * - true  → Write acknowledged by slave
+   * - false → Timeout or NACK
+   */
   bool auxWriteByte(uint8_t slaveAddr, uint8_t reg, uint8_t data);
+
+  /**
+   * auxReadByte
+   *
+   * - Read a single byte from a register of an auxiliary I2C slave via SLV4
+   * - Generates a combined write-then-read transaction (reg byte + repeated START)
+   * - Suitable for slaves that follow standard I2C register-read protocol
+   *
+   * Note: slaves that need separate write/read transactions (e.g. command-response
+   * firmware) should use auxWriteCommand + auxReadResponse instead.
+   *
+   * Parameters:
+   * - slaveAddr: 7-bit I2C address of the auxiliary slave
+   * - reg:       register address to read from
+   * - data:      output byte received from slave
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Timeout or NACK
+   */
+  bool auxReadByte(uint8_t slaveAddr, uint8_t reg, uint8_t &data);
+
+  /**
+   * auxWriteCommand
+   *
+   * - Send a single command byte to an auxiliary I2C slave via SLV4
+   * - Uses REG_DIS: generates [START, addr+W, cmd_byte, STOP] with no register prefix
+   * - Designed for slaves that use a command-response protocol (no register addressing)
+   *
+   * Parameters:
+   * - slaveAddr: 7-bit I2C address of the auxiliary slave
+   * - cmd:       command byte to send
+   *
+   * Returns:
+   * - true  → Command acknowledged by slave
+   * - false → Timeout or NACK
+   */
+  bool auxWriteCommand(uint8_t slaveAddr, uint8_t cmd);
+
+  /**
+   * auxConfigSlave
+   *
+   * - Configure SLV0 for automatic periodic reads from an auxiliary I2C slave
+   * - The ICM20948 master will read numBytes starting at reg on every ODR cycle
+   * - Data is deposited into EXT_SLV_SENS_DATA_00 and subsequent registers
+   * - Call once during initialization; read results with auxReadSensorData
+   *
+   * Parameters:
+   * - slaveAddr: 7-bit I2C address of the auxiliary slave
+   * - reg:       starting register address to read from on the slave
+   * - numBytes:  number of bytes to read per cycle (1–15)
+   *
+   * Returns:
+   * - true  → SLV0 configured successfully
+   * - false → Operation failed
+   */
   bool auxConfigSlave(uint8_t slaveAddr, uint8_t reg, uint8_t numBytes);
+
+  /**
+   * auxReadSensorData
+   *
+   * - Read bytes from EXT_SLV_SENS_DATA registers (BANK 0)
+   * - Returns data collected by the ICM20948 master from SLV0–SLV3 on the last cycle
+   * - Must call auxConfigSlave first to set up the automatic read
+   *
+   * Parameters:
+   * - buf: output buffer to store the received bytes
+   * - len: number of bytes to read (must match numBytes configured in auxConfigSlave)
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Bus error
+   */
   bool auxReadSensorData(uint8_t *buf, uint8_t len);
+
+  /**
+   * auxReadResponse
+   *
+   * - Read a single response byte from an auxiliary I2C slave via SLV4
+   * - Generates a pure read transaction: [START, addr+R, 1 byte, STOP]
+   * - No register byte is sent (REG_DIS); slave must already be ready to transmit
+   * - Use after auxWriteCommand to complete a command-response exchange with slaves
+   *   that require separate write and read transactions (e.g. PY32F0 firmware slaves)
+   *
+   * Parameters:
+   * - slaveAddr: 7-bit I2C address of the auxiliary slave
+   * - data:      output byte received from slave
+   *
+   * Returns:
+   * - true  → Response received successfully
+   * - false → Timeout or NACK
+   */
+  bool auxReadResponse(uint8_t slaveAddr, uint8_t &data);
+
+  /**
+   * auxRead12bit
+   *
+   * - Read a 12-bit value previously configured via auxConfigSlave (SLV0, numBytes = 2)
+   * - Assumes little-endian packing: first byte = LSB, second byte = MSB
+   * - Result is masked to 12 bits (0-4095)
+   *
+   * Returns:
+   * - true  → Read successful
+   * - false → Read failed
+   */
+  bool auxRead12bit(uint16_t &raw);
 private:
   I2C_Interface i2c;
   SPI_Interface spi;

@@ -133,8 +133,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac11c6bb5cb949a957d5ae12de13039bf" id="r_ac11c6bb5cb949a957d5ae12de13039bf"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ac11c6bb5cb949a957d5ae12de13039bf">fifoWm</a> [5]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00126">126</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<div class="textblock"><p><a class="el" href="structICM20948__IntStatus.html">ICM20948_IntStatus</a></p>
+<ul>
+<li>Holds the parsed state of the four interrupt status registers</li>
+<li>Covers INT_STATUS (0x19), INT_STATUS_1 (0x1A), INT_STATUS_2 (0x1B), INT_STATUS_3 (0x1C)</li>
+<li>Populated by checkIntStatus() via a single 4-byte burst read</li>
+<li>Reading these registers clears the interrupt flags (when clearMode = 0 in IntPinConfig) </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00149">149</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a0b7a43a154fb62938d5b72f6c4e7589b" name="a0b7a43a154fb62938d5b72f6c4e7589b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b7a43a154fb62938d5b72f6c4e7589b">&#9670;&#160;</a></span>dmpInt1</h2>
@@ -148,7 +155,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00131">131</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00154">154</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>
@@ -164,7 +171,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00138">138</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00161">161</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +187,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00141">141</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00164">164</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>
@@ -196,7 +203,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00132">132</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00155">155</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +219,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00130">130</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00153">153</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +235,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00135">135</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00158">158</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +251,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00129">129</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DevLab__ICM20948_8h_source.html#l00152">152</a> of file <a class="el" href="DevLab__ICM20948_8h_source.html">DevLab_ICM20948.h</a>.</p>
 
 </div>
 </div>

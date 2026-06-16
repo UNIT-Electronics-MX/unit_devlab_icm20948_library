@@ -93,9 +93,27 @@ bool \doxymbox{\hyperlink{classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd4
 \item 
 bool \doxymbox{\hyperlink{classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7}{get\+Accel\+Offset}} (int16\+\_\+t \&offsetX, int16\+\_\+t \&offsetY, int16\+\_\+t \&offsetZ)
 \item 
-bool \doxymbox{\hyperlink{classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37}{int\+Init}} ()
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43}{int\+Init}} (const \doxymbox{\hyperlink{structICM20948__IntPinConfig}{ICM20948\+\_\+\+Int\+Pin\+Config}} \&cfg)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7}{int\+Enable\+Config}} (const \doxymbox{\hyperlink{structICM20948__IntEnableConfig}{ICM20948\+\_\+\+Int\+Enable\+Config}} \&cfg)
 \item 
 bool \doxymbox{\hyperlink{classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720}{check\+Int\+Status}} (\doxymbox{\hyperlink{structICM20948__IntStatus}{ICM20948\+\_\+\+Int\+Status}} \&status)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a}{aux\+Master\+Enable}} (uint8\+\_\+t clk\+Freq)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102}{aux\+Write\+Byte}} (uint8\+\_\+t slave\+Addr, uint8\+\_\+t reg, uint8\+\_\+t data)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb}{aux\+Read\+Byte}} (uint8\+\_\+t slave\+Addr, uint8\+\_\+t reg, uint8\+\_\+t \&data)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808}{aux\+Write\+Command}} (uint8\+\_\+t slave\+Addr, uint8\+\_\+t cmd)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619}{aux\+Config\+Slave}} (uint8\+\_\+t slave\+Addr, uint8\+\_\+t reg, uint8\+\_\+t num\+Bytes)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566}{aux\+Read\+Sensor\+Data}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, uint8\+\_\+t len)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f}{aux\+Read\+Response}} (uint8\+\_\+t slave\+Addr, uint8\+\_\+t \&data)
+\item 
+bool \doxymbox{\hyperlink{classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a}{aux\+Read12bit}} (uint16\+\_\+t \&raw)
 \end{DoxyCompactItemize}
 
 
@@ -106,7 +124,7 @@ Class
 \item Caches scale factors for LSB-\/\texorpdfstring{$>$}{>}physical conversions 
 \end{DoxyItemize}
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00149}{149}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00172}{172}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 
 
@@ -153,12 +171,240 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00181}{181}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
+Here is the call graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxConfigSlave@{auxConfigSlave}}
+\index{auxConfigSlave@{auxConfigSlave}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxConfigSlave()}{auxConfigSlave()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Config\+Slave (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Addr}{, }\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t}]{num\+Bytes}{}\end{DoxyParamCaption})}
+
+aux\+Config\+Slave
+
+
+\begin{DoxyItemize}
+\item Configure SLV0 for automatic periodic reads from an auxiliary I2C slave
+\item The ICM20948 master will read num\+Bytes starting at reg on every ODR cycle
+\item Data is deposited into EXT\+\_\+\+SLV\+\_\+\+SENS\+\_\+\+DATA\+\_\+00 and subsequent registers
+\item Call once during initialization; read results with aux\+Read\+Sensor\+Data
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item slave\+Addr:\+ 7-\/bit I2C address of the auxiliary slave
+\item reg:\+ starting register address to read from on the slave
+\item num\+Bytes:\+ number of bytes to read per cycle (1–15)
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → SLV0 configured successfully
+\item false → Operation failed 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01374}{1374}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
 Here is the call graph for this function:\+
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph}
+\includegraphics[width=350pt]{classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxMasterEnable@{auxMasterEnable}}
+\index{auxMasterEnable@{auxMasterEnable}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxMasterEnable()}{auxMasterEnable()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Master\+Enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{clk\+Freq}{}\end{DoxyParamCaption})}
+
+aux\+Master\+Enable
+
+
+\begin{DoxyItemize}
+\item Enable the ICM20948 internal I2C master for auxiliary bus
+\item Clears BYPASS\+\_\+\+EN so the aux bus is controlled by the ICM
+\item Sets I2\+C\+\_\+\+MST\+\_\+\+EN in USER\+\_\+\+CTRL
+\item Configures auxiliary master clock frequency
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item clk\+Freq:\+ clock divider value (e.\+g. 0x07 ≈ 345.\+6 k\+Hz, 0x0D ≈ 400 k\+Hz)
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Master enabled successfully
+\item false → Operation failed 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01260}{1260}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxRead12bit@{auxRead12bit}}
+\index{auxRead12bit@{auxRead12bit}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxRead12bit()}{auxRead12bit()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Read12bit (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \&}]{raw}{}\end{DoxyParamCaption})}
+
+aux\+Read12bit
+
+
+\begin{DoxyItemize}
+\item Read a 12-\/bit value previously configured via aux\+Config\+Slave (SLV0, num\+Bytes = 2)
+\item Assumes little-\/endian packing:\+ first byte = LSB, second byte = MSB
+\item Result is masked to 12 bits (0-\/4095)
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Read successful
+\item false → Read failed 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01424}{1424}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxReadByte@{auxReadByte}}
+\index{auxReadByte@{auxReadByte}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxReadByte()}{auxReadByte()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Read\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Addr}{, }\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t \&}]{data}{}\end{DoxyParamCaption})}
+
+aux\+Read\+Byte
+
+
+\begin{DoxyItemize}
+\item Read a single byte from a register of an auxiliary I2C slave via SLV4
+\item Generates a combined write-\/then-\/read transaction (reg byte + repeated START)
+\item Suitable for slaves that follow standard I2C register-\/read protocol
+\end{DoxyItemize}
+
+Note:\+ slaves that need separate write/\+read transactions (e.\+g. command-\/response firmware) should use aux\+Write\+Command + aux\+Read\+Response instead.
+
+Parameters:\+
+\begin{DoxyItemize}
+\item slave\+Addr:\+ 7-\/bit I2C address of the auxiliary slave
+\item reg:\+ register address to read from
+\item data:\+ output byte received from slave
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Read successful
+\item false → Timeout or NACK 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01312}{1312}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxReadResponse@{auxReadResponse}}
+\index{auxReadResponse@{auxReadResponse}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxReadResponse()}{auxReadResponse()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Read\+Response (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Addr}{, }\item[{uint8\+\_\+t \&}]{data}{}\end{DoxyParamCaption})}
+
+aux\+Read\+Response
+
+
+\begin{DoxyItemize}
+\item Read a single response byte from an auxiliary I2C slave via SLV4
+\item Generates a pure read transaction:\+ \+[START, addr+R, 1 byte, STOP]\+
+\item No register byte is sent (REG\+\_\+\+DIS); slave must already be ready to transmit
+\item Use after aux\+Write\+Command to complete a command-\/response exchange with slaves that require separate write and read transactions (e.\+g. PY32\+F0 firmware slaves)
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item slave\+Addr:\+ 7-\/bit I2C address of the auxiliary slave
+\item data:\+ output byte received from slave
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Response received successfully
+\item false → Timeout or NACK 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01397}{1397}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxReadSensorData@{auxReadSensorData}}
+\index{auxReadSensorData@{auxReadSensorData}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxReadSensorData()}{auxReadSensorData()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Read\+Sensor\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buf}{, }\item[{uint8\+\_\+t}]{len}{}\end{DoxyParamCaption})}
+
+aux\+Read\+Sensor\+Data
+
+
+\begin{DoxyItemize}
+\item Read bytes from EXT\+\_\+\+SLV\+\_\+\+SENS\+\_\+\+DATA registers (BANK 0)
+\item Returns data collected by the ICM20948 master from SLV0–\+SLV3 on the last cycle
+\item Must call aux\+Config\+Slave first to set up the automatic read
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item buf:\+ output buffer to store the received bytes
+\item len:\+ number of bytes to read (must match num\+Bytes configured in aux\+Config\+Slave)
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Read successful
+\item false → Bus error 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01391}{1391}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function:\+
@@ -166,7 +412,82 @@ Here is the caller graph for this function:\+
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph}
+\includegraphics[width=350pt]{classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxWriteByte@{auxWriteByte}}
+\index{auxWriteByte@{auxWriteByte}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxWriteByte()}{auxWriteByte()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Addr}{, }\item[{uint8\+\_\+t}]{reg}{, }\item[{uint8\+\_\+t}]{data}{}\end{DoxyParamCaption})}
+
+aux\+Write\+Byte
+
+
+\begin{DoxyItemize}
+\item Write a single byte to a register of an auxiliary I2C slave via SLV4
+\item Uses one-\/shot SLV4 transaction:\+ polls SLV4\+\_\+\+DONE, checks for NACK
+\item Suitable for configuration writes (not continuous streaming)
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item slave\+Addr:\+ 7-\/bit I2C address of the auxiliary slave
+\item reg:\+ target register address on the slave
+\item data:\+ byte to write
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Write acknowledged by slave
+\item false → Timeout or NACK 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01281}{1281}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!auxWriteCommand@{auxWriteCommand}}
+\index{auxWriteCommand@{auxWriteCommand}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{auxWriteCommand()}{auxWriteCommand()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+aux\+Write\+Command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slave\+Addr}{, }\item[{uint8\+\_\+t}]{cmd}{}\end{DoxyParamCaption})}
+
+aux\+Write\+Command
+
+
+\begin{DoxyItemize}
+\item Send a single command byte to an auxiliary I2C slave via SLV4
+\item Uses REG\+\_\+\+DIS:\+ generates \+[START, addr+W, cmd\+\_\+byte, STOP]\+ with no register prefix
+\item Designed for slaves that use a command-\/response protocol (no register addressing)
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item slave\+Addr:\+ 7-\/bit I2C address of the auxiliary slave
+\item cmd:\+ command byte to send
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Command acknowledged by slave
+\item false → Timeout or NACK 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01346}{1346}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!beginI2C@{beginI2C}}
@@ -193,8 +514,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00006}{6}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -211,8 +531,7 @@ bool Dev\+Lab\+\_\+\+ICM20948::\+begin\+SPI (\begin{DoxyParamCaption}\item[{uint
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00060}{60}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -225,12 +544,30 @@ Here is the call graph for this function:\+
 {\footnotesize\ttfamily \label{classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720} 
 bool Dev\+Lab\+\_\+\+ICM20948::\+check\+Int\+Status (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structICM20948__IntStatus}{ICM20948\+\_\+\+Int\+Status}} \&}]{status}{}\end{DoxyParamCaption})}
 
+check\+Int\+Status
 
+
+\begin{DoxyItemize}
+\item Read and parse all four interrupt status registers in a single burst read
+\item Covers INT\+\_\+\+STATUS (0x19), INT\+\_\+\+STATUS\+\_\+1 (0x1A), INT\+\_\+\+STATUS\+\_\+2 (0x1B), INT\+\_\+\+STATUS\+\_\+3 (0x1C) from BANK 0
+\item Reading clears the interrupt flags when clear\+Mode = 0 in \doxylink{structICM20948__IntPinConfig}{ICM20948\+\_\+\+Int\+Pin\+Config}
+\item Typically called inside the INT pin ISR or polled in the main loop
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item status:\+ \doxylink{structICM20948__IntStatus}{ICM20948\+\_\+\+Int\+Status} struct populated with the current interrupt flags
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Status read successfully
+\item false → Operation failed 
+\end{DoxyItemize}
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01231}{1231}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -265,8 +602,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00988}{988}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -303,8 +639,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00926}{926}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -341,8 +676,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01151}{1151}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -371,8 +705,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00796}{796}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -400,8 +733,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00878}{878}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -429,8 +761,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00534}{534}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -459,8 +790,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00619}{619}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -497,8 +827,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01099}{1099}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -527,8 +856,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00571}{571}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -556,8 +884,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00665}{665}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -586,8 +913,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00502}{502}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -624,8 +950,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01039}{1039}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -655,21 +980,73 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00334}{334}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!intInit@{intInit}}
+\Hypertarget{classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!intEnableConfig@{intEnableConfig}}
+\index{intEnableConfig@{intEnableConfig}!DevLab\_ICM20948@{DevLab\_ICM20948}}
+\doxysubsubsection{\texorpdfstring{intEnableConfig()}{intEnableConfig()}}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+int\+Enable\+Config (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structICM20948__IntEnableConfig}{ICM20948\+\_\+\+Int\+Enable\+Config}} \&}]{cfg}{}\end{DoxyParamCaption})}
+
+int\+Enable\+Config
+
+
+\begin{DoxyItemize}
+\item Enable or disable individual interrupt sources routed to the INT pin
+\item Writes INT\+\_\+\+ENABLE (0x10), INT\+\_\+\+ENABLE\+\_\+1 (0x11), INT\+\_\+\+ENABLE\+\_\+2 (0x12), and INT\+\_\+\+ENABLE\+\_\+3 (0x13) in BANK 0
+\item Must call \doxylink{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43}{int\+Init()} first to configure the pin electrical behavior
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item cfg:\+ \doxylink{structICM20948__IntEnableConfig}{ICM20948\+\_\+\+Int\+Enable\+Config} struct with the desired interrupt sources enabled
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → All four registers written successfully
+\item false → Operation failed 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01200}{1200}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!intInit@{intInit}}
 \index{intInit@{intInit}!DevLab\_ICM20948@{DevLab\_ICM20948}}
 \doxysubsubsection{\texorpdfstring{intInit()}{intInit()}}
-{\footnotesize\ttfamily \label{classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37} 
-bool Dev\+Lab\+\_\+\+ICM20948::\+int\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43} 
+bool Dev\+Lab\+\_\+\+ICM20948::\+int\+Init (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structICM20948__IntPinConfig}{ICM20948\+\_\+\+Int\+Pin\+Config}} \&}]{cfg}{}\end{DoxyParamCaption})}
+
+int\+Init
 
 
+\begin{DoxyItemize}
+\item Configure the physical behavior of the INT pin (INT\+\_\+\+PIN\+\_\+\+CFG register, BANK 0)
+\item Sets active level, drive mode (push-\/pull /\+ open-\/drain), latch vs pulse mode, clear condition, FSYNC level, FSYNC interrupt enable, and I2C bypass
+\end{DoxyItemize}
+
+Parameters:\+
+\begin{DoxyItemize}
+\item cfg:\+ \doxylink{structICM20948__IntPinConfig}{ICM20948\+\_\+\+Int\+Pin\+Config} struct with the desired pin settings
+\end{DoxyItemize}
+
+Returns:\+
+\begin{DoxyItemize}
+\item true → Configuration written successfully
+\item false → Operation failed 
+\end{DoxyItemize}
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01176}{1176}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
@@ -678,7 +1055,7 @@ Here is the call graph for this function:\+
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classDevLab__ICM20948_a9dbe029090b4057fd9245551d8917b37_cgraph}
+\includegraphics[width=350pt]{classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!readAccel@{readAccel}}
@@ -703,8 +1080,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00238}{238}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -733,8 +1109,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00258}{258}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -764,8 +1139,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00310}{310}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -794,8 +1168,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00278}{278}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -825,16 +1198,14 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00118}{118}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function:\+
-\nopagebreak
+Here is the caller graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -863,14 +1234,6 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00132}{132}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the caller graph for this function:\+
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_icgraph}
-\end{center}
-\end{figure}
 \Hypertarget{classDevLab__ICM20948_adfbd409c7723007d208c82550098a649}\index{DevLab\_ICM20948@{DevLab\_ICM20948}!selfTestAccel@{selfTestAccel}}
 \index{selfTestAccel@{selfTestAccel}!DevLab\_ICM20948@{DevLab\_ICM20948}}
 \doxysubsubsection{\texorpdfstring{selfTestAccel()}{selfTestAccel()}}
@@ -892,8 +1255,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00826}{826}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -921,8 +1283,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00683}{683}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -958,8 +1319,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00952}{952}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -976,8 +1336,7 @@ bool Dev\+Lab\+\_\+\+ICM20948::\+set\+Accel\+Div\+Rate (\begin{DoxyParamCaption}
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00748}{748}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1014,8 +1373,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00897}{897}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1052,8 +1410,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01124}{1124}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1082,8 +1439,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00709}{709}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1112,8 +1468,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00857}{857}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1142,8 +1497,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00520}{520}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1172,8 +1526,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00593}{593}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1190,8 +1543,7 @@ bool Dev\+Lab\+\_\+\+ICM20948::\+set\+Gyro\+Averaging (\begin{DoxyParamCaption}\
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00970}{970}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1208,8 +1560,7 @@ bool Dev\+Lab\+\_\+\+ICM20948::\+set\+Gyro\+Div\+Rate (\begin{DoxyParamCaption}\
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00780}{780}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1246,8 +1597,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01072}{1072}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1276,8 +1626,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00550}{550}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1313,8 +1662,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00644}{644}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1343,8 +1691,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00488}{488}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1402,8 +1749,7 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l01006}{1006}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1438,16 +1784,14 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00164}{164}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function:\+
-\nopagebreak
+Here is the caller graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1483,16 +1827,14 @@ Returns:\+
 
 Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source_l00144}{144}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8cpp_source}{Dev\+Lab\+\_\+\+ICM20948.\+cpp}}.
 
-Here is the call graph for this function:\+
-\nopagebreak
+Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function:\+
-\nopagebreak
+Here is the caller graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

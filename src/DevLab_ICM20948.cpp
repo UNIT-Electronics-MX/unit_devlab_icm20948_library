@@ -1263,10 +1263,10 @@ bool DevLab_ICM20948::auxMasterEnable(uint8_t clkFreq)
     if (!selectBank(0)) return false;
 
     // Limpiar BYPASS_EN (bit 1 de INT_PIN_CFG)
-    if (!bus->writeBit(INT_PIN_CFG, 1, 0)) return false;
+    if (!bus->writeBit(INT_PIN_CFG, 1, (uint8_t)0)) return false;
 
     // Activar I2C_MST_EN (bit 5 de USER_CTRL)
-    if (!bus->writeBit(USER_CTRL, 5, 1)) return false;
+    if (!bus->writeBit(USER_CTRL, 5, (uint8_t)1)) return false;
 
     // BANK 3: configurar clock del master auxiliar
     if (!selectBank(3)) return false;
@@ -1283,16 +1283,78 @@ bool DevLab_ICM20948::auxWriteByte(uint8_t slaveAddr, uint8_t reg, uint8_t data)
     if (!selectBank(3)) return false;
 
     // Dirección del slave, bit 7=0 para escritura
-    if (!bus->write(I2C_SLV4_ADDR, slaveAddr & 0x7F)) return false;
+    if (!bus->write(I2C_SLV4_ADDR, (uint8_t)(slaveAddr & 0x7F))) return false;
 
-    // Registro destino que queremos escribir en el slave 
+    // Registro destino que queremos escribir en el slave
     if (!bus->write(I2C_SLV4_REG, reg)) return false;
 
     // Dato a escribir
     if (!bus->write(I2C_SLV4_DO, data)) return false;
 
     // Disparar transacción (I2C_SLV4_EN, se auto-limpia al terminar)
-    if (!bus->write(I2C_SLV4_CTRL, I2C_SLVx_EN)) return false;
+    if (!bus->write(I2C_SLV4_CTRL, (uint8_t)I2C_SLVx_EN)) return false;
+
+    // Esperar a que complete — verificar SLV4_DONE en BANK 0
+    if (!selectBank(0)) return false;
+
+    uint8_t status = 0;
+    uint8_t timeout = 50;
+    do {
+        delay(1);
+        if (!bus->read(I2C_MST_STATUS, status)) return false;
+        if (--timeout == 0) return false;  // timeout
+    } while (!(status & MST_SLV4_DONE));
+
+    // Verificar que no hubo NACK
+    return !(status & MST_SLV4_NACK);
+}
+
+bool DevLab_ICM20948::auxReadByte(uint8_t slaveAddr, uint8_t reg, uint8_t &data)
+{
+    if (!selectBank(3)) return false;
+
+    // Dirección del slave, bit 7=1 para lectura
+    if (!bus->write(I2C_SLV4_ADDR, (uint8_t)((slaveAddr & 0x7F) | I2C_SLVx_RNW))) return false;
+
+    // Registro origen que queremos leer del slave
+    if (!bus->write(I2C_SLV4_REG, reg)) return false;
+
+    // Disparar transacción (I2C_SLV4_EN, se auto-limpia al terminar)
+    if (!bus->write(I2C_SLV4_CTRL, (uint8_t)I2C_SLVx_EN)) return false;
+
+    // Esperar a que complete — verificar SLV4_DONE en BANK 0
+    if (!selectBank(0)) return false;
+
+    uint8_t status = 0;
+    uint8_t timeout = 50;
+    do {
+        delay(1);
+        if (!bus->read(I2C_MST_STATUS, status)) return false;
+        if (--timeout == 0) return false;  // timeout
+    } while (!(status & MST_SLV4_DONE));
+
+    // Verificar que no hubo NACK
+    if (status & MST_SLV4_NACK) return false;
+
+    // Leer el dato recibido del slave (BANK 3)
+    if (!selectBank(3)) return false;
+    if (!bus->read(I2C_SLV4_DI, data)) return false;
+
+    return selectBank(0);
+}
+
+bool DevLab_ICM20948::auxWriteCommand(uint8_t slaveAddr, uint8_t cmd)
+{
+    if (!selectBank(3)) return false;
+
+    // Dirección del slave, bit 7=0 para escritura
+    if (!bus->write(I2C_SLV4_ADDR, (uint8_t)(slaveAddr & 0x7F))) return false;
+
+    // Byte de comando a enviar (único byte de la transacción)
+    if (!bus->write(I2C_SLV4_DO, cmd)) return false;
+
+    // EN + REG_DIS: el SLV4 envía solo I2C_SLV4_DO, sin byte de registro
+    if (!bus->write(I2C_SLV4_CTRL, (uint8_t)(I2C_SLVx_EN | I2C_SLVx_REG_DIS))) return false;
 
     // Esperar a que complete — verificar SLV4_DONE en BANK 0
     if (!selectBank(0)) return false;
@@ -1314,13 +1376,13 @@ bool DevLab_ICM20948::auxWriteByte(uint8_t slaveAddr, uint8_t reg, uint8_t data)
     if (!selectBank(3)) return false;
 
     // Slave 0: dirección + bit READ
-    if (!bus->write(I2C_SLV0_ADDR, slaveAddr | I2C_SLVx_RNW)) return false;
+    if (!bus->write(I2C_SLV0_ADDR, (uint8_t)(slaveAddr | I2C_SLVx_RNW))) return false;
 
     // Registro de inicio
     if (!bus->write(I2C_SLV0_REG, reg)) return false;
 
     // Habilitar + número de bytes
-    if (!bus->write(I2C_SLV0_CTRL, I2C_SLVx_EN | (numBytes & 0x0F))) return false;
+    if (!bus->write(I2C_SLV0_CTRL, (uint8_t)(I2C_SLVx_EN | (numBytes & 0x0F)))) return false;
 
     return selectBank(0);
 }
@@ -1329,5 +1391,43 @@ bool DevLab_ICM20948::auxWriteByte(uint8_t slaveAddr, uint8_t reg, uint8_t data)
 bool DevLab_ICM20948::auxReadSensorData(uint8_t *buf, uint8_t len)
 {
     if (!selectBank(0)) return false;
-    return bus->readBytes(EXT_SLV_SENS_DATA_00, buf, len);
+    return bus->read(EXT_SLV_SENS_DATA_00, buf, len);
+}
+
+bool DevLab_ICM20948::auxReadResponse(uint8_t slaveAddr, uint8_t &data)
+{
+    if (!selectBank(3)) return false;
+
+    // Slave address con bit READ, sin byte de registro (REG_DIS)
+    // Genera: [START, addr+R, lee 1 byte, STOP]
+    if (!bus->write(I2C_SLV4_ADDR, (uint8_t)((slaveAddr & 0x7F) | I2C_SLVx_RNW))) return false;
+    if (!bus->write(I2C_SLV4_CTRL, (uint8_t)(I2C_SLVx_EN | I2C_SLVx_REG_DIS))) return false;
+
+    if (!selectBank(0)) return false;
+
+    uint8_t status = 0;
+    uint8_t timeout = 50;
+    do {
+        delay(1);
+        if (!bus->read(I2C_MST_STATUS, status)) return false;
+        if (--timeout == 0) return false;
+    } while (!(status & MST_SLV4_DONE));
+
+    if (status & MST_SLV4_NACK) return false;
+
+    if (!selectBank(3)) return false;
+    if (!bus->read(I2C_SLV4_DI, data)) return false;
+
+    return selectBank(0);
+}
+
+bool DevLab_ICM20948::auxRead12bit(uint16_t &raw)
+{
+    uint8_t buf[2];
+    if (!auxReadSensorData(buf, 2)) return false;
+
+    // LSB primero (little-endian): buf[0] = byte bajo, buf[1] = byte alto
+    raw = (uint16_t)(buf[0] | (buf[1] << 8)) & 0x0FFF;
+
+    return true;
 }

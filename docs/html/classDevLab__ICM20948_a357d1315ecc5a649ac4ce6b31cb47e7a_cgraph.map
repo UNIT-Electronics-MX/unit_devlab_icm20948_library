@@ -1,0 +1,7 @@
+<map id="DevLab_ICM20948::auxRead12bit" name="DevLab_ICM20948::auxRead12bit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,247,38"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a8f47c9f63642c35e5b5656e720667566" title=" " alt="" coords="295,5,503,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,23,281,23,281,28,247,28"/>
+<area shape="rect" id="Node000003" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="551,13,773,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="503,23,537,23,537,28,503,28"/>
+</map>

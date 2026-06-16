@@ -24,9 +24,17 @@ uint8\+\_\+t \doxymbox{\hyperlink{structICM20948__IntStatus_ac11c6bb5cb949a957d5
 
 
 \doxysubsection{Detailed Description}
+\doxylink{structICM20948__IntStatus}{ICM20948\+\_\+\+Int\+Status}
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00126}{126}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+\begin{DoxyItemize}
+\item Holds the parsed state of the four interrupt status registers
+\item Covers INT\+\_\+\+STATUS (0x19), INT\+\_\+\+STATUS\+\_\+1 (0x1A), INT\+\_\+\+STATUS\+\_\+2 (0x1B), INT\+\_\+\+STATUS\+\_\+3 (0x1C)
+\item Populated by check\+Int\+Status() via a single 4-\/byte burst read
+\item Reading these registers clears the interrupt flags (when clear\+Mode = 0 in Int\+Pin\+Config) 
+\end{DoxyItemize}
+
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00149}{149}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 
 
@@ -41,7 +49,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+dmp\+Int1}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00131}{131}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00154}{154}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntStatus_a91ea9622426177697ad95043338f2096}\index{ICM20948\_IntStatus@{ICM20948\_IntStatus}!fifoOvf@{fifoOvf}}
 \index{fifoOvf@{fifoOvf}!ICM20948\_IntStatus@{ICM20948\_IntStatus}}
@@ -51,7 +59,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+fifo\+Ovf\+[5]\+}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00138}{138}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00161}{161}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntStatus_ac11c6bb5cb949a957d5ae12de13039bf}\index{ICM20948\_IntStatus@{ICM20948\_IntStatus}!fifoWm@{fifoWm}}
 \index{fifoWm@{fifoWm}!ICM20948\_IntStatus@{ICM20948\_IntStatus}}
@@ -61,7 +69,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+fifo\+Wm\+[5]\+}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00141}{141}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00164}{164}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntStatus_a76967ffcc1f2f78af326ec5997c4e46e}\index{ICM20948\_IntStatus@{ICM20948\_IntStatus}!i2cMstInt@{i2cMstInt}}
 \index{i2cMstInt@{i2cMstInt}!ICM20948\_IntStatus@{ICM20948\_IntStatus}}
@@ -71,7 +79,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+i2c\+Mst\+Int}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00132}{132}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00155}{155}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntStatus_a0e14602a7e105da494b79056fc1a6ac4}\index{ICM20948\_IntStatus@{ICM20948\_IntStatus}!pllRdyInt@{pllRdyInt}}
 \index{pllRdyInt@{pllRdyInt}!ICM20948\_IntStatus@{ICM20948\_IntStatus}}
@@ -81,7 +89,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+pll\+Rdy\+Int}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00130}{130}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00153}{153}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntStatus_a8662cbb6f261e560d0571467f4957bf0}\index{ICM20948\_IntStatus@{ICM20948\_IntStatus}!rawDataRdy@{rawDataRdy}}
 \index{rawDataRdy@{rawDataRdy}!ICM20948\_IntStatus@{ICM20948\_IntStatus}}
@@ -91,7 +99,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+raw\+Data\+Rdy}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00135}{135}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00158}{158}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 \Hypertarget{structICM20948__IntStatus_a2438eb5d73069cbb931b12879679c756}\index{ICM20948\_IntStatus@{ICM20948\_IntStatus}!womInt@{womInt}}
 \index{womInt@{womInt}!ICM20948\_IntStatus@{ICM20948\_IntStatus}}
@@ -101,7 +109,7 @@ uint8\+\_\+t ICM20948\+\_\+\+Int\+Status::\+wom\+Int}
 
 
 
-Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00129}{129}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
+Definition at line \doxymbox{\hyperlink{DevLab__ICM20948_8h_source_l00152}{152}} of file \doxymbox{\hyperlink{DevLab__ICM20948_8h_source}{Dev\+Lab\+\_\+\+ICM20948.\+h}}.
 
 
 
