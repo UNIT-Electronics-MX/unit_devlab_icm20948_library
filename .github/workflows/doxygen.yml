@@ -64,6 +64,10 @@ jobs:
         run: |
           cd .doxygen && doxygen Doxyfile
 
+      - name: Create .nojekyll file for GitHub Pages
+        run: |
+          touch docs/html/.nojekyll
+
       - name: Verify deploy entrypoint
         run: |
           test -f docs/html/index.html
