@@ -43,6 +43,26 @@ div, span, a, td, th, li {
     color: var(--ti-white) !important;
 }
 
+/* Fix white text on white background issues */
+div.header,
+.title,
+.summary a,
+.memtitle {
+    color: var(--ti-dark-gray) !important;
+}
+
+/* Ensure breadcrumbs are visible */
+div.header .headertitle,
+div.header .title,
+div.summary {
+    color: var(--ti-dark-gray) !important;
+}
+
+div.header .headertitle .title {
+    color: var(--ti-red) !important;
+    font-weight: bold;
+}
+
 /* ============================================
    General Page Styling
    ============================================ */
@@ -87,56 +107,97 @@ body {
    Navigation Menu
    ============================================ */
 
+/* Main navigation bar */
 #main-menu {
-    background-color: var(--ti-dark-gray);
-    border-bottom: 1px solid var(--ti-border-gray);
+    background-color: var(--ti-dark-gray) !important;
+    border-bottom: 1px solid var(--ti-border-gray) !important;
 }
 
 #main-nav {
-    background-color: var(--ti-dark-gray);
+    background-color: var(--ti-dark-gray) !important;
 }
 
+/* Top navigation */
+#top,
+.navpath {
+    background-color: var(--ti-dark-gray) !important;
+    border-color: var(--ti-red) !important;
+}
+
+/* Menu items */
 .sm-dox {
     background-color: var(--ti-dark-gray) !important;
 }
 
-.sm-dox a {
+.sm-dox a,
+.sm-dox a:link,
+.sm-dox a:visited {
     color: var(--ti-white) !important;
-    text-decoration: none;
+    text-decoration: none !important;
     padding: 10px 20px;
+    background-color: transparent !important;
 }
 
-.sm-dox a:hover {
+.sm-dox a:hover,
+.sm-dox a:focus,
+.sm-dox a:active {
     background-color: var(--ti-red) !important;
     color: var(--ti-white) !important;
 }
 
 .sm-dox a.current {
     background-color: var(--ti-red) !important;
+    color: var(--ti-white) !important;
+}
+
+.sm-dox ul,
+.sm-dox ul a {
+    background-color: var(--ti-dark-gray) !important;
+    color: var(--ti-white) !important;
 }
 
 /* Tabs styling */
-.tabs, .tabs2, .tabs3 {
-    background: var(--ti-dark-gray);
-    border-bottom: 2px solid var(--ti-red);
+.tabs, 
+.tabs2, 
+.tabs3,
+.tablist {
+    background: var(--ti-dark-gray) !important;
+    border-bottom: 2px solid var(--ti-red) !important;
 }
 
 .tablist li {
-    background: var(--ti-gray);
-    border: none;
+    background: var(--ti-gray) !important;
+    border: none !important;
     margin-right: 2px;
 }
 
 .tablist a {
-    color: var(--ti-white);
-    text-decoration: none;
+    color: var(--ti-white) !important;
+    text-decoration: none !important;
     padding: 8px 16px;
     display: block;
+    background-color: var(--ti-gray) !important;
 }
 
 .tablist a:hover {
-    background: var(--ti-red);
-    color: var(--ti-white);
+    background: var(--ti-red) !important;
+    color: var(--ti-white) !important;
+}
+
+.tablist li.current a {
+    background: var(--ti-red) !important;
+    color: var(--ti-white) !important;
+}
+
+/* Additional nav elements */
+#nav-tree,
+#nav-sync,
+.ui-resizable-e {
+    background-color: var(--ti-light-gray) !important;
+}
+
+#nav-tree-contents a {
+    color: var(--ti-dark-gray) !important;
 }
 
 .tablist li.current a {
@@ -179,7 +240,7 @@ body {
    ============================================ */
 
 #doc-content {
-    background-color: var(--ti-white);
+    background-color: var(--ti-white) !important;
     padding: 20px;
 }
 
@@ -189,14 +250,24 @@ body {
     margin: 0 auto;
 }
 
+/* Page title and headers */
+.PageDoc,
+.title,
+h1.title,
+.PageDocTitle {
+    color: var(--ti-dark-gray) !important;
+    background-color: transparent !important;
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--ti-dark-gray);
+    color: var(--ti-dark-gray) !important;
     font-weight: 600;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     border-bottom: 2px solid var(--ti-red);
     padding-bottom: 5px;
+    background-color: transparent !important;
 }
 
 h1 {
@@ -434,18 +505,27 @@ dl.bug {
    ============================================ */
 
 #nav-path {
-    background-color: var(--ti-light-gray);
-    border-top: 2px solid var(--ti-red);
+    background-color: var(--ti-light-gray) !important;
+    border-top: 2px solid var(--ti-red) !important;
     padding: 10px;
 }
 
-.navpath li {
-    color: var(--ti-gray);
+.navpath li,
+.navpath li a {
+    color: var(--ti-dark-gray) !important;
+}
+
+.navpath li a:hover {
+    color: var(--ti-red) !important;
 }
 
 hr.footer {
     border-top: 1px solid var(--ti-border-gray);
     margin-top: 30px;
+}
+
+.footer {
+    color: var(--ti-gray) !important;
 }
 
 /* ============================================
@@ -631,4 +711,111 @@ em,
 .graph .edge .label {
     fill: var(--ti-gray) !important;
 }
+
+/* ============================================
+   Additional Fixes for Text Visibility
+   ============================================ */
+
+/* Ensure all text in content area is visible */
+.textblock,
+.textblock p,
+.contents p,
+div.textblock {
+    color: var(--ti-dark-gray) !important;
+}
+
+/* Directory listings */
+.directory tr.even {
+    background-color: var(--ti-light-gray) !important;
+}
+
+.directory td,
+.directory td.entry {
+    color: var(--ti-dark-gray) !important;
+}
+
+/* Class list and member lists */
+.memberdecls td,
+.fieldtable td {
+    color: var(--ti-dark-gray) !important;
+}
+
+/* Page navigation */
+.pages a,
+.navpath ul li a {
+    color: var(--ti-dark-gray) !important;
+}
+
+.pages a:hover,
+.navpath ul li a:hover {
+    color: var(--ti-red) !important;
+}
+
+/* Ensure table headers are readable */
+table thead th,
+table.memberdecls th,
+table.fieldtable th {
+    color: var(--ti-white) !important;
+    background: linear-gradient(180deg, var(--ti-red) 0%, var(--ti-dark-red) 100%) !important;
+}
+
+/* Make sure all navigation text is visible */
+#main-menu li,
+#main-menu span,
+.tablist li.current,
+.sm-dox span.scroll-up,
+.sm-dox span.scroll-down {
+    color: var(--ti-white) !important;
+}
+
+/* Breadcrumb trail */
+div.header .title,
+div.header .summary,
+div.headertitle {
+    color: var(--ti-dark-gray) !important;
+    background: transparent !important;
+}
+
+/* Ingroup text */
+.ingroups,
+.ingroups a {
+    color: var(--ti-gray) !important;
+}
+
+.ingroups a:hover {
+    color: var(--ti-red) !important;
+}
+
+/* Documentation body text */
+.memdoc,
+.memdoc p,
+.memdoc dl {
+    color: var(--ti-dark-gray) !important;
+}
+
+/* Function/method signatures */
+.memname,
+.memname td {
+    color: var(--ti-red) !important;
+}
+
+/* Ensure dropdown menus are visible */
+.sm-dox ul a,
+.sm-dox ul a:hover,
+.sm-dox ul a:focus {
+    color: var(--ti-white) !important;
+    background-color: var(--ti-gray) !important;
+}
+
+.sm-dox ul a:hover {
+    background-color: var(--ti-red) !important;
+}
+
+/* File/directory icons */
+.icondoc,
+.iconfopen,
+.iconfclosed {
+    color: var(--ti-red) !important;
+}
+
 
