@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.6.16)  16 JUN 2026 17:16
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.16)  16 JUN 2026 17:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -12,15 +12,15 @@ Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
 File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@chapter=\count188
-\c@section=\count189
-\c@subsection=\count190
-\c@subsubsection=\count191
-\c@paragraph=\count192
-\c@subparagraph=\count193
-\c@figure=\count194
-\c@table=\count195
+\c@part=\count183
+\c@chapter=\count184
+\c@section=\count185
+\c@subsection=\count186
+\c@subsubsection=\count187
+\c@paragraph=\count188
+\c@subparagraph=\count189
+\c@figure=\count190
+\c@table=\count191
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
@@ -44,19 +44,19 @@ Package: doxygen
 Package: alltt 2021/01/29 v2.0g defines alltt environment
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count196
-\calc@Bcount=\count197
+\calc@Acount=\count192
+\calc@Bcount=\count193
 \calc@Adimen=\dimen143
 \calc@Bdimen=\dimen144
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count198
+\calc@Ccount=\count194
 \calc@Cskip=\skip54
 ) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count199
+\c@float@type=\count195
 \float@exts=\toks18
 \float@box=\box51
 \@float@everytoks=\toks19
@@ -71,12 +71,11 @@ Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+Package xcolor Info: Driver file: xetex.def on input line 274.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
 Package xcolor Info: Model `RGB' extended on input line 1366.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
@@ -88,7 +87,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 \everycr=\toks22
 \minrowclearance=\skip55
-\rownum=\count266
+\rownum=\count196
 ) (./longtable_doxygen.sty
 Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
 ozen version for doxygen
@@ -96,16 +95,16 @@ ozen version for doxygen
 \LTright=\skip57
 \LTpre=\skip58
 \LTpost=\skip59
-\LTchunksize=\count267
+\LTchunksize=\count197
 \LTcapwidth=\dimen145
 \LT@head=\box53
 \LT@firsthead=\box54
 \LT@foot=\box55
 \LT@lastfoot=\box56
-\LT@cols=\count268
-\LT@rows=\count269
-\c@LT@tables=\count270
-\c@LT@chunks=\count271
+\LT@cols=\count198
+\LT@rows=\count199
+\c@LT@tables=\count266
+\c@LT@chunks=\count267
 \LT@p@ftn=\toks23
 ) (./tabu_doxygen.sty
 Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
@@ -113,16 +112,16 @@ rsion for doxygen
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box57
-\sift@deathcycles=\count272
+\sift@deathcycles=\count268
 \@vwid@loff=\dimen146
 \@vwid@roff=\dimen147
 )
-\c@taburow=\count273
-\tabu@nbcols=\count274
-\tabu@cnt=\count275
-\tabu@Xcol=\count276
-\tabu@alloc=\count277
-\tabu@nested=\count278
+\c@taburow=\count269
+\tabu@nbcols=\count270
+\tabu@cnt=\count271
+\tabu@Xcol=\count272
+\tabu@alloc=\count273
+\tabu@nested=\count274
 \tabu@target=\dimen148
 \tabu@spreadtarget=\dimen149
 \tabu@naturalX=\dimen150
@@ -145,11 +144,11 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks26
 )
-\FV@CodeLineNo=\count279
+\FV@CodeLineNo=\count275
 \FV@InFile=\read3
 \FV@TabBox=\box62
-\c@FancyVerbLine=\count280
-\FV@StepNumber=\count281
+\c@FancyVerbLine=\count276
+\FV@StepNumber=\count277
 \FV@OutFile=\write3
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
@@ -158,18 +157,18 @@ Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen159
 \TX@target=\dimen160
 \TX@delta=\dimen161
-\TX@cols=\count282
+\TX@cols=\count278
 \TX@ftn=\toks27
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count283
+\c@tracingmulticols=\count279
 \mult@box=\box63
 \multicol@leftmargin=\dimen162
-\c@unbalance=\count284
-\c@collectmore=\count285
-\doublecol@number=\count286
-\multicoltolerance=\count287
-\multicolpretolerance=\count288
+\c@unbalance=\count280
+\c@collectmore=\count281
+\doublecol@number=\count282
+\multicoltolerance=\count283
+\multicolpretolerance=\count284
 \full@width=\dimen163
 \page@free=\dimen164
 \premulticols=\dimen165
@@ -220,19 +219,19 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box104
 \@tempa=\box105
 \@tempa=\box106
-\c@minrows=\count289
-\c@columnbadness=\count290
-\c@finalcolumnbadness=\count291
+\c@minrows=\count285
+\c@columnbadness=\count286
+\c@finalcolumnbadness=\count287
 \last@try=\dimen168
 \multicolovershoot=\dimen169
 \multicolundershoot=\dimen170
 \mult@nat@firstbox=\box107
 \colbreak@box=\box108
-\mc@col@check@num=\count292
+\mc@col@check@num=\count288
 ) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip63
-\multirow@cntb=\count293
+\multirow@cntb=\count289
 \multirow@dima=\skip64
 \bigstrutjot=\dimen171
 ) (/usr/share/texlive/texmf-dist/tex/latex/hanging/hanging.sty
@@ -258,7 +257,7 @@ ive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks28
 \XKV@tempa@toks=\toks29
 )
-\XKV@depth=\count294
+\XKV@depth=\count290
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
@@ -274,7 +273,7 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \Gin@req@height=\dimen172
 \Gin@req@width=\dimen173
@@ -286,9 +285,9 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@lly=\dimen175
 \tc@urx=\dimen176
 \tc@ury=\dimen177
-Package trimclip Info: Using driver 'tc-pdftex.def'.
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
-File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+Package trimclip Info: Using driver 'tc-xetex.def'.
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
 \adjbox@Width=\dimen178
 \adjbox@Height=\dimen179
@@ -300,7 +299,7 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@ptotalheight=\dimen185
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count295
+\c@checkoddpage=\count291
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -316,16 +315,114 @@ Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient
 ways
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count296
+\etb@tempcnta=\count292
 ) (/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty (/usr/
 share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count297
-\loi_nestcnt=\count298
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 104 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 105 replaced by U+FFFD.
+\loi_cnt_foreach_nest=\count293
+Invalid UTF-8 byte or sequence at line 139 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 146 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 192 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 209 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 209 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 222 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 222 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 223 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 223 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 224 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 226 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 226 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 238 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 243 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 243 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 260 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 324 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 337 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 337 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 354 replaced by U+FFFD.
+\loi_nestcnt=\count294
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 377 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 378 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 398 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 398 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 414 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 422 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 422 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 426 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 428 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 433 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 433 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 441 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 441 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 442 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 451 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 472 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 475 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 492 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 519 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
 sep char (CT)
 )
-\c@@stackindex=\count299
+\c@@stackindex=\count295
 \@boxshift=\skip73
 \stack@tmplength=\skip74
 \temp@stkl=\skip75
@@ -336,15 +433,15 @@ sep char (CT)
 \se@backgroundbox=\box113
 \stackedbox=\box114
 \@centerbox=\box115
-\c@ROWcellindex@=\count300
+\c@ROWcellindex@=\count296
 ) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip77
 \enit@outerparindent=\dimen186
 \enit@toks=\toks31
 \enit@inbox=\box116
-\enit@count@id=\count301
-\enitdp@description=\count302
+\enit@count@id=\count297
+\enitdp@description=\count298
 ) (/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
 Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
@@ -355,7 +452,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 \UL@skip=\skip78
 \UL@hook=\toks32
 \UL@height=\dimen187
-\UL@pe=\count303
+\UL@pe=\count299
 \UL@pixel=\dimen188
 \ULC@box=\box119
 Package: ulem 2019/11/18
@@ -366,44 +463,71 @@ Package: ulem 2019/11/18
 \CodeWidthChar=\skip80
 \CodeHeightChar=\skip81
 \DoxyCodeWidth=\skip82
-\c@DoxyEnumeratei=\count304
-\c@DoxyEnumerateii=\count305
-\c@DoxyEnumerateiii=\count306
-\c@DoxyEnumerateiv=\count307
-\c@DoxyEnumeratev=\count308
-\c@DoxyEnumeratevi=\count309
-\c@DoxyEnumeratevii=\count310
-\c@DoxyEnumerateviii=\count311
-\c@DoxyEnumerateix=\count312
-\c@DoxyEnumeratex=\count313
-\c@DoxyEnumeratexi=\count314
-\c@DoxyEnumeratexii=\count315
-\enitdp@DoxyEnumerate=\count316
-\enitdp@DoxyItemize=\count317
-\c@subsubsubsection=\count318
-\c@subsubsubsubsection=\count319
-\c@subsubsubsubsubsection=\count320
-\c@subsubsubsubsubsubsection=\count321
-) (./unicode.sty
+\c@DoxyEnumeratei=\count300
+\c@DoxyEnumerateii=\count301
+\c@DoxyEnumerateiii=\count302
+\c@DoxyEnumerateiv=\count303
+\c@DoxyEnumeratev=\count304
+\c@DoxyEnumeratevi=\count305
+\c@DoxyEnumeratevii=\count306
+\c@DoxyEnumerateviii=\count307
+\c@DoxyEnumerateix=\count308
+\c@DoxyEnumeratex=\count309
+\c@DoxyEnumeratexi=\count310
+\c@DoxyEnumeratexii=\count311
+\enitdp@DoxyEnumerate=\count312
+\enitdp@DoxyItemize=\count313
+\c@subsubsubsection=\count314
+\c@subsubsubsubsection=\count315
+\c@subsubsubsubsubsection=\count316
+\c@subsubsubsubsubsubsection=\count317
+) (./devlab-fonts.sty
+Package: devlab-fonts 2026/06/16 Times New Roman and Courier for Doxygen PDF ou
+tput
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texl
+ive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf
+-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
+\g__graphics_track_int=\count318
+\l__pdf_internal_box=\box121
+\g__pdf_backend_object_int=\count319
+\g__pdf_backend_annotation_int=\count320
+\g__pdf_backend_link_int=\count321
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count322
+\l__fontspec_language_int=\count323
+\l__fontspec_strnum_int=\count324
+\l__fontspec_tmp_int=\count325
+\l__fontspec_tmpa_int=\count326
+\l__fontspec_tmpb_int=\count327
+\l__fontspec_tmpc_int=\count328
+\l__fontspec_em_int=\count329
+\l__fontspec_emdef_int=\count330
+\l__fontspec_strong_int=\count331
+\l__fontspec_strongdef_int=\count332
+\l__fontspec_tmpa_dim=\dimen190
+\l__fontspec_tmpb_dim=\dimen191
+\l__fontspec_tmpc_dim=\dimen192
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))) (./unicode
+.sty
 Package: unicode 2026/06/16 Unicode mappings for Doxygen PDF output
-   defining Unicode char U+00B0 (decimal 176)
-   defining Unicode char U+00B1 (decimal 177)
-   defining Unicode char U+00B2 (decimal 178)
-   defining Unicode char U+00B3 (decimal 179)
-   defining Unicode char U+00B5 (decimal 181)
-   defining Unicode char U+2013 (decimal 8211)
-   defining Unicode char U+2014 (decimal 8212)
-   defining Unicode char U+201C (decimal 8220)
-   defining Unicode char U+201D (decimal 8221)
-   defining Unicode char U+207B (decimal 8315)
-   defining Unicode char U+2190 (decimal 8592)
-   defining Unicode char U+2192 (decimal 8594)
-   defining Unicode char U+2248 (decimal 8776)
-   defining Unicode char U+2265 (decimal 8805)
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks33
 \inpenc@posthook=\toks34
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
@@ -417,7 +541,11 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
 Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 ) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
@@ -426,22 +554,22 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count322
-\Gm@cntv=\count323
-\c@Gm@tempcnt=\count324
-\Gm@bindingoffset=\dimen190
-\Gm@wd@mp=\dimen191
-\Gm@odd@mp=\dimen192
-\Gm@even@mp=\dimen193
-\Gm@layoutwidth=\dimen194
-\Gm@layoutheight=\dimen195
-\Gm@layouthoffset=\dimen196
-\Gm@layoutvoffset=\dimen197
+\Gm@cnth=\count333
+\Gm@cntv=\count334
+\c@Gm@tempcnt=\count335
+\Gm@bindingoffset=\dimen193
+\Gm@wd@mp=\dimen194
+\Gm@odd@mp=\dimen195
+\Gm@even@mp=\dimen196
+\Gm@layoutwidth=\dimen197
+\Gm@layoutheight=\dimen198
+\Gm@layouthoffset=\dimen199
+\Gm@layoutvoffset=\dimen256
 \Gm@dimlist=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count325
-\cp@tempcnt=\count326
+\c@cp@cntr=\count336
+\cp@tempcnt=\count337
 LaTeX Info: Redefining \checkoddpage on input line 59.
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
@@ -460,7 +588,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip92
 \bibsep=\skip93
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count327
+\c@NAT@ctr=\count338
 ) (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
@@ -493,8 +621,8 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip120
 \cftfigindent=\skip121
 \cftfignumwidth=\skip122
-\c@lofdepth=\count328
-\c@lotdepth=\count329
+\c@lofdepth=\count339
+\c@lotdepth=\count340
 \cftbeforelottitleskip=\skip123
 \cftafterlottitleskip=\skip124
 \cftbeforetabskip=\skip125
@@ -522,7 +650,7 @@ Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 )) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
@@ -536,21 +664,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count330
+\c@section@level=\count341
 )
-\@linkdim=\dimen198
-\Hy@linkcounter=\count331
-\Hy@pagecounter=\count332
+\@linkdim=\dimen257
+\Hy@linkcounter=\count342
+\Hy@pagecounter=\count343
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count333
+\Hy@SavedSpaceFactor=\count344
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Hyper figures OFF on input line 4179.
 Package hyperref Info: Link nesting OFF on input line 4184.
@@ -576,19 +700,19 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 ))
-\c@Hy@tempcnt=\count334
+\c@Hy@tempcnt=\count345
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
-\XeTeXLinkMargin=\dimen199
+\XeTeXLinkMargin=\dimen258
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count335
-\Field@Width=\dimen256
-\Fld@charsize=\dimen257
+\Fld@menulength=\count346
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
 Package hyperref Info: Hyper figures OFF on input line 6063.
 Package hyperref Info: Link nesting OFF on input line 6068.
 Package hyperref Info: Hyper index ON on input line 6071.
@@ -600,38 +724,45 @@ Package hyperref Info: PDF/A mode OFF on input line 6093.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count336
-\c@Item=\count337
-\c@Hfootnote=\count338
+\Hy@abspage=\count347
+\c@Item=\count348
+\c@Hfootnote=\count349
 )
-Package hyperref Info: Driver: hpdftex.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
-\Fld@listcount=\count339
-\c@bookmark@seq@number=\count340
+Package hyperref Info: Driver (autodetected): hxetex.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2024-01-20 v7.01h Hyperref driver for XeTeX
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box122
+\c@Hy@AnnotLevel=\count350
+\HyField@AnnotCount=\count351
+\Fld@listcount=\count352
+\c@bookmark@seq@number=\count353
 \Hy@SectionHShift=\skip128
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 163.
-Package hyperref Info: Option `unicode' set `true' on input line 163.
+Package hyperref Info: Option `colorlinks' set `true' on input line 164.
+Package hyperref Info: Option `unicode' set `true' on input line 164.
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen258
-\captionmargin=\dimen259
-\caption@leftmargin=\dimen260
-\caption@rightmargin=\dimen261
-\caption@width=\dimen262
-\caption@indent=\dimen263
-\caption@parindent=\dimen264
-\caption@hangindent=\dimen265
+\caption@tempdima=\dimen261
+\captionmargin=\dimen262
+\caption@leftmargin=\dimen263
+\caption@rightmargin=\dimen264
+\caption@width=\dimen265
+\caption@indent=\dimen266
+\caption@parindent=\dimen267
+\caption@hangindent=\dimen268
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count341
-\c@continuedfloat=\count342
+\c@caption@flags=\count354
+\c@continuedfloat=\count355
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen266
-\caption@adjustwidth@linewidth=\dimen267
+\caption@adjustwidth@hsize=\dimen269
+\caption@adjustwidth@linewidth=\dimen270
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -640,67 +771,180 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
 Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
 \Etoc@toctoks=\toks36
-\c@etoc@tocid=\count343
-\etoc@framed@titlebox=\box121
-\etoc@framed@contentsbox=\box122
+\c@etoc@tocid=\count356
+\etoc@framed@titlebox=\box123
+\etoc@framed@contentsbox=\box124
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
-5.
+6.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 185.
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count344
-\l__pdf_internal_box=\box123
-) (./refman.aux)
+(Font)              scaled to size 8.99994pt on input line 186.
+(./refman.aux)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 185.
-LaTeX Font Info:    ... okay on input line 185.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count345
-\scratchdimen=\dimen268
-\scratchbox=\box124
-\nofMPsegments=\count346
-\nofMParguments=\count347
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count348
-\MPscratchDim=\dimen269
-\MPnumerator=\count349
-\makeMPintoPDFobject=\count350
-\everyMPtoPDFconversion=\toks38
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+86.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 186.
+LaTeX Font Info:    ... okay on input line 186.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 186.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 186.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 186.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 186.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 186.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 186.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 186.
+LaTeX Font Info:    Redeclaring math accent \check on input line 186.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 186.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 186.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 186.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 186.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 186.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 186.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 186.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 186.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 186.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 186.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/pcr/b/n on input line 186.
+
+Package fontspec Info: Font family 'Tinos(0)' created for font 'Tinos' with
+(fontspec)             options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Tinos/OT:script=latn;language=dflt;mapping=tex-text;
+"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Tinos/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Tinos/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Tinos/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'Cousine(0)' created for font 'Cousine'
+(fontspec)             with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Cousine/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Cousine/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Cousine/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Cousine/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+LaTeX Font Info:    Trying to load font information for T1+Tinos(0) on input li
+ne 186.
+LaTeX Font Info:    No file T1Tinos(0).fd. on input line 186.
+
+LaTeX Font Warning: Font shape `T1/Tinos(0)/m/n' undefined
+(Font)              using `T1/cmr/m/n' instead on input line 186.
+
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -731,8 +975,8 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package backref Info: ** backref set up for natbib ** on input line 185.
-Package hyperref Info: Link coloring ON on input line 185.
+Package backref Info: ** backref set up for natbib ** on input line 186.
+Package hyperref Info: Link coloring ON on input line 186.
 (./refman.out) (./refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
@@ -740,80 +984,53 @@ Package hyperref Info: Link coloring ON on input line 185.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \Etoc@tf=\read4
-Package hyperref Info: Option `pageanchor' set `false' on input line 193.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 193.
+Package hyperref Info: Option `pageanchor' set `false' on input line 194.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 194.
 
-Package hyperref Info: Option `unicode' set `true' on input line 193.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 198.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 198.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 198
+LaTeX Font Info:    Trying to load font information for U+msa on input line 199
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 198
+LaTeX Font Info:    Trying to load font information for U+msb on input line 199
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 19
-8.
+9.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 199.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 203.
-[1
+) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/base/8r.enc}] [2
+] [2
 
 ]
 \tf@toc=\write6
 \openout6 = `refman.toc'.
 
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 209.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 209.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 209.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 20
-9.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [
-18]
-Package hyperref Info: Option `pageanchor' set `true' on input line 212.
+
+LaTeX Font Warning: Font shape `T1/Tinos(0)/b/n' undefined
+(Font)              using `T1/Tinos(0)/m/n' instead on input line 210.
+
+[1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 213.
 (./index.tex
 Chapter 1.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 12.
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-5.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 15.
+LaTeX Font Info:    Trying to load font information for TS1+Tinos(0) on input l
+ine 15.
+LaTeX Font Info:    No file TS1Tinos(0).fd. on input line 15.
+
+LaTeX Font Warning: Font shape `TS1/Tinos(0)/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 15.
+
 [1
 
-
-] [2]
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 73.
-
+]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
@@ -848,1639 +1065,968 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-[3] [4]) [5] [6
-
-]
+[2]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[3]) [4]
 Chapter 2.
-(./hierarchy.tex) [7] [8
+(./hierarchy.tex) [5
+
+] [6
 
 ]
 Chapter 3.
-(./annotated.tex) [9] [10
+(./annotated.tex) [7] [8
 
 ]
 Chapter 4.
-(./files.tex) [11] [12
+(./files.tex) [9] [10
 
 ]
 Chapter 5.
-(./classBusIO__7Semi.tex
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 57.
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 57.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 74.
-[13] <./classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_icgraph.pdf>
-<classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_icgraph.pdf, id=3978, 937.
-5025pt x 1314.9125pt>
+(./classBusIO__7Semi.tex [11]
 File: classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_icgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_ic
-graph.pdf  used on input line 98.
-(pdftex.def)             Requested size: 350.0pt x 490.88394pt.
-[14] [15] <./classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cgraph.pdf>
-<classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cgraph.pdf, id=4014, 512.9
-1624pt x 99.37125pt>
+[12] [13]
 File: classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cg
-raph.pdf  used on input line 128.
-(pdftex.def)             Requested size: 350.0pt x 67.80809pt.
- <./classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_cgraph.pdf>
-<classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_cgraph.pdf, id=4025, 512.9
-1624pt x 99.37125pt>
 File: classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_cg
-raph.pdf  used on input line 147.
-(pdftex.def)             Requested size: 350.0pt x 67.80809pt.
- <./classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_icgraph.pdf>
-<classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_icgraph.pdf, id=4033, 418.
-56375pt x 136.51pt>
 File: classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_icgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a0d76100d6e83237e0ee97eba7044147d_ic
-graph.pdf  used on input line 155.
-(pdftex.def)             Requested size: 350.0pt x 114.14687pt.
- <./classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cgraph.pdf>
-<classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cgraph.pdf, id=4044, 354.3
-2375pt x 99.37125pt>
 File: classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cg
-raph.pdf  used on input line 174.
-(pdftex.def)             Requested size: 350.0pt x 98.161pt.
-[16] <./classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cgraph.pdf>
-<classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cgraph.pdf, id=4067, 354.3
-2375pt x 99.37125pt>
+[14]
 File: classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cg
-raph.pdf  used on input line 193.
-(pdftex.def)             Requested size: 350.0pt x 98.161pt.
- <./classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_icgraph.pdf>
-<classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_icgraph.pdf, id=4075, 616.
-3025pt x 300.12125pt>
 File: classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_icgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_ic
-graph.pdf  used on input line 201.
-(pdftex.def)             Requested size: 350.0pt x 170.4435pt.
-[17] <./classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_icgraph.pdf>
-<classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_icgraph.pdf, id=4102, 942.
-52126pt x 1932.21875pt>
+[15]
 File: classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_icgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_ic
-graph.pdf  used on input line 242.
-(pdftex.def)             Requested size: 268.27618pt x 550.0pt.
-[18] <./classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cgraph.pdf>
-<classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cgraph.pdf, id=4127, 521.9
-5pt x 136.51pt>
+[16]
 File: classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cg
-raph.pdf  used on input line 261.
-(pdftex.def)             Requested size: 350.0pt x 91.54036pt.
-[19] <./classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cgraph.pdf>
-<classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cgraph.pdf, id=4145, 521.9
-5pt x 136.51pt>
+[17]
 File: classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cg
-raph.pdf  used on input line 280.
-(pdftex.def)             Requested size: 350.0pt x 91.54036pt.
- <./classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_icgraph.pdf>
-<classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_icgraph.pdf, id=4153, 541.
-02126pt x 420.57124pt>
 File: classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_icgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_ic
-graph.pdf  used on input line 288.
-(pdftex.def)             Requested size: 350.0pt x 272.0846pt.
-[20] <./classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cgraph.pdf>
-<classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cgraph.pdf, id=4173, 360.3
-4625pt x 136.51pt>
+[18]
 File: classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cg
-raph.pdf  used on input line 312.
-(pdftex.def)             Requested size: 350.0pt x 132.5895pt.
- <./classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_cgraph.pdf>
-<classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_cgraph.pdf, id=4184, 360.3
-4625pt x 136.51pt>
 File: classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_cgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_cg
-raph.pdf  used on input line 336.
-(pdftex.def)             Requested size: 350.0pt x 132.5895pt.
- <./classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_icgraph.pdf>
-<classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_icgraph.pdf, id=4193, 735.
-74875pt x 556.0775pt>
 File: classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_icgraph.pdf>
-Package pdftex.def Info: classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_ic
-graph.pdf  used on input line 344.
-(pdftex.def)             Requested size: 350.0pt x 264.53835pt.
-[21]) (./structconfigDLPF.tex
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 12.
-[22]) (./classDevLab__ICM20948.tex [23] [24] <./classDevLab__ICM20948_a31460c48
-549b1d3081e253706f8b15e6_cgraph.pdf>
-<classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph.pdf, id=4384, 6
-00.2425pt x 124.465pt>
+[19]) (./structconfigDLPF.tex
+
+LaTeX Font Warning: Font shape `T1/Tinos(0)/m/it' undefined
+(Font)              using `T1/Tinos(0)/m/n' instead on input line 12.
+
+[20]) (./classDevLab__ICM20948.tex [21] [22]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e
-6_cgraph.pdf  used on input line 175.
-(pdftex.def)             Requested size: 350.0pt x 72.57718pt.
- <./classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.pdf>
-<classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.pdf, id=4392, 
-520.94624pt x 173.64874pt>
 File: classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e
-6_icgraph.pdf  used on input line 183.
-(pdftex.def)             Requested size: 350.0pt x 116.6673pt.
-[25] <./classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.pdf>
-<classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.pdf, id=4410, 5
-95.22375pt x 124.465pt>
+Missing character: There is no – ("2013) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[23]
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e61
-9_cgraph.pdf  used on input line 222.
-(pdftex.def)             Requested size: 350.0pt x 73.18681pt.
- <./classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.pdf>
-<classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.pdf, id=4427, 7
-59.83875pt x 149.55875pt>
+Missing character: There is no ≈ ("2248) in font ecrm1000!
+Missing character: There is no ≈ ("2248) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796
-a_cgraph.pdf  used on input line 259.
-(pdftex.def)             Requested size: 350.0pt x 68.89142pt.
-[26] <./classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.pdf>
-<classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.pdf, id=4446, 8
-07.015pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[24]
 File: classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7
-a_cgraph.pdf  used on input line 290.
-(pdftex.def)             Requested size: 350.0pt x 59.20432pt.
- <./classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.pdf>
-<classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.pdf, id=4457, 6
-12.2875pt x 155.58125pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7e
-b_cgraph.pdf  used on input line 330.
-(pdftex.def)             Requested size: 350.0pt x 88.93387pt.
-[27] <./classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.pdf>
-<classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.pdf, id=4477, 5
-89.20125pt x 155.58125pt>
+[25]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78
-f_cgraph.pdf  used on input line 368.
-(pdftex.def)             Requested size: 350.0pt x 92.41885pt.
- <./classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.pdf>
-<classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.pdf, id=4487, 5
-89.20125pt x 136.51pt>
+Missing character: There is no – ("2013) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a8f47c9f63642c35e5b5656e72066756
-6_cgraph.pdf  used on input line 405.
-(pdftex.def)             Requested size: 350.0pt x 81.0901pt.
-[28] <./classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.pdf>
-<classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.pdf, id=4502, 
-454.69875pt x 110.4125pt>
+[26]
 File: classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a8f47c9f63642c35e5b5656e72066756
-6_icgraph.pdf  used on input line 413.
-(pdftex.def)             Requested size: 350.0pt x 84.98923pt.
- <./classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.pdf>
-<classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.pdf, id=4512, 6
-13.29124pt x 155.58125pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e10
-2_cgraph.pdf  used on input line 451.
-(pdftex.def)             Requested size: 350.0pt x 88.78905pt.
-[29] <./classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.pdf>
-<classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.pdf, id=4533, 5
-91.20876pt x 155.58125pt>
+[27]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a780
-8_cgraph.pdf  used on input line 488.
-(pdftex.def)             Requested size: 350.0pt x 92.10786pt.
- <./classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_cgraph.pdf>
-<classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_cgraph.pdf, id=4543, 8
-01.99625pt x 291.0875pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b2
-1_cgraph.pdf  used on input line 520.
-(pdftex.def)             Requested size: 350.0pt x 127.0351pt.
-[30] <./classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_icgraph.pdf>
-<classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_icgraph.pdf, id=4558, 
-317.185pt x 99.37125pt>
+[28]
 File: classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b2
-1_icgraph.pdf  used on input line 528.
-(pdftex.def)             Requested size: 316.0pt x 99.0086pt.
- <./classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_cgraph.pdf>
-<classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_cgraph.pdf, id=4568, 8
-00.9925pt x 331.2375pt>
 File: classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b1
-8_cgraph.pdf  used on input line 546.
-(pdftex.def)             Requested size: 350.0pt x 144.73914pt.
- <./classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_icgraph.pdf>
-<classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_icgraph.pdf, id=4576, 
-316.18124pt x 99.37125pt>
 File: classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b1
-8_icgraph.pdf  used on input line 554.
-(pdftex.def)             Requested size: 315.0pt x 99.00708pt.
-[31] <./classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720_cgraph.pdf>
-<classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720_cgraph.pdf, id=4600, 5
-88.1975pt x 136.51pt>
+[29]
+Underfull \hbox (badness 887) in paragraph at lines 568--569
+[]\T1/Tinos(0)/b/n/10 Covers INT[]_[][]STATUS (0x19), INT[]_[][]STATUS[]_[]1 (0
+x1A), INT[]_[][]STATUS[]_[]2 (0x1B), INT[]_[][]
+ []
+
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb668872
-0_cgraph.pdf  used on input line 591.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
-[32] <./classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d19_cgraph.pdf>
-<classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d19_cgraph.pdf, id=4618, 5
-88.1975pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+[30]
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d19_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d19_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d1
-9_cgraph.pdf  used on input line 627.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
- <./classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f9_cgraph.pdf>
-<classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f9_cgraph.pdf, id=4628, 6
-13.29124pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f9_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f9_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f
-9_cgraph.pdf  used on input line 665.
-(pdftex.def)             Requested size: 350.0pt x 77.90523pt.
-[33] <./classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7_cgraph.pdf>
-<classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7_cgraph.pdf, id=4647, 5
-88.1975pt x 136.51pt>
+[31]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec
-7_cgraph.pdf  used on input line 703.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
- <./classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d9_cgraph.pdf>
-<classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d9_cgraph.pdf, id=4664, 5
-88.1975pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d9_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d9_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d
-9_cgraph.pdf  used on input line 733.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
-[34] <./classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5f_cgraph.pdf>
-<classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5f_cgraph.pdf, id=4683, 5
-88.1975pt x 136.51pt>
+[32]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5f_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5f_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5
-f_cgraph.pdf  used on input line 762.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
- <./classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6d_cgraph.pdf>
-<classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6d_cgraph.pdf, id=4693, 5
-89.20125pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6d_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6d_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6
-d_cgraph.pdf  used on input line 791.
-(pdftex.def)             Requested size: 350.0pt x 81.0901pt.
-[35] <./classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e46_cgraph.pdf>
-<classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e46_cgraph.pdf, id=4714, 5
-87.19376pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[33]
 File: classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e46_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e46_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e4
-6_cgraph.pdf  used on input line 821.
-(pdftex.def)             Requested size: 350.0pt x 81.36713pt.
- <./classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a36_cgraph.pdf>
-<classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a36_cgraph.pdf, id=4724, 5
-85.18625pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a36_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a36_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a3
-6_cgraph.pdf  used on input line 859.
-(pdftex.def)             Requested size: 350.0pt x 81.65042pt.
-[36] <./classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a7_cgraph.pdf>
-<classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a7_cgraph.pdf, id=4750, 5
-85.18625pt x 136.51pt>
+[34]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a7_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a
-7_cgraph.pdf  used on input line 889.
-(pdftex.def)             Requested size: 350.0pt x 81.65042pt.
- <./classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37f_cgraph.pdf>
-<classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37f_cgraph.pdf, id=4760, 5
-85.18625pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37f_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37f_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37
-f_cgraph.pdf  used on input line 918.
-(pdftex.def)             Requested size: 350.0pt x 81.65042pt.
-[37] <./classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd7_cgraph.pdf>
-<classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd7_cgraph.pdf, id=4779, 7
-73.89125pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[35]
 File: classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd7_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd
-7_cgraph.pdf  used on input line 948.
-(pdftex.def)             Requested size: 350.0pt x 61.7372pt.
- <./classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c7_cgraph.pdf>
-<classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c7_cgraph.pdf, id=4789, 7
-61.84625pt x 155.58125pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c7_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c
-7_cgraph.pdf  used on input line 986.
-(pdftex.def)             Requested size: 350.0pt x 71.47565pt.
-[38] <./classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph.pdf>
-<classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph.pdf, id=4808, 7
-78.91pt x 199.74625pt>
+[36]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c356
-1_cgraph.pdf  used on input line 1017.
-(pdftex.def)             Requested size: 350.0pt x 89.75392pt.
- <./classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_icgraph.pdf>
-<classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_icgraph.pdf, id=4816, 
-531.9875pt x 154.5775pt>
 File: classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c356
-1_icgraph.pdf  used on input line 1025.
-(pdftex.def)             Requested size: 350.0pt x 101.70067pt.
- <./classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.pdf>
-<classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.pdf, id=4829, 5
-92.2125pt x 124.465pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a3c5db22058479806072167f2c15319c
-7_cgraph.pdf  used on input line 1061.
-(pdftex.def)             Requested size: 350.0pt x 73.56094pt.
-[39] <./classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_icgraph.pdf>
-<classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_icgraph.pdf, id=4853, 
-320.19624pt x 110.4125pt>
+[37]
 File: classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a3c5db22058479806072167f2c15319c
-7_icgraph.pdf  used on input line 1069.
-(pdftex.def)             Requested size: 319.0pt x 110.00113pt.
- <./classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.pdf>
-<classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.pdf, id=4872, 5
-75.14874pt x 118.4425pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f4
-3_cgraph.pdf  used on input line 1104.
-(pdftex.def)             Requested size: 350.0pt x 72.07811pt.
- <./classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_icgraph.pdf>
-<classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_icgraph.pdf, id=4880, 
-303.1325pt x 99.37125pt>
 File: classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f4
-3_icgraph.pdf  used on input line 1112.
-(pdftex.def)             Requested size: 302.0pt x 99.00102pt.
-[40] <./classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_cgraph.pdf>
-<classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_cgraph.pdf, id=4900, 5
-94.22pt x 136.51pt>
+[38]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27
-b_cgraph.pdf  used on input line 1142.
-(pdftex.def)             Requested size: 350.0pt x 80.40897pt.
- <./classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_icgraph.pdf>
-<classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_icgraph.pdf, id=4908, 
-423.5825pt x 136.51pt>
 File: classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27
-b_icgraph.pdf  used on input line 1150.
-(pdftex.def)             Requested size: 350.0pt x 112.79918pt.
-[41] <./classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_cgraph.pdf>
-<classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_cgraph.pdf, id=4928, 5
-91.20876pt x 136.51pt>
+[39]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522
-d_cgraph.pdf  used on input line 1180.
-(pdftex.def)             Requested size: 350.0pt x 80.81723pt.
- <./classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_icgraph.pdf>
-<classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_icgraph.pdf, id=4936, 
-420.57124pt x 136.51pt>
 File: classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522
-d_icgraph.pdf  used on input line 1188.
-(pdftex.def)             Requested size: 350.0pt x 113.60529pt.
- <./classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_cgraph.pdf>
-<classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_cgraph.pdf, id=4946, 5
-89.20125pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f88631
-4_cgraph.pdf  used on input line 1219.
-(pdftex.def)             Requested size: 350.0pt x 81.0901pt.
-[42] <./classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_icgraph.pdf>
-<classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_icgraph.pdf, id=4962, 
-538.01pt x 154.5775pt>
+[40]
 File: classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f88631
-4_icgraph.pdf  used on input line 1227.
-(pdftex.def)             Requested size: 350.0pt x 100.55908pt.
- <./classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_cgraph.pdf>
-<classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_cgraph.pdf, id=4973, 6
-30.355pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5
-e_cgraph.pdf  used on input line 1257.
-(pdftex.def)             Requested size: 350.0pt x 75.79726pt.
- <./classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_icgraph.pdf>
-<classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_icgraph.pdf, id=4981, 
-352.31625pt x 99.37125pt>
 File: classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5
-e_icgraph.pdf  used on input line 1265.
-(pdftex.def)             Requested size: 350.0pt x 98.71748pt.
-[43] <./classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph.pdf>
-<classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph.pdf, id=5001, 6
-09.27625pt x 136.51pt>
+[41]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9
-e_cgraph.pdf  used on input line 1296.
-(pdftex.def)             Requested size: 350.0pt x 78.41972pt.
- <./classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_icgraph.pdf>
-<classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_icgraph.pdf, id=5009, 
-529.98pt x 210.7875pt>
 File: classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9
-e_icgraph.pdf  used on input line 1304.
-(pdftex.def)             Requested size: 350.0pt x 139.20702pt.
-[44] <./classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_cgraph.pdf>
-<classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_cgraph.pdf, id=5035, 3
-96.48125pt x 99.37125pt>
+[42]
+Missing character: There is no – ("2013) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c5
-5_cgraph.pdf  used on input line 1334.
-(pdftex.def)             Requested size: 350.0pt x 87.72292pt.
- <./classDevLab__ICM20948_adfbd409c7723007d208c82550098a649_cgraph.pdf>
-<classDevLab__ICM20948_adfbd409c7723007d208c82550098a649_cgraph.pdf, id=5045, 7
-45.78625pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_adfbd409c7723007d208c82550098a649_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_adfbd409c7723007d208c82550098a649_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_adfbd409c7723007d208c82550098a64
-9_cgraph.pdf  used on input line 1363.
-(pdftex.def)             Requested size: 350.0pt x 64.06389pt.
-[45] <./classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff156_cgraph.pdf>
-<classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff156_cgraph.pdf, id=5064, 7
-68.8725pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+[43]
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff156_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff156_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff15
-6_cgraph.pdf  used on input line 1392.
-(pdftex.def)             Requested size: 350.0pt x 62.1413pt.
- <./classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_cgraph.pdf>
-<classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_cgraph.pdf, id=5075, 5
-88.1975pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a619f82390347cc173d1604d4d711b53
-7_cgraph.pdf  used on input line 1429.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
- <./classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_icgraph.pdf>
-<classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_icgraph.pdf, id=5083, 
-355.3275pt x 136.51pt>
 File: classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a619f82390347cc173d1604d4d711b53
-7_icgraph.pdf  used on input line 1437.
-(pdftex.def)             Requested size: 350.0pt x 134.46834pt.
-[46] <./classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_cgraph.pdf>
-<classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_cgraph.pdf, id=5103, 5
-88.1975pt x 124.465pt>
+[44]
 File: classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60e
-c_cgraph.pdf  used on input line 1455.
-(pdftex.def)             Requested size: 350.0pt x 74.06233pt.
- <./classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_icgraph.pdf>
-<classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_icgraph.pdf, id=5111, 
-355.3275pt x 136.51pt>
 File: classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60e
-c_icgraph.pdf  used on input line 1463.
-(pdftex.def)             Requested size: 350.0pt x 134.46834pt.
-[47] <./classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_cgraph.pdf>
-<classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_cgraph.pdf, id=5131, 7
-73.89125pt x 149.55875pt>
+[45]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb8
-5_cgraph.pdf  used on input line 1501.
-(pdftex.def)             Requested size: 350.0pt x 67.63855pt.
- <./classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_icgraph.pdf>
-<classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_icgraph.pdf, id=5139, 
-379.4175pt x 173.64874pt>
 File: classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb8
-5_icgraph.pdf  used on input line 1509.
-(pdftex.def)             Requested size: 350.0pt x 160.18802pt.
-[48] <./classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd45_cgraph.pdf>
-<classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd45_cgraph.pdf, id=5157, 5
-88.1975pt x 124.465pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[46]
 File: classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd45_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd45_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd4
-5_cgraph.pdf  used on input line 1547.
-(pdftex.def)             Requested size: 350.0pt x 74.06233pt.
- <./classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_cgraph.pdf>
-<classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_cgraph.pdf, id=5174, 5
-88.1975pt x 124.465pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe
-2_cgraph.pdf  used on input line 1577.
-(pdftex.def)             Requested size: 350.0pt x 74.06233pt.
- <./classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_icgraph.pdf>
-<classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_icgraph.pdf, id=5182, 
-316.18124pt x 110.4125pt>
 File: classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe
-2_icgraph.pdf  used on input line 1585.
-(pdftex.def)             Requested size: 315.0pt x 110.00787pt.
-[49] <./classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_cgraph.pdf>
-<classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_cgraph.pdf, id=5203, 5
-88.1975pt x 136.51pt>
+[47]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb4
-3_cgraph.pdf  used on input line 1615.
-(pdftex.def)             Requested size: 350.0pt x 81.22966pt.
- <./classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_icgraph.pdf>
-<classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_icgraph.pdf, id=5211, 
-355.3275pt x 173.64874pt>
 File: classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb4
-3_icgraph.pdf  used on input line 1623.
-(pdftex.def)             Requested size: 350.0pt x 171.05164pt.
- <./classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d6_cgraph.pdf>
-<classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d6_cgraph.pdf, id=5222, 5
-88.1975pt x 118.4425pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d6_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d6_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d
-6_cgraph.pdf  used on input line 1653.
-(pdftex.def)             Requested size: 350.0pt x 70.47867pt.
-[50] <./classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_cgraph.pdf>
-<classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_cgraph.pdf, id=5242, 7
-47.79375pt x 149.55875pt>
+[48]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a0bea2c662c285120253851c80289e07
-7_cgraph.pdf  used on input line 1683.
-(pdftex.def)             Requested size: 350.0pt x 70.0005pt.
- <./classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_icgraph.pdf>
-<classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_icgraph.pdf, id=5250, 
-353.32pt x 99.37125pt>
 File: classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a0bea2c662c285120253851c80289e07
-7_icgraph.pdf  used on input line 1691.
-(pdftex.def)             Requested size: 350.0pt x 98.43848pt.
- <./classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e7_cgraph.pdf>
-<classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e7_cgraph.pdf, id=5261, 5
-85.18625pt x 136.51pt>
 File: classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e7_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e
-7_cgraph.pdf  used on input line 1709.
-(pdftex.def)             Requested size: 350.0pt x 81.65042pt.
-[51] <./classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_cgraph.pdf>
-<classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_cgraph.pdf, id=5282, 5
-85.18625pt x 124.465pt>
+[49]
 File: classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a0377
-3_cgraph.pdf  used on input line 1727.
-(pdftex.def)             Requested size: 350.0pt x 74.44597pt.
- <./classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_icgraph.pdf>
-<classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_icgraph.pdf, id=5290, 
-352.31625pt x 110.4125pt>
 File: classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a0377
-3_icgraph.pdf  used on input line 1735.
-(pdftex.def)             Requested size: 350.0pt x 109.68608pt.
-[52] <./classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db54_cgraph.pdf>
-<classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db54_cgraph.pdf, id=5309, 5
-85.18625pt x 124.465pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+[50]
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db54_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db54_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db5
-4_cgraph.pdf  used on input line 1773.
-(pdftex.def)             Requested size: 350.0pt x 74.44597pt.
- <./classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb_cgraph.pdf>
-<classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb_cgraph.pdf, id=5326, 5
-85.18625pt x 124.465pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1b
-b_cgraph.pdf  used on input line 1803.
-(pdftex.def)             Requested size: 350.0pt x 74.44597pt.
-[53] <./classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_cgraph.pdf>
-<classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_cgraph.pdf, id=5347, 5
-85.18625pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[51]
 File: classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d63
-2_cgraph.pdf  used on input line 1840.
-(pdftex.def)             Requested size: 350.0pt x 81.65042pt.
- <./classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_icgraph.pdf>
-<classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_icgraph.pdf, id=5356, 
-352.31625pt x 110.4125pt>
 File: classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d63
-2_icgraph.pdf  used on input line 1848.
-(pdftex.def)             Requested size: 350.0pt x 109.68608pt.
- <./classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc4_cgraph.pdf>
-<classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc4_cgraph.pdf, id=5366, 7
-72.8875pt x 136.51pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc4_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc4_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc
-4_cgraph.pdf  used on input line 1878.
-(pdftex.def)             Requested size: 350.0pt x 61.81844pt.
-[54] <./classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b3_icgraph.pdf>
-<classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b3_icgraph.pdf, id=5387, 
-572.1375pt x 136.51pt>
+[52]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b3_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b3_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b
-3_icgraph.pdf  used on input line 1907.
-(pdftex.def)             Requested size: 350.0pt x 83.50842pt.
- <./classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_cgraph.pdf>
-<classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_cgraph.pdf, id=5397, 7
-61.84625pt x 175.65625pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd18
-6_cgraph.pdf  used on input line 1945.
-(pdftex.def)             Requested size: 350.0pt x 80.69832pt.
- <./classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_icgraph.pdf>
-<classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_icgraph.pdf, id=5405, 
-328.22626pt x 99.37125pt>
 File: classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd18
-6_icgraph.pdf  used on input line 1953.
-(pdftex.def)             Requested size: 327.0pt x 99.00102pt.
-[55] <./classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph.pdf>
-<classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph.pdf, id=5424, 5
-73.14125pt x 118.4425pt>
+[53]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b5
-7_cgraph.pdf  used on input line 1989.
-(pdftex.def)             Requested size: 350.0pt x 72.32933pt.
- <./classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_icgraph.pdf>
-<classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_icgraph.pdf, id=5432, 
-708.6475pt x 160.6pt>
 File: classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b5
-7_icgraph.pdf  used on input line 1997.
-(pdftex.def)             Requested size: 350.0pt x 79.32202pt.
-[56] <./classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph.pdf>
-<classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph.pdf, id=5451, 5
-92.2125pt x 118.4425pt>
+[54]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a889
-1_cgraph.pdf  used on input line 2034.
-(pdftex.def)             Requested size: 350.0pt x 70.00154pt.
- <./classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_icgraph.pdf>
-<classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_icgraph.pdf, id=5459, 
-732.7375pt x 194.7275pt>
 File: classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_icgraph.pdf>
-Package pdftex.def Info: classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a889
-1_icgraph.pdf  used on input line 2042.
-(pdftex.def)             Requested size: 350.0pt x 93.01352pt.
-) (./classI2C__Interface.tex <./classI2C__Interface__inherit__graph.pdf>
-<classI2C__Interface__inherit__graph.pdf, id=5469, 176.66pt x 154.5775pt>
+) (./classI2C__Interface.tex
 File: classI2C__Interface__inherit__graph.pdf Graphic file (type pdf)
 <use classI2C__Interface__inherit__graph.pdf>
-Package pdftex.def Info: classI2C__Interface__inherit__graph.pdf  used on input
- line 14.
-(pdftex.def)             Requested size: 176.0pt x 154.00159pt.
-[57] <./classI2C__Interface__coll__graph.pdf>
-<classI2C__Interface__coll__graph.pdf, id=5486, 176.66pt x 154.5775pt>
+[55]
 File: classI2C__Interface__coll__graph.pdf Graphic file (type pdf)
 <use classI2C__Interface__coll__graph.pdf>
-Package pdftex.def Info: classI2C__Interface__coll__graph.pdf  used on input li
-ne 24.
-(pdftex.def)             Requested size: 176.0pt x 154.00159pt.
-[58] <./classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_icgraph.pdf>
-<classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_icgraph.pdf, id=5532, 48
-3.8075pt x 99.37125pt>
+[56]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_icgraph.pdf Graphic
  file (type pdf)
 <use classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_icgraph.pdf>
-Package pdftex.def Info: classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_
-icgraph.pdf  used on input line 98.
-(pdftex.def)             Requested size: 350.0pt x 71.89143pt.
-[59]) (./structICM20948__IntEnableConfig.tex [60]) (./structICM20948__IntPinCon
-fig.tex [61]) (./structICM20948__IntStatus.tex [62] [63]) (./structicm__plat__t
-.tex [64]) (./classInterface__7Semi.tex <./classInterface__7Semi__inherit__grap
-h.pdf>
-<classInterface__7Semi__inherit__graph.pdf, id=5766, 260.975pt x 154.5775pt>
+Missing character: There is no → ("2192) in font ecrm1000!
+[57]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+) (./structICM20948__IntEnableConfig.tex [58]
+Missing character: There is no – ("2013) in font ecrm1000!
+) (./structICM20948__IntPinConfig.tex [59]) (./structICM20948__IntStatus.tex [6
+0]
+Underfull \hbox (badness 887) in paragraph at lines 32--33
+[]\T1/Tinos(0)/b/n/10 Covers INT[]_[][]STATUS (0x19), INT[]_[][]STATUS[]_[]1 (0
+x1A), INT[]_[][]STATUS[]_[]2 (0x1B), INT[]_[][]
+ []
+
+[61]) (./structicm__plat__t.tex [62]) (./classInterface__7Semi.tex
 File: classInterface__7Semi__inherit__graph.pdf Graphic file (type pdf)
 <use classInterface__7Semi__inherit__graph.pdf>
-Package pdftex.def Info: classInterface__7Semi__inherit__graph.pdf  used on inp
-ut line 14.
-(pdftex.def)             Requested size: 260.0pt x 154.00159pt.
-[65] [66]) (./classSPI__Interface.tex <./classSPI__Interface__inherit__graph.pd
-f>
-<classSPI__Interface__inherit__graph.pdf, id=5821, 176.66pt x 154.5775pt>
+[63]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+[64]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
+) (./classSPI__Interface.tex
 File: classSPI__Interface__inherit__graph.pdf Graphic file (type pdf)
 <use classSPI__Interface__inherit__graph.pdf>
-Package pdftex.def Info: classSPI__Interface__inherit__graph.pdf  used on input
- line 14.
-(pdftex.def)             Requested size: 176.0pt x 154.00159pt.
-[67] <./classSPI__Interface__coll__graph.pdf>
-<classSPI__Interface__coll__graph.pdf, id=5836, 176.66pt x 154.5775pt>
+[65]
 File: classSPI__Interface__coll__graph.pdf Graphic file (type pdf)
 <use classSPI__Interface__coll__graph.pdf>
-Package pdftex.def Info: classSPI__Interface__coll__graph.pdf  used on input li
-ne 24.
-(pdftex.def)             Requested size: 176.0pt x 154.00159pt.
-[68] <./classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_icgraph.pdf>
-<classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_icgraph.pdf, id=5880, 48
-0.79625pt x 99.37125pt>
+[66]
+Missing character: There is no → ("2192) in font ecrm1000!
+Missing character: There is no → ("2192) in font ecrm1000!
 File: classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_icgraph.pdf Graphic
  file (type pdf)
 <use classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_icgraph.pdf>
-Package pdftex.def Info: classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_
-icgraph.pdf  used on input line 120.
-(pdftex.def)             Requested size: 350.0pt x 72.34026pt.
-[69]) [70]
+[67]) [68]
 Chapter 6.
-(./gyr__test_8ino.tex <./gyr__test_8ino__incl.pdf>
-<gyr__test_8ino__incl.pdf, id=5923, 665.48625pt x 331.2375pt>
+(./gyr__test_8ino.tex
 File: gyr__test_8ino__incl.pdf Graphic file (type pdf)
 <use gyr__test_8ino__incl.pdf>
-Package pdftex.def Info: gyr__test_8ino__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 174.21059pt.
-[71
+[69
 
-] [72]
+] [70]
 Underfull \hbox (badness 10000) detected at line 162
 [][][]
  []
 
- <./gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf>
-<gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf, id=6011, 873.2625
-pt x 212.795pt>
 File: gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf Graphic file 
 (type pdf)
 <use gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgrap
-h.pdf  used on input line 174.
-(pdftex.def)             Requested size: 350.0pt x 85.28532pt.
- <./gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
-<gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf, id=6021, 708.6475
-pt x 136.51pt>
 File: gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf Graphic file 
 (type pdf)
 <use gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgrap
-h.pdf  used on input line 196.
-(pdftex.def)             Requested size: 350.0pt x 67.42372pt.
- <./gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-<gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf, id=6037, 223.836
-24pt x 99.37125pt>
 File: gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf Graphic file
  (type pdf)
 <use gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgra
-ph.pdf  used on input line 204.
-(pdftex.def)             Requested size: 223.0pt x 99.00253pt.
-[73] <./gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-<gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf, id=6070, 356.331
-25pt x 118.4425pt>
+[71]
 File: gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf Graphic file
  (type pdf)
 <use gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgra
-ph.pdf  used on input line 240.
-(pdftex.def)             Requested size: 350.0pt x 116.34213pt.
- <./gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-<gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf, id=6082, 1050.926
-25pt x 342.27875pt>
 File: gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf Graphic file 
 (type pdf)
 <use gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgrap
-h.pdf  used on input line 276.
-(pdftex.def)             Requested size: 350.0pt x 113.99165pt.
-[74] <./gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-<gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf, id=6101, 225.843
-75pt x 99.37125pt>
+[72]
 File: gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf Graphic file
  (type pdf)
 <use gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgra
-ph.pdf  used on input line 284.
-(pdftex.def)             Requested size: 225.0pt x 99.00557pt.
- <./gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=6111, 1148.29p
-t x 603.25375pt>
 File: gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgrap
-h.pdf  used on input line 306.
-(pdftex.def)             Requested size: 350.0pt x 183.86786pt.
-[75] [76]) (./gyr__test_8ino_source.tex [77] [78] [79]) (./i2c__accel_8ino.tex
+[73] [74]) (./gyr__test_8ino_source.tex [75] [76] [77]) (./i2c__accel_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[80] <./i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=6612, 668.497
-5pt x 136.51pt>
+[78]
 File: i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgra
-ph.pdf  used on input line 109.
-(pdftex.def)             Requested size: 350.0pt x 71.473pt.
- <./i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=6622, 905.382
-5pt x 590.205pt>
 File: i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgra
-ph.pdf  used on input line 131.
-(pdftex.def)             Requested size: 350.0pt x 228.15271pt.
-[81]) (./i2c__accel_8ino_source.tex [82] [83]) (./i2c__basic_8ino.tex
+[79]) (./i2c__accel_8ino_source.tex [80] [81]) (./i2c__basic_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[84] <./i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=6866, 704.632
-5pt x 210.7875pt>
+[82]
 File: i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgra
-ph.pdf  used on input line 109.
-(pdftex.def)             Requested size: 350.0pt x 104.69876pt.
- <./i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=6876, 893.337
-5pt x 543.02875pt>
 File: i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgra
-ph.pdf  used on input line 131.
-(pdftex.def)             Requested size: 350.0pt x 212.75809pt.
-[85]) (./i2c__basic_8ino_source.tex [86] [87]) (./i2c__gyro_8ino.tex
+[83]) (./i2c__basic_8ino_source.tex [84] [85]) (./i2c__gyro_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[88] <./i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=7114, 665.4862
-5pt x 136.51pt>
+[86]
 File: i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file 
 (type pdf)
 <use i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgrap
-h.pdf  used on input line 109.
-(pdftex.def)             Requested size: 350.0pt x 71.79587pt.
- <./i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=7124, 893.3375
-pt x 353.32pt>
 File: i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgrap
-h.pdf  used on input line 131.
-(pdftex.def)             Requested size: 350.0pt x 138.4304pt.
-) (./i2c__gyro_8ino_source.tex [89] [90]) (./i2c__magneto_8ino.tex
+) (./i2c__gyro_8ino_source.tex [87] [88]) (./i2c__magneto_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[91] <./i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=7350, 663.4
-7874pt x 136.51pt>
+[89]
 File: i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic fi
 le (type pdf)
 <use i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cg
-raph.pdf  used on input line 109.
-(pdftex.def)             Requested size: 350.0pt x 72.0125pt.
-[92] <./i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=7380, 893.3
-375pt x 543.02875pt>
+[90]
 File: i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic fi
 le (type pdf)
 <use i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cg
-raph.pdf  used on input line 131.
-(pdftex.def)             Requested size: 350.0pt x 212.75809pt.
-) (./i2c__magneto_8ino_source.tex [93]) (./interrupt_8ino.tex [94] <./interrupt
-_8ino__incl.pdf>
-<interrupt_8ino__incl.pdf, id=7539, 665.48625pt x 331.2375pt>
+) (./i2c__magneto_8ino_source.tex [91]) (./interrupt_8ino.tex [92]
 File: interrupt_8ino__incl.pdf Graphic file (type pdf)
 <use interrupt_8ino__incl.pdf>
-Package pdftex.def Info: interrupt_8ino__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 174.21059pt.
-[95] <./interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph.pdf>
-<interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph.pdf, id=7599, 227.851
-26pt x 99.37125pt>
+[93]
 File: interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph.pdf Graphic file
  (type pdf)
 <use interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph.pdf>
-Package pdftex.def Info: interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgra
-ph.pdf  used on input line 159.
-(pdftex.def)             Requested size: 227.0pt x 99.00253pt.
-[96] <./interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=7628, 882.2962
-5pt x 385.44pt>
+[94]
 File: interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgrap
-h.pdf  used on input line 223.
-(pdftex.def)             Requested size: 350.0pt x 152.9029pt.
-[97]) (./interrupt_8ino_source.tex [98]) (./mag__test_8ino.tex <./mag__test_8in
-o__incl.pdf>
-<mag__test_8ino__incl.pdf, id=7754, 665.48625pt x 331.2375pt>
+[95]) (./interrupt_8ino_source.tex [96]) (./mag__test_8ino.tex
 File: mag__test_8ino__incl.pdf Graphic file (type pdf)
 <use mag__test_8ino__incl.pdf>
-Package pdftex.def Info: mag__test_8ino__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 174.21059pt.
-[99] [100] <./mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph.pdf>
-<mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph.pdf, id=7872, 938.5062
-6pt x 272.01625pt>
+[97] [98]
 File: mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph.pdf Graphic file 
 (type pdf)
 <use mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph.pdf>
-Package pdftex.def Info: mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgrap
-h.pdf  used on input line 143.
-(pdftex.def)             Requested size: 350.0pt x 101.44135pt.
- <./mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph.pdf>
-<mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph.pdf, id=7880, 345.29p
-t x 136.51pt>
 File: mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph.pdf Graphic file
  (type pdf)
 <use mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph.pdf>
-Package pdftex.def Info: mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgra
-ph.pdf  used on input line 151.
-(pdftex.def)             Requested size: 344.0pt x 136.0014pt.
-[101] <./mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=7910, 1035.87p
-t x 530.98375pt>
+[99]
 File: mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgrap
-h.pdf  used on input line 215.
-(pdftex.def)             Requested size: 350.0pt x 179.40588pt.
-[102]) (./mag__test_8ino_source.tex [103] [104]) (./spi__accel_8ino.tex
+) (./mag__test_8ino_source.tex [100] [101]) (./spi__accel_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
- <./spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=8131, 668.497
-5pt x 136.51pt>
+[102]
 File: spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgra
-ph.pdf  used on input line 62.
-(pdftex.def)             Requested size: 350.0pt x 71.473pt.
-[105]
+
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
- <./spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=8182, 893.337
-5pt x 442.65375pt>
 File: spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgra
-ph.pdf  used on input line 87.
-(pdftex.def)             Requested size: 350.0pt x 173.43127pt.
- <./spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-<spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf, id=8190, 213.79
-875pt x 99.37125pt>
+[103]
 File: spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf Graphic fil
 e (type pdf)
 <use spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-Package pdftex.def Info: spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgr
-aph.pdf  used on input line 105.
-(pdftex.def)             Requested size: 213.0pt x 98.99951pt.
-[106]) (./spi__accel_8ino_source.tex [107]) (./spi__basic_8ino.tex
+) (./spi__accel_8ino_source.tex [104] [105]) (./spi__basic_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[108] <./spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=8394, 704.632
-5pt x 173.64874pt>
 File: spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgra
-ph.pdf  used on input line 62.
-(pdftex.def)             Requested size: 350.0pt x 86.25182pt.
-
+[106]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
- <./spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=8404, 893.337
-5pt x 442.65375pt>
 File: spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgra
-ph.pdf  used on input line 87.
-(pdftex.def)             Requested size: 350.0pt x 173.43127pt.
-[109] <./spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-<spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf, id=8427, 213.79
-875pt x 99.37125pt>
 File: spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf Graphic fil
 e (type pdf)
 <use spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-Package pdftex.def Info: spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgr
-aph.pdf  used on input line 105.
-(pdftex.def)             Requested size: 213.0pt x 98.99951pt.
-) (./spi__basic_8ino_source.tex [110] [111]) (./spi__gyro_8ino.tex
+) (./spi__basic_8ino_source.tex [107] [108]) (./spi__gyro_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
- <./spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-<spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=8579, 665.4862
-5pt x 136.51pt>
 File: spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file 
 (type pdf)
 <use spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-Package pdftex.def Info: spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgrap
-h.pdf  used on input line 62.
-(pdftex.def)             Requested size: 350.0pt x 71.79587pt.
-[112]
+[109]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
- <./spi__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<spi__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=8609, 893.3375
-pt x 374.39874pt>
 File: spi__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use spi__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: spi__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgrap
-h.pdf  used on input line 87.
-(pdftex.def)             Requested size: 350.0pt x 146.68904pt.
- <./spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-<spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf, id=8617, 213.798
-75pt x 99.37125pt>
 File: spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf Graphic file
  (type pdf)
 <use spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-Package pdftex.def Info: spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgra
-ph.pdf  used on input line 105.
-(pdftex.def)             Requested size: 213.0pt x 98.99951pt.
-) (./spi__gyro_8ino_source.tex [113] [114]) (./test_8ino.tex <./test_8ino__incl
-.pdf>
-<test_8ino__incl.pdf, id=8758, 665.48625pt x 320.19624pt>
+) (./spi__gyro_8ino_source.tex [110] [111]) (./test_8ino.tex
 File: test_8ino__incl.pdf Graphic file (type pdf)
 <use test_8ino__incl.pdf>
-Package pdftex.def Info: test_8ino__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 168.40356pt.
-[115]
-Overfull \hbox (35.32097pt too wide) in paragraph at lines 58--59
-[]\T1/phv/m/n/10 const [] [] []$ $[] = { [], [],
+[112]
+Overfull \hbox (91.29556pt too wide) in paragraph at lines 58--59
+[]\T1/Tinos(0)/bc/n/10 const [] [] []$ $[] = { [], [],
  []
 
 
-Underfull \hbox (badness 6575) in paragraph at lines 64--65
-[]\T1/phv/m/n/10 const [] [] []$ $[] = { [],
+Overfull \hbox (15.39743pt too wide) in paragraph at lines 64--65
+[]\T1/Tinos(0)/bc/n/10 const [] [] []$ $[] = { [],
  []
 
 
-Overfull \hbox (102.96448pt too wide) in paragraph at lines 64--65
-[]\T1/phv/m/n/10 , [], [],
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[]\T1/Tinos(0)/bc/n/10 , [],
  []
 
 
-Overfull \hbox (263.50385pt too wide) in paragraph at lines 64--65
-[]\T1/phv/m/n/10 , [], [],[]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+[]\T1/Tinos(0)/bc/n/10 , [],
  []
 
 
-Overfull \hbox (75.3508pt too wide) in paragraph at lines 68--69
-[]\T1/phv/m/n/10 const [] [] []$ $[] = {[] ,[],
+Overfull \hbox (166.56848pt too wide) in paragraph at lines 64--65
+[]\T1/Tinos(0)/bc/n/10 , [],[]
  []
 
-[116] [117]
+
+Underfull \hbox (badness 791) in paragraph at lines 68--69
+[]\T1/Tinos(0)/bc/n/10 const [] [] []$ $[] = {[]
+ []
+
+
+Overfull \hbox (71.48059pt too wide) in paragraph at lines 68--69
+\T1/Tinos(0)/bc/n/10 ,[], [], []} 
+ []
+
+[113] [114]
 Underfull \hbox (badness 10000) detected at line 172
 [][][]
  []
 
- <./test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf>
-<test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf, id=8941, 899.36pt x 23
-4.8775pt>
 File: test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf Graphic file (type
  pdf)
 <use test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf>
-Package pdftex.def Info: test_8ino_a327f4fbd9f22daba4f8a6f3f1c13f729_cgraph.pdf
-  used on input line 184.
-(pdftex.def)             Requested size: 350.0pt x 91.40474pt.
- <./test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
-<test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf, id=8951, 708.6475pt x 
-136.51pt>
 File: test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf Graphic file (type
  pdf)
 <use test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
-Package pdftex.def Info: test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf
-  used on input line 206.
-(pdftex.def)             Requested size: 350.0pt x 67.42372pt.
- <./test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-<test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf, id=8966, 223.83624pt 
-x 99.37125pt>
 File: test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-Package pdftex.def Info: test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pd
-f  used on input line 214.
-(pdftex.def)             Requested size: 223.0pt x 99.00253pt.
-[118] <./test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-<test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf, id=8996, 356.33125pt 
-x 118.4425pt>
+[115]
 File: test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-Package pdftex.def Info: test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pd
-f  used on input line 250.
-(pdftex.def)             Requested size: 350.0pt x 116.34213pt.
- <./test_8ino_a8765c1cf679c82cf73a0a13af44b983b_icgraph.pdf>
-<test_8ino_a8765c1cf679c82cf73a0a13af44b983b_icgraph.pdf, id=9006, 327.2225pt x
- 99.37125pt>
 File: test_8ino_a8765c1cf679c82cf73a0a13af44b983b_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a8765c1cf679c82cf73a0a13af44b983b_icgraph.pdf>
-Package pdftex.def Info: test_8ino_a8765c1cf679c82cf73a0a13af44b983b_icgraph.pd
-f  used on input line 272.
-(pdftex.def)             Requested size: 326.0pt x 98.99951pt.
- <./test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-<test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf, id=9016, 1050.92625pt 
-x 379.4175pt>
 File: test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf Graphic file (type
  pdf)
 <use test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-Package pdftex.def Info: test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf
-  used on input line 294.
-(pdftex.def)             Requested size: 350.0pt x 126.36024pt.
-[119] <./test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-<test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf, id=9037, 225.84375pt 
-x 99.37125pt>
 File: test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-Package pdftex.def Info: test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pd
-f  used on input line 302.
-(pdftex.def)             Requested size: 225.0pt x 99.00557pt.
- <./test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=9047, 1148.29pt x 6
-03.25375pt>
+[116]
 File: test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file (type
  pdf)
 <use test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf
-  used on input line 324.
-(pdftex.def)             Requested size: 350.0pt x 183.86786pt.
 
-Overfull \hbox (69.37291pt too wide) in paragraph at lines 334--335
-\T1/pcr/m/n/8 const [] accel[]AVG[]$ $[] = {[] ,[],
- []
-
-[120]
-Overfull \hbox (59.7729pt too wide) in paragraph at lines 348--349
-\T1/pcr/m/n/8 const [] accel[]Cfg[]$ $[] = { [], [],
+Overfull \hbox (69.45773pt too wide) in paragraph at lines 334--335
+\TU/Cousine(0)/m/n/8 const [] accelAVG[]$ $[] = {[] ,[],
  []
 
 
-Overfull \hbox (107.77293pt too wide) in paragraph at lines 362--363
-\T1/pcr/m/n/8 const [] accel[]DLPF[]$ $[] = { [], [],
+Overfull \hbox (59.85617pt too wide) in paragraph at lines 348--349
+\TU/Cousine(0)/m/n/8 const [] accelCfg[]$ $[] = { [], [],
  []
 
 
-Overfull \hbox (48.75621pt too wide) in paragraph at lines 362--363
-[]\T1/pcr/m/n/8 , [], [],
+Overfull \hbox (107.86398pt too wide) in paragraph at lines 362--363
+\TU/Cousine(0)/m/n/8 const [] accelDLPF[]$ $[] = { [], [],
  []
 
 
-Overfull \hbox (34.3562pt too wide) in paragraph at lines 362--363
-[]\T1/pcr/m/n/8 , [],[]
+Overfull \hbox (48.83792pt too wide) in paragraph at lines 362--363
+[]\TU/Cousine(0)/m/n/8 , [], [],
  []
 
 
+Overfull \hbox (34.43558pt too wide) in paragraph at lines 362--363
+[]\TU/Cousine(0)/m/n/8 , [],[]
+ []
+
+[117]
 Underfull \hbox (badness 10000) in paragraph at lines 376--377
-\T1/pcr/m/n/8 const uint16[]_[]t accel[]SR[]$ $[] = {0, 1, 3, 5, 7 , 10, 15, 22
-, 31, 63, 127, 255, 513, 1022, 2044,
+\TU/Cousine(0)/m/n/8 const uint16_t accelSR[]$ $[] = {0, 1, 3, 5, 7 , 10, 15, 2
+2, 31, 63, 127, 255, 513, 1022, 2044,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 447--448
-\T1/pcr/m/n/8 const char$\OMS/cmsy/m/n/8 ^^C$ \T1/pcr/m/n/8 etiquetas[]Accel[]D
-LPFCFG[]$ $[] = { "246/265", "246/265", "111/136", "50.[]4/68.[]8","23.[]
+\TU/Cousine(0)/m/n/8 const char$\OMS/cmsy/m/n/8 ^^C$ \TU/Cousine(0)/m/n/8 etiqu
+etasAccelDLPFCFG[]$ $[] = { "246/265", "246/265", "111/136", "50.4/68.8","23.[]
+
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 461--462
-\T1/pcr/m/n/8 const char$\OMS/cmsy/m/n/8 ^^C$ \T1/pcr/m/n/8 etiquetas[]SR[]$ $[
-] = { "1125.[]0","562.[]5", "281.[]3", "187.[]5","140.[]6", "102.[]3", "70.[]3"
-,
+\TU/Cousine(0)/m/n/8 const char$\OMS/cmsy/m/n/8 ^^C$ \TU/Cousine(0)/m/n/8 etiqu
+etasSR[]$ $[] = { "1125.0","562.5", "281.3", "187.5","140.6", "102.3", "70.3",
  []
 
-[121]) (./test_8ino_source.tex [122] [123] [124]) (./test2_8ino.tex <./test2_8i
-no__incl.pdf>
-<test2_8ino__incl.pdf, id=9448, 665.48625pt x 320.19624pt>
+[118]) (./test_8ino_source.tex [119] [120] [121]) (./test2_8ino.tex
 File: test2_8ino__incl.pdf Graphic file (type pdf)
 <use test2_8ino__incl.pdf>
-Package pdftex.def Info: test2_8ino__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 168.40356pt.
-[125] [126] [127]
+[122] [123]
 Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
 
- <./test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pdf>
-<test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pdf, id=9599, 899.36pt x 2
-83.0575pt>
 File: test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pdf>
-Package pdftex.def Info: test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pd
-f  used on input line 186.
-(pdftex.def)             Requested size: 350.0pt x 110.15442pt.
- <./test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
-<test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf, id=9609, 708.6475pt x
- 136.51pt>
+[124]
 File: test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
-Package pdftex.def Info: test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pd
-f  used on input line 208.
-(pdftex.def)             Requested size: 350.0pt x 67.42372pt.
- <./test2_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-<test2_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf, id=9624, 223.83624pt
- x 99.37125pt>
 File: test2_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf Graphic file (ty
 pe pdf)
 <use test2_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-Package pdftex.def Info: test2_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.p
-df  used on input line 216.
-(pdftex.def)             Requested size: 223.0pt x 99.00253pt.
-[128] <./test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-<test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf, id=9656, 356.33125pt
- x 118.4425pt>
 File: test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf Graphic file (ty
 pe pdf)
 <use test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-Package pdftex.def Info: test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.p
-df  used on input line 252.
-(pdftex.def)             Requested size: 350.0pt x 116.34213pt.
- <./test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-<test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf, id=9668, 1050.92625pt
- x 342.27875pt>
+[125]
 File: test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-Package pdftex.def Info: test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pd
-f  used on input line 288.
-(pdftex.def)             Requested size: 350.0pt x 113.99165pt.
- <./test2_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-<test2_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf, id=9676, 225.84375pt
- x 99.37125pt>
 File: test2_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf Graphic file (ty
 pe pdf)
 <use test2_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-Package pdftex.def Info: test2_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.p
-df  used on input line 296.
-(pdftex.def)             Requested size: 225.0pt x 99.00557pt.
-[129] <./test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=9697, 1148.29pt x 
-603.25375pt>
 File: test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-Package pdftex.def Info: test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pd
-f  used on input line 318.
-(pdftex.def)             Requested size: 350.0pt x 183.86786pt.
-[130] [131]) (./test2_8ino_source.tex [132] [133] [134] [135]) (./README_8md.te
-x) (./7Semi__I2C__Interface_8h.tex <./7Semi__I2C__Interface_8h__incl.pdf>
-<7Semi__I2C__Interface_8h__incl.pdf, id=10212, 289.08pt x 209.78375pt>
+[126] [127]) (./test2_8ino_source.tex [128] [129] [130] [131]) (./README_8md.te
+x) (./7Semi__I2C__Interface_8h.tex
 File: 7Semi__I2C__Interface_8h__incl.pdf Graphic file (type pdf)
 <use 7Semi__I2C__Interface_8h__incl.pdf>
-Package pdftex.def Info: 7Semi__I2C__Interface_8h__incl.pdf  used on input line
- 10.
-(pdftex.def)             Requested size: 288.0pt x 209.01176pt.
- <./7Semi__I2C__Interface_8h__dep__incl.pdf>
-<7Semi__I2C__Interface_8h__dep__incl.pdf, id=10221, 1925.1925pt x 220.825pt>
+[132]
 File: 7Semi__I2C__Interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use 7Semi__I2C__Interface_8h__dep__incl.pdf>
-Package pdftex.def Info: 7Semi__I2C__Interface_8h__dep__incl.pdf  used on input
- line 18.
-(pdftex.def)             Requested size: 350.0pt x 40.14438pt.
-) (./7Semi__I2C__Interface_8h_source.tex [136]) (./7Semi__Interface_8h.tex <./7
-Semi__Interface_8h__incl.pdf>
-<7Semi__Interface_8h__incl.pdf, id=10295, 270.00874pt x 154.5775pt>
+) (./7Semi__I2C__Interface_8h_source.tex [133]) (./7Semi__Interface_8h.tex
 File: 7Semi__Interface_8h__incl.pdf Graphic file (type pdf)
 <use 7Semi__Interface_8h__incl.pdf>
-Package pdftex.def Info: 7Semi__Interface_8h__incl.pdf  used on input line 11.
-(pdftex.def)             Requested size: 269.0pt x 154.00394pt.
-[137] <./7Semi__Interface_8h__dep__incl.pdf>
-<7Semi__Interface_8h__dep__incl.pdf, id=10390, 1925.1925pt x 276.03125pt>
+[134]
 File: 7Semi__Interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use 7Semi__Interface_8h__dep__incl.pdf>
-Package pdftex.def Info: 7Semi__Interface_8h__dep__incl.pdf  used on input line
- 19.
-(pdftex.def)             Requested size: 350.0pt x 50.18048pt.
-) (./7Semi__Interface_8h_source.tex [138]) (./7Semi__SPI__Interface_8h.tex <./7
-Semi__SPI__Interface_8h__incl.pdf>
-<7Semi__SPI__Interface_8h__incl.pdf, id=10452, 270.00874pt x 209.78375pt>
+) (./7Semi__Interface_8h_source.tex [135]) (./7Semi__SPI__Interface_8h.tex
 File: 7Semi__SPI__Interface_8h__incl.pdf Graphic file (type pdf)
 <use 7Semi__SPI__Interface_8h__incl.pdf>
-Package pdftex.def Info: 7Semi__SPI__Interface_8h__incl.pdf  used on input line
- 9.
-(pdftex.def)             Requested size: 269.0pt x 209.00536pt.
-[139] <./7Semi__SPI__Interface_8h__dep__incl.pdf>
-<7Semi__SPI__Interface_8h__dep__incl.pdf, id=10520, 1925.1925pt x 220.825pt>
 File: 7Semi__SPI__Interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use 7Semi__SPI__Interface_8h__dep__incl.pdf>
-Package pdftex.def Info: 7Semi__SPI__Interface_8h__dep__incl.pdf  used on input
- line 17.
-(pdftex.def)             Requested size: 350.0pt x 40.14438pt.
-) (./7Semi__SPI__Interface_8h_source.tex [140] [141]) (./BusIO__7Semi_8h.tex <.
-/BusIO__7Semi_8h__incl.pdf>
-<BusIO__7Semi_8h__incl.pdf, id=10694, 187.70125pt x 154.5775pt>
+[136]) (./7Semi__SPI__Interface_8h_source.tex [137]) (./BusIO__7Semi_8h.tex
 File: BusIO__7Semi_8h__incl.pdf Graphic file (type pdf)
 <use BusIO__7Semi_8h__incl.pdf>
-Package pdftex.def Info: BusIO__7Semi_8h__incl.pdf  used on input line 9.
-(pdftex.def)             Requested size: 187.0pt x 154.00865pt.
- <./BusIO__7Semi_8h__dep__incl.pdf>
-<BusIO__7Semi_8h__dep__incl.pdf, id=10702, 1925.1925pt x 220.825pt>
+[138]
 File: BusIO__7Semi_8h__dep__incl.pdf Graphic file (type pdf)
 <use BusIO__7Semi_8h__dep__incl.pdf>
-Package pdftex.def Info: BusIO__7Semi_8h__dep__incl.pdf  used on input line 17.
-
-(pdftex.def)             Requested size: 350.0pt x 40.14438pt.
-) (./BusIO__7Semi_8h_source.tex [142] [143]) (./DevLab__ICM20948_8cpp.tex <./De
-vLab__ICM20948_8cpp__incl.pdf>
-<DevLab__ICM20948_8cpp__incl.pdf, id=10878, 637.38126pt x 320.19624pt>
+) (./BusIO__7Semi_8h_source.tex [139] [140]) (./DevLab__ICM20948_8cpp.tex
 File: DevLab__ICM20948_8cpp__incl.pdf Graphic file (type pdf)
 <use DevLab__ICM20948_8cpp__incl.pdf>
-Package pdftex.def Info: DevLab__ICM20948_8cpp__incl.pdf  used on input line 9.
-
-(pdftex.def)             Requested size: 350.0pt x 175.82509pt.
-) (./DevLab__ICM20948_8cpp_source.tex [144] [145] [146] [147] [148] [149] [150]
-[151] [152] [153] [154] [155] [156] [157] [158] [159] [160]) (./DevLab__ICM2094
-8_8h.tex <./DevLab__ICM20948_8h__incl.pdf>
-<DevLab__ICM20948_8h__incl.pdf, id=12890, 637.38126pt x 264.99pt>
+) (./DevLab__ICM20948_8cpp_source.tex [141] [142] [143] [144] [145] [146] [147]
+[148] [149] [150] [151] [152] [153] [154] [155] [156] [157]) (./DevLab__ICM2094
+8_8h.tex
 File: DevLab__ICM20948_8h__incl.pdf Graphic file (type pdf)
 <use DevLab__ICM20948_8h__incl.pdf>
-Package pdftex.def Info: DevLab__ICM20948_8h__incl.pdf  used on input line 16.
-(pdftex.def)             Requested size: 350.0pt x 145.51042pt.
-[161] <./DevLab__ICM20948_8h__dep__incl.pdf>
-<DevLab__ICM20948_8h__dep__incl.pdf, id=12980, 1925.1925pt x 165.61874pt>
 File: DevLab__ICM20948_8h__dep__incl.pdf Graphic file (type pdf)
 <use DevLab__ICM20948_8h__dep__incl.pdf>
-Package pdftex.def Info: DevLab__ICM20948_8h__dep__incl.pdf  used on input line
- 24.
-(pdftex.def)             Requested size: 350.0pt x 30.10828pt.
-[162] [163] [164]) (./DevLab__ICM20948_8h_source.tex [165] [166] [167] [168] [1
-69] [170] [171] [172] [173] [174]) (./ICM20948__platform_8h.tex) (./ICM20948__p
-latform_8h_source.tex [175]) (./ICM20948__regs_8h.tex <./ICM20948__regs_8h__dep
-__incl.pdf>
-<ICM20948__regs_8h__dep__incl.pdf, id=14263, 1925.1925pt x 220.825pt>
+[158]
+Overfull \hbox (55.15125pt too wide) in paragraph at lines 41--52
+[] \T1/Tinos(0)/bc/n/10 = 0x00 , [] = 0x01 , []
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 52--64
+[] \T1/Tinos(0)/bc/n/10 = 0x00 , [] = 0x01 , [] = 0x02 ,
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 52--64
+[] \T1/Tinos(0)/bc/n/10 = 0x04 , [] = 0x05 , [] = 0x06 ,
+ []
+
+[159] [160]) (./DevLab__ICM20948_8h_source.tex [161] [162] [163] [164] [165] [1
+66] [167] [168] [169] [170] [171]) (./ICM20948__platform_8h.tex) (./ICM20948__p
+latform_8h_source.tex [172]) (./ICM20948__regs_8h.tex
 File: ICM20948__regs_8h__dep__incl.pdf Graphic file (type pdf)
 <use ICM20948__regs_8h__dep__incl.pdf>
-Package pdftex.def Info: ICM20948__regs_8h__dep__incl.pdf  used on input line 8
-.
-(pdftex.def)             Requested size: 350.0pt x 40.14438pt.
-[176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [
-189] [190]
-Overfull \hbox (33.11172pt too wide) in paragraph at lines 1757--1758
-|   \T1/pcr/m/sl/8 rate[]_[]request \T1/pcr/m/n/8 ) (rate[]_[]request) /$\OMS/c
-msy/m/n/8 ^^C$ \T1/pcr/m/n/8 symbolic; your driver computes DIV = round(1100/ra
-te)-1
+
+Underfull \hbox (badness 5622) in paragraph at lines 64--66
+[]\T1/Tinos(0)/bc/n/10 #define [] 0x0F /$\OMS/cmsy/m/n/10 ^^C$ [] [] []
  []
 
-[191] [192] [193] [194] [195] [196] [197] [198]
+[173] [174]
+Overfull \hbox (22.14665pt too wide) in paragraph at lines 220--222
+[]\T1/Tinos(0)/bc/n/10 #define [] 0x01 /$\OMS/cmsy/m/n/10 ^^C$ \T1/Tinos(0)/bc/
+n/10 GYRO[]_[][]DLPFCFG[]2[]:0[] GYRO[]_[][]FS[]_[][]SEL[]1[]:0[] []
+ []
+
+
+Underfull \hbox (badness 3884) in paragraph at lines 240--242
+[]\T1/Tinos(0)/bc/n/10 #define [] 0x02 /$\OMS/cmsy/m/n/10 ^^C$ [] [] []
+ []
+
+
+Overfull \hbox (27.42314pt too wide) in paragraph at lines 280--282
+[]\T1/Tinos(0)/bc/n/10 #define [] 0x14 /$\OMS/cmsy/m/n/10 ^^C$ \T1/Tinos(0)/bc/
+n/10 ACCEL[]_[][]DLPFCFG[]2[]:0[] ACCEL[]_[][]FS[]_[][]SEL[]1[]:0[] []
+ []
+
+[175]
+Overfull \hbox (16.80074pt too wide) in paragraph at lines 312--314
+[]\T1/Tinos(0)/bc/n/10 #define [] 0x52 /$\OMS/cmsy/m/n/10 ^^C$ [] [] []
+ []
+
+[176]
+Overfull \hbox (49.92026pt too wide) in paragraph at lines 420--422
+[]\T1/Tinos(0)/bc/n/10 #define [] (0x3u $\OML/cmm/m/it/10 <$$<$ []\T1/Tinos(0)/
+bc/n/10 ) 
+ []
+
+Missing character: There is no – ("2013) in font ecrm1000!
+[177] [178] [179] [180]
+Missing character: There is no — ("2014) in font ecrm1000!
+[181] [182] [183] [184] [185] [186] [187]
+Overfull \hbox (33.18098pt too wide) in paragraph at lines 1757--1758
+|   \TU/Cousine(0)/m/it/8 rate_request \TU/Cousine(0)/m/n/8 ) (rate_request) /$
+\OMS/cmsy/m/n/8 ^^C$ \TU/Cousine(0)/m/n/8 symbolic; your driver computes DIV = 
+round(1100/rate)-1
+ []
+
+Missing character: There is no — ("2014) in font ecrm1000!
+[188] [189] [190] [191] [192] [193] [194]
 Underfull \hbox (badness 10000) in paragraph at lines 2640--2641
-\T1/pcr/m/n/8 #define INT[]_[][]PIN[]_[][]CFG 0x0F /$\OMS/cmsy/m/n/8 ^^C$ [] []
- [] [] \T1/pcr/m/n/8 ACTL[]_[][]FSYNC
+\TU/Cousine(0)/m/n/8 #define INT_[][]PIN_[][]CFG 0x0F /$\OMS/cmsy/m/n/8 ^^C$ []
+ [] [] [] \TU/Cousine(0)/m/n/8 ACTL_[][]FSYNC
  []
 
-[199] [200] [201] [202] [203]
+[195] [196] [197] [198] [199] [200]
 Underfull \hbox (badness 10000) in paragraph at lines 3293--3294
-\T1/pcr/m/n/8 #define USER[]_[][]CTRL 0x03 /$\OMS/cmsy/m/n/8 ^^C$ \T1/pcr/m/n/8
- DMP[]_[][]EN FIFO[]_[][]EN I2[]C[]_[][]MST[]_[][]EN I2[]C[]_[][]IF[]_[][]DIS D
-MP[]_[][]RST SRAM[]_[][]RST I2[]C[]_[][]MST[]_[][]RST -
+\TU/Cousine(0)/m/n/8 #define USER_[][]CTRL 0x03 /$\OMS/cmsy/m/n/8 ^^C$ \TU/Cous
+ine(0)/m/n/8 DMP_[][]EN FIFO_[][]EN I2C_[][]MST_[][]EN I2C_[][]IF_[][]DIS DMP_[
+][]RST SRAM_[][]RST I2C_[][]MST_[][]RST -
  []
 
-[204] [205] [206]) (./ICM20948__regs_8h_source.tex [207] [208] [209] [210] [211
-]) [212] (./refman.ind
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 1.
-[213
+[201]
+Missing character: There is no – ("2013) in font ecrm1000!
+[202]) (./ICM20948__regs_8h_source.tex [203] [204] [205] [206] [207] [208]) [20
+9] [210
+
+] (./refman.ind [211
 
 
+] [212] [213] [214] [215] [216] [217] [218] [219]
+Underfull \hbox (badness 10000) in paragraph at lines 1137--1138
+[]| \T1/Tinos(0)/bc/n/10 REG_BANK_SEL_USER_BANK_MASK,
+ []
 
-] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226]
-[227] [228
+
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1139
+[]| \T1/Tinos(0)/bc/n/10 REG_BANK_SEL_USER_BANK_SHIFT,
+ []
+
+[220] [221] [222] [223] [224] [225] [226
 
 ]) (./refman.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
 (rerunfilecheck)             Checksum: 49AC0E8177A434B7941E692B1AA6BB4E;141231.
 
  ) 
 Here is how much of TeX's memory you used:
- 28207 strings out of 476182
- 662286 string characters out of 5795595
- 1993975 words of memory out of 5000000
- 42591 multiletter control sequences out of 15000+600000
- 619349 words of font info for 121 fonts, out of 8000000 for 9000
+ 22647 strings out of 476878
+ 521258 string characters out of 5805249
+ 1971627 words of memory out of 5000000
+ 44023 multiletter control sequences out of 15000+600000
+ 577671 words of font info for 116 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,16n,117p,1605b,783s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (248 pages, 2407892 bytes).
-PDF statistics:
- 19350 PDF objects out of 22161 (max. 8388607)
- 18339 compressed objects within 184 object streams
- 7178 named destinations out of 7423 (max. 500000)
- 6527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101i,16n,117p,1606b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
+Output written on refman.pdf (246 pages).

@@ -1,0 +1,27 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{devlab-fonts}[2026/06/16 Times New Roman and Courier for Doxygen PDF output]
+
+\RequirePackage{fontspec}
+
+\newcommand{\devlabmainfont}{%
+  \IfFontExistsTF{Times New Roman}{%
+    \setmainfont{Times New Roman}%
+  }{%
+    \IfFontExistsTF{Tinos}{\setmainfont{Tinos}}{\setmainfont{TeX Gyre Termes}}%
+  }%
+}
+
+\newcommand{\devlabmonofont}{%
+  \IfFontExistsTF{Courier New}{%
+    \setmonofont{Courier New}%
+  }{%
+    \IfFontExistsTF{Cousine}{\setmonofont{Cousine}}{\setmonofont{TeX Gyre Cursor}}%
+  }%
+}
+
+\AtBeginDocument{%
+  \devlabmainfont
+  \devlabmonofont
+  \renewcommand{\familydefault}{\rmdefault}%
+  \normalfont
+}
