@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.16)  16 JUN 2026 17:31
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.6.16)  16 JUN 2026 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,16 +539,6 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 ) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
-Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
-) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
-Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
 ) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -774,15 +764,7 @@ Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
 \c@etoc@tocid=\count356
 \etoc@framed@titlebox=\box123
 \etoc@framed@contentsbox=\box124
-)
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
-6.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 186.
-(./refman.aux)
+) (./refman.aux)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
@@ -857,17 +839,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 186.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 186.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 186.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 186.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 186.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 186.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 186.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 186.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/b/n on input line 186.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 186.
 
 Package fontspec Info: Font family 'Tinos(0)' created for font 'Tinos' with
 (fontspec)             options [Ligatures=TeX].
@@ -933,13 +915,6 @@ Space].
 (fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
-
-LaTeX Font Info:    Trying to load font information for T1+Tinos(0) on input li
-ne 186.
-LaTeX Font Info:    No file T1Tinos(0).fd. on input line 186.
-
-LaTeX Font Warning: Font shape `T1/Tinos(0)/m/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 186.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1010,27 +985,15 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 \tf@toc=\write6
 \openout6 = `refman.toc'.
 
-
-LaTeX Font Warning: Font shape `T1/Tinos(0)/b/n' undefined
-(Font)              using `T1/Tinos(0)/m/n' instead on input line 210.
-
 [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18
-
 ]
 Package hyperref Info: Option `pageanchor' set `true' on input line 213.
 (./index.tex
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+Tinos(0) on input l
-ine 15.
-LaTeX Font Info:    No file TS1Tinos(0).fd. on input line 15.
-
-LaTeX Font Warning: Font shape `TS1/Tinos(0)/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textbullet' on input line 15.
-
 [1
 
-]
+
+] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
@@ -1065,39 +1028,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-[2]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[3]) [4]
-Chapter 2.
-(./hierarchy.tex) [5
+[3] [4]) [5] [6
 
-] [6
+]
+Chapter 2.
+(./hierarchy.tex) [7] [8
 
 ]
 Chapter 3.
-(./annotated.tex) [7] [8
+(./annotated.tex) [9] [10
 
 ]
 Chapter 4.
-(./files.tex) [9] [10
+(./files.tex) [11] [12
 
 ]
 Chapter 5.
-(./classBusIO__7Semi.tex [11]
+(./classBusIO__7Semi.tex [13]
 File: classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_a933c66d9a1afe84102323e209a93dd31_icgraph.pdf>
-[12] [13]
+[14] [15]
 File: classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a51b4ef7309cdfddaa3c94d99eac09065_cgraph.pdf>
@@ -1110,29 +1066,29 @@ ile (type pdf)
 File: classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a15f260e24f2c2f806965744c40f0f52f_cgraph.pdf>
-[14]
+[16]
 File: classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_cgraph.pdf>
 File: classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_aed7b0973e323495f8516a0d253089af8_icgraph.pdf>
-[15]
+[17]
 File: classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_aa633479356af692cb9ea334771b7c0c5_icgraph.pdf>
-[16]
+[18]
 File: classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_a6a07d4bd0a308294b37166b6d25209b2_cgraph.pdf>
-[17]
+[19]
 File: classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_cgraph.pdf>
 File: classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_ac7b3d1c425f7187abbe1bbec64d9ccea_icgraph.pdf>
-[18]
+[20]
 File: classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cgraph.pdf Graphic fi
 le (type pdf)
 <use classBusIO__7Semi_af38d37d409c6d8bc956522465fa39390_cgraph.pdf>
@@ -1142,78 +1098,49 @@ le (type pdf)
 File: classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_icgraph.pdf Graphic f
 ile (type pdf)
 <use classBusIO__7Semi_a855c7388d4118e632c84c7f8e2e3ddc2_icgraph.pdf>
-[19]) (./structconfigDLPF.tex
-
-LaTeX Font Warning: Font shape `T1/Tinos(0)/m/it' undefined
-(Font)              using `T1/Tinos(0)/m/n' instead on input line 12.
-
-[20]) (./classDevLab__ICM20948.tex [21] [22]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[21]) (./structconfigDLPF.tex [22]) (./classDevLab__ICM20948.tex [23] [24]
 File: classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_cgraph.pdf>
 File: classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a31460c48549b1d3081e253706f8b15e6_icgraph.pdf>
-Missing character: There is no – ("2013) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[23]
-Missing character: There is no → ("2192) in font ecrm1000!
+[25]
 File: classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ab8336307b4096237d701d989d1f5e619_cgraph.pdf>
-Missing character: There is no ≈ ("2248) in font ecrm1000!
-Missing character: There is no ≈ ("2248) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aab027c72832d1c7ec722187e6a64796a_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[24]
+[26]
 File: classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a357d1315ecc5a649ac4ce6b31cb47e7a_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a1b8cce13fe757b1b3a61f8437766d7eb_cgraph.pdf>
-[25]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[27]
 File: classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a57d37173d6d5c54ab4c7027dfdd3a78f_cgraph.pdf>
-Missing character: There is no – ("2013) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_cgraph.pdf>
-[26]
+[28]
 File: classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a8f47c9f63642c35e5b5656e720667566_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a1079d6d89e4bda1f496cce90a820e102_cgraph.pdf>
-[27]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[29]
 File: classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ac2a1cdaf078cac71e14e0629925a7808_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_cgraph.pdf>
-[28]
+[30]
 File: classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a91147b3cd4c45bffc8e024f985be7b21_icgraph.pdf>
@@ -1223,226 +1150,158 @@ c file (type pdf)
 File: classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18_icgraph.pdf>
-[29]
-Underfull \hbox (badness 887) in paragraph at lines 568--569
-[]\T1/Tinos(0)/b/n/10 Covers INT[]_[][]STATUS (0x19), INT[]_[][]STATUS[]_[]1 (0
-x1A), INT[]_[][]STATUS[]_[]2 (0x1B), INT[]_[][]
- []
-
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[31]
 File: classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a61f65c00baf13e2cd69eee7cb6688720_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-[30]
-Missing character: There is no → ("2192) in font ecrm1000!
+[32]
 File: classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d19_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ae356f6810b038f90e706bd288bb79d19_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f9_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a95dae0d8f84175c0175e65b9981d86f9_cgraph.pdf>
-[31]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[33]
 File: classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ae4beff71dc469940c9ba561d57f04ec7_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d9_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9f2da1c80e24d06ae0a0561eb850d8d9_cgraph.pdf>
-[32]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[34]
 File: classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5f_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ace42a35300e82402626ce89eb8958e5f_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6d_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ac4585d35fd7444eee47ea7accd162b6d_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[33]
+[35]
 File: classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e46_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ab5ef83d7268ee07da27e9cce74c94e46_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a36_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a3d407a299b73a9d6da88f724bcca0a36_cgraph.pdf>
-[34]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[36]
 File: classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a721c6c8151230452abfc6c36814f63a7_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37f_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a5e21409c747b1345884dd0d05720f37f_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[35]
+[37]
 File: classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9832c13228e84e8ef74a631bfe1fdcd7_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a8b3768ede281b8aa65900b1db8a7a7c7_cgraph.pdf>
-[36]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[38]
 File: classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_cgraph.pdf>
 File: classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_cgraph.pdf>
-[37]
+[39]
 File: classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a3c5db22058479806072167f2c15319c7_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_cgraph.pdf>
 File: classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_ab011f71e9466a0e1e8245638f81b0f43_icgraph.pdf>
-[38]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[40]
 File: classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_cgraph.pdf>
 File: classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b_icgraph.pdf>
-[39]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[41]
 File: classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_cgraph.pdf>
 File: classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_cgraph.pdf>
-[40]
+[42]
 File: classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_cgraph.pdf>
 File: classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e_icgraph.pdf>
-[41]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[43]
 File: classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_cgraph.pdf>
 File: classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a8bef7eafb3b67eb736f491d0df453b9e_icgraph.pdf>
-[42]
-Missing character: There is no – ("2013) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[44]
 File: classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aaa26fcbfea0e67d45cb1c3ae39654c55_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_adfbd409c7723007d208c82550098a649_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_adfbd409c7723007d208c82550098a649_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-[43]
-Missing character: There is no → ("2192) in font ecrm1000!
+[45]
 File: classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff156_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a9d7602ece2c3908e7bbb2acd45dff156_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_cgraph.pdf>
 File: classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a619f82390347cc173d1604d4d711b537_icgraph.pdf>
-[44]
+[46]
 File: classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_cgraph.pdf>
 File: classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_aca0cb8da36b8e9128299b9aeb5bb60ec_icgraph.pdf>
-[45]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[47]
 File: classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_cgraph.pdf>
 File: classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_ac52d80aad738b90aa0f05e9d6404bb85_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[46]
+[48]
 File: classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd45_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a7c150c665140086d7937fa4b2f39cd45_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_cgraph.pdf>
 File: classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_afe657b6e9d21f02dad2599ea04feefe2_icgraph.pdf>
-[47]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[49]
 File: classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_cgraph.pdf>
 File: classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d6_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a18de038f48173c77483f4be1c04204d6_cgraph.pdf>
-[48]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[50]
 File: classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a0bea2c662c285120253851c80289e077_cgraph.pdf>
@@ -1452,64 +1311,48 @@ ic file (type pdf)
 File: classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e7_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a7ae5665d5e835f8024df82f43bae46e7_cgraph.pdf>
-[49]
+[51]
 File: classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_cgraph.pdf>
 File: classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a16cc9db132bb7a2b706275c9f5a03773_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-[50]
-Missing character: There is no → ("2192) in font ecrm1000!
+[52]
 File: classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db54_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a631e6298058a3c54f1c02bae5cf8db54_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a70bbcf97fd1c211e2bea203a5039b1bb_cgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[51]
+[53]
 File: classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_cgraph.pdf>
 File: classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a6a06dbd14558e50d40595de82502d632_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc4_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a6c9c09f8b2ab39f5de7f48c6c743ffc4_cgraph.pdf>
-[52]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[54]
 File: classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b3_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a0882a30454b0716953f5f375613d24b3_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
 File: classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_cgraph.pdf>
 File: classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186_icgraph.pdf>
-[53]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[55]
 File: classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_cgraph.pdf>
 File: classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_icgraph.pdf Graph
 ic file (type pdf)
 <use classDevLab__ICM20948_a4210e842050486637a5967b2a9ef7b57_icgraph.pdf>
-[54]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[56]
 File: classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph.pdf Graphi
 c file (type pdf)
 <use classDevLab__ICM20948_a0d6774b76298645ee45ec0e9065a8891_cgraph.pdf>
@@ -1519,60 +1362,36 @@ ic file (type pdf)
 ) (./classI2C__Interface.tex
 File: classI2C__Interface__inherit__graph.pdf Graphic file (type pdf)
 <use classI2C__Interface__inherit__graph.pdf>
-[55]
+[57]
 File: classI2C__Interface__coll__graph.pdf Graphic file (type pdf)
 <use classI2C__Interface__coll__graph.pdf>
-[56]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[58]
 File: classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_icgraph.pdf Graphic
  file (type pdf)
 <use classI2C__Interface_ae8147c4d6e54fe2622825d7e17493152_icgraph.pdf>
-Missing character: There is no → ("2192) in font ecrm1000!
-[57]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-) (./structICM20948__IntEnableConfig.tex [58]
-Missing character: There is no – ("2013) in font ecrm1000!
-) (./structICM20948__IntPinConfig.tex [59]) (./structICM20948__IntStatus.tex [6
-0]
-Underfull \hbox (badness 887) in paragraph at lines 32--33
-[]\T1/Tinos(0)/b/n/10 Covers INT[]_[][]STATUS (0x19), INT[]_[][]STATUS[]_[]1 (0
-x1A), INT[]_[][]STATUS[]_[]2 (0x1B), INT[]_[][]
- []
-
-[61]) (./structicm__plat__t.tex [62]) (./classInterface__7Semi.tex
+[59]) (./structICM20948__IntEnableConfig.tex [60]) (./structICM20948__IntPinCon
+fig.tex [61]) (./structICM20948__IntStatus.tex [62] [63]) (./structicm__plat__t
+.tex [64]) (./classInterface__7Semi.tex
 File: classInterface__7Semi__inherit__graph.pdf Graphic file (type pdf)
 <use classInterface__7Semi__inherit__graph.pdf>
-[63]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-[64]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
-) (./classSPI__Interface.tex
+[65] [66]) (./classSPI__Interface.tex
 File: classSPI__Interface__inherit__graph.pdf Graphic file (type pdf)
 <use classSPI__Interface__inherit__graph.pdf>
-[65]
+[67]
 File: classSPI__Interface__coll__graph.pdf Graphic file (type pdf)
 <use classSPI__Interface__coll__graph.pdf>
-[66]
-Missing character: There is no → ("2192) in font ecrm1000!
-Missing character: There is no → ("2192) in font ecrm1000!
+[68]
 File: classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_icgraph.pdf Graphic
  file (type pdf)
 <use classSPI__Interface_a24b5d68ff8da5578f56ee571d86ab289_icgraph.pdf>
-[67]) [68]
+[69]) [70]
 Chapter 6.
 (./gyr__test_8ino.tex
 File: gyr__test_8ino__incl.pdf Graphic file (type pdf)
 <use gyr__test_8ino__incl.pdf>
-[69
+[71
 
-] [70]
+] [72]
 Underfull \hbox (badness 10000) detected at line 162
 [][][]
  []
@@ -1586,104 +1405,103 @@ File: gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf Graphic file
 File: gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf Graphic file
  (type pdf)
 <use gyr__test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-[71]
+[73]
 File: gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf Graphic file
  (type pdf)
 <use gyr__test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
 File: gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf Graphic file 
 (type pdf)
 <use gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
-[72]
+[74]
 File: gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf Graphic file
  (type pdf)
 <use gyr__test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
 File: gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use gyr__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-[73] [74]) (./gyr__test_8ino_source.tex [75] [76] [77]) (./i2c__accel_8ino.tex
+[75] [76]) (./gyr__test_8ino_source.tex [77] [78] [79]) (./i2c__accel_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[78]
+[80]
 File: i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
 File: i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-[79]) (./i2c__accel_8ino_source.tex [80] [81]) (./i2c__basic_8ino.tex
+[81]) (./i2c__accel_8ino_source.tex [82] [83]) (./i2c__basic_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[82]
+[84]
 File: i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
 File: i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use i2c__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-[83]) (./i2c__basic_8ino_source.tex [84] [85]) (./i2c__gyro_8ino.tex
+[85]) (./i2c__basic_8ino_source.tex [86] [87]) (./i2c__gyro_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[86]
+[88]
 File: i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file 
 (type pdf)
 <use i2c__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
 File: i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use i2c__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-) (./i2c__gyro_8ino_source.tex [87] [88]) (./i2c__magneto_8ino.tex
+) (./i2c__gyro_8ino_source.tex [89] [90]) (./i2c__magneto_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[89]
+[91]
 File: i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic fi
 le (type pdf)
 <use i2c__magneto_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-[90]
+[92]
 File: i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic fi
 le (type pdf)
 <use i2c__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-) (./i2c__magneto_8ino_source.tex [91]) (./interrupt_8ino.tex [92]
+) (./i2c__magneto_8ino_source.tex [93]) (./interrupt_8ino.tex [94]
 File: interrupt_8ino__incl.pdf Graphic file (type pdf)
 <use interrupt_8ino__incl.pdf>
-[93]
+[95]
 File: interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph.pdf Graphic file
  (type pdf)
 <use interrupt_8ino_aef596810c644e9f3853919b365e8270f_icgraph.pdf>
-[94]
+[96]
 File: interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use interrupt_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-[95]) (./interrupt_8ino_source.tex [96]) (./mag__test_8ino.tex
+[97]) (./interrupt_8ino_source.tex [98]) (./mag__test_8ino.tex
 File: mag__test_8ino__incl.pdf Graphic file (type pdf)
 <use mag__test_8ino__incl.pdf>
-[97] [98]
+[99] [100]
 File: mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph.pdf Graphic file 
 (type pdf)
 <use mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_cgraph.pdf>
 File: mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph.pdf Graphic file
  (type pdf)
 <use mag__test_8ino_af42a493b8d96759f43d866fbe725cf3d_icgraph.pdf>
-[99]
+[101]
 File: mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file 
 (type pdf)
 <use mag__test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-) (./mag__test_8ino_source.tex [100] [101]) (./spi__accel_8ino.tex
+[102]) (./mag__test_8ino_source.tex [103] [104]) (./spi__accel_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[102]
 File: spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use spi__accel_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-
+[105]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
@@ -1691,19 +1509,19 @@ Underfull \hbox (badness 10000) detected at line 75
 File: spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use spi__accel_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-[103]
 File: spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf Graphic fil
 e (type pdf)
 <use spi__accel_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-) (./spi__accel_8ino_source.tex [104] [105]) (./spi__basic_8ino.tex
+[106]) (./spi__accel_8ino_source.tex [107]) (./spi__basic_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
+[108]
 File: spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file
  (type pdf)
 <use spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-[106]
+
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
@@ -1711,10 +1529,11 @@ Underfull \hbox (badness 10000) detected at line 75
 File: spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
  (type pdf)
 <use spi__basic_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
+[109]
 File: spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf Graphic fil
 e (type pdf)
 <use spi__basic_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-) (./spi__basic_8ino_source.tex [107] [108]) (./spi__gyro_8ino.tex
+) (./spi__basic_8ino_source.tex [110] [111]) (./spi__gyro_8ino.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1722,7 +1541,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 File: spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file 
 (type pdf)
 <use spi__gyro_8ino_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
-[109]
+[112]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
@@ -1733,45 +1552,35 @@ File: spi__gyro_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file
 File: spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf Graphic file
  (type pdf)
 <use spi__gyro_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b_icgraph.pdf>
-) (./spi__gyro_8ino_source.tex [110] [111]) (./test_8ino.tex
+) (./spi__gyro_8ino_source.tex [113] [114]) (./test_8ino.tex
 File: test_8ino__incl.pdf Graphic file (type pdf)
 <use test_8ino__incl.pdf>
-[112]
-Overfull \hbox (91.29556pt too wide) in paragraph at lines 58--59
-[]\T1/Tinos(0)/bc/n/10 const [] [] []$ $[] = { [], [],
+[115]
+Overfull \hbox (52.49417pt too wide) in paragraph at lines 58--59
+[]\TU/Tinos(0)/bc/n/10 const [] [] []$ $[] = { [], [],
  []
 
 
-Overfull \hbox (15.39743pt too wide) in paragraph at lines 64--65
-[]\T1/Tinos(0)/bc/n/10 const [] [] []$ $[] = { [],
+Underfull \hbox (badness 1226) in paragraph at lines 64--65
+[]\TU/Tinos(0)/bc/n/10 const [] [] []$ $[] = { [],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-[]\T1/Tinos(0)/bc/n/10 , [],
+Overfull \hbox (128.53976pt too wide) in paragraph at lines 64--65
+[]\TU/Tinos(0)/bc/n/10 , [], [],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-[]\T1/Tinos(0)/bc/n/10 , [],
+Overfull \hbox (298.73508pt too wide) in paragraph at lines 64--65
+[]\TU/Tinos(0)/bc/n/10 , [], [],[]
  []
 
 
-Overfull \hbox (166.56848pt too wide) in paragraph at lines 64--65
-[]\T1/Tinos(0)/bc/n/10 , [],[]
+Overfull \hbox (97.29169pt too wide) in paragraph at lines 68--69
+[]\TU/Tinos(0)/bc/n/10 const [] [] []$ $[] = {[] ,[],
  []
 
-
-Underfull \hbox (badness 791) in paragraph at lines 68--69
-[]\T1/Tinos(0)/bc/n/10 const [] [] []$ $[] = {[]
- []
-
-
-Overfull \hbox (71.48059pt too wide) in paragraph at lines 68--69
-\T1/Tinos(0)/bc/n/10 ,[], [], []} 
- []
-
-[113] [114]
+[116] [117]
 Underfull \hbox (badness 10000) detected at line 172
 [][][]
  []
@@ -1785,7 +1594,7 @@ File: test_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf Graphic file (type
 File: test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a1cf9f29034d9373db6498335da3d661c_icgraph.pdf>
-[115]
+[118]
 File: test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
@@ -1798,7 +1607,7 @@ File: test_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf Graphic file (type
 File: test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf Graphic file (typ
 e pdf)
 <use test_8ino_a59a0400232b9ffe7d4395b166f74593a_icgraph.pdf>
-[116]
+[119]
 File: test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file (type
  pdf)
 <use test_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
@@ -1827,7 +1636,7 @@ Overfull \hbox (34.43558pt too wide) in paragraph at lines 362--363
 []\TU/Cousine(0)/m/n/8 , [],[]
  []
 
-[117]
+[120]
 Underfull \hbox (badness 10000) in paragraph at lines 376--377
 \TU/Cousine(0)/m/n/8 const uint16_t accelSR[]$ $[] = {0, 1, 3, 5, 7 , 10, 15, 2
 2, 31, 63, 127, 255, 513, 1022, 2044,
@@ -1846,10 +1655,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 461--462
 etasSR[]$ $[] = { "1125.0","562.5", "281.3", "187.5","140.6", "102.3", "70.3",
  []
 
-[118]) (./test_8ino_source.tex [119] [120] [121]) (./test2_8ino.tex
+[121]) (./test_8ino_source.tex [122] [123] [124]) (./test2_8ino.tex
 File: test2_8ino__incl.pdf Graphic file (type pdf)
 <use test2_8ino__incl.pdf>
-[122] [123]
+[125] [126]
 Underfull \hbox (badness 10000) detected at line 174
 [][][]
  []
@@ -1857,7 +1666,7 @@ Underfull \hbox (badness 10000) detected at line 174
 File: test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a73c1d2766fc4db839bb9adf5cab93c80_cgraph.pdf>
-[124]
+[127]
 File: test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a1cf9f29034d9373db6498335da3d661c_cgraph.pdf>
@@ -1867,7 +1676,7 @@ pe pdf)
 File: test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf Graphic file (ty
 pe pdf)
 <use test2_8ino_a42633dcf8fe2689c57c8113825f74c66_icgraph.pdf>
-[125]
+[128]
 File: test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a59a0400232b9ffe7d4395b166f74593a_cgraph.pdf>
@@ -1877,136 +1686,78 @@ pe pdf)
 File: test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file (typ
 e pdf)
 <use test2_8ino_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-[126] [127]) (./test2_8ino_source.tex [128] [129] [130] [131]) (./README_8md.te
+[129] [130] [131]) (./test2_8ino_source.tex [132] [133] [134]) (./README_8md.te
 x) (./7Semi__I2C__Interface_8h.tex
 File: 7Semi__I2C__Interface_8h__incl.pdf Graphic file (type pdf)
 <use 7Semi__I2C__Interface_8h__incl.pdf>
-[132]
+[135]
 File: 7Semi__I2C__Interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use 7Semi__I2C__Interface_8h__dep__incl.pdf>
-) (./7Semi__I2C__Interface_8h_source.tex [133]) (./7Semi__Interface_8h.tex
+) (./7Semi__I2C__Interface_8h_source.tex [136]) (./7Semi__Interface_8h.tex
 File: 7Semi__Interface_8h__incl.pdf Graphic file (type pdf)
 <use 7Semi__Interface_8h__incl.pdf>
-[134]
+[137]
 File: 7Semi__Interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use 7Semi__Interface_8h__dep__incl.pdf>
-) (./7Semi__Interface_8h_source.tex [135]) (./7Semi__SPI__Interface_8h.tex
+) (./7Semi__Interface_8h_source.tex [138]) (./7Semi__SPI__Interface_8h.tex
 File: 7Semi__SPI__Interface_8h__incl.pdf Graphic file (type pdf)
 <use 7Semi__SPI__Interface_8h__incl.pdf>
 File: 7Semi__SPI__Interface_8h__dep__incl.pdf Graphic file (type pdf)
 <use 7Semi__SPI__Interface_8h__dep__incl.pdf>
-[136]) (./7Semi__SPI__Interface_8h_source.tex [137]) (./BusIO__7Semi_8h.tex
+[139]) (./7Semi__SPI__Interface_8h_source.tex [140]) (./BusIO__7Semi_8h.tex
 File: BusIO__7Semi_8h__incl.pdf Graphic file (type pdf)
 <use BusIO__7Semi_8h__incl.pdf>
-[138]
+[141]
 File: BusIO__7Semi_8h__dep__incl.pdf Graphic file (type pdf)
 <use BusIO__7Semi_8h__dep__incl.pdf>
-) (./BusIO__7Semi_8h_source.tex [139] [140]) (./DevLab__ICM20948_8cpp.tex
+) (./BusIO__7Semi_8h_source.tex [142] [143]) (./DevLab__ICM20948_8cpp.tex
 File: DevLab__ICM20948_8cpp__incl.pdf Graphic file (type pdf)
 <use DevLab__ICM20948_8cpp__incl.pdf>
-) (./DevLab__ICM20948_8cpp_source.tex [141] [142] [143] [144] [145] [146] [147]
-[148] [149] [150] [151] [152] [153] [154] [155] [156] [157]) (./DevLab__ICM2094
+) (./DevLab__ICM20948_8cpp_source.tex [144] [145] [146] [147] [148] [149] [150]
+[151] [152] [153] [154] [155] [156] [157] [158] [159] [160]) (./DevLab__ICM2094
 8_8h.tex
 File: DevLab__ICM20948_8h__incl.pdf Graphic file (type pdf)
 <use DevLab__ICM20948_8h__incl.pdf>
 File: DevLab__ICM20948_8h__dep__incl.pdf Graphic file (type pdf)
 <use DevLab__ICM20948_8h__dep__incl.pdf>
-[158]
-Overfull \hbox (55.15125pt too wide) in paragraph at lines 41--52
-[] \T1/Tinos(0)/bc/n/10 = 0x00 , [] = 0x01 , []
- []
-
-
-Underfull \hbox (badness 2351) in paragraph at lines 52--64
-[] \T1/Tinos(0)/bc/n/10 = 0x00 , [] = 0x01 , [] = 0x02 ,
- []
-
-
-Underfull \hbox (badness 2351) in paragraph at lines 52--64
-[] \T1/Tinos(0)/bc/n/10 = 0x04 , [] = 0x05 , [] = 0x06 ,
- []
-
-[159] [160]) (./DevLab__ICM20948_8h_source.tex [161] [162] [163] [164] [165] [1
-66] [167] [168] [169] [170] [171]) (./ICM20948__platform_8h.tex) (./ICM20948__p
-latform_8h_source.tex [172]) (./ICM20948__regs_8h.tex
+[161] [162] [163]) (./DevLab__ICM20948_8h_source.tex [164] [165] [166] [167] [1
+68] [169] [170] [171] [172] [173] [174]) (./ICM20948__platform_8h.tex) (./ICM20
+948__platform_8h_source.tex [175]) (./ICM20948__regs_8h.tex
 File: ICM20948__regs_8h__dep__incl.pdf Graphic file (type pdf)
 <use ICM20948__regs_8h__dep__incl.pdf>
-
-Underfull \hbox (badness 5622) in paragraph at lines 64--66
-[]\T1/Tinos(0)/bc/n/10 #define [] 0x0F /$\OMS/cmsy/m/n/10 ^^C$ [] [] []
+[176] [177]
+Underfull \hbox (badness 5460) in paragraph at lines 240--242
+[]\TU/Tinos(0)/bc/n/10 #define [] 0x02 /$\OMS/cmsy/m/n/10 ^^C$ [] [] [] \TU/Tin
+os(0)/bc/n/10 GYRO_[][]
  []
 
-[173] [174]
-Overfull \hbox (22.14665pt too wide) in paragraph at lines 220--222
-[]\T1/Tinos(0)/bc/n/10 #define [] 0x01 /$\OMS/cmsy/m/n/10 ^^C$ \T1/Tinos(0)/bc/
-n/10 GYRO[]_[][]DLPFCFG[]2[]:0[] GYRO[]_[][]FS[]_[][]SEL[]1[]:0[] []
- []
-
-
-Underfull \hbox (badness 3884) in paragraph at lines 240--242
-[]\T1/Tinos(0)/bc/n/10 #define [] 0x02 /$\OMS/cmsy/m/n/10 ^^C$ [] [] []
- []
-
-
-Overfull \hbox (27.42314pt too wide) in paragraph at lines 280--282
-[]\T1/Tinos(0)/bc/n/10 #define [] 0x14 /$\OMS/cmsy/m/n/10 ^^C$ \T1/Tinos(0)/bc/
-n/10 ACCEL[]_[][]DLPFCFG[]2[]:0[] ACCEL[]_[][]FS[]_[][]SEL[]1[]:0[] []
- []
-
-[175]
-Overfull \hbox (16.80074pt too wide) in paragraph at lines 312--314
-[]\T1/Tinos(0)/bc/n/10 #define [] 0x52 /$\OMS/cmsy/m/n/10 ^^C$ [] [] []
- []
-
-[176]
-Overfull \hbox (49.92026pt too wide) in paragraph at lines 420--422
-[]\T1/Tinos(0)/bc/n/10 #define [] (0x3u $\OML/cmm/m/it/10 <$$<$ []\T1/Tinos(0)/
-bc/n/10 ) 
- []
-
-Missing character: There is no – ("2013) in font ecrm1000!
-[177] [178] [179] [180]
-Missing character: There is no — ("2014) in font ecrm1000!
-[181] [182] [183] [184] [185] [186] [187]
+[178] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190]
 Overfull \hbox (33.18098pt too wide) in paragraph at lines 1757--1758
 |   \TU/Cousine(0)/m/it/8 rate_request \TU/Cousine(0)/m/n/8 ) (rate_request) /$
 \OMS/cmsy/m/n/8 ^^C$ \TU/Cousine(0)/m/n/8 symbolic; your driver computes DIV = 
 round(1100/rate)-1
  []
 
-Missing character: There is no — ("2014) in font ecrm1000!
-[188] [189] [190] [191] [192] [193] [194]
+[191] [192] [193] [194] [195] [196] [197]
 Underfull \hbox (badness 10000) in paragraph at lines 2640--2641
 \TU/Cousine(0)/m/n/8 #define INT_[][]PIN_[][]CFG 0x0F /$\OMS/cmsy/m/n/8 ^^C$ []
  [] [] [] \TU/Cousine(0)/m/n/8 ACTL_[][]FSYNC
  []
 
-[195] [196] [197] [198] [199] [200]
+[198] [199] [200] [201] [202] [203]
 Underfull \hbox (badness 10000) in paragraph at lines 3293--3294
 \TU/Cousine(0)/m/n/8 #define USER_[][]CTRL 0x03 /$\OMS/cmsy/m/n/8 ^^C$ \TU/Cous
 ine(0)/m/n/8 DMP_[][]EN FIFO_[][]EN I2C_[][]MST_[][]EN I2C_[][]IF_[][]DIS DMP_[
 ][]RST SRAM_[][]RST I2C_[][]MST_[][]RST -
  []
 
-[201]
-Missing character: There is no – ("2013) in font ecrm1000!
-[202]) (./ICM20948__regs_8h_source.tex [203] [204] [205] [206] [207] [208]) [20
-9] [210
-
-] (./refman.ind [211
+[204] [205]) (./ICM20948__regs_8h_source.tex [206] [207] [208] [209] [210] [211
+]) [212] (./refman.ind [213
 
 
-] [212] [213] [214] [215] [216] [217] [218] [219]
-Underfull \hbox (badness 10000) in paragraph at lines 1137--1138
-[]| \T1/Tinos(0)/bc/n/10 REG_BANK_SEL_USER_BANK_MASK,
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1138--1139
-[]| \T1/Tinos(0)/bc/n/10 REG_BANK_SEL_USER_BANK_SHIFT,
- []
-
-[220] [221] [222] [223] [224] [225] [226
+] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226]
+[227] [228
 
 ]) (./refman.aux)
  ***********
@@ -2021,12 +1772,12 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 
  ) 
 Here is how much of TeX's memory you used:
- 22647 strings out of 476878
- 521258 string characters out of 5805249
- 1971627 words of memory out of 5000000
- 44023 multiletter control sequences out of 15000+600000
- 577671 words of font info for 116 fonts, out of 8000000 for 9000
+ 22508 strings out of 476878
+ 519209 string characters out of 5805249
+ 1968627 words of memory out of 5000000
+ 43891 multiletter control sequences out of 15000+600000
+ 566618 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,16n,117p,1606b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,117p,1605b,645s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on refman.pdf (246 pages).
+Output written on refman.pdf (248 pages).
