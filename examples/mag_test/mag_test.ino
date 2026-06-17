@@ -1,6 +1,7 @@
 /**
  * @file mag_test.ino
- * @brief Magnetometer operation-mode sweep for the 7Semi ICM-20948.
+ * @brief Magnetometer operation-mode sweep for the DevLab ICM-20948.
+ * @author Jonathan Mejorado Lopez
  * @details Initializes the AK09916 magnetometer through the ICM-20948 internal
  * I2C master, iterates through continuous measurement modes, and prints CSV-like
  * magnetic field samples to the Serial monitor.

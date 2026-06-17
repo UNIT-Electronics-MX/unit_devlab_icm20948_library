@@ -32,6 +32,7 @@
 /** @brief SPI clock used during sensor initialization and reads. */
 #define SPI_FAST_SPEED 1000000
 
+#define CS_PIN D10  // Chip-select pin for SPI (change as needed)
 /** @brief Global ICM-20948 driver instance. */
 DevLab_ICM20948 imu;
 
