@@ -1,6 +1,7 @@
 /**
  * @file interrupt.ino
- * @brief I2C interrupt example for the 7Semi ICM-20948.
+ * @brief I2C interrupt example for the DevLab ICM-20948.
+ * @author Jonathan Mejorado Lopez
  * @details Configures the IMU raw-data-ready interrupt pin and counts ISR
  * events on an Arduino-compatible board.
  */

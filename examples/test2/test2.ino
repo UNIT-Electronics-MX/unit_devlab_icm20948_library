@@ -1,7 +1,8 @@
 /**
  * @file test2.ino
  * @brief Extended accelerometer DLPF, full-scale, and averaging sweep.
- * @details Runs a larger I2C validation matrix for the 7Semi ICM-20948
+ * @author Jonathan Mejorado Lopez
+ * @details Runs a larger I2C validation matrix for the DevLab ICM-20948
  * accelerometer and prints CSV-like samples for later analysis.
  */
 

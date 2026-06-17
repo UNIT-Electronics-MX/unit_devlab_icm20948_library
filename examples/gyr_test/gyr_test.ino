@@ -1,6 +1,7 @@
 /**
  * @file gyr_test.ino
- * @brief Gyroscope DLPF and full-scale sweep for the 7Semi ICM-20948.
+ * @brief Gyroscope DLPF and full-scale sweep for the DevLab ICM-20948.
+ * @author Jonathan Mejorado Lopez
  * @details Applies each gyroscope filter/full-scale configuration over I2C and
  * prints repeated samples for validation and noise comparison.
  */
@@ -38,16 +39,6 @@ struct configDLPF {
 //id,div,nbw_hz,odr_hz,nombre : {DLPF, NBW , ODR}
 /*
 /** @brief Gyroscope DLPF configurations exercised by the sweep. */
-const configDLPF configsDLPF[] = {
-  {  0,   0,  229.8f, 1125.0f, "196,6 ; 229,8 ; 1125.0 " },
-  {  1,   0,  187.6f, 1125.0f, "151,8 ; 187.6 ; 1125.0 " },
-  {  2,   0,  154.3f,  1125.0f, "119,5 ; 154,3 ; 1125.0 " },
-  {  3,   2,   73.3f,  375.0f, "51,2 ; 73,3 ; 375 " },
-  {  4,   5,   35.9f,  187.5f, "23,9 ; 35,9 ; 187.5 " },
-  {  5,  14,   17.8f,   75.0f, "11,6 ; 17,8 ;  75.0 " },
-  {  6,  29,    8.9f,   37.5f, "5,7 ; 8,9 ;  37.5 " },
-  {  7,   0,  376.5f, 1125.0f, "361,4 ; 376,5 ; 1125 " },
-};*/
 const configDLPF configsDLPF[] = {
   {  0,   0,  229.8f, 1125.0f, "196,6 ; 229,8 ; 1125.0 " },
   {  1,   0,  187.6f, 1125.0f, "151,8 ; 187.6 ; 1125.0 " },

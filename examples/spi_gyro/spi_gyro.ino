@@ -2,6 +2,7 @@
  * @file    ICM20948_SPI_Gyro.ino
  * @brief   Minimal SPI bring-up for 7Semi ICM-20948 on ESP32/UNO +
  *          continuous gyroscope readout.
+ * @author  7Semi,Jonathan Mejorado Lopez
  *
  * Features
  * - SPI init on custom pins
@@ -29,6 +30,8 @@
 
 #include <DevLab_ICM20948.h>
 
+#define CS_PIN D10  // Chip-select pin for SPI (change as needed)
+
 /** @brief SPI clock used during sensor initialization and reads. */
 #define SPI_FAST_SPEED 1000000
 
@@ -52,7 +55,7 @@ void setup() {
   /* Init SPI bus on your pins. */
   // SPI.begin(SCK_PIN, MISO_PIN, MOSI_PIN, CS_PIN);
 
-  if (!imu.beginSPI(CS_PIN, spi_bus, 1000000)) {
+  if (!imu.beginSPI(CS_PIN, spi_bus, SPI_FAST_SPEED)) {
     Serial.println("ERROR: beginSPI() failed");
     while (1) delay(200);
   }
@@ -92,13 +95,14 @@ void setup() {
    *
    * FCHOICE=1 (Bypass) : very wide (use with care; highest noise)
    */
-  if (!imu.GyroConfig(/*DLPFCFG*/ GYRO_DLPFCFG_4,
-                      /*FS_SEL*/ dps2000,
-                      /*FCHOICE*/ true,  // DLPF ON
-                      /*X*/ true, /*Y*/ true, /*Z*/ true,
-                      /*AVGCFG*/ 0)) {
-    Serial.println(F("GyroConfig failed."));
+
+  if(!imu.setDLPF(ICM20948_Gyro_DLPF::DLPF_51HZ, false)) {
+    Serial.println(F("setGyroDLPF failed."));
   }
+  if(!imu.setGyroScale(ICM20948_Gyro_FullScale::DPS_2000)) {
+    Serial.println(F("setGyroScale failed."));
+  }
+
 
   /* Set gyroscope output data rate (ODR)
    * - Gyro_SMPLRT(rate_hz)
@@ -106,8 +110,8 @@ void setup() {
    * - Valid range: ~4.3–1100 Hz
    * - Example: 1000 Hz
    */
-  if (!imu.Gyro_SMPLRT(1000)) {
-    Serial.println(F("Gyro_SMPLRT failed."));
+  if(!imu.setGyroDivRate(2)) { // 1100 / (1 + 1) = 550 Hz
+    Serial.println(F("setGyroDivRate failed."));
   }
 }
 

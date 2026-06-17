@@ -1,5 +1,6 @@
 /***************************************************************
  * @file    SPI_Basic.ino
+ * @author  7Semi,Jonathan Mejorado Lopez
  * @brief   Minimal SPI bring-up for 7Semi ICM-20948 +
  *          basic Accel/Gyro/Temp readout (updated API).
  *
@@ -15,10 +16,10 @@
  * - SPI speed ~1MHz recommended during init
  *
  * Wiring (Arduino UNO SPI)
- * - SCK  -> D13
- * - MOSI -> D11
- * - MISO -> D12
- * - CS   -> D10 (changeable; update CS_PIN)
+ * - SCK(SCL)  -> D13
+ * - MOSI(SDA) -> D11
+ * - MISO(SD0/AD0) -> D12
+ * - CS(nCS)   -> D10 (changeable; update CS_PIN)
  * - VCC  -> 3V3
  * - GND  -> GND
  *
@@ -29,8 +30,11 @@
  * - CS   -> D10
  ***************************************************************/
 #include <DevLab_ICM20948.h>
+/** @brief Chip-select pin for SPI. */
 
+#define CS_PIN D10
 /** @brief SPI clock used during sensor initialization and reads. */
+
 #define SPI_FAST_SPEED 1000000
 
 /** @brief Global ICM-20948 driver instance. */
@@ -50,7 +54,7 @@ void setup() {
   delay(200);
 
 
-  if (!imu.beginSPI(CS_PIN, spi_bus, 1000000)) {
+  if (!imu.beginSPI(CS_PIN, spi_bus, SPI_FAST_SPEED)) {
     Serial.println("ERROR: beginSPI() failed");
     while (1) delay(200);
   }
