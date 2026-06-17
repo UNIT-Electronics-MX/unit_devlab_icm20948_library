@@ -93,11 +93,15 @@ void setup() {
    *                3 = ACCEL_DEC3_AVG_32
    * - stX/Y/Z    : enable self-test (false here)
    */
-  if (!imu.AccelConfigure(ACCEL_DLPFCFG_3, /*FS_SEL*/ g4,
-                          /*dlpf_enable*/ true,  // DLPF really ON
-                          /*dec3*/ ACCEL_DEC3_AVG_8,
-                          /*stX*/ false, /*stY*/ false, /*stZ*/ false)) {
-    Serial.println(F("AccelConfigure failed."));
+  if(!imu.setAccelDLPF(ACCEL_DLPFCFG_3,false)) {
+    Serial.println(F("setAccelDLPF failed."));
+  }
+
+  if(!imu.setAccelScale(ICM20948_Accel_FullScale::G_4)) {
+    Serial.println(F("setAccelFS failed."));
+  }
+  if(!imu.setAccelAveraging(ICM20948_Accel_Average::AVG_8)) {
+    Serial.println(F("setAccelAveraging failed."));
   }
 
   /* Set accelerometer output data rate (ODR)
@@ -106,7 +110,7 @@ void setup() {
    * - Valid range: 1–1125 Hz
    * - Example: 225 Hz 
    */
-  if (!imu.Accel_SMPLRT(225)) {
+  if (!imu.setAccelDivRate(4)) { // 1125 / (1 + 4) = 225 Hz
     Serial.println(F("Accel_SMPLRT failed."));
   }
 }
