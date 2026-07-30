@@ -42,9 +42,15 @@ bool DevLab_ICM20948::beginI2C(uint8_t address, TwoWire &i2cPort, uint32_t i2cSp
   if (!bus->write(ODR_ALIGN_EN, (uint8_t)0x01))
     return false;
 
-  // Enable I2C interface (I2C_IF_DIS = 0)
+  if (!selectBank(0)) return false;
+
+  /*In case of error substitute the following code with the previous one
   if (!bus->writeBit(USER_CTRL, 4, (uint8_t)0x00))
-    return false;
+  return false;
+  */
+  // Enable I2C interface (I2C_IF_DIS = 0)
+  if (!bus->write(USER_CTRL, (uint8_t)0x00))
+  return false;
 
   // Set clock source to PLL (auto select best clock)
   if (!bus->write(PWR_MGMT_1, (uint8_t)0x01))
@@ -68,7 +74,7 @@ bool DevLab_ICM20948::beginSPI(uint8_t csPin, SPIClass &spiPort, uint32_t spiSpe
 
   // Assign SPI interface implementation
   iface = &spi;
-
+  
   // Initialize SPI (1MHz) and probe device
   if (!spi.beginSPI(csPin, spiPort, spiSpeed))
     return false;
@@ -100,10 +106,13 @@ bool DevLab_ICM20948::beginSPI(uint8_t csPin, SPIClass &spiPort, uint32_t spiSpe
   if (!bus->write(ODR_ALIGN_EN, (uint8_t)0x01))
     return false;
 
-  // Enable I2C interface (I2C_IF_DIS = 0)
-  if (!bus->writeBit(USER_CTRL, 4, (uint8_t)0x01))
+  if (!selectBank(0)) 
     return false;
+  // Enable I2C interface (I2C_IF_DIS = 0)
 
+if (!bus->writeBit(USER_CTRL, 4, (uint8_t)1)) return false;
+
+  Serial.println("I2C interface enabled");
   // Wake device from sleep mode (SLEEP = 0)
   if (!bus->write(PWR_MGMT_1,(uint8_t)0x01))
     return false;
@@ -211,8 +220,8 @@ bool DevLab_ICM20948::applyBasicDefaults()
   if (!bus->write(GYRO_SMPLRT_DIV, (uint8_t)0x00))
     return false;
 
-  // Configure accel (DLPF enabled, FS = 16g)
-  if (!bus->write(ACCEL_CONFIG, (uint8_t)0x1F))
+  // Configure accel (DLPF enabled, FS = 2g)
+  if (!bus->write(ACCEL_CONFIG, (uint8_t)0x19))   //Change to 0x1F for 16g
     return false;
 
   // Set accel sample rate divider high byte
@@ -307,27 +316,25 @@ bool DevLab_ICM20948::readTemperature(float &temperature)
 }
 
 
-bool DevLab_ICM20948::readMag(float &x, float &y, float &z)
-{
-  // Select USER BANK 0
-  if (!selectBank(0))
+bool DevLab_ICM20948::readMag(float &x, float &y, float &z) {
+  if (!selectBank(0)) return false;
+
+  uint8_t buf[9];
+
+  if (!bus->read(EXT_SLV_SENS_DATA_00, buf, 9))
     return false;
 
-  // Read 8 bytes (ST1 + XYZ + ST2)
-  uint8_t buf[8];
-  if (!bus->read(EXT_SLV_SENS_DATA_00, buf, 8))
-    return false;
+
+  if (buf[8] & 0x08) return false;
 
   int16_t mx = (int16_t)(buf[1] | (buf[2] << 8));
   int16_t my = (int16_t)(buf[3] | (buf[4] << 8));
   int16_t mz = (int16_t)(buf[5] | (buf[6] << 8));
 
-  // Convert to µT (AK09916 sensitivity)
   x = mx * 0.15f;
   y = my * 0.15f;
   z = mz * 0.15f;
 
-  // Success
   return true;
 }
 
@@ -348,10 +355,13 @@ bool DevLab_ICM20948::initMag()
 
   if (!selectBank(3))
     return false;
+  if (!bus->write(I2C_MST_ODR_CONFIG,  (uint8_t)0x00))  
+    return false;
 
   if (!bus->write(I2C_MST_CTRL, (uint8_t)0x07))
     return false;
-
+  if(!bus->write(I2C_MST_DELAY_CTRL,  (uint8_t)0x01))  
+    return false;
   delay(10);
 
   //Soft Reset
@@ -380,7 +390,7 @@ bool DevLab_ICM20948::initMag()
       if (!bus->write(I2C_SLV0_REG, (uint8_t)AK_ST1))
         return false;
 
-      if (!bus->write(I2C_SLV0_CTRL, (uint8_t)(I2C_SLVx_EN | 8)))
+      if (!bus->write(I2C_SLV0_CTRL, (uint8_t)(I2C_SLVx_EN | 9)))
         return false;
 
       return true;
@@ -400,7 +410,7 @@ bool DevLab_ICM20948::initMag()
       if (!bus->write(I2C_SLV0_REG, (uint8_t)AK_ST1))
         return false;
 
-      if (!bus->write(I2C_SLV0_CTRL, (uint8_t)(I2C_SLVx_EN | 8)))
+      if (!bus->write(I2C_SLV0_CTRL, (uint8_t)(I2C_SLVx_EN | 9)))
         return false;
     
     return false;
@@ -415,74 +425,47 @@ bool DevLab_ICM20948::setMagOpMode(ICM20948_Op_Mode opMode)
   return true;
 }
 
-bool DevLab_ICM20948::writeSlave4(uint8_t reg, uint8_t value)
-{
-  // Select USER BANK 3
-  if (!selectBank(3))
-    return false;
+bool DevLab_ICM20948::writeSlave4(uint8_t reg, uint8_t value) {
+  if (!selectBank(3)) return false;
 
-  // 7 - 1:r , 0:W
-  //[6:0]: I2C slave address (AK09916_I2C_ADDR)
-  // Set slave address (write)
-  if (!bus->write(I2C_SLV4_ADDR, (uint8_t)AK09916_I2C_ADDR))
-    return false;
+  bus->write(I2C_SLV4_ADDR, (uint8_t)(AK09916_I2C_ADDR));  // write mode
+  bus->write(I2C_SLV4_REG,  (uint8_t)reg);
+  bus->write(I2C_SLV4_DO,   (uint8_t)value);
+  bus->write(I2C_SLV4_CTRL, (uint8_t)0x80);               // iniciar transacción
 
-  // Set data to write to slave
-  if (!bus->write(I2C_SLV4_DO, value))
-    return false;
+  // Cambiar a Bank 0 para verificar I2C_MST_STATUS
+  if (!selectBank(0)) return false;
 
-  // Set target register
-  if (!bus->write(I2C_SLV4_REG, reg))
-    return false;
-
-  // Start transaction (EN bit)
-  if (!bus->write(I2C_SLV4_CTRL, (uint8_t)128))
-    return false;
-  // Wait for completion (with timeout)
   uint32_t start = millis();
   uint8_t status;
-
-  while (millis() - start < 10)
-  {
-    if (bus->read(I2C_SLV4_CTRL, status))
-      if (!(status & 0x80)) 
+  while (millis() - start < 20) {
+    if (bus->read(I2C_MST_STATUS, status))
+      if (status & 0x40)    // bit 6 = I2C_SLV4_DONE
         return true;
   }
-
-  // Timeout
-  return false;
+  return false;  // timeout
 }
 
-bool DevLab_ICM20948::readSlave4(uint8_t reg, uint8_t &value)
-{
-  // Select USER BANK 3
-  if (!selectBank(3))
-    return false;
+bool DevLab_ICM20948::readSlave4(uint8_t reg, uint8_t &value) {
+  if (!selectBank(3)) return false;
 
-  // Set slave address (read)
-  if (!bus->write(I2C_SLV4_ADDR, (uint8_t)(AK09916_I2C_ADDR | 0x80)))
-    return false;
+  bus->write(I2C_SLV4_ADDR, (uint8_t)(AK09916_I2C_ADDR | 0x80));  // read mode
+  bus->write(I2C_SLV4_REG,  (uint8_t)reg);
+  bus->write(I2C_SLV4_CTRL, (uint8_t)0x80);                       // iniciar transacción
 
-  // Set target register
-  if (!bus->write(I2C_SLV4_REG, reg))
-    return false;
+  // Cambiar a Bank 0 para verificar I2C_MST_STATUS
+  if (!selectBank(0)) return false;
 
-  // Start transaction
-  if (!bus->write(I2C_SLV4_CTRL, (uint8_t)128))
-    return false;
-  // Wait for completion
   uint32_t start = millis();
   uint8_t status;
-  while (millis() - start < 10)
-  {
-    if (bus->read(I2C_SLV4_CTRL, status))
-      if (!(status & 0x80)) 
-       { if (!bus->read(I2C_SLV4_DI, value))
-    return false;
-    return true;
-}
+  while (millis() - start < 20) {
+    if (bus->read(I2C_MST_STATUS, status))
+      if (status & 0x40) {   // I2C_SLV4_DONE
+        if (!selectBank(3)) return false;
+        return bus->read(I2C_SLV4_DI, value);
+      }
   }
-    return false;
+  return false;  // timeout
 }
 
 bool DevLab_ICM20948::setLowPower(bool enable)
