@@ -1,0 +1,11 @@
+<map id="loop" name="loop">
+<area shape="rect" id="Node000001" title="Read and print magnetometer data in microtesla." alt="" coords="5,31,56,56"/>
+<area shape="rect" id="Node000002" href="$classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314" title=" " alt="" coords="104,31,312,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,41,90,41,90,46,56,46"/>
+<area shape="rect" id="Node000003" href="$classBusIO__7Semi.html#a933c66d9a1afe84102323e209a93dd31" title=" " alt="" coords="399,5,544,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,31,385,24,385,29,313,36"/>
+<area shape="rect" id="Node000004" href="$classDevLab__ICM20948.html#aaa26fcbfea0e67d45cb1c3ae39654c55" title=" " alt="" coords="360,55,583,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="313,50,347,53,346,59,312,55"/>
+<area shape="rect" id="Node000005" href="$classBusIO__7Semi.html#aa633479356af692cb9ea334771b7c0c5" title=" " alt="" coords="631,55,780,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="583,65,617,65,617,70,583,70"/>
+</map>

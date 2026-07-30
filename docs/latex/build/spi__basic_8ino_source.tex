@@ -63,48 +63,67 @@
 \DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ delay(200);}
 \DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00060}00060\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00062}00062\ \ \ \mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186}{setSensors}}(\textcolor{keyword}{true},\ \textcolor{keyword}{true},\ \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00063}00063\ \ \ Serial.println(\textcolor{stringliteral}{"{}Ready."{}});}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00064}00064\ \}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00065}00065\ \textcolor{comment}{}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00066}00066\ \textcolor{comment}{/**}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00067}00067\ \textcolor{comment}{\ *\ @brief\ Read\ and\ print\ accelerometer,\ gyroscope,\ and\ temperature\ data.}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00068}00068\ \textcolor{comment}{\ */}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00069}\mbox{\hyperlink{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}}()\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00070}00070\ \ \ \textcolor{keywordtype}{float}\ ax,\ ay,\ az;}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00071}00071\ \ \ \textcolor{keywordtype}{float}\ gx,\ gy,\ gz;}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00072}00072\ \ \ \textcolor{keywordtype}{float}\ tC;}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00074}00074\ \ \ \textcolor{comment}{/*\ Read\ accelerometer.\ */}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00075}00075\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b}{readAccel}}(ax,\ ay,\ az))\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00076}00076\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}ACC\ [g]:\ "{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00077}00077\ \ \ \ \ Serial.print(ax,\ 3);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00078}00078\ \ \ \ \ Serial.print(ay,\ 3);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00079}00079\ \ \ \ \ Serial.println(az,\ 3);}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00080}00080\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00081}00081\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}ACC\ read\ failed"{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00082}00082\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00084}00084\ \ \ \textcolor{comment}{/*\ Read\ gyroscope.\ */}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00085}00085\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d}{readGyro}}(gx,\ gy,\ gz))\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00086}00086\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}GYR\ [dps]:\ "{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00087}00087\ \ \ \ \ Serial.print(gx,\ 2);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00088}00088\ \ \ \ \ Serial.print(gy,\ 2);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00089}00089\ \ \ \ \ Serial.println(gz,\ 2);}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00090}00090\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00091}00091\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}GYR\ read\ failed"{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00092}00092\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00093}00093\ }
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00094}00094\ \ \ \textcolor{comment}{/*\ Read\ temperature.\ */}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00095}00095\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e}{readTemperature}}(tC))\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00096}00096\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}TMP\ [C]:\ "{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00097}00097\ \ \ \ \ Serial.println(tC,\ 2);}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00098}00098\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00099}00099\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}TMP\ read\ failed"{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00100}00100\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00102}00102\ \ \ Serial.println(F(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}));}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00103}00103\ \ \ delay(500);}
-\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00062}00062\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_ae9c088334d6ec706bb08b47ef29bd186}{setSensors}}(\textcolor{keyword}{true},\ \textcolor{keyword}{true},\ \textcolor{keyword}{true}))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00063}00063\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}ERROR:\ setSensors\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00064}00064\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00065}00065\ \ \ \textcolor{comment}{/*\ Initialize\ magnetometer.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00066}00066\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561}{initMag}}())\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00067}00067\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}Mag\ init\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00068}00068\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00069}00069\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}Mag\ initialized"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00070}00070\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00071}00071\ \ \ Serial.println(\textcolor{stringliteral}{"{}Ready."{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00073}00073\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00074}00074\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00075}00075\ \textcolor{comment}{\ *\ @brief\ Read\ and\ print\ accelerometer,\ gyroscope,\ and\ temperature\ data.}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00076}00076\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00077}\mbox{\hyperlink{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f}{00077}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spi__basic_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}}()\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00078}00078\ \ \ \textcolor{keywordtype}{float}\ ax,\ ay,\ az;}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00079}00079\ \ \ \textcolor{keywordtype}{float}\ gx,\ gy,\ gz;}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00080}00080\ \ \ \textcolor{keywordtype}{float}\ mx,\ my,\ mz;}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00081}00081\ \ \ \textcolor{keywordtype}{float}\ tC;}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00083}00083\ \ \ \textcolor{comment}{/*\ Read\ accelerometer.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00084}00084\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a3b58edd0915cff118ca81daa6944a27b}{readAccel}}(ax,\ ay,\ az))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00085}00085\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}ACC\ [g]:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00086}00086\ \ \ \ \ Serial.print(ax,\ 3);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00087}00087\ \ \ \ \ Serial.print(ay,\ 3);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00088}00088\ \ \ \ \ Serial.println(az,\ 3);}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00089}00089\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00090}00090\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}ACC\ read\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00091}00091\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00093}00093\ \ \ \textcolor{comment}{/*\ Read\ gyroscope.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00094}00094\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a006c131f860f1fc81c587b3d8a77522d}{readGyro}}(gx,\ gy,\ gz))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00095}00095\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}GYR\ [dps]:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00096}00096\ \ \ \ \ Serial.print(gx,\ 2);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00097}00097\ \ \ \ \ Serial.print(gy,\ 2);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00098}00098\ \ \ \ \ Serial.println(gz,\ 2);}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00099}00099\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00100}00100\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}GYR\ read\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00101}00101\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00103}00103\ \ \ \textcolor{comment}{/*\ Read\ magnetometer.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00104}00104\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314}{readMag}}(mx,\ my,\ mz))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00105}00105\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}MAG\ [uT]:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00106}00106\ \ \ \ \ Serial.print(mx,\ 2);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00107}00107\ \ \ \ \ Serial.print(my,\ 2);\ Serial.print(\textcolor{stringliteral}{"{},\ "{}});}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00108}00108\ \ \ \ \ Serial.println(mz,\ 2);}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00109}00109\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00110}00110\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}MAG\ read\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00111}00111\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00113}00113\ \ \ \textcolor{comment}{/*\ Read\ temperature.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00114}00114\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__basic_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_aa5c2ecd855cebb1934bbbe020128ab5e}{readTemperature}}(tC))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00115}00115\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}TMP\ [C]:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00116}00116\ \ \ \ \ Serial.println(tC,\ 2);}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00117}00117\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00118}00118\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}TMP\ read\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00119}00119\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00121}00121\ \ \ Serial.println(F(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00122}00122\ \ \ delay(500);}
+\DoxyCodeLine{\Hypertarget{spi__basic_8ino_source_l00123}00123\ \}}
 
 \end{DoxyCode}

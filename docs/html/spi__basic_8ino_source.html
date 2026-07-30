@@ -161,72 +161,93 @@ $(document).ready(function(){initNavTree('spi__basic_8ino_source.html',''); init
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">while</span> (1) delay(200);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">setSensors</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  Serial.println(<span class="stringliteral">&quot;Ready.&quot;</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">setSensors</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    Serial.println(F(<span class="stringliteral">&quot;ERROR: setSensors failed&quot;</span>));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="comment">/* Initialize magnetometer. */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a7b137192f8eb987cd221808c2c6c3561">initMag</a>()) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    Serial.println(F(<span class="stringliteral">&quot;Mag init failed&quot;</span>));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    Serial.println(F(<span class="stringliteral">&quot;Mag initialized&quot;</span>));</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  Serial.println(<span class="stringliteral">&quot;Ready.&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment"></span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">/**</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"> * @brief Read and print accelerometer, gyroscope, and temperature data.</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment"> */</span></div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a>() {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">float</span> ax, ay, az;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordtype">float</span> gx, gy, gz;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">float</span> tC;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">/* Read accelerometer. */</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">readAccel</a>(ax, ay, az)) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    Serial.print(F(<span class="stringliteral">&quot;ACC [g]: &quot;</span>));</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    Serial.print(ax, 3); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    Serial.print(ay, 3); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    Serial.println(az, 3);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    Serial.println(F(<span class="stringliteral">&quot;ACC read failed&quot;</span>));</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="comment">/* Read gyroscope. */</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">readGyro</a>(gx, gy, gz)) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    Serial.print(F(<span class="stringliteral">&quot;GYR [dps]: &quot;</span>));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    Serial.print(gx, 2); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    Serial.print(gy, 2); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    Serial.println(gz, 2);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    Serial.println(F(<span class="stringliteral">&quot;GYR read failed&quot;</span>));</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">/* Read temperature. */</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">readTemperature</a>(tC)) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Serial.print(F(<span class="stringliteral">&quot;TMP [C]: &quot;</span>));</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    Serial.println(tC, 2);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    Serial.println(F(<span class="stringliteral">&quot;TMP read failed&quot;</span>));</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  Serial.println(F(<span class="stringliteral">&quot;-----------------------------&quot;</span>));</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  delay(500);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"></span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> * @brief Read and print accelerometer, gyroscope, and temperature data.</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f">   77</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a>() {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">float</span> ax, ay, az;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">float</span> gx, gy, gz;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">float</span> mx, my, mz;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">float</span> tC;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="comment">/* Read accelerometer. */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">readAccel</a>(ax, ay, az)) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    Serial.print(F(<span class="stringliteral">&quot;ACC [g]: &quot;</span>));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    Serial.print(ax, 3); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    Serial.print(ay, 3); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    Serial.println(az, 3);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    Serial.println(F(<span class="stringliteral">&quot;ACC read failed&quot;</span>));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">/* Read gyroscope. */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">readGyro</a>(gx, gy, gz)) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    Serial.print(F(<span class="stringliteral">&quot;GYR [dps]: &quot;</span>));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Serial.print(gx, 2); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    Serial.print(gy, 2); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    Serial.println(gz, 2);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    Serial.println(F(<span class="stringliteral">&quot;GYR read failed&quot;</span>));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="comment">/* Read magnetometer. */</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314">readMag</a>(mx, my, mz)) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    Serial.print(F(<span class="stringliteral">&quot;MAG [uT]: &quot;</span>));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    Serial.print(mx, 2); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    Serial.print(my, 2); Serial.print(<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    Serial.println(mz, 2);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    Serial.println(F(<span class="stringliteral">&quot;MAG read failed&quot;</span>));</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="comment">/* Read temperature. */</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">readTemperature</a>(tC)) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    Serial.print(F(<span class="stringliteral">&quot;TMP [C]: &quot;</span>));</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    Serial.println(tC, 2);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    Serial.println(F(<span class="stringliteral">&quot;TMP read failed&quot;</span>));</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  Serial.println(F(<span class="stringliteral">&quot;-----------------------------&quot;</span>));</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  delay(500);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
 </div>
 <div class="ttc" id="aDevLab__ICM20948_8h_html"><div class="ttname"><a href="DevLab__ICM20948_8h.html">DevLab_ICM20948.h</a></div></div>
 <div class="ttc" id="aclassDevLab__ICM20948_html"><div class="ttname"><a href="classDevLab__ICM20948.html">DevLab_ICM20948</a></div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8h_source.html#l00172">DevLab_ICM20948.h:173</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a006c131f860f1fc81c587b3d8a77522d"><div class="ttname"><a href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">DevLab_ICM20948::readGyro</a></div><div class="ttdeci">bool readGyro(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00258">DevLab_ICM20948.cpp:258</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a3b58edd0915cff118ca81daa6944a27b"><div class="ttname"><a href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">DevLab_ICM20948::readAccel</a></div><div class="ttdeci">bool readAccel(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00238">DevLab_ICM20948.cpp:238</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a4386f310503153f3e28935cbdda75b18"><div class="ttname"><a href="classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18">DevLab_ICM20948::beginSPI</a></div><div class="ttdeci">bool beginSPI(uint8_t csPin, SPIClass &amp;spiPort=SPI, uint32_t spiSpeed=1000000)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00060">DevLab_ICM20948.cpp:60</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_aa5c2ecd855cebb1934bbbe020128ab5e"><div class="ttname"><a href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">DevLab_ICM20948::readTemperature</a></div><div class="ttdeci">bool readTemperature(float &amp;temperature)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00278">DevLab_ICM20948.cpp:278</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_ae9c088334d6ec706bb08b47ef29bd186"><div class="ttname"><a href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">DevLab_ICM20948::setSensors</a></div><div class="ttdeci">bool setSensors(bool accel_on, bool gyro_on, bool temp_on)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l01006">DevLab_ICM20948.cpp:1006</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a006c131f860f1fc81c587b3d8a77522d"><div class="ttname"><a href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">DevLab_ICM20948::readGyro</a></div><div class="ttdeci">bool readGyro(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00267">DevLab_ICM20948.cpp:267</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a3b58edd0915cff118ca81daa6944a27b"><div class="ttname"><a href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">DevLab_ICM20948::readAccel</a></div><div class="ttdeci">bool readAccel(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00247">DevLab_ICM20948.cpp:247</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a4386f310503153f3e28935cbdda75b18"><div class="ttname"><a href="classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18">DevLab_ICM20948::beginSPI</a></div><div class="ttdeci">bool beginSPI(uint8_t csPin, SPIClass &amp;spiPort=SPI, uint32_t spiSpeed=1000000)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00066">DevLab_ICM20948.cpp:66</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a7b137192f8eb987cd221808c2c6c3561"><div class="ttname"><a href="classDevLab__ICM20948.html#a7b137192f8eb987cd221808c2c6c3561">DevLab_ICM20948::initMag</a></div><div class="ttdeci">bool initMag()</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00341">DevLab_ICM20948.cpp:341</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a9f9b29867c2b78efef3ef9688f886314"><div class="ttname"><a href="classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314">DevLab_ICM20948::readMag</a></div><div class="ttdeci">bool readMag(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00319">DevLab_ICM20948.cpp:319</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_aa5c2ecd855cebb1934bbbe020128ab5e"><div class="ttname"><a href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">DevLab_ICM20948::readTemperature</a></div><div class="ttdeci">bool readTemperature(float &amp;temperature)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00287">DevLab_ICM20948.cpp:287</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_ae9c088334d6ec706bb08b47ef29bd186"><div class="ttname"><a href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">DevLab_ICM20948::setSensors</a></div><div class="ttdeci">bool setSensors(bool accel_on, bool gyro_on, bool temp_on)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00989">DevLab_ICM20948.cpp:989</a></div></div>
 <div class="ttc" id="aspi__basic_8ino_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="spi__basic_8ino.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdoc">Initialize Serial and start the ICM-20948 over SPI.</div><div class="ttdef"><b>Definition</b> <a href="spi__basic_8ino_source.html#l00052">spi_basic.ino:52</a></div></div>
 <div class="ttc" id="aspi__basic_8ino_html_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b"><div class="ttname"><a href="spi__basic_8ino.html#a5f08ba3a5b3d8e5b3fa5a22429ecfa2b">spi_bus</a></div><div class="ttdeci">SPIClass spi_bus(SPI)</div><div class="ttdoc">SPI bus object used by the IMU driver.</div></div>
 <div class="ttc" id="aspi__basic_8ino_html_a785e68f45fbc9e3f0ed8219615c1ed1d"><div class="ttname"><a href="spi__basic_8ino.html#a785e68f45fbc9e3f0ed8219615c1ed1d">SPI_FAST_SPEED</a></div><div class="ttdeci">#define SPI_FAST_SPEED</div><div class="ttdoc">SPI clock used during sensor initialization and reads.</div><div class="ttdef"><b>Definition</b> <a href="spi__basic_8ino_source.html#l00038">spi_basic.ino:38</a></div></div>
 <div class="ttc" id="aspi__basic_8ino_html_aa8226278adaa3f7fb2ad8b966f7787a1"><div class="ttname"><a href="spi__basic_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a></div><div class="ttdeci">DevLab_ICM20948 imu</div><div class="ttdoc">Global ICM-20948 driver instance.</div><div class="ttdef"><b>Definition</b> <a href="spi__basic_8ino_source.html#l00041">spi_basic.ino:41</a></div></div>
 <div class="ttc" id="aspi__basic_8ino_html_abfcf05153ddbd63d5aff5d018867cc19"><div class="ttname"><a href="spi__basic_8ino.html#abfcf05153ddbd63d5aff5d018867cc19">CS_PIN</a></div><div class="ttdeci">#define CS_PIN</div><div class="ttdoc">Chip-select pin for SPI.</div><div class="ttdef"><b>Definition</b> <a href="spi__basic_8ino_source.html#l00035">spi_basic.ino:35</a></div></div>
-<div class="ttc" id="aspi__basic_8ino_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">Read and print accelerometer, gyroscope, and temperature data.</div><div class="ttdef"><b>Definition</b> <a href="spi__basic_8ino_source.html#l00069">spi_basic.ino:69</a></div></div>
+<div class="ttc" id="aspi__basic_8ino_html_afe461d27b9c48d5921c00d521181f12f"><div class="ttname"><a href="spi__basic_8ino.html#afe461d27b9c48d5921c00d521181f12f">loop</a></div><div class="ttdeci">void loop()</div><div class="ttdoc">Read and print accelerometer, gyroscope, and temperature data.</div><div class="ttdef"><b>Definition</b> <a href="spi__basic_8ino_source.html#l00077">spi_basic.ino:77</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li><li class="navelem"><a class="el" href="dir_b0c22a11d25a146afe72094f2fae7885.html">spi_basic</a></li><li class="navelem"><a class="el" href="spi__basic_8ino.html">spi_basic.ino</a></li>
-    <li class="footer">Generated on Wed Jun 17 2026 22:44:15 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jul 30 2026 17:20:13 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

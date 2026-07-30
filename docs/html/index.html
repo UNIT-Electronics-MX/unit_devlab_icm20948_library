@@ -233,12 +233,12 @@ Initialize Sensor</h2>
 <div class="line">  Serial.println(<span class="stringliteral">&quot;SPI init failed&quot;</span>);</div>
 <div class="line">  <span class="keywordflow">while</span> (1);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a4386f310503153f3e28935cbdda75b18"><div class="ttname"><a href="classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18">DevLab_ICM20948::beginSPI</a></div><div class="ttdeci">bool beginSPI(uint8_t csPin, SPIClass &amp;spiPort=SPI, uint32_t spiSpeed=1000000)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00060">DevLab_ICM20948.cpp:60</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a4386f310503153f3e28935cbdda75b18"><div class="ttname"><a href="classDevLab__ICM20948.html#a4386f310503153f3e28935cbdda75b18">DevLab_ICM20948::beginSPI</a></div><div class="ttdeci">bool beginSPI(uint8_t csPin, SPIClass &amp;spiPort=SPI, uint32_t spiSpeed=1000000)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00066">DevLab_ICM20948.cpp:66</a></div></div>
 <div class="ttc" id="aspi__accel_8ino_html_abfcf05153ddbd63d5aff5d018867cc19"><div class="ttname"><a href="spi__accel_8ino.html#abfcf05153ddbd63d5aff5d018867cc19">CS_PIN</a></div><div class="ttdeci">#define CS_PIN</div><div class="ttdef"><b>Definition</b> <a href="spi__accel_8ino_source.html#l00036">spi_accel.ino:36</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
 Enable Sensors</h2>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">setSensors</a>(<span class="keyword">true</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_ae9c088334d6ec706bb08b47ef29bd186"><div class="ttname"><a href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">DevLab_ICM20948::setSensors</a></div><div class="ttdeci">bool setSensors(bool accel_on, bool gyro_on, bool temp_on)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l01006">DevLab_ICM20948.cpp:1006</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_ae9c088334d6ec706bb08b47ef29bd186"><div class="ttname"><a href="classDevLab__ICM20948.html#ae9c088334d6ec706bb08b47ef29bd186">DevLab_ICM20948::setSensors</a></div><div class="ttdeci">bool setSensors(bool accel_on, bool gyro_on, bool temp_on)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00989">DevLab_ICM20948.cpp:989</a></div></div>
 </div><!-- fragment --><ul>
 <li>accel → enable accelerometer</li>
 <li>gyro → enable gyroscope</li>
@@ -248,7 +248,7 @@ Enable Sensors</h2>
 Reading Accelerometer</h1>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> ax, ay, az;</div>
 <div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">readAccel</a>(ax, ay, az);</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a3b58edd0915cff118ca81daa6944a27b"><div class="ttname"><a href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">DevLab_ICM20948::readAccel</a></div><div class="ttdeci">bool readAccel(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00238">DevLab_ICM20948.cpp:238</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a3b58edd0915cff118ca81daa6944a27b"><div class="ttname"><a href="classDevLab__ICM20948.html#a3b58edd0915cff118ca81daa6944a27b">DevLab_ICM20948::readAccel</a></div><div class="ttdeci">bool readAccel(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00247">DevLab_ICM20948.cpp:247</a></div></div>
 </div><!-- fragment --><ul>
 <li>Output in g</li>
 </ul>
@@ -256,7 +256,7 @@ Reading Accelerometer</h1>
 Reading Gyroscope</h1>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> gx, gy, gz;</div>
 <div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">readGyro</a>(gx, gy, gz);</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a006c131f860f1fc81c587b3d8a77522d"><div class="ttname"><a href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">DevLab_ICM20948::readGyro</a></div><div class="ttdeci">bool readGyro(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00258">DevLab_ICM20948.cpp:258</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a006c131f860f1fc81c587b3d8a77522d"><div class="ttname"><a href="classDevLab__ICM20948.html#a006c131f860f1fc81c587b3d8a77522d">DevLab_ICM20948::readGyro</a></div><div class="ttdeci">bool readGyro(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00267">DevLab_ICM20948.cpp:267</a></div></div>
 </div><!-- fragment --><ul>
 <li>Output in degrees/sec</li>
 </ul>
@@ -264,7 +264,7 @@ Reading Gyroscope</h1>
 Reading Temperature</h1>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> temp;</div>
 <div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">readTemperature</a>(temp);</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_aa5c2ecd855cebb1934bbbe020128ab5e"><div class="ttname"><a href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">DevLab_ICM20948::readTemperature</a></div><div class="ttdeci">bool readTemperature(float &amp;temperature)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00278">DevLab_ICM20948.cpp:278</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_aa5c2ecd855cebb1934bbbe020128ab5e"><div class="ttname"><a href="classDevLab__ICM20948.html#aa5c2ecd855cebb1934bbbe020128ab5e">DevLab_ICM20948::readTemperature</a></div><div class="ttdeci">bool readTemperature(float &amp;temperature)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00287">DevLab_ICM20948.cpp:287</a></div></div>
 </div><!-- fragment --><ul>
 <li>Output in °C</li>
 </ul>
@@ -274,8 +274,8 @@ Reading Magnetometer</h1>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">float</span> mx, my, mz;</div>
 <div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314">readMag</a>(mx, my, mz);</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a7b137192f8eb987cd221808c2c6c3561"><div class="ttname"><a href="classDevLab__ICM20948.html#a7b137192f8eb987cd221808c2c6c3561">DevLab_ICM20948::initMag</a></div><div class="ttdeci">bool initMag()</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00334">DevLab_ICM20948.cpp:334</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a9f9b29867c2b78efef3ef9688f886314"><div class="ttname"><a href="classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314">DevLab_ICM20948::readMag</a></div><div class="ttdeci">bool readMag(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00310">DevLab_ICM20948.cpp:310</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a7b137192f8eb987cd221808c2c6c3561"><div class="ttname"><a href="classDevLab__ICM20948.html#a7b137192f8eb987cd221808c2c6c3561">DevLab_ICM20948::initMag</a></div><div class="ttdeci">bool initMag()</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00341">DevLab_ICM20948.cpp:341</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a9f9b29867c2b78efef3ef9688f886314"><div class="ttname"><a href="classDevLab__ICM20948.html#a9f9b29867c2b78efef3ef9688f886314">DevLab_ICM20948::readMag</a></div><div class="ttdeci">bool readMag(float &amp;x, float &amp;y, float &amp;z)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00319">DevLab_ICM20948.cpp:319</a></div></div>
 </div><!-- fragment --><ul>
 <li>Output in microtesla (µT)</li>
 </ul>
@@ -283,7 +283,7 @@ Reading Magnetometer</h1>
 Setting Accelerometer Scale</h1>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43">setAccelScale</a>(<a class="code hl_enumvalue" href="DevLab__ICM20948_8h.html#a7d56bdd11158e2d05da5c9317fadee05abda3c606e1ce64e3bda86c1fe6232693">G_4</a>);</div>
 <div class="ttc" id="aDevLab__ICM20948_8h_html_a7d56bdd11158e2d05da5c9317fadee05abda3c606e1ce64e3bda86c1fe6232693"><div class="ttname"><a href="DevLab__ICM20948_8h.html#a7d56bdd11158e2d05da5c9317fadee05abda3c606e1ce64e3bda86c1fe6232693">ICM20948_Accel_FullScale::G_4</a></div><div class="ttdeci">@ G_4</div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43"><div class="ttname"><a href="classDevLab__ICM20948.html#a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43">DevLab_ICM20948::setAccelScale</a></div><div class="ttdeci">bool setAccelScale(ICM20948_Accel_FullScale fullScale)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00857">DevLab_ICM20948.cpp:857</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43"><div class="ttname"><a href="classDevLab__ICM20948.html#a1a2aa0019d5e1c6ba8ce4a3c1d9fcb43">DevLab_ICM20948::setAccelScale</a></div><div class="ttdeci">bool setAccelScale(ICM20948_Accel_FullScale fullScale)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00840">DevLab_ICM20948.cpp:840</a></div></div>
 </div><!-- fragment --><ul>
 <li>G_2, G_4, G_8, G_16</li>
 </ul>
@@ -291,25 +291,25 @@ Setting Accelerometer Scale</h1>
 Setting Gyroscope Scale</h2>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a6a06dbd14558e50d40595de82502d632">setGyroScale</a>(<a class="code hl_enumvalue" href="DevLab__ICM20948_8h.html#a409a608f5c864bb503bf1a65b164de7da7a03fe4c8dae7b2cc724db90de97f53f">DPS_2000</a>);</div>
 <div class="ttc" id="aDevLab__ICM20948_8h_html_a409a608f5c864bb503bf1a65b164de7da7a03fe4c8dae7b2cc724db90de97f53f"><div class="ttname"><a href="DevLab__ICM20948_8h.html#a409a608f5c864bb503bf1a65b164de7da7a03fe4c8dae7b2cc724db90de97f53f">ICM20948_Gyro_FullScale::DPS_2000</a></div><div class="ttdeci">@ DPS_2000</div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a6a06dbd14558e50d40595de82502d632"><div class="ttname"><a href="classDevLab__ICM20948.html#a6a06dbd14558e50d40595de82502d632">DevLab_ICM20948::setGyroScale</a></div><div class="ttdeci">bool setGyroScale(ICM20948_Gyro_FullScale fullScale)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00644">DevLab_ICM20948.cpp:644</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a6a06dbd14558e50d40595de82502d632"><div class="ttname"><a href="classDevLab__ICM20948.html#a6a06dbd14558e50d40595de82502d632">DevLab_ICM20948::setGyroScale</a></div><div class="ttdeci">bool setGyroScale(ICM20948_Gyro_FullScale fullScale)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00627">DevLab_ICM20948.cpp:627</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
 Setting Sample Rate</h2>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#afe657b6e9d21f02dad2599ea04feefe2">setAccelSampleRate</a>(225);</div>
 <div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a70bbcf97fd1c211e2bea203a5039b1bb">setGyroSampleRate</a>(225);</div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a70bbcf97fd1c211e2bea203a5039b1bb"><div class="ttname"><a href="classDevLab__ICM20948.html#a70bbcf97fd1c211e2bea203a5039b1bb">DevLab_ICM20948::setGyroSampleRate</a></div><div class="ttdeci">bool setGyroSampleRate(float sampleRate)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00550">DevLab_ICM20948.cpp:550</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_afe657b6e9d21f02dad2599ea04feefe2"><div class="ttname"><a href="classDevLab__ICM20948.html#afe657b6e9d21f02dad2599ea04feefe2">DevLab_ICM20948::setAccelSampleRate</a></div><div class="ttdeci">bool setAccelSampleRate(uint16_t sampleRate)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00709">DevLab_ICM20948.cpp:709</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a70bbcf97fd1c211e2bea203a5039b1bb"><div class="ttname"><a href="classDevLab__ICM20948.html#a70bbcf97fd1c211e2bea203a5039b1bb">DevLab_ICM20948::setGyroSampleRate</a></div><div class="ttdeci">bool setGyroSampleRate(float sampleRate)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00533">DevLab_ICM20948.cpp:533</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_afe657b6e9d21f02dad2599ea04feefe2"><div class="ttname"><a href="classDevLab__ICM20948.html#afe657b6e9d21f02dad2599ea04feefe2">DevLab_ICM20948::setAccelSampleRate</a></div><div class="ttdeci">bool setAccelSampleRate(uint16_t sampleRate)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00692">DevLab_ICM20948.cpp:692</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
 DLPF Configuration</h2>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#ac52d80aad738b90aa0f05e9d6404bb85">setAccelDLPF</a>(<a class="code hl_define" href="ICM20948__regs_8h.html#a981a5bd41894531939c10568f7793069">ACCEL_DLPFCFG_3</a>, <span class="keyword">false</span>);</div>
 <div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a0bea2c662c285120253851c80289e077">setDLPF</a>(GYRO_DLPF_3, <span class="keyword">false</span>);</div>
 <div class="ttc" id="aICM20948__regs_8h_html_a981a5bd41894531939c10568f7793069"><div class="ttname"><a href="ICM20948__regs_8h.html#a981a5bd41894531939c10568f7793069">ACCEL_DLPFCFG_3</a></div><div class="ttdeci">#define ACCEL_DLPFCFG_3</div><div class="ttdef"><b>Definition</b> <a href="ICM20948__regs_8h_source.html#l00348">ICM20948_regs.h:348</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a0bea2c662c285120253851c80289e077"><div class="ttname"><a href="classDevLab__ICM20948.html#a0bea2c662c285120253851c80289e077">DevLab_ICM20948::setDLPF</a></div><div class="ttdeci">bool setDLPF(ICM20948_Gyro_DLPF dlpf, bool bypass)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00593">DevLab_ICM20948.cpp:593</a></div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_ac52d80aad738b90aa0f05e9d6404bb85"><div class="ttname"><a href="classDevLab__ICM20948.html#ac52d80aad738b90aa0f05e9d6404bb85">DevLab_ICM20948::setAccelDLPF</a></div><div class="ttdeci">bool setAccelDLPF(uint8_t dlpf, bool bypass)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00897">DevLab_ICM20948.cpp:897</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a0bea2c662c285120253851c80289e077"><div class="ttname"><a href="classDevLab__ICM20948.html#a0bea2c662c285120253851c80289e077">DevLab_ICM20948::setDLPF</a></div><div class="ttdeci">bool setDLPF(ICM20948_Gyro_DLPF dlpf, bool bypass)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00576">DevLab_ICM20948.cpp:576</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_ac52d80aad738b90aa0f05e9d6404bb85"><div class="ttname"><a href="classDevLab__ICM20948.html#ac52d80aad738b90aa0f05e9d6404bb85">DevLab_ICM20948::setAccelDLPF</a></div><div class="ttdeci">bool setAccelDLPF(uint8_t dlpf, bool bypass)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00880">DevLab_ICM20948.cpp:880</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
 Averaging Configuration</h2>
 <div class="fragment"><div class="line"><a class="code hl_variable" href="gyr__test_8ino.html#aa8226278adaa3f7fb2ad8b966f7787a1">imu</a>.<a class="code hl_function" href="classDevLab__ICM20948.html#a619f82390347cc173d1604d4d711b537">setAccelAveraging</a>(<a class="code hl_enumvalue" href="DevLab__ICM20948_8h.html#a6b88764d5f92bd1ed524fdc1f8b87088a682b1e1305b78c070fc0d38523969924">AVG_8</a>);</div>
 <div class="ttc" id="aDevLab__ICM20948_8h_html_a6b88764d5f92bd1ed524fdc1f8b87088a682b1e1305b78c070fc0d38523969924"><div class="ttname"><a href="DevLab__ICM20948_8h.html#a6b88764d5f92bd1ed524fdc1f8b87088a682b1e1305b78c070fc0d38523969924">ICM20948_Gyro_Average::AVG_8</a></div><div class="ttdeci">@ AVG_8</div></div>
-<div class="ttc" id="aclassDevLab__ICM20948_html_a619f82390347cc173d1604d4d711b537"><div class="ttname"><a href="classDevLab__ICM20948.html#a619f82390347cc173d1604d4d711b537">DevLab_ICM20948::setAccelAveraging</a></div><div class="ttdeci">bool setAccelAveraging(ICM20948_Accel_Average avg)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00952">DevLab_ICM20948.cpp:952</a></div></div>
+<div class="ttc" id="aclassDevLab__ICM20948_html_a619f82390347cc173d1604d4d711b537"><div class="ttname"><a href="classDevLab__ICM20948.html#a619f82390347cc173d1604d4d711b537">DevLab_ICM20948::setAccelAveraging</a></div><div class="ttdeci">bool setAccelAveraging(ICM20948_Accel_Average avg)</div><div class="ttdef"><b>Definition</b> <a href="DevLab__ICM20948_8cpp_source.html#l00935">DevLab_ICM20948.cpp:935</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
 Applications</h1>
 <ul>
@@ -333,7 +333,7 @@ License</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Jun 17 2026 22:44:15 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jul 30 2026 17:20:13 for DevLab_ICM20948 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

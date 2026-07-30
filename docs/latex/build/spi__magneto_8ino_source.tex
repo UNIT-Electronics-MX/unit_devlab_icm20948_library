@@ -1,0 +1,106 @@
+\doxysection{spi\+\_\+magneto.\+ino}
+\hypertarget{spi__magneto_8ino_source}{}\label{spi__magneto_8ino_source}\index{examples/spi\_magneto/spi\_magneto.ino@{examples/spi\_magneto/spi\_magneto.ino}}
+\mbox{\hyperlink{spi__magneto_8ino}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00001}00001\ \textcolor{comment}{/***************************************************************}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ \ \ \ I2C\_Magneto.ino}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00003}00003\ \textcolor{comment}{\ *\ @author\ \ Jonathan\ Mejorado\ Lopez}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00004}00004\ \textcolor{comment}{\ *\ @brief\ \ \ Minimal\ I2C\ bring-\/up\ for\ DevLab\ ICM-\/20948\ +}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ AK09916\ magnetometer\ readout\ (updated\ API).}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00006}00006\ \textcolor{comment}{\ *\ Features}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00007}00007\ \textcolor{comment}{\ *\ -\/\ SPI\ init\ (UNO\ /\ ESP32)}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00008}00008\ \textcolor{comment}{\ *\ -\/\ beginSPI()\ initialization}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00009}00009\ \textcolor{comment}{\ *\ -\/\ Manual\ sensor\ enable}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00010}00010\ \textcolor{comment}{\ *\ -\/\ Read\ Accel\ /\ Gyro\ /\ Temp}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00011}00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00012}00012\ \textcolor{comment}{\ *\ Notes}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00013}00013\ \textcolor{comment}{\ *\ -\/\ WHO\_AM\_I\ must\ be\ 0xEA}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00014}00014\ \textcolor{comment}{\ *\ -\/\ Sensors\ must\ be\ explicitly\ enabled}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00015}00015\ \textcolor{comment}{\ *\ -\/\ SPI\ speed\ \string~1MHz\ recommended\ during\ init}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00017}00017\ \textcolor{comment}{\ *\ Wiring\ (Arduino\ UNO\ SPI)}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00018}00018\ \textcolor{comment}{\ *\ -\/\ SCK(SCL)\ \ -\/>\ D13}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00019}00019\ \textcolor{comment}{\ *\ -\/\ MOSI(SDA)\ -\/>\ D11}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00020}00020\ \textcolor{comment}{\ *\ -\/\ MISO(SD0/AD0)\ -\/>\ D12}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00021}00021\ \textcolor{comment}{\ *\ -\/\ CS(nCS)\ \ \ -\/>\ D10\ (changeable;\ update\ CS\_PIN)}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00022}00022\ \textcolor{comment}{\ *\ -\/\ VCC\ \ -\/>\ 3V3}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00023}00023\ \textcolor{comment}{\ *\ -\/\ GND\ \ -\/>\ GND}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00024}00024\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00025}00025\ \textcolor{comment}{\ *\ Wiring\ (ESP32\ VSPI\ default)}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00026}00026\ \textcolor{comment}{\ *\ -\/\ SCK\ \ -\/>\ D13}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00027}00027\ \textcolor{comment}{\ *\ -\/\ MOSI\ -\/>\ D11}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00028}00028\ \textcolor{comment}{\ *\ -\/\ MISO\ -\/>\ D12}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00029}00029\ \textcolor{comment}{\ *\ -\/\ CS\ \ \ -\/>\ D10}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00030}00030\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00031}00031\ \textcolor{comment}{\ *\ License\ :\ MIT}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00032}00032\ \textcolor{comment}{\ ***************************************************************/}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00034}00034\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{DevLab__ICM20948_8h}{DevLab\_ICM20948.h}}>}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00036}00036\ \textcolor{comment}{/*\ ======================\ User\ Config\ =======================\ */}\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00037}00037\ \textcolor{comment}{/**\ @brief\ Chip-\/select\ pin\ for\ SPI.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00038}\mbox{\hyperlink{spi__magneto_8ino_abfcf05153ddbd63d5aff5d018867cc19}{00038}}\ \textcolor{preprocessor}{\#define\ CS\_PIN\ D10}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00039}00039\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00040}00040\ \textcolor{comment}{/**\ @brief\ SPI\ clock\ used\ during\ sensor\ initialization\ and\ reads.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00042}\mbox{\hyperlink{spi__magneto_8ino_a785e68f45fbc9e3f0ed8219615c1ed1d}{00042}}\ \textcolor{preprocessor}{\#define\ SPI\_FAST\_SPEED\ 1000000}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00043}00043\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00044}00044\ \textcolor{comment}{/**\ @brief\ Global\ ICM-\/20948\ driver\ instance.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00045}\mbox{\hyperlink{spi__magneto_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{00045}}\ \mbox{\hyperlink{classDevLab__ICM20948}{DevLab\_ICM20948}}\ \mbox{\hyperlink{spi__magneto_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}};}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00046}00046\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00047}00047\ \textcolor{comment}{/**\ @brief\ SPI\ bus\ object\ used\ by\ the\ IMU\ driver.\ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00048}\mbox{\hyperlink{spi__magneto_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b}{00048}}\ SPIClass\ \mbox{\hyperlink{spi__magneto_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b}{spi\_bus}}(SPI);}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00050}00050\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00051}00051\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00052}00052\ \textcolor{comment}{\ *\ @brief\ Configure\ I2C,\ verify\ the\ IMU,\ and\ initialize\ the\ magnetometer.}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00053}00053\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00054}00054\ \textcolor{comment}{\ *\ The\ magnetometer\ is\ accessed\ through\ the\ ICM-\/20948\ internal\ I2C\ master,\ so}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00055}00055\ \textcolor{comment}{\ *\ initMag()\ must\ succeed\ before\ loop()\ can\ read\ magnetic\ field\ data.}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00056}00056\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00057}\mbox{\hyperlink{spi__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spi__magneto_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}}()\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00058}00058\ \ \ Serial.begin(115200);}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00059}00059\ \ \ delay(200);}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00060}00060\ \ \ Serial.println(F(\textcolor{stringliteral}{"{}ICM-\/20948\ (SPI)\ —\ Magnetometer\ Example"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00062}00062\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{spi__magneto_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a4386f310503153f3e28935cbdda75b18}{beginSPI}}(\mbox{\hyperlink{spi__magneto_8ino_abfcf05153ddbd63d5aff5d018867cc19}{CS\_PIN}},\ \mbox{\hyperlink{spi__magneto_8ino_a5f08ba3a5b3d8e5b3fa5a22429ecfa2b}{spi\_bus}},\ \mbox{\hyperlink{spi__magneto_8ino_a785e68f45fbc9e3f0ed8219615c1ed1d}{SPI\_FAST\_SPEED}}))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00063}00063\ \ \ \ \ Serial.println(\textcolor{stringliteral}{"{}ERROR:\ beginSPI()\ failed"{}});}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)\ delay(200);}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00065}00065\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00067}00067\ \ \ Serial.println(F(\textcolor{stringliteral}{"{}ICM-\/20948\ ready\ (SPI)."{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00069}00069\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{spi__magneto_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a7b137192f8eb987cd221808c2c6c3561}{initMag}}())\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00070}00070\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}Mag\ init\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00071}00071\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00072}00072\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}Mag\ initialized"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00073}00073\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00074}00074\ \ \ Serial.println(\textcolor{stringliteral}{"{}Ready."{}});}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00076}00076\ \ \ Serial.println(F(\textcolor{stringliteral}{"{}Magnetometer\ ready"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00078}00078\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00079}00079\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00080}00080\ \textcolor{comment}{\ *\ @brief\ Read\ and\ print\ magnetometer\ data\ in\ microtesla.}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00081}00081\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00082}\mbox{\hyperlink{spi__magneto_8ino_afe461d27b9c48d5921c00d521181f12f}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{spi__magneto_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}}()\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00083}00083\ \ \ \textcolor{keywordtype}{float}\ mx,\ my,\ mz;}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00085}00085\ \ \ \textcolor{comment}{/*\ Read\ magnetometer\ data}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00086}00086\ \textcolor{comment}{\ \ \ *\ -\/\ Output\ in\ microtesla\ (uT)}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00087}00087\ \textcolor{comment}{\ \ \ *\ -\/\ Returns\ true\ on\ success}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00088}00088\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00089}00089\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{spi__magneto_8ino_aa8226278adaa3f7fb2ad8b966f7787a1}{imu}}.\mbox{\hyperlink{classDevLab__ICM20948_a9f9b29867c2b78efef3ef9688f886314}{readMag}}(mx,\ my,\ mz))\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00090}00090\ \ \ \ \ Serial.print(F(\textcolor{stringliteral}{"{}MAG\ [uT]:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00091}00091\ \ \ \ \ Serial.print(mx,\ 2);\ Serial.print(F(\textcolor{stringliteral}{"{},\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00092}00092\ \ \ \ \ Serial.print(my,\ 2);\ Serial.print(F(\textcolor{stringliteral}{"{},\ "{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00093}00093\ \ \ \ \ Serial.println(mz,\ 2);}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00094}00094\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00095}00095\ \ \ \ \ Serial.println(F(\textcolor{stringliteral}{"{}Mag\ read\ failed"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00096}00096\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00098}00098\ \ \ Serial.println(F(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}));}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00099}00099\ \ \ delay(500);}
+\DoxyCodeLine{\Hypertarget{spi__magneto_8ino_source_l00100}00100\ \}}
+
+\end{DoxyCode}

@@ -9,5 +9,5 @@ var searchData=
   ['connection_6',['connection',['../index.html#autotoc_md6',1,'I²C Connection'],['../index.html#autotoc_md10',1,'SPI Connection']]],
   ['connections_20wiring_7',['Connections / Wiring',['../index.html#autotoc_md4',1,'']]],
   ['cs_8',['cs',['../classSPI__Interface.html#a90f186288944e5595780219c7c3e8a17',1,'SPI_Interface']]],
-  ['cs_5fpin_9',['cs_pin',['../spi__accel_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_accel.ino'],['../spi__basic_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_basic.ino'],['../spi__gyro_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_gyro.ino']]]
+  ['cs_5fpin_9',['cs_pin',['../spi__accel_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_accel.ino'],['../spi__basic_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_basic.ino'],['../spi__gyro_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_gyro.ino'],['../spi__magneto_8ino.html#abfcf05153ddbd63d5aff5d018867cc19',1,'CS_PIN:&#160;spi_magneto.ino']]]
 ];

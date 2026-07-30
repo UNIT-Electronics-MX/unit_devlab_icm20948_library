@@ -10,6 +10,7 @@ var dir_d28a4824dc47e487b107a5db32ef43c4 =
     [ "spi_accel", "dir_0e5973fcad70f068092871290dcee444.html", "dir_0e5973fcad70f068092871290dcee444" ],
     [ "spi_basic", "dir_b0c22a11d25a146afe72094f2fae7885.html", "dir_b0c22a11d25a146afe72094f2fae7885" ],
     [ "spi_gyro", "dir_1bf60d74cd5f1792cdbdc52e5ccd3a2e.html", "dir_1bf60d74cd5f1792cdbdc52e5ccd3a2e" ],
+    [ "spi_magneto", "dir_1ec354bb86507d025b0080fc043b14ac.html", "dir_1ec354bb86507d025b0080fc043b14ac" ],
     [ "test", "dir_0fe9cd1e19620fd79d7a86ad96ecfe64.html", "dir_0fe9cd1e19620fd79d7a86ad96ecfe64" ],
     [ "test2", "dir_de50eccf6a252f5ec3370f2573e3171e.html", "dir_de50eccf6a252f5ec3370f2573e3171e" ]
 ];
