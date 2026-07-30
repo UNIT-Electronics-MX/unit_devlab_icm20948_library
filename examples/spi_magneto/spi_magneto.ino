@@ -1,9 +1,8 @@
 /***************************************************************
- * @file    SPI_Basic.ino
- * @author  7Semi,Jonathan Mejorado Lopez
- * @brief   Minimal SPI bring-up for 7Semi ICM-20948 +
- *          basic Accel/Gyro/Temp readout (updated API).
- *
+ * @file    I2C_Magneto.ino
+ * @author  Jonathan Mejorado Lopez
+ * @brief   Minimal I2C bring-up for DevLab ICM-20948 +
+ *          AK09916 magnetometer readout (updated API).
  * Features
  * - SPI init (UNO / ESP32)
  * - beginSPI() initialization
@@ -28,11 +27,16 @@
  * - MOSI -> D11
  * - MISO -> D12
  * - CS   -> D10
+ *
+ * License : MIT
  ***************************************************************/
-#include <DevLab_ICM20948.h>
-/** @brief Chip-select pin for SPI. */
 
+#include <DevLab_ICM20948.h>
+
+/* ====================== User Config ======================= */
+/** @brief Chip-select pin for SPI. */
 #define CS_PIN D10
+
 /** @brief SPI clock used during sensor initialization and reads. */
 
 #define SPI_FAST_SPEED 1000000
@@ -43,79 +47,52 @@ DevLab_ICM20948 imu;
 /** @brief SPI bus object used by the IMU driver. */
 SPIClass spi_bus(SPI);
 
+
 /**
- * @brief Initialize Serial and start the ICM-20948 over SPI.
+ * @brief Configure I2C, verify the IMU, and initialize the magnetometer.
  *
- * @note The sketch expects a board-level CS_PIN definition to select the
- * chip-select pin used by beginSPI().
+ * The magnetometer is accessed through the ICM-20948 internal I2C master, so
+ * initMag() must succeed before loop() can read magnetic field data.
  */
 void setup() {
   Serial.begin(115200);
   delay(200);
-
+  Serial.println(F("ICM-20948 (SPI) — Magnetometer Example"));
 
   if (!imu.beginSPI(CS_PIN, spi_bus, SPI_FAST_SPEED)) {
     Serial.println("ERROR: beginSPI() failed");
     while (1) delay(200);
   }
 
-  if (!imu.setSensors(true, true, true)) {
-    Serial.println(F("ERROR: setSensors failed"));
-  }
-  /* Initialize magnetometer. */
+  Serial.println(F("ICM-20948 ready (SPI)."));
+
   if (!imu.initMag()) {
     Serial.println(F("Mag init failed"));
   } else {
     Serial.println(F("Mag initialized"));
   }
   Serial.println("Ready.");
+
+  Serial.println(F("Magnetometer ready"));
 }
 
 /**
- * @brief Read and print accelerometer, gyroscope, and temperature data.
+ * @brief Read and print magnetometer data in microtesla.
  */
 void loop() {
-  float ax, ay, az;
-  float gx, gy, gz;
   float mx, my, mz;
-  float tC;
 
-  /* Read accelerometer. */
-  if (imu.readAccel(ax, ay, az)) {
-    Serial.print(F("ACC [g]: "));
-    Serial.print(ax, 3); Serial.print(", ");
-    Serial.print(ay, 3); Serial.print(", ");
-    Serial.println(az, 3);
-  } else {
-    Serial.println(F("ACC read failed"));
-  }
-
-  /* Read gyroscope. */
-  if (imu.readGyro(gx, gy, gz)) {
-    Serial.print(F("GYR [dps]: "));
-    Serial.print(gx, 2); Serial.print(", ");
-    Serial.print(gy, 2); Serial.print(", ");
-    Serial.println(gz, 2);
-  } else {
-    Serial.println(F("GYR read failed"));
-  }
-
-  /* Read magnetometer. */
+  /* Read magnetometer data
+   * - Output in microtesla (uT)
+   * - Returns true on success
+   */
   if (imu.readMag(mx, my, mz)) {
     Serial.print(F("MAG [uT]: "));
-    Serial.print(mx, 2); Serial.print(", ");
-    Serial.print(my, 2); Serial.print(", ");
+    Serial.print(mx, 2); Serial.print(F(", "));
+    Serial.print(my, 2); Serial.print(F(", "));
     Serial.println(mz, 2);
   } else {
-    Serial.println(F("MAG read failed"));
-  }
-
-  /* Read temperature. */
-  if (imu.readTemperature(tC)) {
-    Serial.print(F("TMP [C]: "));
-    Serial.println(tC, 2);
-  } else {
-    Serial.println(F("TMP read failed"));
+    Serial.println(F("Mag read failed"));
   }
 
   Serial.println(F("-----------------------------"));
